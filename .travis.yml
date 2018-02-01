@@ -1,3 +1,11 @@
 language: node_js
-node_js:
-  - "4"
+dist: trusty
+cache:
+  directories:
+- node_modules
+jobs:
+  include:
+    - node_js: "7.6.0"
+      env: NODE7=true
+    - node_js: "6.4.0"
+      env: NODE6=true
