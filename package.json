@@ -1,28 +1,29 @@
 {
-  "name": "sourcescrapper",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "axios": "^0.17.1",
-    "form-data": "^2.3.1",
-    "normalize-url": "^2.0.1",
-    "object-merge": "^2.5.1",
-    "puppeteer": "^1.0.0",
-    "query-string": "^5.0.1",
-    "regexp.execall": "^1.0.2",
-    "typeof": "^1.0.0",
-    "urlparser": "^0.3.9"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "source",
-    "scrapper",
-    "extractor"
-  ],
-  "author": "OpenByte",
-  "license": "MIT"
+    "name": "sourcescrapper",
+    "version": "0.1.0",
+    "description": "Simple library which helps you to retrieve the source of various video streaming sites. ",
+    "author": "OpenByte <development.openbyte@gmail.com>",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OpenByteDev/SourceScrapper.git"
+    },
+    "dependencies": {
+        "axios": "^0.17.1",
+        "normalize-url": "^2.0.1",
+        "puppeteer": "^1.0.0",
+        "query-string": "^5.0.1",
+        "typeof": "^1.0.0",
+        "urlparser": "^0.3.9"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "source",
+        "scrapper",
+        "extractor"
+    ],
+    "license": "MIT"
 }
