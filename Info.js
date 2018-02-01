@@ -12,7 +12,8 @@ class Info {
                         type === 'undefined' ? [] :
                         type === 'array' ? value :
                             [value]
-                }, enumerable: true
+                },
+                enumerable: true
             },
             poster: {
                 get: () => poster,

@@ -13,15 +13,18 @@ class Scrapper {
         Object.defineProperties(this, {
             type: {
                 get: () => type,
-                set: value => type = value.toLowerCase()
+                set: value => type = value.toLowerCase(),
+                enumerable: true
             },
             domain: {
                 get: () => domain,
-                set: value => domain = (typeOf(value) === 'array' ? value : [value]).map(d => d.toLowerCase())
+                set: value => domain = (typeOf(value) === 'array' ? value : [value]).map(d => d.toLowerCase()),
+                enumerable: true
             },
             runner: {
                 get: () => runner,
-                set: value => runner = value.toLowerCase()
+                set: value => runner = value.toLowerCase(),
+                enumerable: true
             }
         });
         this.name = name;
