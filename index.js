@@ -1,15 +1,15 @@
-const Error = require('./Error.js');
-const Source = require('./Source.js');
-const Info = require('./Info.js');
-const Scrap = require('./Scrap.js');
-const Scrapper = require('./Scrapper.js');
-const LinkScrapper = require('./LinkScrapper.js');
-const StreamScrapper = require('./StreamScrapper.js');
-const ScrapperList = require('./ScrapperList.js');
+const Error = require('./lib/Error.js');
+const Source = require('./lib/Source.js');
+const Info = require('./lib/Info.js');
+const Scrap = require('./lib/Scrap.js');
+const Scrapper = require('./lib/Scrapper.js');
+const LinkScrapper = require('./lib/LinkScrapper.js');
+const StreamScrapper = require('./lib/StreamScrapper.js');
+const ScrapperList = require('./lib/ScrapperList.js');
 
-const scrappers = require('./scrappers.js');
-const runners = require('./runners.js');
-const config = require('./config.js');
+const scrappers = require('./lib/scrappers.js');
+const runners = require('./lib/runners.js');
+const config = require('./lib/config.js');
 
 
 module.exports = {
