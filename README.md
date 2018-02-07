@@ -21,6 +21,7 @@ Simple library which helps you to retrieve...
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20" style="margin-bottom: -5px"></sub> vidzi.tv
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20" style="margin-bottom: -5px"></sub> vidstreaming.io
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20" style="margin-bottom: -5px"></sub> streamango.com
+ - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20" style="margin-bottom: -5px"></sub> rapidvideo.com
 
 #### Link
 - <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20" style="margin-bottom: -5px"></sub> gogoanime.io
