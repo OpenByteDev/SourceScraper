@@ -15,17 +15,17 @@ Simple library which helps you to retrieve...
 ## Supported Sites
 
 #### Stream
- - <sub><img src="http://www.google.com/s2/favicons?domain=openload.co" height="20" style="margin-bottom: -5px"></sub> openload.co
- - <sub><img src="http://www.google.com/s2/favicons?domain=oload.tv" height="20" style="margin-bottom: -5px"></sub> oload.tv
- - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20" style="margin-bottom: -5px"></sub> streamcloud.eu
- - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20" style="margin-bottom: -5px"></sub> vidzi.tv
- - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20" style="margin-bottom: -5px"></sub> vidstreaming.io
- - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20" style="margin-bottom: -5px"></sub> streamango.com
- - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20" style="margin-bottom: -5px"></sub> rapidvideo.com
+ - <sub><img src="http://www.google.com/s2/favicons?domain=openload.co" height="20"></sub> openload.co
+ - <sub><img src="http://www.google.com/s2/favicons?domain=oload.tv" height="20"></sub> oload.tv
+ - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> streamcloud.eu
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20"></sub> vidzi.tv
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> vidstreaming.io
+ - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> streamango.com
+ - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> rapidvideo.com
 
 #### Link
-- <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20" style="margin-bottom: -5px"></sub> gogoanime.io
-
+- <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> gogoanime.io
+- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> kissanime.ru
 <hr>
 
 ## Getting Started
