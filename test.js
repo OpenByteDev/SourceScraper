@@ -1,8 +1,11 @@
 const { config, scrappers, classes: { StreamInfo, HosterInfo }} = require('./index.js');
 
 (async () => {
+    config.showError = true;
+
     //config.puppeteer.headless = false;
     //config.puppeteer.executablePath = 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe';
+    config.puppeteer.args = ['--no-sandbox', '--disable-setuid-sandbox'];
 
     const urls = [
         'https://openload.co/embed/zRpmqpRRaac/YuGiOhArcVEpisode123-rh-480.x.mp4',
@@ -35,9 +38,11 @@ const { config, scrappers, classes: { StreamInfo, HosterInfo }} = require('./ind
         }
     } catch (err) {
         allSuccess = false;
-        console.log(err);
-        throw 'Unexpected error during testing';
+        if (config.showError)
+            console.error(err);
+        console.error('Unexpected error during testing');
     }
     if (!allSuccess)
-        throw ''
+        process.exit(1);
+    process.exit(0);
 })();
