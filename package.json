@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper",
-    "version": "0.3.0",
+    "version": "0.3.5",
     "description": "Simple library which helps you to retrieve the source of various video streaming sites. ",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "index.js",
