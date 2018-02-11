@@ -1,0 +1,43 @@
+const { config, scrappers, classes: { StreamInfo, HosterInfo }} = require('./index.js');
+
+(async () => {
+    //config.puppeteer.headless = false;
+    //config.puppeteer.executablePath = 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe';
+
+    const urls = [
+        'https://openload.co/embed/zRpmqpRRaac/YuGiOhArcVEpisode123-rh-480.x.mp4',
+        'https://oload.tv/embed/fZOeAHeGgcI',
+        'http://streamcloud.eu/dx008gqtcsdw/jumanji.SD-spectre.mkv.html',
+        'https://vidzi.tv/8yrmh5ooflp6.html',
+        'http://vidstreaming.io/streaming.php?id=NzUwMDI=&title=Mob+Psycho+100+Episode+9',
+        'https://streamango.com/embed/klkflffksmotebqk/YuGiOhArcVEpisode123-rh-343_mp4',
+        'https://rapidvideo.com/e/FO24ULAW2H',
+
+        'https://ww3.gogoanime.io/death-note-episode-19',
+        'http://kissanime.ru/Anime/Yu-Gi-Oh-Arc-V-Dub/Episode-123?id=142754&s=default'
+    ];
+
+    let allSuccess = true;
+    try {
+        for (let url of urls) {
+            const scrapper = scrappers.all.getFirstApplicable(url);
+            const scrap = await scrapper.run(url);
+
+            const success =
+                scrap.info &&
+                scrap.info instanceof StreamInfo && scrap.info.source.length > 0 ||
+                scrap.info instanceof HosterInfo && scrap.info.hoster.length > 0;
+
+            console.log(`${scrapper.name}: ${success}`);
+
+            if (!success)
+                allSuccess = false;
+        }
+    } catch (err) {
+        allSuccess = false;
+        console.log(err);
+        throw 'Unexpected error during testing';
+    }
+    if (!allSuccess)
+        throw ''
+})();

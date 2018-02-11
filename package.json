@@ -22,7 +22,7 @@
     },
     "devDependencies": {},
     "scripts": {
-        "test": "exit 0"
+        "test": "node test.js"
     },
     "keywords": [
         "source",
