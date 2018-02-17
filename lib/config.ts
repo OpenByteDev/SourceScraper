@@ -1,4 +1,4 @@
-module.exports = {
+export let config = {
     puppeteer: {
         headless: true
     },

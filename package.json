@@ -3,26 +3,41 @@
     "version": "0.3.5",
     "description": "Simple library which helps you to retrieve the source of various video streaming sites. ",
     "author": "OpenByte <development.openbyte@gmail.com>",
-    "main": "index.js",
+    "main": "dist/index.js",
+    "types": "types/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
+        "await-sleep": "0.0.1",
         "axios": "^0.17.1",
         "htmlstringparser": "^0.2.0",
         "newline-remove": "^1.0.2",
         "normalize-url": "^2.0.1",
         "object-merge": "^2.5.1",
-        "puppeteer": "^1.0.0",
+        "puppeteer": "^1.1.0",
         "query-string": "^5.1.0",
         "random-number": "0.0.9",
         "typeof": "^1.0.0",
         "urlparser": "^0.3.9"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "@types/newline-remove": "^1.0.0",
+        "@types/node": "^9.4.6",
+        "@types/normalize-url": "^1.9.1",
+        "@types/object-merge": "^2.5.0",
+        "@types/puppeteer": "^1.0.0",
+        "@types/query-string": "^5.1.0",
+        "@types/typeof": "^1.0.0",
+        "@types/urlparser": "^0.2.0",
+        "tslint": "^5.9.1",
+        "typescript": "^2.7.2"
+    },
     "scripts": {
-        "test": "node test.js"
+        "test": "node test/test.js",
+        "lint": "tslint -p .",
+        "build": "tsc"
     },
     "keywords": [
         "source",
