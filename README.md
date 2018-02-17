@@ -14,7 +14,7 @@ Simple library which helps you to retrieve...
 
 ## Supported Sites
 
-#### Stream
+#### Source
  - <sub><img src="http://www.google.com/s2/favicons?domain=openload.co" height="20"></sub> openload.co
  - <sub><img src="http://www.google.com/s2/favicons?domain=oload.tv" height="20"></sub> oload.tv
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> streamcloud.eu
@@ -23,7 +23,7 @@ Simple library which helps you to retrieve...
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> streamango.com
  - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> rapidvideo.com
 
-#### Link
+#### Hoster
 - <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> gogoanime.io
 - <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> kissanime.ru
 <hr>
@@ -36,7 +36,7 @@ npm install sourcescrapper
 
 ### Usage
 ```js
-const {scrappers} = require('sourcescrapper');
+const { scrappers } = require('sourcescrapper');
 
 (async () => {
     const url = 'some url';
