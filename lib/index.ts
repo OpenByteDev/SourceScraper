@@ -1,4 +1,4 @@
-require('./extensions');
+importScripts('./extensions');
 
 export * from './classes';
 export * from './config';

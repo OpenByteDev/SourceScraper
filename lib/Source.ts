@@ -1,6 +1,5 @@
 import normalizeUrl = require('normalize-url');
-import objectMerge = require("object-merge");
-
+import objectMerge = require('object-merge');
 
 const _private = new WeakMap();
 
@@ -9,7 +8,7 @@ export class Source {
     public codec?: string;
     public resolution?: string;
 
-    constructor({ url, type, codec, resolution }: { url:string, type?:string, codec?:string, resolution?:string }) {
+    constructor({ url, type, codec, resolution }: { url: string, type?: string, codec?: string, resolution?: string }) {
         this.type = type;
         this.codec = codec;
         this.resolution = resolution;
@@ -23,7 +22,7 @@ export class Source {
         (_private.get(this) || _private.set(this, {}).get(this)).url = normalizeUrl(value);
     }
 
-    toJSON(): object {
+    public toJSON(): object {
         return objectMerge(this, _private.get(this));
     }
 }

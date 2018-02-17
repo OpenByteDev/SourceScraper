@@ -1,13 +1,12 @@
-import objectMerge = require("object-merge");
-import normalizeUrl = require("normalize-url");
-
+import normalizeUrl = require('normalize-url');
+import objectMerge = require('object-merge');
 
 const _private = new WeakMap();
 
 export class Hoster {
     public name: string;
 
-    constructor({ url, name }: { url:string, name:string }) {
+    constructor({ url, name }: { url: string, name: string }) {
         this.url = url;
         this.name = name;
     }
@@ -19,7 +18,7 @@ export class Hoster {
         (_private.get(this) || _private.set(this, {}).get(this)).url = normalizeUrl(value);
     }
 
-    toJSON(): object {
+    public toJSON(): object {
         return objectMerge(this, _private.get(this));
     }
 }

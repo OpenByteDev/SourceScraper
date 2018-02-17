@@ -23,18 +23,20 @@
         "urlparser": "^0.3.9"
     },
     "devDependencies": {
-        "typescript": "^2.7.2",
-        "@types/node": "^9.4.6",
         "@types/newline-remove": "^1.0.0",
+        "@types/node": "^9.4.6",
         "@types/normalize-url": "^1.9.1",
         "@types/object-merge": "^2.5.0",
         "@types/puppeteer": "^1.0.0",
         "@types/query-string": "^5.1.0",
         "@types/typeof": "^1.0.0",
-        "@types/urlparser": "^0.2.0"
+        "@types/urlparser": "^0.2.0",
+        "tslint": "^5.9.1",
+        "typescript": "^2.7.2"
     },
     "scripts": {
         "test": "node test/test.js",
+        "lint": "tslint -p .",
         "build": "tsc"
     },
     "keywords": [

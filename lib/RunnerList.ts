@@ -1,5 +1,4 @@
-import { Runner } from "./Runner";
-
+import { Runner } from './Runner';
 
 export class RunnerList extends Array<Runner> {
     constructor(length: number)
@@ -8,10 +7,10 @@ export class RunnerList extends Array<Runner> {
         super(...args);
     }
 
-    getByType(type: string): Runner|undefined {
-        return this.find(e => e.type === type);
+    public getByType(type: string): Runner | undefined {
+        return this.find((e) => e.type === type);
     }
-    toMap(): Map<string, Runner> {
-        return new Map(this.map(e => [ e.type, e ]) as [string, Runner][]);
+    public toMap(): Map<string, Runner> {
+        return new Map(this.map((e) => [ e.type, e ]) as Array<[string, Runner]>);
     }
 }
