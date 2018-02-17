@@ -20,6 +20,8 @@ RegExp.prototype.execAll = function(str: string): any[] {
     return arr;
 };
 
-Array.prototype.flatMap = function<T1, T2>(lambda: (currentValue: T1, index: number, array: T1[]) => T2[], thisArg?: any): T2[] {
+Array.prototype.flatMap = function<T1, T2>(
+    lambda: (currentValue: T1, index: number, array: T1[]) => T2[],
+    thisArg?: any): T2[] {
     return Array.prototype.concat.apply([], this.map(lambda, thisArg));
 };

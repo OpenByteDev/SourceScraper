@@ -191,9 +191,12 @@ export const scrappers = {
             domain: 'vidstreaming.io',
             runner: 'html',
             exec: async ({html}) => {
-                const titleregex = new RegExp(/<title>([^<]+)<\/title>/);
-                const setupregex = new RegExp(/playerInstance\.setup\(\s*{\s*sources\s*:\s*\[\s*{\s*(.*?)\s*}\s*]\s*,?\s*}\s*\);/, 'gi');
-                const loadregex = new RegExp(/playerInstance\.load\(\s*{\s*(.*?)\s*,?\s*}\s*\)\s*;/, 'gi');
+                const titleregex =
+                    new RegExp(/<title>([^<]+)<\/title>/);
+                const setupregex =
+                    new RegExp(/playerInstance\.setup\({\s*sources\s*:\s*\[\s*{\s*(.*?)\s*}\s*]\s*,?\s*}\);/, 'gi');
+                const loadregex =
+                    new RegExp(/playerInstance\.load\({\s*(.*?)\s*,?\s*}\)\s*;/, 'gi');
 
                 html = removeNewline(html);
 

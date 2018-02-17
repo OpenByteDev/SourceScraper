@@ -16,17 +16,24 @@ declare interface RunnerArgs<RunnerScrapper> {
     scrapper: RunnerScrapper;
     options?: any;
 }
-export type PuppeteerRunnerScrapper =
-    (args: { url: string, browser: Browser, page: Page, scrapper: PuppeteerRunnerScrapper, runners: RunnerList }) => any;
-const puppeteerRunner = new Runner('puppeteer', async ({url, scrapper, options= {}}: RunnerArgs<PuppeteerRunnerScrapper>) => {
+
+export type PuppeteerRunnerScrapper = (args: {
+    url: string,
+    browser: Browser,
+    page: Page,
+    scrapper: PuppeteerRunnerScrapper,
+    runners: RunnerList
+}) => any;
+const puppeteerRunner = new Runner('puppeteer',
+    async ({url, scrapper, options= {}}: RunnerArgs<PuppeteerRunnerScrapper>) => {
     let _options: any = {
         config: {
             headless: false
         },
         requestInterception: {
             active: true,
-            block: ({ request }:
-                        { request: any, resourceType: string, url: string, page: any, browser: any }) => request.resourceType === 'font'
+            block: ({ request }: { request: any, resourceType: string, url: string, page: any, browser: any }) =>
+                request.resourceType === 'font'
         },
         init: null
     };
@@ -42,13 +49,16 @@ const puppeteerRunner = new Runner('puppeteer', async ({url, scrapper, options= 
 
     await page.setRequestInterception(_options.requestInterception && _options.requestInterception.active);
     page.on('request', (request: any) => {
-        const block = _options.requestInterception && _options.requestInterception.block && _options.requestInterception.block({
-            request,
-            resourceType: request.resourceType(),
-            url: request.url(),
-            page,
-            browser
-        });
+        const block =
+            _options.requestInterception &&
+            _options.requestInterception.block &&
+            _options.requestInterception.block({
+                request,
+                resourceType: request.resourceType(),
+                url: request.url(),
+                page,
+                browser
+            });
 
         if (typeof block === 'undefined') {
             return;
@@ -86,9 +96,15 @@ const puppeteerRunner = new Runner('puppeteer', async ({url, scrapper, options= 
         await browser.close();
     }
 });
-export type HTMLRunnerScrapper =
-    (args: { url: string, html: string, response: any, scrapper: HTMLRunnerScrapper, runners: RunnerList }) => any;
-const htmlRunner = new Runner('html', async ({url, scrapper, options= {}}: RunnerArgs<HTMLRunnerScrapper>) => {
+export type HTMLRunnerScrapper = (args: {
+    url: string,
+    html: string,
+    response: any,
+    scrapper: HTMLRunnerScrapper,
+    runners: RunnerList
+}) => any;
+const htmlRunner = new Runner('html',
+    async ({url, scrapper, options= {}}: RunnerArgs<HTMLRunnerScrapper>) => {
     let _options: any = {
         config: {url,
                  method: 'get',
@@ -111,9 +127,17 @@ const htmlRunner = new Runner('html', async ({url, scrapper, options= {}}: Runne
         runners
     });
 });
-export type DOMRunnerScrapper =
-    (args: { url: string, dom: any, parser: any, html: string, response: any, scrapper: DOMRunnerScrapper, runners: RunnerList }) => any;
-const domRunner = new Runner('dom', async ({url, scrapper, options= {}}: RunnerArgs<DOMRunnerScrapper>) => {
+export type DOMRunnerScrapper = (args: {
+    url: string,
+    dom: any,
+    parser: any,
+    html: string,
+    response: any,
+    scrapper: DOMRunnerScrapper,
+    runners: RunnerList
+}) => any;
+const domRunner = new Runner('dom',
+    async ({url, scrapper, options= {}}: RunnerArgs<DOMRunnerScrapper>) => {
     return htmlRunner.run({
         url,
         scrapper: async (args) => {
@@ -126,8 +150,13 @@ const domRunner = new Runner('dom', async ({url, scrapper, options= {}}: RunnerA
         options
     });
 });
-export type UrlRunnerScrapper = (args: { url: string, scrapper: UrlRunnerScrapper, runners: RunnerList }) => any;
-const urlRunner = new Runner('url', async ({url, scrapper, options= {}}: RunnerArgs<UrlRunnerScrapper>) => {
+export type UrlRunnerScrapper = (args: {
+    url: string,
+    scrapper: UrlRunnerScrapper,
+    runners: RunnerList
+}) => any;
+const urlRunner = new Runner('url',
+    async ({url, scrapper, options= {}}: RunnerArgs<UrlRunnerScrapper>) => {
     return scrapper({
         url,
         scrapper,

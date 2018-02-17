@@ -22,7 +22,8 @@ export class SourceInfo extends Info {
         return _private.get(this).poster;
     }
     set poster(value: string | undefined) {
-        (_private.get(this) || _private.set(this, {}).get(this)).poster = typeof value === 'undefined' ? value : normalizeUrl(value);
+        (_private.get(this) || _private.set(this, {}).get(this)).poster =
+            typeof value === 'undefined' ? value : normalizeUrl(value);
     }
 
     public toJSON(): object {
