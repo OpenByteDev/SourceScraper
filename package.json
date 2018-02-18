@@ -32,12 +32,14 @@
         "@types/typeof": "^1.0.0",
         "@types/urlparser": "^0.2.0",
         "tslint": "^5.9.1",
+        "typedoc": "^0.10.0",
         "typescript": "^2.7.2"
     },
     "scripts": {
         "test": "node test/test.js",
         "lint": "tslint -p .",
-        "build": "tsc"
+        "build": "tsc",
+        "gen-doc": "typedoc --out ./docs ./lib/index.ts --ignoreCompilerErrors --target ES6 --name SourceScrapper --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
     },
     "keywords": [
         "source",
