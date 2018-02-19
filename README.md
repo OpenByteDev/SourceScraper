@@ -31,7 +31,7 @@ Simple library which helps you to retrieve...
 ## Getting Started
 ### Installation
 ```bash
-npm install sourcescrapper
+$ npm install sourcescrapper
 ```
 
 ### Usage
