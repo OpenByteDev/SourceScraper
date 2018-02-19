@@ -1,14 +1,11 @@
 # Source Scrapper
 
 [![Build Status](https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScrapper) [![npm version](https://badge.fury.io/js/sourcescrapper.svg)](https://www.npmjs.com/package/sourcescrapper) 
-[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg)](https://david-dm.org/OpenByteDev/SourceScrapper)  [![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg)](https://david-dm.org/OpenByteDev/SourceScrapper?type=dev)  [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT) [![DOGE](https://img.shields.io/badge/doge-wow-yellow.svg)]()
+[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg)](https://david-dm.org/OpenByteDev/SourceScrapper)  [![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg)](https://david-dm.org/OpenByteDev/SourceScrapper?type=dev)  [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT) [![Doge](https://img.shields.io/badge/doge-wow-yellow.svg)]()
 
 Simple library which helps you to retrieve...
-
  - the source of various video streaming sites
-
  - the urls to these streaming sites. 
-
 
 <hr>
 
@@ -46,3 +43,6 @@ const { scrappers } = require('sourcescrapper');
         console.log(scrap.info.source[0].url);
 })();
 ```
+
+### API
+The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/).
