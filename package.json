@@ -29,6 +29,7 @@
         "@types/object-merge": "^2.5.0",
         "@types/puppeteer": "^1.0.0",
         "@types/query-string": "^5.1.0",
+        "@types/random-number": "0.0.0",
         "@types/typeof": "^1.0.0",
         "@types/urlparser": "^0.2.0",
         "tslint": "^5.9.1",
