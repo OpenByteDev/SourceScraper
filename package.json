@@ -40,7 +40,7 @@
         "test": "node test/test.js",
         "lint": "tslint -p .",
         "build": "tsc",
-        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name SourceScrapper --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals",
+        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name SourceScrapper --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
     },
     "keywords": [
         "source",
