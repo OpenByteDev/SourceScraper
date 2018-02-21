@@ -10,7 +10,6 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "await-sleep": "0.0.1",
         "axios": "^0.18.0",
         "htmlstringparser": "^0.2.0",
         "newline-remove": "^1.0.2",

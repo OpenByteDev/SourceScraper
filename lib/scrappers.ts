@@ -1,4 +1,3 @@
-import sleep = require('await-sleep');
 import removeNewline = require('newline-remove');
 import normalizeUrl = require('normalize-url');
 import queryString = require('query-string');
