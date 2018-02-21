@@ -87,76 +87,65 @@ export const scrappers = {
             domain: 'streamcloud.eu',
             runner: 'url',
             exec: async ({url, runners}) => {
-                let retry = false;
-                const s = async () => {
-                    const dataRegex = new RegExp(/\/([^\/.]+)\/(.*)\.[^.]+/, 'i');
-                    const data = dataRegex.exec(url);
-                    if (data === null || data.length <= 2)
-                        return null;
-                    const id = data[1];
-                    const name = data[2];
-                    if (!id || !name)
-                        return null;
+                const dataRegex = new RegExp(/\/([^\/.]+)\/(.*)\.[^.]+/, 'i');
+                const data = dataRegex.exec(url);
+                if (data === null || data.length <= 2)
+                    return null;
+                const id = data[1];
+                const name = data[2];
+                if (!id || !name)
+                    return null;
 
-                    const htmlRunner = runners.getByType('html');
-                    if (!(htmlRunner instanceof Runner))
-                        return null;
-                    const html = await htmlRunner.run({
-                        url,
-                        scrapper: ({html: _html}) => removeNewline(_html),
-                        options: {
-                            axios: {
-                                config: {
-                                    method: 'post',
-                                    headers: {
-                                        'Referer': url,
-                                        'Content-Type': 'application/x-www-form-urlencoded',
-                                        'Cache-Control': 'no-cache',
-                                        'Connection': 'Keep-Alive'
-                                    },
-                                    data: queryString.stringify({
-                                        fname: name,
-                                        hash: '',
-                                        id,
-                                        op: 'download1',
-                                        referer: '',
-                                        usr_login: '',
-                                        imhuman: 'Weiter+zum+Video'
-                                    })
-                                }
+                const htmlRunner = runners.getByType('html');
+                if (!(htmlRunner instanceof Runner))
+                    return null;
+                const html = await htmlRunner.run({
+                    url,
+                    scrapper: ({html: _html}) => removeNewline(_html),
+                    options: {
+                        axios: {
+                            config: {
+                                method: 'post',
+                                headers: {
+                                    'Referer': url,
+                                    'Content-Type': 'application/x-www-form-urlencoded',
+                                    'Cache-Control': 'no-cache',
+                                    'Connection': 'Keep-Alive'
+                                },
+                                data: queryString.stringify({
+                                    fname: name,
+                                    hash: '',
+                                    id,
+                                    op: 'download1',
+                                    referer: '',
+                                    usr_login: '',
+                                    imhuman: 'Weiter+zum+Video'
+                                })
                             }
                         }
-                    }) as string;
-
-                    const configRegex = new RegExp(/jwplayer\("[^"]+"\).setup\({(.*?)}\);/, 'i');
-                    const propRegex = new RegExp(/(\w+)\s*:\s*"?(.*?)"?\s*,/, 'ig');
-                    const tabRegex = /(?:\\t|\t)/g;
-                    const configData = configRegex.exec(html);
-                    if (!configData || configData.length < 1) {
-                        retry = true;
-                        return null;
                     }
-                    const configRAW = configData[1].replace(tabRegex, '');
-                    const propData = propRegex.execAll(configRAW);
-                    const props: any = {};
-                    for (const e of propData)
-                        if (e && e.length >= 2)
-                            props[e[1]] = e[2];
-                    return new SourceInfo({
-                        poster: props.image,
-                        title: name,
-                        source: new Source({
-                            url: props.file,
-                            resolution: props.width + 'x' + props.height
-                        })
-                    });
-                };
-                let info = await s();
-                if (retry) {
-                    await sleep(10000);
-                    info = await s();
-                }
-                return info;
+                }) as string;
+
+                const configRegex = new RegExp(/jwplayer\("[^"]+"\).setup\({(.*?)}\);/, 'i');
+                const propRegex = new RegExp(/(\w+)\s*:\s*"?(.*?)"?\s*,/, 'ig');
+                const tabRegex = /(?:\\t|\t)/g;
+                const configData = configRegex.exec(html);
+                if (!configData || configData.length < 1)
+                    return null;
+                const configRAW = configData[1].replace(tabRegex, '');
+                const propData = propRegex.execAll(configRAW);
+                const props: any = {};
+                for (const e of propData)
+                    if (e && e.length >= 2)
+                        props[e[1]] = e[2];
+                return new SourceInfo({
+                    poster: props.image,
+                    title: name,
+                    source: new Source({
+                        url: props.file,
+                        resolution: props.width + 'x' + props.height
+                    })
+                });
             }
         }),
         new SourceScrapper({
