@@ -25,25 +25,22 @@ const defaultScrappers = new ScrapperList(
             const videos = dom.getElementsByTagName('video');
             for (const video of videos) {
                 const vsrc = video.attrs.src;
-                if (vsrc) {
+                if (vsrc)
                     info.source.push(new Source({
                         url: vsrc,
                         type: video.attrs.type
                     }));
-                }
                 const poster = video.attrs.poster;
-                if (poster) {
+                if (poster)
                     info.poster = poster;
-                }
                 const sources = video.getElementsByTagName('source');
                 for (const source of sources) {
                     const ssrc = source.attrs.src;
-                    if (ssrc) {
+                    if (ssrc)
                         info.source.push(new Source({
                             url: ssrc,
                             type: source.attrs.type
                         }));
-                    }
                 }
             }
             return info;
@@ -94,19 +91,16 @@ export const scrappers = {
                 const s = async () => {
                     const dataRegex = new RegExp(/\/([^\/.]+)\/(.*)\.[^.]+/, 'i');
                     const data = dataRegex.exec(url);
-                    if (data === null || data.length <= 2) {
+                    if (data === null || data.length <= 2)
                         return null;
-                    }
                     const id = data[1];
                     const name = data[2];
-                    if (!id || !name) {
+                    if (!id || !name)
                         return null;
-                    }
 
                     const htmlRunner = runners.getByType('html');
-                    if (!(htmlRunner instanceof Runner)) {
+                    if (!(htmlRunner instanceof Runner))
                         return null;
-                    }
                     const html = await htmlRunner.run({
                         url,
                         scrapper: ({html: _html}) => removeNewline(_html),
@@ -145,11 +139,9 @@ export const scrappers = {
                     const configRAW = configData[1].replace(tabRegex, '');
                     const propData = propRegex.execAll(configRAW);
                     const props: any = {};
-                    for (const e of propData) {
-                        if (e && e.length >= 2) {
+                    for (const e of propData)
+                        if (e && e.length >= 2)
                             props[e[1]] = e[2];
-                        }
-                    }
                     return new SourceInfo({
                         poster: props.image,
                         title: name,
@@ -244,9 +236,8 @@ export const scrappers = {
                 let srces; // remove typescript error "cannot find name 'srces'"
                 const srcs = await page.evaluate(() => {
                     for (const script of document.getElementsByTagName('script')) {
-                        if (script.src) {
+                        if (script.src)
                             continue;
-                        }
                         if (script.text.includes('srces.push')) {
                             eval(script.innerText);
                             return srces;
@@ -276,27 +267,23 @@ export const scrappers = {
             runner: 'dom',
             exec: ({dom}) => {
                 const bodys = dom.getElementsByTagName('body');
-                if (!(bodys.length >= 1)) {
+                if (!(bodys.length >= 1))
                     return null;
-                }
                 const body = bodys[0];
                 const containers = body.getElementsByClassName('anime_muti_link'); // <-- no typo here
-                if (!(containers.length >= 1)) {
+                if (!(containers.length >= 1))
                     return null;
-                }
                 const container = containers[0];
                 const items = container.getElementsByTagName('li');
                 const info = new HosterInfo();
                 for (const item of items) {
                     const links = item.getElementsByTagName('a');
-                    if (!(links.length >= 1)) {
+                    if (!(links.length >= 1))
                         continue;
-                    }
                     const link = links[0];
                     const url = link.attrs['data-video'];
-                    if (!url) {
+                    if (!url)
                         continue;
-                    }
                     let name = link.getText();
                     if (name) {
                         const spans = link.getElementsByTagName('span');
@@ -311,9 +298,8 @@ export const scrappers = {
                     }));
                 }
                 const titles = dom.getElementsByTagName('title');
-                if (titles.length >= 1) {
+                if (titles.length >= 1)
                     info.title = titles[0].getText();
-                }
                 return info;
             }
         }),
@@ -369,11 +355,10 @@ export const scrappers = {
                         waitUntil: 'domcontentloaded'
                     });
 
-                    if (response.status() === 500) {
+                    if (response.status() === 500)
                         await page.goto(url, {
                             waitUntil: 'domcontentloaded'
                         });
-                    }
 
                     if (page.url().toLowerCase().includes('special/areyouhuman2') &&
                         (await page.$eval('body', (body) => body.innerText)).startsWith('Wrong')) {
@@ -395,20 +380,18 @@ export const scrappers = {
 
                 const info = new HosterInfo();
 
-                for (const hosterHandle of hosterOptionsHandles) {
+                for (const hosterHandle of hosterOptionsHandles)
                     hosterOptions.push({
                         name: await (await hosterHandle.getProperty('innerText')).jsonValue(),
                         url: await (await hosterHandle.getProperty('value')).jsonValue(),
                         default: await (await hosterHandle.getProperty('selected')).jsonValue()
                     });
 
-                }
                 const u = urlparser.parse(url);
                 const baseUrl = `${u.host.protocol}://${u.host.hostname}`;
                 for (const hoster of hosterOptions) {
-                    if (hoster.name.toLowerCase() === 'beta server') {
+                    if (hoster.name.toLowerCase() === 'beta server')
                         continue;
-                    }
                     if (hoster.default) {
                         info.hoster.push(new Hoster({
                             name: hoster.name,

@@ -37,9 +37,8 @@ const puppeteerRunner = new Runner('puppeteer',
         },
         init: null
     };
-    if (options.puppeteer) {
+    if (options.puppeteer)
         _options = objectMerge(_options, options.puppeteer);
-    }
     _options.config = objectMerge(_options.config, config.puppeteer);
 
     const browser = await puppeteerLaunch(_options.config);
@@ -60,14 +59,11 @@ const puppeteerRunner = new Runner('puppeteer',
                 browser
             });
 
-        if (typeof block === 'undefined') {
+        if (typeof block === 'undefined')
             return;
-        }
-        if (block) {
+        if (block)
             request.abort();
-        } else {
-            request.continue();
-        }
+        else request.continue();
     });
 
     if (typeOf(_options.init) === 'function') {
@@ -114,9 +110,8 @@ const htmlRunner = new Runner('html',
             }
         }
     };
-    if (options.axios) {
+    if (options.axios)
         _options = objectMerge(_options, options.axios);
-    }
 
     const response = await axios.request(_options.config);
     return scrapper({

@@ -12,9 +12,8 @@ RegExp.prototype.execAll = function(str: string): any[] {
 
     while ((tmp = this.exec(str)) !== null) {
         arr.push(tmp);
-        if (!this.global) {
+        if (!this.global)
             break;
-        }
     }
 
     return arr;

@@ -22,9 +22,9 @@ export class Scrapper {
     constructor({ name, type, domain, runner, runnerOptions= {}, exec }: // tslint:disable-next-line
                     { name: string, type: string, domain?: string | string[], runner: Runner | string, runnerOptions?: any, exec: ScrapperExec }) {
         this.name = name;
-        if (typeof runner === 'string') {
+        if (typeof runner === 'string')
             this.setRunnerByType(runner);
-        } else { this.runner = runner; }
+        else this.runner = runner;
         this.runnerOptions = runnerOptions;
         this.exec = exec;
         this.type = type;
@@ -46,9 +46,8 @@ export class Scrapper {
 
     public setRunnerByType(type: string): void {
         const runner = runners.getByType(type);
-        if (typeof runner === 'undefined') {
+        if (typeof runner === 'undefined')
             throw new TypeError('Runner not supported');
-        }
         this.runner = runner;
     }
     public isApplicable(url: string): boolean {
