@@ -1,5 +1,6 @@
 import removeNewline = require('newline-remove');
 import normalizeUrl = require('normalize-url');
+import objectLiteralStringToObject = require('object-literal-string-to-object');
 import queryString = require('query-string');
 import random = require('random-number');
 import typeOf = require('typeof');
@@ -9,7 +10,6 @@ import { Hoster } from './Hoster';
 import { HosterInfo } from './HosterInfo';
 import { HosterScrapper } from './HosterScrapper';
 import { Runner } from './Runner';
-import { Scrapper } from './Scrapper';
 import { ScrapperList } from './ScrapperList';
 import { Source } from './Source';
 import { SourceInfo } from './SourceInfo';
@@ -56,7 +56,7 @@ const defaultScrappers = new ScrapperList(
     })
 );
 
-export const scrappers = {
+export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
     stream: new ScrapperList(
         new SourceScrapper({
             name: 'Openload',
@@ -398,14 +398,98 @@ export const scrappers = {
 
                 return info;
             }
+        }),
+        new HosterScrapper({
+            name: 'MasterAnime',
+            domain: 'masterani.me',
+            runner: 'html',
+            exec: ({ html }) => {
+                const argsRegex = /<script[^>]*>\s*(?:(?:var|let|const)\s*)?args\s*=\s*({.*?})\s*(;\s*)?<\/script>/;
+                const argsData = argsRegex.exec(html);
+                if (argsData === null || argsData.length < 2)
+                    return null;
+                const argsString = argsData[1];
+                const args = objectLiteralStringToObject.parse(argsString) as {
+                    anime: {
+                        info: {
+                            id: number,
+                            title: string,
+                            slug: string,
+                            episode_length: number
+                        },
+                        poster: string,
+                        episodes: {
+                            current: {
+                                id: number,
+                                episode: string,
+                                subbed: number,
+                                dubbed: number,
+                                type: number,
+                                title: string,
+                                duration: number,
+                                created_at: string,
+                                tvdb_id: number,
+                                description: string | null,
+                                aired: string,
+                                users: Array<{
+                                    id: number,
+                                    name: string,
+                                    last_time_seen: string,
+                                    is_online: boolean,
+                                    avatar: {
+                                        id: string,
+                                        path: string,
+                                        extension: string,
+                                        file: string
+                                    }
+                                }> | null,
+                                extra_viewers: number
+                            },
+                            next: {
+                                id: number,
+                                episode: string
+                            },
+                            prev: {
+                                id: number,
+                                episode: string
+                            }
+                        }
+                    },
+                    mirrors: Array<{
+                        id: number,
+                        host_id: number,
+                        embed_id: string,
+                        quality: number,
+                        type: number,
+                        host: {
+                            id: number,
+                            name: string,
+                            embed_prefix: string,
+                            embed_suffix: string | null
+                        }
+                    }>,
+                    auto_update: number[]
+                };
+                return new HosterInfo({
+                    title: args.anime.info.title,
+                    hoster: args.mirrors.map(e => new Hoster({
+                        name: e.host.name,
+                        url:
+                            e.host.embed_prefix.replace(/\\\//g, '/') +
+                            e.embed_id +
+                            e.host.embed_suffix || '',
+                        quality: e.quality
+                    }))
+                });
+            }
         })
     )
 };
 
 function all(): ScrapperList {
-    return new ScrapperList(...[scrappers.stream, scrappers.hoster]
-        .map((e) => e as Scrapper[])
-        .reduce((a, e) => a.concat(e))
+    return new ScrapperList(
+        ...[scrappers.stream, scrappers.hoster]
+            .flatMap(e => e)
     );
 }
 
@@ -420,7 +504,6 @@ Object.defineProperties(scrappers, {
     },
     default: {
         value: defaultScrappers,
-        enumerable: true,
-        writable: false
+        enumerable: true
     }
 });

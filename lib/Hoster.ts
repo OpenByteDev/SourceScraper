@@ -5,10 +5,14 @@ const _private = new WeakMap();
 
 export class Hoster {
     public name: string;
+    public quality?: string | number;
+    public data?: string;
 
-    constructor({ url, name }: { url: string, name: string }) {
+    constructor({ url, name, quality, data }: { url: string, name: string, quality?: string | number, data?: any }) {
         this.url = url;
         this.name = name;
+        this.quality = quality;
+        this.data = data;
     }
 
     get url(): string {

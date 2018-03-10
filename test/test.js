@@ -17,6 +17,7 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
         'https://rapidvideo.com/e/FO24ULAW2H',
 
         'https://ww3.gogoanime.io/death-note-episode-19',
+        'https://www.masterani.me/anime/watch/2809-b-the-beginning/7',
         'http://kissanime.ru/Anime/Yu-Gi-Oh-Arc-V-Dub/Episode-123?id=142754&s=default'
     ];
 
