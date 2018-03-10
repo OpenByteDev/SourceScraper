@@ -21,6 +21,7 @@ Simple library which helps you to retrieve...
  - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> rapidvideo.com
 
 #### Hoster
+- <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> masterani.me
 - <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> gogoanime.io
 - <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> kissanime.ru
 <hr>
