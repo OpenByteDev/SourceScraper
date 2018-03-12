@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import HTMLStringParser from 'htmlstringparser';
 import objectMerge = require('object-merge');
 import { Browser, launch as puppeteerLaunch, Page } from 'puppeteer';
@@ -11,21 +11,26 @@ import { config } from './config';
 
 export const runners = new RunnerList();
 
-declare interface RunnerArgs<RunnerScrapper> {
+export interface RunnerArgs<T extends RunnerScrapper<any>> {
     url: string;
-    scrapper: RunnerScrapper;
+    scrapper: T;
     options?: any;
 }
+export type RunnerScrapper<T extends RunnerScrapperArgs> = (args: T) => any;
+export interface RunnerScrapperArgs {
+    url: string;
+    scrapper: RunnerScrapper<any>;
+    runners: RunnerList;
+}
 
-export type PuppeteerRunnerScrapper = (args: {
-    url: string,
-    browser: Browser,
-    page: Page,
-    scrapper: PuppeteerRunnerScrapper,
-    runners: RunnerList
-}) => any;
+export interface PuppeteerRunnerArgs extends RunnerArgs<PuppeteerRunnerScrapper> { }
+export type PuppeteerRunnerScrapper = RunnerScrapper<PuppeteerRunnerScrapperArgs>;
+export interface PuppeteerRunnerScrapperArgs extends RunnerScrapperArgs {
+    browser: Browser;
+    page: Page;
+}
 const puppeteerRunner = new Runner('puppeteer',
-    async ({url, scrapper, options= {}}: RunnerArgs<PuppeteerRunnerScrapper>) => {
+    async ({url, scrapper, options= {}}: PuppeteerRunnerArgs) => {
     let _options: any = {
         config: {
             headless: false
@@ -92,15 +97,15 @@ const puppeteerRunner = new Runner('puppeteer',
         await browser.close();
     }
 });
-export type HTMLRunnerScrapper = (args: {
-    url: string,
-    html: string,
-    response: any,
-    scrapper: HTMLRunnerScrapper,
-    runners: RunnerList
-}) => any;
+
+export interface HTMLRunnerArgs extends RunnerArgs<HTMLRunnerScrapper> { }
+export type HTMLRunnerScrapper = RunnerScrapper<HTMLRunnerScrapperArgs>;
+export interface HTMLRunnerScrapperArgs extends RunnerScrapperArgs {
+    response: AxiosResponse;
+    html: string;
+}
 const htmlRunner = new Runner('html',
-    async ({url, scrapper, options= {}}: RunnerArgs<HTMLRunnerScrapper>) => {
+    async ({url, scrapper, options= {}}: HTMLRunnerArgs) => {
     let _options: any = {
         config: {url,
                  method: 'get',
@@ -122,26 +127,25 @@ const htmlRunner = new Runner('html',
         runners
     });
 });
-export type DOMRunnerScrapper = (args: {
-    url: string,
-    dom: any,
-    parser: any,
-    html: string,
-    response: any,
-    scrapper: DOMRunnerScrapper,
-    runners: RunnerList
-}) => any;
+
+export function htmlToDomArgs(htmlArgs: HTMLRunnerScrapperArgs): DOMRunnerScrapperArgs {
+    return {
+        ...htmlArgs,
+        parser: HTMLStringParser,
+        dom: new HTMLStringParser(htmlArgs.html)
+    };
+}
+export interface DOMRunnerArgs extends RunnerArgs<DOMRunnerScrapper> { }
+export type DOMRunnerScrapper = RunnerScrapper<DOMRunnerScrapperArgs>;
+export interface DOMRunnerScrapperArgs extends HTMLRunnerScrapperArgs {
+    parser: any;
+    dom: any;
+}
 const domRunner = new Runner('dom',
-    async ({url, scrapper, options= {}}: RunnerArgs<DOMRunnerScrapper>) => {
+    async ({url, scrapper, options= {}}: DOMRunnerArgs) => {
     return htmlRunner.run({
         url,
-        scrapper: async (args) => {
-            const dom = new HTMLStringParser(args.html);
-
-            args.parser = HTMLStringParser;
-            args.dom = dom;
-            return scrapper(args);
-        },
+        scrapper: async (args) => scrapper(htmlToDomArgs(args)),
         options
     });
 });

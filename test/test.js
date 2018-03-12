@@ -15,6 +15,7 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
         'http://vidstreaming.io/streaming.php?id=NzUwMDI=&title=Mob+Psycho+100+Episode+9',
         'https://streamango.com/embed/klkflffksmotebqk/YuGiOhArcVEpisode123-rh-343_mp4',
         'https://rapidvideo.com/e/FO24ULAW2H',
+        'https://stream.moe/embed2/902293eb0f33cd5b',
 
         'https://ww3.gogoanime.io/death-note-episode-19',
         'https://www.masterani.me/anime/watch/2809-b-the-beginning/7',

@@ -19,6 +19,7 @@ Simple library which helps you to retrieve...
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> vidstreaming.io
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> streamango.com
  - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> rapidvideo.com
+ - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20"></sub> stream.moe
 
 #### Hoster
 - <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> masterani.me

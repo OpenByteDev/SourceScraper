@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Runner | SourceScrapper</title>
+	<title>DOMRunnerScrapperArgs | SourceScrapper</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="runner.html">Runner</a>
+					<a href="domrunnerscrapperargs.html">DOMRunnerScrapperArgs</a>
 				</li>
 			</ul>
-			<h1>Class Runner</h1>
+			<h1>Interface DOMRunnerScrapperArgs</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Runner</span>
+						<a href="htmlrunnerscrapperargs.html" class="tsd-signature-type">HTMLRunnerScrapperArgs</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">DOMRunnerScrapperArgs</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -77,69 +82,94 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="runner.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="runner.html#run" class="tsd-kind-icon">run</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="runner.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="domrunnerscrapperargs.html#dom" class="tsd-kind-icon">dom</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerscrapperargs.html#html" class="tsd-kind-icon">html</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="domrunnerscrapperargs.html#parser" class="tsd-kind-icon">parser</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerscrapperargs.html#response" class="tsd-kind-icon">response</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerscrapperargs.html#runners" class="tsd-kind-icon">runners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerscrapperargs.html#scrapper" class="tsd-kind-icon">scrapper</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerscrapperargs.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Runner<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, f<span class="tsd-signature-symbol">: </span><a href="../globals.html#runnerfunction" class="tsd-signature-type">RunnerFunction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="runner.html" class="tsd-signature-type">Runner</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/Runner.ts#L9">Runner.ts:9</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>type: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>f: <a href="../globals.html#runnerfunction" class="tsd-signature-type">RunnerFunction</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="runner.html" class="tsd-signature-type">Runner</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="run" class="tsd-anchor"></a>
-					<h3>run</h3>
-					<div class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">:</span> <a href="../globals.html#runnerfunction" class="tsd-signature-type">RunnerFunction</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="dom" class="tsd-anchor"></a>
+					<h3>dom</h3>
+					<div class="tsd-signature tsd-kind-icon">dom<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/Runner.ts#L9">Runner.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/runners.ts#L142">runners.ts:142</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="type" class="tsd-anchor"></a>
-					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="html" class="tsd-anchor"></a>
+					<h3>html</h3>
+					<div class="tsd-signature tsd-kind-icon">html<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="htmlrunnerscrapperargs.html">HTMLRunnerScrapperArgs</a>.<a href="htmlrunnerscrapperargs.html#html">html</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/runners.ts#L105">runners.ts:105</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="parser" class="tsd-anchor"></a>
+					<h3>parser</h3>
+					<div class="tsd-signature tsd-kind-icon">parser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/Runner.ts#L8">Runner.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/runners.ts#L141">runners.ts:141</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="response" class="tsd-anchor"></a>
+					<h3>response</h3>
+					<div class="tsd-signature tsd-kind-icon">response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AxiosResponse</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="htmlrunnerscrapperargs.html">HTMLRunnerScrapperArgs</a>.<a href="htmlrunnerscrapperargs.html#response">response</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/runners.ts#L104">runners.ts:104</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="runners" class="tsd-anchor"></a>
+					<h3>runners</h3>
+					<div class="tsd-signature tsd-kind-icon">runners<span class="tsd-signature-symbol">:</span> <a href="../classes/runnerlist.html" class="tsd-signature-type">RunnerList</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="runnerscrapperargs.html">RunnerScrapperArgs</a>.<a href="runnerscrapperargs.html#runners">runners</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/runners.ts#L23">runners.ts:23</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="scrapper" class="tsd-anchor"></a>
+					<h3>scrapper</h3>
+					<div class="tsd-signature tsd-kind-icon">scrapper<span class="tsd-signature-symbol">:</span> <a href="../globals.html#runnerscrapper" class="tsd-signature-type">RunnerScrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="runnerscrapperargs.html">RunnerScrapperArgs</a>.<a href="runnerscrapperargs.html#scrapper">scrapper</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/runners.ts#L22">runners.ts:22</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="url" class="tsd-anchor"></a>
+					<h3>url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="runnerscrapperargs.html">RunnerScrapperArgs</a>.<a href="runnerscrapperargs.html#url">url</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/d45de0d/lib/runners.ts#L21">runners.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -157,17 +187,29 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="runner.html" class="tsd-kind-icon">Runner</a>
+					<li class="current tsd-kind-interface">
+						<a href="domrunnerscrapperargs.html" class="tsd-kind-icon">DOMRunner<wbr>Scrapper<wbr>Args</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="runner.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="domrunnerscrapperargs.html#dom" class="tsd-kind-icon">dom</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="runner.html#run" class="tsd-kind-icon">run</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="domrunnerscrapperargs.html#html" class="tsd-kind-icon">html</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="runner.html#type" class="tsd-kind-icon">type</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="domrunnerscrapperargs.html#parser" class="tsd-kind-icon">parser</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="domrunnerscrapperargs.html#response" class="tsd-kind-icon">response</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="domrunnerscrapperargs.html#runners" class="tsd-kind-icon">runners</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="domrunnerscrapperargs.html#scrapper" class="tsd-kind-icon">scrapper</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="domrunnerscrapperargs.html#url" class="tsd-kind-icon">url</a>
 							</li>
 						</ul>
 					</li>

@@ -15,6 +15,8 @@ import { Source } from './Source';
 import { SourceInfo } from './SourceInfo';
 import { SourceScrapper } from './SourceScrapper';
 
+import { htmlToDomArgs } from './runners';
+
 const defaultScrappers = new ScrapperList(
     new SourceScrapper({
         name: 'dom',
@@ -42,6 +44,9 @@ const defaultScrappers = new ScrapperList(
                         }));
                 }
             }
+            const titles = dom.getElementsByTagName('title');
+            if (titles.length >= 1)
+                info.title = titles[0].getText();
             return info;
         }
     }),
@@ -52,6 +57,13 @@ const defaultScrappers = new ScrapperList(
             return page.evaluate((scrapper) => {
                 return eval('(' + scrapper + ')')(document);
             }, defaultScrappers.getByName('dom').toString());
+        }
+    }),
+    new SourceScrapper({
+        name: 'html',
+        runner: 'html',
+        exec: async (args) => {
+            return defaultScrappers.getByName('dom').exec(htmlToDomArgs(args));
         }
     })
 );
@@ -246,6 +258,26 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
             domain: 'rapidvideo.com',
             runner: 'dom',
             exec: (args= {}) => defaultScrappers.getByName('dom').exec(args)
+        }),
+        new SourceScrapper({
+            name: 'Stream.Moe',
+            domain: 'stream.moe',
+            runner: 'html',
+            exec: async args => {
+                const html = args.html;
+                const encodedDataRegex = /atob\((['"])(.*?)\1\)/i;
+                const encodedData = encodedDataRegex.exec(html);
+                if (encodedData === null || encodedData.length < 3)
+                    return null;
+                const encoded = encodedData[2];
+                const decoded = Buffer.from(encoded, 'base64').toString('ascii');
+                const info = await defaultScrappers.getByName('html').exec({ ...args, html: decoded });
+                const titleRegex = /<title[^>]*>\s*(?:\[.*?])\s*(.*?)\s*(?:\[.*?]).*?<\/title>/i;
+                const titleData = titleRegex.exec(html);
+                if (titleData !== null && titleData.length >= 1)
+                    info.title = titleData[1];
+                return info;
+            }
         })
     ),
     hoster: new ScrapperList(
