@@ -12,19 +12,18 @@ Simple library which helps you to retrieve...
 ## Supported Sites
 
 #### Source
- - <sub><img src="http://www.google.com/s2/favicons?domain=openload.co" height="20"></sub> openload.co
- - <sub><img src="http://www.google.com/s2/favicons?domain=oload.tv" height="20"></sub> oload.tv
- - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> streamcloud.eu
- - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20"></sub> vidzi.tv
- - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> vidstreaming.io
- - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> streamango.com
- - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> rapidvideo.com
- - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20"></sub> stream.moe
+ - <sub><img src="http://www.google.com/s2/favicons?domain=oload.win" height="20"></sub> Openload (openload.co, oload.tv, oload.win)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> Streamcloud (streamcloud.eu)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20"></sub> Vidzi (vidzi.tv)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> Vidstreaming (vidstreaming.io)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> Streamango (streamango.com)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> Rapidvideo (rapidvideo.com)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20"></sub> StreamMoe (stream.moe)
 
 #### Hoster
-- <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> masterani.me
-- <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> gogoanime.io
-- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> kissanime.ru
+- <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> MasterAnime (masterani.me)
+- <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> Gogoanime (gogoanime.io, gogoanime.se)
+- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> Kissanime (kissanime.ru)
 <hr>
 
 ## Getting Started

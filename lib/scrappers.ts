@@ -72,18 +72,18 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
     stream: new ScrapperList(
         new SourceScrapper({
             name: 'Openload',
-            domain: ['openload.co', 'oload.tv'],
+            domain: ['openload.co', 'oload.tv', 'oload.win'],
             runner: 'puppeteer',
             exec: async ({page}) => {
                 const streamurl = await page.$eval(
-                    '[id*=stream]',
-                    (e) => e.innerText);
+                    '[id*=stream], div[style*="display:none"] p:last-of-type',
+                    e => e.innerText);
                 const title = await page.$eval(
                     'meta[name="description"], meta[name="og:title"], meta[name="twitter:title"]',
-                    (e) => e.content);
+                    e => e.content).catch(e => undefined);
                 const thumb = await page.$eval(
                     'meta[name="og:image"], meta[name="twitter:image"]',
-                    (e) => e.content);
+                    e => e.content).catch(e => undefined);
                 return new SourceInfo({
                     source: new Source({
                         url: `https://openload.co/stream/${await streamurl}?mime=true`
@@ -183,47 +183,36 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
             domain: 'vidstreaming.io',
             runner: 'html',
             exec: async ({html}) => {
-                const titleregex =
-                    new RegExp(/<title>([^<]+)<\/title>/);
-                const setupregex =
-                    new RegExp(/playerInstance\.setup\({\s*sources\s*:\s*\[\s*{\s*(.*?)\s*}\s*]\s*,?\s*}\);/, 'gi');
-                const loadregex =
-                    new RegExp(/playerInstance\.load\({\s*(.*?)\s*,?\s*}\)\s*;/, 'gi');
+                const titleregex = /<title>([^<]+)<\/title>/;
+                const dataregex = /playerInstance\.(setup|load)\(({.*?})\)/gi;
 
                 html = removeNewline(html);
 
-                const setupjson =
-                    '[' + setupregex
-                        .execAll(html)
-                        .map((match) => match.length > 1 ? match[1] : null)
-                        .filter((e) => e !== null)
-                        .map((s) => s.replace(/'/g, '"'))
-                        .map((s) => s.replace(/(^|,|{)\s*(file|label|type)\s*:/g, '$1"$2":'))
-                        .map((s) => '{' + s + '}')
-                        .reduce((a, c) => a + ',' + c) + ']';
-                const setupdata = JSON.parse(setupjson);
-                const loadjson =
-                    '[' + loadregex
-                        .execAll(html)
-                        .map((match) => match.length > 1 ? match[1] : null)
-                        .filter((e) => e !== null)
-                        .map((s) => s.replace(/'/g, '"'))
-                        .map((s) => s.replace(/(^|,|{)\s*(file|label|type)\s*:/g, '$1"$2":'))
-                        .map((s) => '{' + s + '}')
-                        .reduce((a, c) => a + ',' + c) + ']';
-                const loaddata = JSON.parse(loadjson);
+                const data = dataregex
+                    .execAll(html)
+                    .map(match => match.length >= 3 ? match[2] : null)
+                    .filter(e => e)
+                    .map(e => objectLiteralStringToObject.parse(e))
+                    .filter(e => e);
 
-                const srcdata = setupdata.concat(loaddata)
-                    .filter((e) => typeOf(e.file) === 'string' && !e.file.includes('error.com'));
+                const sources = new Set(data
+                    .filter(e => Array.isArray(e.sources) && e.sources.length > 0)
+                    .flatMap(e => e.sources)
+                    .filter(e => e && typeOf(e.file) === 'string' && !e.file.includes('error.com')));
+
+                const images = new Set(data
+                    .filter(e => e.image)
+                    .map(e => e.image));
 
                 const titles = titleregex.exec(html);
-                const title = titles !== null && titles.length >= 1 ? titles[0] : undefined;
 
                 return new SourceInfo({
-                    title,
-                    source: srcdata.map((e) => new Source({
-                        url: e.file
-                    }))
+                    title: titles && titles[0] || undefined,
+                    source: [...sources].map(e => new Source({
+                        url: e.file,
+                        type: e.type || undefined
+                    })),
+                    poster: images[0] || undefined
                 });
             }
         }),

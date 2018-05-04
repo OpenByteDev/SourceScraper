@@ -5,14 +5,14 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
 
     config.puppeteer.headless = true;
     //config.puppeteer.executablePath = 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe';
+    //config.puppeteer.headless = false;
     config.puppeteer.args = ['--no-sandbox', '--disable-setuid-sandbox'];
 
     const urls = [
-        'https://openload.co/embed/zRpmqpRRaac/YuGiOhArcVEpisode123-rh-480.x.mp4',
-        'https://oload.tv/embed/fZOeAHeGgcI',
+        'https://oload.win/embed/3fz9J5E1aMg',
         'http://streamcloud.eu/dx008gqtcsdw/jumanji.SD-spectre.mkv.html',
         'https://vidzi.tv/8yrmh5ooflp6.html',
-        'http://vidstreaming.io/streaming.php?id=NzUwMDI=&title=Mob+Psycho+100+Episode+9',
+        'https://vidstreaming.io/streaming.php?id=MzkzNTA=&title=Sword+Art+Online+Episode+6',
         'https://streamango.com/embed/klkflffksmotebqk/YuGiOhArcVEpisode123-rh-343_mp4',
         'https://rapidvideo.com/e/FO24ULAW2H',
         'https://stream.moe/embed2/902293eb0f33cd5b',
