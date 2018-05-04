@@ -188,7 +188,21 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
 
                 html = removeNewline(html);
 
-                const data = dataregex
+                const data: Array<{
+                    sources: Array<{
+                        file: string,
+                        type: string,
+                        label: string
+                    }>,
+                    tracks: Array<{
+                        kind: 'thumbnail' | string,
+                        file: string
+                    }>,
+                    image: string,
+                    file: string,
+                    type: string,
+                    label: string
+                }> = dataregex
                     .execAll(html)
                     .map(match => match.length >= 3 ? match[2] : null)
                     .filter(e => e)
@@ -272,7 +286,7 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
     hoster: new ScrapperList(
         new HosterScrapper({
             name: 'Gogoanime',
-            domain: 'gogoanime.io',
+            domain: ['gogoanime.io', 'gogoanime.se'],
             runner: 'dom',
             exec: ({dom}) => {
                 const bodys = dom.getElementsByTagName('body');
