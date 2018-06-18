@@ -1,16 +1,17 @@
 const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../dist/index.js');
 
 (async () => {
+    
     config.showError = true;
 
     config.puppeteer.headless = true;
-    //config.puppeteer.executablePath = 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe';
-    //config.puppeteer.headless = false;
+    // config.puppeteer.executablePath = 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe';
+    // config.puppeteer.headless = false;
     config.puppeteer.args = ['--no-sandbox', '--disable-setuid-sandbox'];
 
     const urls = [
         'https://oload.win/embed/3fz9J5E1aMg',
-        'http://streamcloud.eu/dx008gqtcsdw/jumanji.SD-spectre.mkv.html',
+        // 'http://streamcloud.eu/dx008gqtcsdw/jumanji.SD-spectre.mkv.html', // test not working
         'https://vidzi.tv/8yrmh5ooflp6.html',
         'https://vidstreaming.io/streaming.php?id=MzkzNTA=&title=Sword+Art+Online+Episode+6',
         'https://streamango.com/embed/klkflffksmotebqk/YuGiOhArcVEpisode123-rh-343_mp4',
@@ -19,7 +20,7 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
 
         'https://ww3.gogoanime.io/death-note-episode-19',
         'https://www.masterani.me/anime/watch/2809-b-the-beginning/7',
-        'http://kissanime.ru/Anime/Yu-Gi-Oh-Arc-V-Dub/Episode-123?id=142754&s=default'
+        // 'http://kissanime.ru/Anime/Yu-Gi-Oh-Arc-V-Dub/Episode-123?id=142754&s=default' // test not working
     ];
 
     let allSuccess = true;
@@ -47,4 +48,5 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
     if (!allSuccess)
         process.exit(1);
     process.exit(0);
+
 })();

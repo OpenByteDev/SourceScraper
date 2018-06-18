@@ -9,7 +9,6 @@ import urlparser = require('urlparser');
 import { Hoster } from './Hoster';
 import { HosterInfo } from './HosterInfo';
 import { HosterScrapper } from './HosterScrapper';
-import { Runner } from './Runner';
 import { ScrapperList } from './ScrapperList';
 import { Source } from './Source';
 import { SourceInfo } from './SourceInfo';
@@ -108,7 +107,7 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
                     return null;
 
                 const htmlRunner = runners.getByType('html');
-                if (!(htmlRunner instanceof Runner))
+                if (typeof htmlRunner === 'undefined')
                     return null;
                 const html = await htmlRunner.run({
                     url,
@@ -510,9 +509,9 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
                     hoster: args.mirrors.map(e => new Hoster({
                         name: e.host.name,
                         url:
-                            e.host.embed_prefix.replace(/\\\//g, '/') +
+                            (e.host.embed_prefix || '').replace(/\\\//g, '/') +
                             e.embed_id +
-                            e.host.embed_suffix || '',
+                            (e.host.embed_suffix || ''),
                         quality: e.quality
                     }))
                 });
