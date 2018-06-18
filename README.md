@@ -13,7 +13,7 @@ Simple library which helps you to retrieve...
 
 #### Source
  - <sub><img src="http://www.google.com/s2/favicons?domain=oload.win" height="20"></sub> Openload (openload.co, oload.tv, oload.win)
- - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> Streamcloud (streamcloud.eu)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> Streamcloud (streamcloud.eu) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20"></sub> Vidzi (vidzi.tv)
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> Vidstreaming (vidstreaming.io)
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> Streamango (streamango.com)
@@ -23,7 +23,7 @@ Simple library which helps you to retrieve...
 #### Hoster
 - <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> MasterAnime (masterani.me)
 - <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> Gogoanime (gogoanime.io, gogoanime.se)
-- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> Kissanime (kissanime.ru)
+- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> Kissanime (kissanime.ru) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
 <hr>
 
 ## Getting Started
