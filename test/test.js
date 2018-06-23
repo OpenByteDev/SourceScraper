@@ -17,6 +17,7 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
         'https://streamango.com/embed/klkflffksmotebqk/YuGiOhArcVEpisode123-rh-343_mp4',
         'https://rapidvideo.com/e/FO24ULAW2H',
         'https://stream.moe/embed2/902293eb0f33cd5b',
+        'https://mp4upload.com/embed-0354jdnelp86.html',
 
         'https://ww3.gogoanime.io/death-note-episode-19',
         'https://www.masterani.me/anime/watch/2809-b-the-beginning/7',

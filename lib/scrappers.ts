@@ -280,6 +280,23 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
                     info.title = titleData[1];
                 return info;
             }
+        }),
+        new SourceScrapper({
+            name: 'MP4Upload',
+            domain: 'mp4upload.com',
+            runner: 'puppeteer',
+            exec: async ({page}) => {
+                // tslint:disable-next-line
+                let jwplayer; // remove typescript error "cannot find name 'jwplayer'"
+                const config = await page.evaluate(() => jwplayer().getConfig().playlistItem);
+                return new SourceInfo({
+                    poster: config.image,
+                    source: config.allSources.map((s) => new Source({
+                        url: s.file,
+                        type: s.type
+                    }))
+                });
+            }
         })
     ),
     hoster: new ScrapperList(

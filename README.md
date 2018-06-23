@@ -19,6 +19,7 @@ Simple library which helps you to retrieve...
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> Streamango (streamango.com)
  - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> Rapidvideo (rapidvideo.com)
  - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20"></sub> StreamMoe (stream.moe)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=mp4upload.com" height="20"></sub> MP4Upload (mp4upload.com)
 
 #### Hoster
 - <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> MasterAnime (masterani.me)
