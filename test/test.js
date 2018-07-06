@@ -11,7 +11,7 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
 
     const urls = [
         'https://oload.win/embed/3fz9J5E1aMg',
-        // 'http://streamcloud.eu/dx008gqtcsdw/jumanji.SD-spectre.mkv.html', // test not working
+        // 'http://streamcloud.eu/dx008gqtcsdw/jumanji.SD-spectre.mkv.html', // test not working on travis ci
         'https://vidzi.tv/8yrmh5ooflp6.html',
         'https://vidstreaming.io/streaming.php?id=MzkzNTA=&title=Sword+Art+Online+Episode+6',
         'https://streamango.com/embed/klkflffksmotebqk/YuGiOhArcVEpisode123-rh-343_mp4',
@@ -19,9 +19,9 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
         'https://stream.moe/embed2/902293eb0f33cd5b',
         'https://mp4upload.com/embed-0354jdnelp86.html',
 
-        'https://ww3.gogoanime.io/death-note-episode-19',
+        'https://www3.gogoanime.se/death-note-episode-19',
         'https://www.masterani.me/anime/watch/2809-b-the-beginning/7',
-        // 'http://kissanime.ru/Anime/Yu-Gi-Oh-Arc-V-Dub/Episode-123?id=142754&s=default' // test not working
+        // 'http://kissanime.ru/Anime/Yu-Gi-Oh-Arc-V-Dub/Episode-123?id=142754&s=default' // test not working on travis ci
     ];
 
     let allSuccess = true;
