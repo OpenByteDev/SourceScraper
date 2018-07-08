@@ -160,7 +160,7 @@ export const scrappers: { stream: ScrapperList, hoster: ScrapperList } = {
         }),
         new SourceScrapper({
             name: 'Vidzi',
-            domain: 'vidzi.tv',
+            domain: ['vidzi.tv', 'vidzi.online'],
             runner: 'puppeteer',
             exec: async ({page}) => {
                 // tslint:disable-next-line
