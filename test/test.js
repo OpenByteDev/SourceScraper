@@ -1,12 +1,12 @@
 const { config, scrappers, SourceInfo, HosterInfo } = require('../dist/index.js');
-const isTravisCiBuild = require('is-travis-ci-build');
+const isTravis = require('is-travis');
 
 (async () => {
     
     config.showError = true;
     config.puppeteer.headless = true;
 
-    if (isTravisCiBuild())
+    if (isTravis)
         config.puppeteer.args = ['--no-sandbox'];
 
     const urls = [
