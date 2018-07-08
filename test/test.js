@@ -1,13 +1,13 @@
 const { config, scrappers, SourceInfo, HosterInfo } = require('../dist/index.js');
+const isTravisCiBuild = require('is-travis-ci-build');
 
 (async () => {
     
     config.showError = true;
+    config.puppeteer.headless = true;
 
-    config.puppeteer.headless = false;
-    // config.puppeteer.executablePath = 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe';
-    // config.puppeteer.headless = false;
-    config.puppeteer.args = ['--no-sandbox', '--disable-setuid-sandbox'];
+    if (isTravisCiBuild())
+        config.puppeteer.args = ['--no-sandbox'];
 
     const urls = [
         'https://oload.win/embed/3fz9J5E1aMg',
