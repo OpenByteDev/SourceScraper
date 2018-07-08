@@ -1,10 +1,10 @@
-const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../dist/index.js');
+const { config, scrappers, SourceInfo, HosterInfo } = require('../dist/index.js');
 
 (async () => {
     
     config.showError = true;
 
-    config.puppeteer.headless = true;
+    config.puppeteer.headless = false;
     // config.puppeteer.executablePath = 'C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe';
     // config.puppeteer.headless = false;
     config.puppeteer.args = ['--no-sandbox', '--disable-setuid-sandbox'];
@@ -17,7 +17,7 @@ const { config, scrappers, classes: { SourceInfo, HosterInfo } } = require('../d
         'https://streamango.com/embed/klkflffksmotebqk/YuGiOhArcVEpisode123-rh-343_mp4',
         'https://rapidvideo.com/e/FO24ULAW2H',
         'https://stream.moe/embed2/902293eb0f33cd5b',
-        'https://mp4upload.com/embed-0354jdnelp86.html',
+        'https://mp4upload.com/embed-w9hlxws8w3b6.html',
 
         'https://www3.gogoanime.se/death-note-episode-19',
         'https://www.masterani.me/anime/watch/2809-b-the-beginning/7',
