@@ -40,6 +40,7 @@
     "scripts": {
         "test": "node test/test.js",
         "lint": "tslint -p .",
+        "lint-fix": "tslint -p . --fix",
         "build": "tsc",
         "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name SourceScrapper --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
     },
