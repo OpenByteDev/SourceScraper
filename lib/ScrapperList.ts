@@ -18,6 +18,7 @@ export class ScrapperList extends Array<Scrapper> {
         return this.find((s) => s.isApplicable(url));
     }
     public getByName(name: string): Scrapper | undefined {
-        return this.find((s) => s.name === name);
+        name = name.toLowerCase();
+        return this.find((s) => s.name.toLowerCase() === name);
     }
 }
