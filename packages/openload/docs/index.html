@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SourceScrapper Masteranime</title>
+	<title>Openload Scrapper</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">SourceScrapper Masteranime</a>
+					<a href="index.html" class="title">Openload Scrapper</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,7 +54,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> SourceScrapper Masteranime</h1>
+			<h1> Openload Scrapper</h1>
 		</div>
 	</div>
 </header>
@@ -62,52 +62,14 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="sourcescrapper">SourceScrapper</h1>
+				<h1 id="openload-scrapper">Openload Scrapper</h1>
 				<p><a href="https://travis-ci.org/OpenByteDev/SourceScrapper"><img src="https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master" alt="Build Status"></a>
-					<a href="https://www.npmjs.com/package/sourcescrapper"><img src="https://badge.fury.io/js/sourcescrapper.svg" alt="npm version"></a>
-					<a href="https://david-dm.org/OpenByteDev/SourceScrapper"><img src="https://david-dm.org/OpenByteDev/SourceScrapper/status.svg" alt="Dependency Status"></a>
-					<a href="https://david-dm.org/OpenByteDev/SourceScrapper?type=dev"><img src="https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg" alt="DevDependency Status"></a>
+					<a href="https://www.npmjs.com/package/masteranime-scrapper"><img src="https://badge.fury.io/js/openload-scrapper.svg" alt="npm version"></a>
+					<a href="https://david-dm.org/OpenByteDev/openload-scrapper"><img src="https://david-dm.org/OpenByteDev/openload-scrapper/status.svg" alt="Dependency Status"></a>
+					<a href="https://david-dm.org/OpenByteDev/openload-scrapper?type=dev"><img src="https://david-dm.org/OpenByteDev/openload-scrapper/dev-status.svg" alt="DevDependency Status"></a>
 					<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="License"></a>
-					<a href=""><img src="https://img.shields.io/badge/doge-wow-yellow.svg" alt="Doge"></a>
-				<a href="https://lernajs.io/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="lerna"></a></p>
-				<p>Scrap the sources from your favorite video streaming sites.</p>
-				<hr>
-				<h2 id="supported-sites">Supported Sites</h2>
-				<h4 id="source">Source</h4>
-				<ul>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=oload.win" height="20"></sub> Openload (openload.co, oload.tv, oload.win)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20"></sub> Vidzi (vidzi.tv)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> Vidstreaming (vidstreaming.io)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> Streamango (streamango.com)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> Rapidvideo (rapidvideo.com)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20"></sub> StreamMoe (stream.moe)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=mp4upload.com" height="20"></sub> MP4Upload (mp4upload.com)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> Streamcloud (streamcloud.eu) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub></li>
-				</ul>
-				<h4 id="hoster">Hoster</h4>
-				<ul>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> MasterAnime (masterani.me)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> Gogoanime (gogoanime.io, gogoanime.se)</li>
-					<li><sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> Kissanime (kissanime.ru) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub><hr>
-					</li>
-				</ul>
-				<h2 id="getting-started">Getting Started</h2>
-				<h3 id="installation">Installation</h3>
-				<pre><code class="lang-bash">$ npm i sourcescrapper
-</code></pre>
-				<h3 id="usage">Usage</h3>
-				<pre><code class="lang-js"><span class="hljs-keyword">const</span> { scrappers } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sourcescrapper'</span>);
-
-<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
-    <span class="hljs-keyword">const</span> url = <span class="hljs-string">'some url'</span>;
-    <span class="hljs-keyword">const</span> scrapper = scrappers.getFirstApplicable(url);
-    <span class="hljs-keyword">const</span> scrap = <span class="hljs-keyword">await</span> scrapper.scrap(url);
-    <span class="hljs-keyword">if</span> (scrap.success)
-        <span class="hljs-built_in">console</span>.log(scrap.data.sources[<span class="hljs-number">0</span>].url);
-})();
-</code></pre>
-				<h3 id="api">API</h3>
-				<p>The API generated with <a href="http://typedoc.org/">TypeDoc</a> can be found <a href="https://openbytedev.github.io/SourceScrapper/">here</a>.</p>
+				<a href=""><img src="https://img.shields.io/badge/doge-wow-yellow.svg" alt="Doge"></a></p>
+				<p>A scrapper for Openload.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">

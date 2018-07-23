@@ -1,7 +1,7 @@
 {
     "name": "openload-scrapper",
     "version": "0.1.0",
-    "description": "A scrapper for masterani.me",
+    "description": "A scrapper for Openload",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
     "types": "types/index.d.ts",
@@ -10,13 +10,12 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.2.0",
-        "sourcescrapper-puppeteer-runner": "^0.1.0"
+        "sourcescrapper-core": "^0.2.1",
+        "sourcescrapper-puppeteer-runner": "^0.1.1"
     },
     "devDependencies": {
         "@types/node": "^10.5.2",
         "npm-run-all": "^4.1.3",
-        "npm-check-updates": "^2.14.2",
         "tslint": "^5.11.0",
         "tslint-eslint-rules": "^5.3.1",
         "typedoc": "^0.11.1",
@@ -27,8 +26,7 @@
         "lint": "tslint -p .",
         "lint-fix": "tslint -p . --fix",
         "build": "tsc",
-        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"Openload Scrapper\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals",
-        "check-updates": "ncu -a"
+        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"Openload Scrapper\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
     },
     "keywords": [
         "sourcescrapper",
@@ -38,7 +36,8 @@
         "openload",
         "oload",
         "openload.co",
-        "oload.tv"
+        "oload.tv",
+        "oload.win"
     ],
     "license": "MIT",
     "bugs": {

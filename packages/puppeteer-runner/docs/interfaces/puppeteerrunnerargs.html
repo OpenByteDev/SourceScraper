@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PuppeteerRunnerArgs | SourceScrapper DomRunner</title>
+	<title>PuppeteerRunnerArgs | SourceScrapper PuppeteerRunner</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">SourceScrapper DomRunner</a>
+					<a href="../index.html" class="title">SourceScrapper PuppeteerRunner</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -76,7 +76,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">any</span>
+						<span class="tsd-signature-type">RunnerArgs</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">PuppeteerRunnerArgs</span>
@@ -93,7 +93,10 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="puppeteerrunnerargs.html#browser" class="tsd-kind-icon">browser</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="puppeteerrunnerargs.html#options" class="tsd-kind-icon">options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="puppeteerrunnerargs.html#page" class="tsd-kind-icon">page</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="puppeteerrunnerargs.html#scrapper" class="tsd-kind-icon">scrapper</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="puppeteerrunnerargs.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,7 +110,18 @@
 					<div class="tsd-signature tsd-kind-icon">browser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Browser</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in PuppeteerRunner.ts:6</li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/a1783a0/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L6">PuppeteerRunner.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from RunnerArgs.options</p>
+						<ul>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/puppeteer-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:5</li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +131,29 @@
 					<div class="tsd-signature tsd-kind-icon">page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Page</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in PuppeteerRunner.ts:7</li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/a1783a0/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L7">PuppeteerRunner.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="scrapper" class="tsd-anchor"></a>
+					<h3>scrapper</h3>
+					<div class="tsd-signature tsd-kind-icon">scrapper<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RunnerExec</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from RunnerArgs.scrapper</p>
+						<ul>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/puppeteer-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:4</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="url" class="tsd-anchor"></a>
+					<h3>url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from RunnerArgs.url</p>
+						<ul>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/puppeteer-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:3</li>
 						</ul>
 					</aside>
 				</section>
@@ -150,8 +186,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="puppeteerrunnerargs.html#browser" class="tsd-kind-icon">browser</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="puppeteerrunnerargs.html#options" class="tsd-kind-icon">options</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="puppeteerrunnerargs.html#page" class="tsd-kind-icon">page</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="puppeteerrunnerargs.html#scrapper" class="tsd-kind-icon">scrapper</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="puppeteerrunnerargs.html#url" class="tsd-kind-icon">url</a>
 							</li>
 						</ul>
 					</li>
