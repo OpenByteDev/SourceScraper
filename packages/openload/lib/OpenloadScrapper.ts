@@ -1,4 +1,4 @@
-import { Source,SourceData, SourceScrapper } from 'sourcescrapper-core';
+import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
 
 import { PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 

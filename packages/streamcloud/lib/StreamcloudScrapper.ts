@@ -1,4 +1,4 @@
-import { Source, SourceData, SourceScrapper, integer, uri } from 'sourcescrapper-core';
+import { integer, Source, SourceData, SourceScrapper, uri } from 'sourcescrapper-core';
 import { HtmlRunner } from 'sourcescrapper-html-runner';
 
 import removeNewlines = require('newline-remove');
