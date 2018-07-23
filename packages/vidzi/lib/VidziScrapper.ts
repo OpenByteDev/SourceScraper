@@ -10,7 +10,7 @@ export class VidziScrapper extends SourceScrapper {
     public domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
     public urlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/;
     public async run(url: string): Promise<SourceData> {
-        return PuppeteerRunner.run(url, async ({page}) => {
+        return PuppeteerRunner.run(url, async ({ page }) => {
             // tslint:disable-next-line
             let jwplayer; // remove typescript error "cannot find name 'jwplayer'"
             const config = await page.evaluate(() => jwplayer().getConfig());
@@ -20,7 +20,7 @@ export class VidziScrapper extends SourceScrapper {
                 jwplayerConfig: config,
                 poster: playlistItem.image,
                 title,
-                source: playlistItem.allSources.map((s) => new Source({
+                sources: playlistItem.allSources.map((s) => new Source({
                     url: s.file,
                     type: s.type
                 }))
