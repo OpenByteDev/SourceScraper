@@ -1,53 +1,5 @@
 {
-    "name": "sourcescrapper",
-    "version": "0.10.4",
-    "description": "Simple library which helps you to retrieve the source of various video streaming sites. ",
-    "author": "OpenByte <development.openbyte@gmail.com>",
-    "main": "dist/index.js",
-    "types": "types/index.d.ts",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/OpenByteDev/SourceScrapper.git"
-    },
-    "dependencies": {
-        "axios": "^0.18.0",
-        "htmlstringparser": "^0.2.0",
-        "is-travis": "^2.0.0",
-        "newline-remove": "^1.0.2",
-        "normalize-url": "^3.1.0",
-        "object-literal-string-to-object": "^0.2.2",
-        "object-merge": "^2.5.1",
-        "puppeteer": "^1.5.0",
-        "query-string": "^6.1.0",
-        "random-number": "^0.0.9",
-        "typeof": "^1.0.0",
-        "urlparser": "^0.3.9"
-    },
-    "devDependencies": {
-        "@types/newline-remove": "^1.0.0",
-        "@types/node": "^10.5.2",
-        "@types/normalize-url": "^1.9.1",
-        "@types/object-merge": "^2.5.0",
-        "@types/puppeteer": "^1.5.0",
-        "@types/query-string": "^6.1.0",
-        "@types/random-number": "^0.0.0",
-        "@types/typeof": "^1.0.0",
-        "@types/urlparser": "^0.2.0",
-        "tslint": "^5.10.0",
-        "typedoc": "^0.11.1",
-        "typescript": "^2.9.2"
-    },
-    "scripts": {
-        "test": "node test/test.js",
-        "lint": "tslint -p .",
-        "lint-fix": "tslint -p . --fix",
-        "build": "tsc",
-        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name SourceScrapper --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
-    },
-    "keywords": [
-        "source",
-        "scrapper",
-        "extractor"
-    ],
-    "license": "MIT"
+	"devDependencies": {
+		"lerna": "^2.11.0"
+	}
 }

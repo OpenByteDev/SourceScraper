@@ -1,5 +1,3 @@
 node_modules
 .idea
-.git
-dist
-types
+lerna-debug.log
