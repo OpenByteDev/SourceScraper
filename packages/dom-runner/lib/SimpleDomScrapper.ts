@@ -4,7 +4,8 @@ import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
 
 export class SimpleScrapper extends SourceScrapper {
     public name: string =  'simple';
-    public domains: RegExp = /.*/;
+    public domains: string[] = [];
+    public urlPattern: RegExp = /.*/;
     public async run(url: string): Promise<SourceData> {
         return DomRunner.run<SourceData>(url, ({ dom }) => {
             const data: SourceData = {
