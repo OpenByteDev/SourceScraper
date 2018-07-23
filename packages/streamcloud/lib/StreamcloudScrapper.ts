@@ -21,9 +21,9 @@ export interface StreamcloudSourceData extends SourceData {
 export class StreamcloudScrapper extends SourceScrapper {
     public name: string = 'streamcloud';
     public domains: string[] = ['streamcloud.eu'];
-    public urlPattern: RegExp = /https?:\/\/streamcloud\.eu\/(\w+)\/(.+)/;
+    public urlPattern: RegExp = /https?:\/\/streamcloud\.eu\/(\w+)\/(.+)/i;
     public async run(url: uri): Promise<StreamcloudSourceData> {
-        const dataRegex = new RegExp(/\/([^\/.]+)\/(.*)\.[^.]+/, 'i');
+        const dataRegex = /\/([^\/.]+)\/(.*)\.[^.]+/i;
         const data = dataRegex.exec(url);
         if (data === null || data.length <= 2)
             return Promise.reject(null);
@@ -56,8 +56,8 @@ export class StreamcloudScrapper extends SourceScrapper {
             }
             );
 
-        const configRegex = new RegExp(/jwplayer\("[^"]+"\).setup\({(.*?)}\);/, 'i');
-        const propRegex = new RegExp(/(\w+)\s*:\s*"?(.*?)"?\s*,/, 'ig');
+        const configRegex = /jwplayer\("[^"]+"\).setup\({(.*?)}\);/i;
+        const propRegex = /(\w+)\s*:\s*"?(.*?)"?\s*,/ig;
         const tabRegex = /(?:\\t|\t)/g;
         const configData = configRegex.exec(html);
         if (!configData || configData.length < 1)
