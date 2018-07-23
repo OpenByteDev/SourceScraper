@@ -15,6 +15,7 @@
     "devDependencies": {
         "@types/node": "^10.5.2",
         "npm-run-all": "^4.1.3",
+        "ncu": "^0.2.1",
         "tslint": "^5.11.0",
         "tslint-eslint-rules": "^5.3.1",
         "typedoc": "^0.11.1",
@@ -25,10 +26,16 @@
         "lint": "tslint -p .",
         "lint-fix": "tslint -p . --fix",
         "build": "tsc",
-        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"SourceScrapper UrlRunner\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
+        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"SourceScrapper UrlRunner\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals",
+        "update-dep": "ncu -a && npm i"
     },
     "keywords": [
-        "sourcescrapper"
+        "sourcescrapper",
+        "source",
+        "scrapper",
+        "extractor",
+        "sourcescrapper-runner",
+        "url"
     ],
     "license": "MIT",
     "bugs": {
