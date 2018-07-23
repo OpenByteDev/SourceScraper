@@ -1,6 +1,6 @@
 {
     "name": "streamcloud-scrapper",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "A scrapper for masterani.me",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -12,8 +12,8 @@
     "dependencies": {
         "newline-remove": "^1.0.2",
         "query-string": "^6.1.0",
-        "sourcescrapper-core": "^0.2.0",
-        "sourcescrapper-html-runner": "^0.1.0"
+        "sourcescrapper-core": "^0.2.2",
+        "sourcescrapper-html-runner": "^0.1.3"
     },
     "devDependencies": {
         "@types/node": "^10.5.2",
