@@ -8,7 +8,7 @@ export interface MasterAnimeHosterData extends HosterData {
 export class MasterAnimeScrapper extends HosterScrapper {
     public name: string = 'masteranime';
     public domains: string[] = ['masterani.me'];
-    public urlPattern: RegExp = /https?:\/\/www\.masterani\.me\/anime\/watch\/(\d+-(?:\w+-)+\w+)\/(\d+)/;
+    public urlPattern: RegExp = /https?:\/\/(www\.)?masterani\.me\/anime\/watch\/(\d+-(?:\w+-)+\w+)\/(\d+)/i;
     public async run(url: string): Promise<MasterAnimeHosterData> {
         const data = await MasterAnimeAPI.getEpisodeDetailedFromUrl(url);
         return {

@@ -1,5 +1,4 @@
 import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
-
 import { PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface OpenloadSourceData extends SourceData {
@@ -8,7 +7,7 @@ export interface OpenloadSourceData extends SourceData {
 export class OpenloadScrapper extends SourceScrapper {
     public name: string = 'openload';
     public domains: string[] = ['openload.co', 'oload.tv', 'oload.win'];
-    public urlPattern: RegExp = /https?:\/\/(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/;
+    public urlPattern: RegExp = /https?:\/\/(www\.)?(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/i;
     public async run(url: string): Promise<OpenloadSourceData> {
         return PuppeteerRunner.run(url, async ({ page }) => {
             const streamurl = await page.$eval(
