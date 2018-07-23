@@ -4,6 +4,4 @@ node_js:
 notifications:
   email: false
 script:
-  - "npm run lint"
-  - "npm run build"
-  - "npm test"
+  - "lerna run test"
