@@ -2,4 +2,5 @@ node_modules
 .idea
 dist
 types
-/**/*.lerna_backup
+*.lerna_backup
+*.log
