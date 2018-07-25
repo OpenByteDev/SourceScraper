@@ -1,8 +1,8 @@
-# SourceScrapper-PuppeteerRunner
+# Rapidvideo Scrapper
 
 [![Build Status](https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScrapper)
-[![npm version](https://badge.fury.io/js/sourcescrapper-puppeteer-runner.svg)](https://www.npmjs.com/package/sourcescrapper-puppeteer-runner)
+[![npm version](https://badge.fury.io/js/rapidvideo-scrapper.svg)](https://www.npmjs.com/package/rapidvideo-scrapper)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Doge](https://img.shields.io/badge/doge-wow-yellow.svg)]()
 
-Provides the PuppeteerRunner class for scrapping.
+A scrapper for Rapidvideo.
