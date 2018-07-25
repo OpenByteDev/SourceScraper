@@ -1,9 +1,11 @@
-import { Scrap, Hoster, HosterData, HosterScrapper } from 'sourcescrapper-core';
+import { MasterAnimeHoster } from './MasterAnimeHoster';
 
 import { MasterAnimeAPI } from 'masteranime-api';
+import { HosterData, HosterScrapper, Scrap } from 'sourcescrapper-core';
 
 export interface MasterAnimeHosterData extends HosterData {
     data: MasterAnimeAPI;
+    hosters: MasterAnimeHoster[];
 }
 export class MasterAnimeScrapper extends HosterScrapper<MasterAnimeHosterData> {
     public static Name: string = 'masteranime';
@@ -20,13 +22,17 @@ export class MasterAnimeScrapper extends HosterScrapper<MasterAnimeHosterData> {
         return {
             data,
             title: data.anime.info.title,
-            hosters: data.mirrors.map(e => new Hoster({
+            hosters: data.mirrors.map(e => new MasterAnimeHoster({
                 name: e.host.name,
                 quality: e.quality,
                 url:
                 (e.host.embed_prefix || '').replace(/\\\//g, '/') +
                 e.embed_id +
                 (e.host.embed_suffix || ''),
+                host_id: e.host_id,
+                embed_id: e.embed_id,
+                host: e.host,
+                type: e.type
             }))
         };
     }
