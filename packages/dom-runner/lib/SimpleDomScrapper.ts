@@ -1,12 +1,18 @@
 import { DomRunner } from './DomRunner';
 
-import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
+import { Scrap, Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
 
-export class SimpleScrapper extends SourceScrapper {
-    public name: string =  'simple';
-    public domains: string[] = [];
-    public urlPattern: RegExp = /.*/;
-    public async run(url: string): Promise<SourceData> {
+export class SimpleDomScrapper extends SourceScrapper {
+    public static Name: string = 'simpledom';
+    public static Domains: string[] = [];
+    public static UrlPattern: RegExp = /.*/;
+    public static async scrap(url: string): Promise<Scrap<SourceData>> {
+        return new SimpleDomScrapper().scrap(url);
+    }
+    public name: string =  SimpleDomScrapper.Name;
+    public domains: string[] = SimpleDomScrapper.Domains;
+    public urlPattern: RegExp = SimpleDomScrapper.UrlPattern;
+    protected async run(url: string): Promise<SourceData> {
         return DomRunner.run<SourceData>(url, ({ dom }) => {
             const data: SourceData = {
                 sources: []
