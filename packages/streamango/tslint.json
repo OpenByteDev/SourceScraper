@@ -8,7 +8,7 @@
         "linebreak-style": [true, "CRLF"],
         "trailing-comma": false,
         "object-literal-sort-keys": false,
-        "no-eval": true,
+        "no-eval": false,
         "arrow-parens": false,
         "no-conditional-assignment": false,
         "variable-name": false,
