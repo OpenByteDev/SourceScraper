@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>VSSource | Vidstreaming Scrapper</title>
+	<title>IVidstreamingSource | Vidstreaming Scrapper</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="vssource.html">VSSource</a>
+					<a href="ividstreamingsource.html">IVidstreamingSource</a>
 				</li>
 			</ul>
-			<h1>Interface VSSource</h1>
+			<h1>Interface IVidstreamingSource</h1>
 		</div>
 	</div>
 </header>
@@ -68,8 +68,19 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">VSSource</span>
+						<span class="tsd-signature-type">ISource</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IVidstreamingSource</span>
+							</li>
+						</ul>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/vidstreamingsource.html" class="tsd-signature-type">VidstreamingSource</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -79,9 +90,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vssource.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vssource.html#label" class="tsd-kind-icon">label</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vssource.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ividstreamingsource.html#codec" class="tsd-kind-icon">codec</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ividstreamingsource.html#label" class="tsd-kind-icon">label</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ividstreamingsource.html#quality" class="tsd-kind-icon">quality</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ividstreamingsource.html#resolution" class="tsd-kind-icon">resolution</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ividstreamingsource.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ividstreamingsource.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,13 +103,14 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="codec" class="tsd-anchor"></a>
+					<h3>codec</h3>
+					<div class="tsd-signature tsd-kind-icon">codec<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
+						<p>Overrides ISource.codec</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidstreaming/lib/VidstreamingScrapper.ts#L19">VidstreamingScrapper.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidstreaming/lib/VidstreamingSource.ts#L8">VidstreamingSource.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -105,17 +120,50 @@
 					<div class="tsd-signature tsd-kind-icon">label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidstreaming/lib/VidstreamingScrapper.ts#L21">VidstreamingScrapper.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidstreaming/lib/VidstreamingSource.ts#L5">VidstreamingSource.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="quality" class="tsd-anchor"></a>
+					<h3>quality</h3>
+					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidstreaming/lib/VidstreamingSource.ts#L6">VidstreamingSource.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="resolution" class="tsd-anchor"></a>
+					<h3>resolution</h3>
+					<div class="tsd-signature tsd-kind-icon">resolution<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides ISource.resolution</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidstreaming/lib/VidstreamingSource.ts#L7">VidstreamingSource.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Overrides ISource.type</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidstreaming/lib/VidstreamingScrapper.ts#L20">VidstreamingScrapper.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidstreaming/lib/VidstreamingSource.ts#L4">VidstreamingSource.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="url" class="tsd-anchor"></a>
+					<h3>url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ISource.url</p>
+						<ul>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidstreaming/node_modules/sourcescrapper-core/types/Source.d.ts:2</li>
 						</ul>
 					</aside>
 				</section>
@@ -134,31 +182,46 @@
 					<li class=" tsd-kind-class">
 						<a href="../classes/vidstreamingscrapper.html" class="tsd-kind-icon">Vidstreaming<wbr>Scrapper</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="setupdataentry.html" class="tsd-kind-icon">Setup<wbr>Data<wbr>Entry</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="track.html" class="tsd-kind-icon">Track</a>
+					<li class=" tsd-kind-class">
+						<a href="../classes/vidstreamingsource.html" class="tsd-kind-icon">Vidstreaming<wbr>Source</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="vssource.html" class="tsd-kind-icon">VSSource</a>
+						<a href="ividstreamingsource.html" class="tsd-kind-icon">IVidstreaming<wbr>Source</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vssource.html#file" class="tsd-kind-icon">file</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="ividstreamingsource.html#codec" class="tsd-kind-icon">codec</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vssource.html#label" class="tsd-kind-icon">label</a>
+								<a href="ividstreamingsource.html#label" class="tsd-kind-icon">label</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vssource.html#type" class="tsd-kind-icon">type</a>
+								<a href="ividstreamingsource.html#quality" class="tsd-kind-icon">quality</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="ividstreamingsource.html#resolution" class="tsd-kind-icon">resolution</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="ividstreamingsource.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="ividstreamingsource.html#url" class="tsd-kind-icon">url</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface">
+						<a href="setupdataentry.html" class="tsd-kind-icon">Setup<wbr>Data<wbr>Entry</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="track.html" class="tsd-kind-icon">Track</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="vsource.html" class="tsd-kind-icon">VSource</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="vidstreamingsourcedata.html" class="tsd-kind-icon">Vidstreaming<wbr>Source<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">

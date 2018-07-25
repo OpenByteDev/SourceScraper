@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Source | SourceScrapper Vidzi</title>
+	<title>IVidziSource | SourceScrapper Vidzi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="source.html">Source</a>
+					<a href="ividzisource.html">IVidziSource</a>
 				</li>
 			</ul>
-			<h1>Interface Source</h1>
+			<h1>Interface IVidziSource</h1>
 		</div>
 	</div>
 </header>
@@ -68,8 +68,19 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Source</span>
+						<span class="tsd-signature-type">ISource</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IVidziSource</span>
+							</li>
+						</ul>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/vidzisource.html" class="tsd-signature-type">VidziSource</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -79,11 +90,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="source.html#default" class="tsd-kind-icon">default</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="source.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="source.html#label" class="tsd-kind-icon">label</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="source.html#preload" class="tsd-kind-icon">preload</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="source.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ividzisource.html#codec" class="tsd-kind-icon">codec</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ividzisource.html#default" class="tsd-kind-icon">default</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ividzisource.html#label" class="tsd-kind-icon">label</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ividzisource.html#preload" class="tsd-kind-icon">preload</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ividzisource.html#resolution" class="tsd-kind-icon">resolution</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ividzisource.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ividzisource.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,23 +104,24 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="codec" class="tsd-anchor"></a>
+					<h3>codec</h3>
+					<div class="tsd-signature tsd-kind-icon">codec<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides ISource.codec</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziSource.ts#L8">VidziSource.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="default" class="tsd-anchor"></a>
 					<h3>default</h3>
 					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidzi/lib/VidziScrapper.ts#L41">VidziScrapper.ts:41</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidzi/lib/VidziScrapper.ts#L42">VidziScrapper.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziSource.ts#L4">VidziSource.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +131,7 @@
 					<div class="tsd-signature tsd-kind-icon">label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidzi/lib/VidziScrapper.ts#L43">VidziScrapper.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziSource.ts#L5">VidziSource.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -127,17 +141,40 @@
 					<div class="tsd-signature tsd-kind-icon">preload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidzi/lib/VidziScrapper.ts#L45">VidziScrapper.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziSource.ts#L7">VidziSource.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="resolution" class="tsd-anchor"></a>
+					<h3>resolution</h3>
+					<div class="tsd-signature tsd-kind-icon">resolution<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides ISource.resolution</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziSource.ts#L9">VidziSource.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Overrides ISource.type</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/5554560/packages/vidzi/lib/VidziScrapper.ts#L44">VidziScrapper.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziSource.ts#L6">VidziSource.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="url" class="tsd-anchor"></a>
+					<h3>url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ISource.url</p>
+						<ul>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Source.d.ts:2</li>
 						</ul>
 					</aside>
 				</section>
@@ -156,6 +193,9 @@
 					<li class=" tsd-kind-class">
 						<a href="../classes/vidziscrapper.html" class="tsd-kind-icon">Vidzi<wbr>Scrapper</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/vidzisource.html" class="tsd-kind-icon">Vidzi<wbr>Source</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="advertising.html" class="tsd-kind-icon">Advertising</a>
 					</li>
@@ -168,6 +208,36 @@
 					<li class=" tsd-kind-interface">
 						<a href="captionslistitem.html" class="tsd-kind-icon">Captions<wbr>List<wbr>Item</a>
 					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="ividzisource.html" class="tsd-kind-icon">IVidzi<wbr>Source</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="ividzisource.html#codec" class="tsd-kind-icon">codec</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ividzisource.html#default" class="tsd-kind-icon">default</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ividzisource.html#label" class="tsd-kind-icon">label</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ividzisource.html#preload" class="tsd-kind-icon">preload</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="ividzisource.html#resolution" class="tsd-kind-icon">resolution</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="ividzisource.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="ividzisource.html#url" class="tsd-kind-icon">url</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="jwplayerconfig.html" class="tsd-kind-icon">JWPlayer<wbr>Config</a>
 					</li>
@@ -189,32 +259,11 @@
 					<li class=" tsd-kind-interface">
 						<a href="setupconfig.html" class="tsd-kind-icon">Setup<wbr>Config</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="source.html" class="tsd-kind-icon">Source</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="source.html#default" class="tsd-kind-icon">default</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="source.html#file" class="tsd-kind-icon">file</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="source.html#label" class="tsd-kind-icon">label</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="source.html#preload" class="tsd-kind-icon">preload</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="source.html#type" class="tsd-kind-icon">type</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="track.html" class="tsd-kind-icon">Track</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="vsource.html" class="tsd-kind-icon">VSource</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="vidzisourcedata.html" class="tsd-kind-icon">Vidzi<wbr>Source<wbr>Data</a>
