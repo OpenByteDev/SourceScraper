@@ -1,6 +1,6 @@
 import { StreamangoSource } from './StreamangoSource';
 
-import { Scrap, Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
+import { Scrap, SourceData, SourceScrapper } from 'sourcescrapper-core';
 import { PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface StreamangoSourceData extends SourceData {
