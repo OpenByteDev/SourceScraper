@@ -1,4 +1,6 @@
-import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
+import { VidstreamingSource } from './VidstreamingSource';
+
+import { Scrap, SourceData, SourceScrapper } from 'sourcescrapper-core';
 import { HtmlRunner } from 'sourcescrapper-html-runner';
 
 import jsonic = require('jsonic');
@@ -8,14 +10,14 @@ export interface VidstreamingSourceData extends SourceData {
     setupData: SetupDataEntry[];
 }
 export interface SetupDataEntry {
-    sources: VSSource[];
+    sources: VSource[];
     tracks: Track[];
     image: string;
     file: string;
     type: string;
     label: string;
 }
-export interface VSSource {
+export interface VSource {
     file: string;
     type: string;
     label: string;
@@ -30,11 +32,17 @@ function isString(obj: any): obj is string {
 function isNotNull<T>(obj: T | null): obj is T {
     return obj !== null;
 }
-export class VidstreamingScrapper extends SourceScrapper {
-    public name: string = 'openload';
-    public domains: string[] = ['openload.co', 'oload.tv', 'oload.win'];
-    public urlPattern: RegExp = /https?:\/\/(www\.)?(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/i;
-    public async run(url: string): Promise<VidstreamingSourceData> {
+export class VidstreamingScrapper extends SourceScrapper<VidstreamingSourceData> {
+    public static Name: string = 'vidstreaming';
+    public static Domains: string[] = ['vidstreaming'];
+    public static UrlPattern: RegExp = /https?:\/\/(www\.)?vidstreaming\.io\/embed\/(\w+)/i;
+    public static async scrap(url: string): Promise<Scrap<VidstreamingSourceData>> {
+        return new VidstreamingScrapper().scrap(url);
+    }
+    public name: string = VidstreamingScrapper.Name;
+    public domains: string[] = VidstreamingScrapper.Domains;
+    public urlPattern: RegExp = VidstreamingScrapper.UrlPattern;
+    protected async run(url: string): Promise<VidstreamingSourceData> {
         return HtmlRunner.run(url, async ({ html }) => {
             const titleregex = /<title>([^<]+)<\/title>/i;
             const dataregex = /playerInstance\.(setup|load)\(({.*?})\)/gi;
@@ -62,10 +70,7 @@ export class VidstreamingScrapper extends SourceScrapper {
                 title: titles && titles[0] || undefined,
                 sources: [...sources]
                     .filter(e => e && e.file && isString(e.file))
-                    .map(e => new Source({
-                    url: e.file,
-                    type: e.type
-                })),
+                    .map(e => new VidstreamingSource(e)),
                 poster: images[0] as string || undefined,
                 setupData: data
             };

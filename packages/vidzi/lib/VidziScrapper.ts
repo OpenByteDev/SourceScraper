@@ -1,9 +1,12 @@
-import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
+import { VidziSource } from './VidziSource';
 
+import { Scrap, SourceData, SourceScrapper } from 'sourcescrapper-core';
 import { PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
-export interface VidziSourceData extends SourceData {
+export interface VidziSourceData extends SourceData<VidziSource> {
     jwplayerConfig: JWPlayerConfig;
+    poster: string;
+    title: string;
 }
 export interface Localization {
     player: string;
@@ -37,7 +40,7 @@ export interface Localization {
     copied: string;
     videoInfo: string;
 }
-export interface Source {
+export interface VSource {
     default: boolean;
     file: string;
     label: string;
@@ -65,13 +68,13 @@ export interface Track {
 }
 export type FeedData = object;
 export interface Playlist {
-    sources: Source[];
+    sources: VSource[];
     tracks: Track[];
     minDvrWindow: number;
     dvrSeekLimit: number;
     image: string;
     preload: string;
-    allSources: Source[];
+    allSources: VSource[];
     file: string;
     feedData: FeedData;
 }
@@ -84,7 +87,7 @@ export interface Captions {
 }
 export interface SetupConfig {
     image: string;
-    sources: Source[];
+    sources: VSource[];
     tracks: Track[];
     height: string;
     base: string;
@@ -98,13 +101,13 @@ export interface SetupConfig {
 export type ItemMeta = object;
 export type MediaContainer = object;
 export interface PlaylistItem {
-    sources: Source[];
+    sources: VSource[];
     tracks: Track[];
     minDvrWindow: number;
     dvrSeekLimit: number;
     image: string;
     preload: string;
-    allSources: Source[];
+    allSources: VSource[];
     file: string;
     feedData: FeedData;
 }
@@ -141,7 +144,7 @@ export interface JWPlayerConfig {
     volume: number;
     width: string;
     image: string;
-    sources: Source[];
+    sources: VSource[];
     tracks: Track[];
     base: string;
     hls_startfromlevel: number;
@@ -198,11 +201,17 @@ export interface JWPlayerConfig {
     currentTime: number;
     instreamMode: boolean;
 }
-export class VidziScrapper extends SourceScrapper {
+export class VidziScrapper extends SourceScrapper<VidziSourceData> {
+    public static Name: string = 'vidzi';
+    public static Domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
+    public static UrlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
+    public static async scrap(url: string): Promise<Scrap<VidziSourceData>> {
+        return new VidziScrapper().scrap(url);
+    }
     public name: string = 'vidzi';
     public domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
     public urlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
-    public async run(url: string): Promise<SourceData> {
+    protected async run(url: string): Promise<VidziSourceData> {
         return PuppeteerRunner.run(url, async ({ page }) => {
             // tslint:disable-next-line
             let jwplayer; // remove typescript error "cannot find name 'jwplayer'"
@@ -213,9 +222,12 @@ export class VidziScrapper extends SourceScrapper {
                 jwplayerConfig: config,
                 poster: playlistItem.image,
                 title,
-                sources: playlistItem.allSources.map((s) => new Source({
+                sources: playlistItem.allSources.map(s => new VidziSource({
+                    default: s.default,
                     url: s.file,
-                    type: s.type
+                    type: s.type,
+                    label: s.label,
+                    preload: s.preload
                 }))
             };
         });
