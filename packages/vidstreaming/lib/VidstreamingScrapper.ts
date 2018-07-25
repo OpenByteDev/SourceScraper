@@ -70,7 +70,14 @@ export class VidstreamingScrapper extends SourceScrapper<VidstreamingSourceData>
                 title: titles && titles[0] || undefined,
                 sources: [...sources]
                     .filter(e => e && e.file && isString(e.file))
-                    .map(e => new VidstreamingSource(e)),
+                    .map(e => new VidstreamingSource({
+                        url: e.file,
+                        label: e.label,
+                        type: e.type,
+                        quality: undefined,
+                        codec: undefined,
+                        resolution: undefined
+                    })),
                 poster: images[0] as string || undefined,
                 setupData: data
             };

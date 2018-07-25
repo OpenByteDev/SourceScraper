@@ -227,7 +227,9 @@ export class VidziScrapper extends SourceScrapper<VidziSourceData> {
                     url: s.file,
                     type: s.type,
                     label: s.label,
-                    preload: s.preload
+                    preload: s.preload,
+                    codec: undefined,
+                    resolution: undefined
                 }))
             };
         });
