@@ -6,5 +6,9 @@
 		"tslint-eslint-rules": "^5.3.1",
 		"typedoc": "^0.11.1",
 		"typescript": "^2.9.2"
+	},
+	"scripts": {
+		"clean": "npm run powershell ./clean_generated_files.ps1",
+		"powershell": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command"
 	}
 }
