@@ -1,10 +1,9 @@
 import { Hoster } from './Hoster';
 import { Scrapper } from './Scrapper';
 
-export interface HosterData {
+export interface HosterData<T extends Hoster = Hoster> {
     title?: string;
-    hosters: Hoster[];
+    hosters: T[];
 }
-export abstract class HosterScrapper extends Scrapper<HosterData> {
-    public abstract run(url: string): Promise<HosterData>;
+export abstract class HosterScrapper<T extends HosterData = HosterData> extends Scrapper<T> {
 }
