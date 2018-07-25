@@ -1,14 +1,20 @@
-import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
+import { Scrap, Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
 import { PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface OpenloadSourceData extends SourceData {
     streamurl: string;
 }
-export class OpenloadScrapper extends SourceScrapper {
-    public name: string = 'openload';
-    public domains: string[] = ['openload.co', 'oload.tv', 'oload.win'];
-    public urlPattern: RegExp = /https?:\/\/(www\.)?(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/i;
-    public async run(url: string): Promise<OpenloadSourceData> {
+export class OpenloadScrapper extends SourceScrapper<OpenloadSourceData> {
+    public static Name: string = 'openload';
+    public static Domains: string[] = ['openload.co', 'oload.tv', 'oload.win'];
+    public static UrlPattern: RegExp = /https?:\/\/(www\.)?(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/i;
+    public static async scrap(url: string): Promise<Scrap<OpenloadSourceData>> {
+        return new OpenloadScrapper().scrap(url);
+    }
+    public name: string = OpenloadScrapper.Name;
+    public domains: string[] = OpenloadScrapper.Domains;
+    public urlPattern: RegExp = OpenloadScrapper.UrlPattern;
+    protected async run(url: string): Promise<OpenloadSourceData> {
         return PuppeteerRunner.run(url, async ({ page }) => {
             const streamurl = await page.$eval(
                 '[id*=stream], div[style*="display:none"] p:last-of-type',

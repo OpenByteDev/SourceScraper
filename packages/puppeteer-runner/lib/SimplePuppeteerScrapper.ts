@@ -1,12 +1,18 @@
 import { PuppeteerRunner } from './PuppeteerRunner';
 
-import { Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
+import { Scrap, Source, SourceData, SourceScrapper } from 'sourcescrapper-core';
 
 export class SimplePuppeteerScrapper extends SourceScrapper {
+    public static Name: string = 'puppeteer';
+    public static Domains: string[] = [];
+    public static UrlPattern = /.*/;
+    public static async scrap(url: string): Promise<Scrap<SourceData>> {
+        return new SimplePuppeteerScrapper().scrap(url);
+    }
     public name: string = 'puppeteer';
     public domains: string[] = [];
     public urlPattern = /.*/;
-    public async run(url: string): Promise<SourceData> {
+    protected async run(url: string): Promise<SourceData> {
         return PuppeteerRunner.run<SourceData>(url, ({ page }) => {
             return page.evaluate(() => {
                 const data: SourceData = {

@@ -1,4 +1,4 @@
-import { integer, Source, SourceData, SourceScrapper, uri } from 'sourcescrapper-core';
+import { integer, Scrap, Source, SourceData, SourceScrapper, uri } from 'sourcescrapper-core';
 import { HtmlRunner } from 'sourcescrapper-html-runner';
 
 import removeNewlines = require('newline-remove');
@@ -18,11 +18,17 @@ export interface JWPlayerSetupData {
 export interface StreamcloudSourceData extends SourceData {
     setupData: JWPlayerSetupData;
 }
-export class StreamcloudScrapper extends SourceScrapper {
-    public name: string = 'streamcloud';
-    public domains: string[] = ['streamcloud.eu'];
-    public urlPattern: RegExp = /https?:\/\/streamcloud\.eu\/(\w+)\/(.+)/i;
-    public async run(url: uri): Promise<StreamcloudSourceData> {
+export class StreamcloudScrapper extends SourceScrapper<StreamcloudSourceData> {
+    public static Name: string = 'streamcloud';
+    public static Domains: string[] = ['streamcloud.eu'];
+    public static UrlPattern: RegExp = /https?:\/\/streamcloud\.eu\/(\w+)\/(.+)/i;
+    public static async scrap(url: string): Promise<Scrap<StreamcloudSourceData>> {
+        return new StreamcloudScrapper().scrap(url);
+    }
+    public name: string = StreamcloudScrapper.Name;
+    public domains: string[] = StreamcloudScrapper.Domains;
+    public urlPattern: RegExp = StreamcloudScrapper.UrlPattern;
+    protected async run(url: uri): Promise<StreamcloudSourceData> {
         const dataRegex = /\/([^\/.]+)\/(.*)\.[^.]+/i;
         const data = dataRegex.exec(url);
         if (data === null || data.length <= 2)
