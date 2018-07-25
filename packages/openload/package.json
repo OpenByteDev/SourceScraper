@@ -10,7 +10,7 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.2.2",
+        "sourcescrapper-core": "^0.3.0",
         "sourcescrapper-puppeteer-runner": "^0.1.2"
     },
     "devDependencies": {

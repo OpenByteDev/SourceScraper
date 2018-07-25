@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "jsdom": "^11.11.0",
-        "sourcescrapper-core": "^0.2.2"
+        "sourcescrapper-core": "^0.3.0"
     },
     "devDependencies": {
         "@types/node": "^10.5.3",
