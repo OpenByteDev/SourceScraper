@@ -6,15 +6,19 @@ export interface IBaseScrap<T> {
     scrapper: Scrapper<T>;
     error?: Error;
 }
+
 export interface IScrap<T> extends IBaseScrap<T> {
     success: boolean;
 }
+
 export interface ISuccessScrap<T> extends IBaseScrap<T> {
     data: T;
 }
+
 export interface IFailureScrap<T> extends IBaseScrap<T> {
     error: Error;
 }
+
 export class Scrap<T> implements IScrap<T> {
     public static success<T>(scrap: ISuccessScrap<T>): Scrap<T> {
         return new Scrap<T>({ ...scrap, success: true });
