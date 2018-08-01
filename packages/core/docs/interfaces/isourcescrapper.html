@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hoster | SourceScrapper Core</title>
+	<title>ISourceScrapper | SourceScrapper Core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,120 +54,117 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="hoster.html">Hoster</a>
+					<a href="isourcescrapper.html">ISourceScrapper</a>
 				</li>
 			</ul>
-			<h1>Class Hoster</h1>
+			<h1>Interface ISourceScrapper&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T<span class="tsd-signature-symbol">: </span><a href="isourcedata.html" class="tsd-signature-type">ISourceData</a></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Hoster</span>
+						<a href="iscrapper.html" class="tsd-signature-type">IScrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ISourceScrapper</span>
+							</li>
+						</ul>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/ihoster.html" class="tsd-signature-type">IHoster</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="hoster.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="hoster.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="hoster.html#quality" class="tsd-kind-icon">quality</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="hoster.html#url" class="tsd-kind-icon">url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="isourcescrapper.html#domains" class="tsd-kind-icon">domains</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="isourcescrapper.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="isourcescrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="isourcescrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Hoster<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hoster.html" class="tsd-signature-type">Hoster</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Hoster.ts#L15">Hoster.ts:15</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5>quality<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="hoster.html" class="tsd-signature-type">Hoster</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="domains" class="tsd-anchor"></a>
+					<h3>domains</h3>
+					<div class="tsd-signature tsd-kind-icon">domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iscrapperdata.html">IScrapperData</a>.<a href="iscrapperdata.html#domains">domains</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Scrapper.ts#L6">Scrapper.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ihoster.html">IHoster</a>.<a href="../interfaces/ihoster.html#name">name</a></p>
+						<p>Inherited from <a href="iscrapperdata.html">IScrapperData</a>.<a href="iscrapperdata.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Hoster.ts#L13">Hoster.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Scrapper.ts#L5">Scrapper.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="quality" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> quality</h3>
-					<div class="tsd-signature tsd-kind-icon">quality<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../globals.html#integer" class="tsd-signature-type">integer</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="scrap" class="tsd-anchor"></a>
+					<h3>scrap</h3>
+					<div class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ihoster.html">IHoster</a>.<a href="../interfaces/ihoster.html#quality">quality</a></p>
+						<p>Inherited from <a href="iscrapper.html">IScrapper</a>.<a href="iscrapper.html#scrap">scrap</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Hoster.ts#L14">Hoster.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Scrapper.ts#L11">Scrapper.ts:11</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>url: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="url" class="tsd-anchor"></a>
-					<h3>url</h3>
-					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="urlpattern" class="tsd-anchor"></a>
+					<h3>url<wbr>Pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/ihoster.html">IHoster</a>.<a href="../interfaces/ihoster.html#url">url</a></p>
+						<p>Inherited from <a href="iscrapperdata.html">IScrapperData</a>.<a href="iscrapperdata.html#urlpattern">urlPattern</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Hoster.ts#L15">Hoster.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Scrapper.ts#L7">Scrapper.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,92 +180,92 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="../classes/hoster.html" class="tsd-kind-icon">Hoster</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/runner.html" class="tsd-kind-icon">Runner</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/runnerscrapper.html" class="tsd-kind-icon">Runner<wbr>Scrapper</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/scrap.html" class="tsd-kind-icon">Scrap</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/scrapper.html" class="tsd-kind-icon">Scrapper</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/scrapperarray.html" class="tsd-kind-icon">Scrapper<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/source.html" class="tsd-kind-icon">Source</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="ibasescrap.html" class="tsd-kind-icon">IBase<wbr>Scrap</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="ifailurescrap.html" class="tsd-kind-icon">IFailure<wbr>Scrap</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="ihoster.html" class="tsd-kind-icon">IHoster</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="ihosterdata.html" class="tsd-kind-icon">IHoster<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="ihosterscrapper.html" class="tsd-kind-icon">IHoster<wbr>Scrapper</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="irunner.html" class="tsd-kind-icon">IRunner</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="irunnerargs.html" class="tsd-kind-icon">IRunner<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="irunnerscrapper.html" class="tsd-kind-icon">IRunner<wbr>Scrapper</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="iscrap.html" class="tsd-kind-icon">IScrap</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="iscrapper.html" class="tsd-kind-icon">IScrapper</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="iscrapperdata.html" class="tsd-kind-icon">IScrapper<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="isource.html" class="tsd-kind-icon">ISource</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="isourcedata.html" class="tsd-kind-icon">ISource<wbr>Data</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="hoster.html" class="tsd-kind-icon">Hoster</a>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="isourcescrapper.html" class="tsd-kind-icon">ISource<wbr>Scrapper</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="hoster.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="isourcescrapper.html#domains" class="tsd-kind-icon">domains</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="hoster.html#name" class="tsd-kind-icon">name</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="isourcescrapper.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="hoster.html#quality" class="tsd-kind-icon">quality</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="isourcescrapper.html#scrap" class="tsd-kind-icon">scrap</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="hoster.html#url" class="tsd-kind-icon">url</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="isourcescrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="runner.html" class="tsd-kind-icon">Runner</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="runnerscrapper.html" class="tsd-kind-icon">Runner<wbr>Scrapper</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="scrap.html" class="tsd-kind-icon">Scrap</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="scrapper.html" class="tsd-kind-icon">Scrapper</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="scrapperarray.html" class="tsd-kind-icon">Scrapper<wbr>Array</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="source.html" class="tsd-kind-icon">Source</a>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="istaticthis.html" class="tsd-kind-icon">IStatic<wbr>This</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ibasescrap.html" class="tsd-kind-icon">IBase<wbr>Scrap</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ifailurescrap.html" class="tsd-kind-icon">IFailure<wbr>Scrap</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/ihoster.html" class="tsd-kind-icon">IHoster</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ihosterdata.html" class="tsd-kind-icon">IHoster<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ihosterscrapper.html" class="tsd-kind-icon">IHoster<wbr>Scrapper</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/irunner.html" class="tsd-kind-icon">IRunner</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/irunnerargs.html" class="tsd-kind-icon">IRunner<wbr>Args</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/irunnerscrapper.html" class="tsd-kind-icon">IRunner<wbr>Scrapper</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/iscrap.html" class="tsd-kind-icon">IScrap</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/iscrapper.html" class="tsd-kind-icon">IScrapper</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/iscrapperdata.html" class="tsd-kind-icon">IScrapper<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/isource.html" class="tsd-kind-icon">ISource</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/isourcedata.html" class="tsd-kind-icon">ISource<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/isourcescrapper.html" class="tsd-kind-icon">ISource<wbr>Scrapper</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/istaticthis.html" class="tsd-kind-icon">IStatic<wbr>This</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/isuccessscrap.html" class="tsd-kind-icon">ISuccess<wbr>Scrap</a>
+						<a href="isuccessscrap.html" class="tsd-kind-icon">ISuccess<wbr>Scrap</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="../globals.html#irunnerexec" class="tsd-kind-icon">IRunner<wbr>Exec</a>

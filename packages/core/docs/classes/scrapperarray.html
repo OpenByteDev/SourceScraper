@@ -115,6 +115,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scrapperarray.html#allapplicable" class="tsd-kind-icon">all<wbr>Applicable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scrapperarray.html#getallapplicable" class="tsd-kind-icon">get<wbr>All<wbr>Applicable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scrapperarray.html#getbydomain" class="tsd-kind-icon">get<wbr>ByDomain</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scrapperarray.html#getbyname" class="tsd-kind-icon">get<wbr>ByName</a></li>
@@ -129,7 +130,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="scrapperarray.html#filter" class="tsd-kind-icon">filter</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="scrapperarray.html#find" class="tsd-kind-icon">find</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="scrapperarray.html#findindex" class="tsd-kind-icon">find<wbr>Index</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="scrapperarray.html#flatmap" class="tsd-kind-icon">flat<wbr>Map</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="scrapperarray.html#foreach" class="tsd-kind-icon">for<wbr>Each</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="scrapperarray.html#indexof" class="tsd-kind-icon">index<wbr>Of</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="scrapperarray.html#join" class="tsd-kind-icon">join</a></li>
@@ -168,7 +168,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/ScrapperArray.ts#L3">ScrapperArray.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L4">ScrapperArray.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,7 +182,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/ScrapperArray.ts#L4">ScrapperArray.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L5">ScrapperArray.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -231,22 +231,45 @@
 					<a name="domains" class="tsd-anchor"></a>
 					<h3>domains</h3>
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> domains<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> domains<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/ScrapperArray.ts#L10">ScrapperArray.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L11">ScrapperArray.ts:11</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="allapplicable" class="tsd-anchor"></a>
+					<h3>all<wbr>Applicable</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">all<wbr>Applicable<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L21">ScrapperArray.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getallapplicable" class="tsd-anchor"></a>
 					<h3>get<wbr>All<wbr>Applicable</h3>
@@ -257,7 +280,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/ScrapperArray.ts#L14">ScrapperArray.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L15">ScrapperArray.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -280,7 +303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/ScrapperArray.ts#L24">ScrapperArray.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L28">ScrapperArray.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -306,7 +329,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/ScrapperArray.ts#L20">ScrapperArray.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L24">ScrapperArray.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -332,7 +355,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/ScrapperArray.ts#L17">ScrapperArray.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/ScrapperArray.ts#L18">ScrapperArray.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -961,72 +984,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-					<a name="flatmap" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> flat<wbr>Map</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">flat<wbr>Map&lt;TResult&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, thisArg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="../interfaces/array.html">Array</a>.<a href="../interfaces/array.html#flatmap">flatMap</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/core/lib/extensions.ts#L14">extensions.ts:14</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>TResult</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Function that converts an element to an Array.</p>
-									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>currentValue<span class="tsd-signature-symbol">: </span><a href="scrapper.html" class="tsd-signature-type">Scrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><a href="scrapper.html" class="tsd-signature-type">Scrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">[]</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>currentValue: <a href="scrapper.html" class="tsd-signature-type">Scrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
-														</li>
-														<li>
-															<h5>index: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>array: <a href="scrapper.html" class="tsd-signature-type">Scrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">[]</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArg: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Value to use as this when executing callback.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">[]</span></h4>
-							<p>A new array with each element being the flattened result of the callback function.</p>
 						</li>
 					</ul>
 				</section>
@@ -2057,10 +2014,10 @@
 						<a href="hoster.html" class="tsd-kind-icon">Hoster</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="hosterscrapper.html" class="tsd-kind-icon">Hoster<wbr>Scrapper</a>
+						<a href="runner.html" class="tsd-kind-icon">Runner</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="runner.html" class="tsd-kind-icon">Runner</a>
+						<a href="runnerscrapper.html" class="tsd-kind-icon">Runner<wbr>Scrapper</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="scrap.html" class="tsd-kind-icon">Scrap</a>
@@ -2084,6 +2041,9 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="scrapperarray.html#domains" class="tsd-kind-icon">domains</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scrapperarray.html#allapplicable" class="tsd-kind-icon">all<wbr>Applicable</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="scrapperarray.html#getallapplicable" class="tsd-kind-icon">get<wbr>All<wbr>Applicable</a>
@@ -2126,9 +2086,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 								<a href="scrapperarray.html#findindex" class="tsd-kind-icon">find<wbr>Index</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-								<a href="scrapperarray.html#flatmap" class="tsd-kind-icon">flat<wbr>Map</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 								<a href="scrapperarray.html#foreach" class="tsd-kind-icon">for<wbr>Each</a>
@@ -2197,15 +2154,6 @@
 					<li class=" tsd-kind-class">
 						<a href="source.html" class="tsd-kind-icon">Source</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="sourcescrapper.html" class="tsd-kind-icon">Source<wbr>Scrapper</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../interfaces/array.html" class="tsd-kind-icon">Array</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/hosterdata.html" class="tsd-kind-icon">Hoster<wbr>Data</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/ibasescrap.html" class="tsd-kind-icon">IBase<wbr>Scrap</a>
 					</li>
@@ -2216,31 +2164,49 @@
 						<a href="../interfaces/ihoster.html" class="tsd-kind-icon">IHoster</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/ihosterdata.html" class="tsd-kind-icon">IHoster<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/ihosterscrapper.html" class="tsd-kind-icon">IHoster<wbr>Scrapper</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/irunner.html" class="tsd-kind-icon">IRunner</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/irunnerargs.html" class="tsd-kind-icon">IRunner<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/irunnerscrapper.html" class="tsd-kind-icon">IRunner<wbr>Scrapper</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/iscrap.html" class="tsd-kind-icon">IScrap</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/iscrapper.html" class="tsd-kind-icon">IScrapper</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iscrapperdata.html" class="tsd-kind-icon">IScrapper<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/isource.html" class="tsd-kind-icon">ISource</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/isourcedata.html" class="tsd-kind-icon">ISource<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/isourcescrapper.html" class="tsd-kind-icon">ISource<wbr>Scrapper</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/istaticthis.html" class="tsd-kind-icon">IStatic<wbr>This</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/isuccessscrap.html" class="tsd-kind-icon">ISuccess<wbr>Scrap</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="../interfaces/regexp.html" class="tsd-kind-icon">Reg<wbr>Exp</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/runnerargs.html" class="tsd-kind-icon">Runner<wbr>Args</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/sourcedata.html" class="tsd-kind-icon">Source<wbr>Data</a>
-					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="../globals.html#runnerexec" class="tsd-kind-icon">Runner<wbr>Exec</a>
+						<a href="../globals.html#irunnerexec" class="tsd-kind-icon">IRunner<wbr>Exec</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#runneroptions" class="tsd-kind-icon">Runner<wbr>Options</a>
+						<a href="../globals.html#irunneroptions" class="tsd-kind-icon">IRunner<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#double" class="tsd-kind-icon">double</a>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IScrapper | SourceScrapper Core</title>
+	<title>IRunnerScrapper | SourceScrapper Core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="iscrapper.html">IScrapper</a>
+					<a href="irunnerscrapper.html">IRunnerScrapper</a>
 				</li>
 			</ul>
-			<h1>Interface IScrapper&lt;T&gt;</h1>
+			<h1>Interface IRunnerScrapper&lt;T, O, A, E, R&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -70,27 +70,28 @@
 					<li>
 						<h4>T</h4>
 					</li>
+					<li>
+						<h4>O<span class="tsd-signature-symbol">: </span><a href="../globals.html#irunneroptions" class="tsd-signature-type">IRunnerOptions</a></h4>
+					</li>
+					<li>
+						<h4>A<span class="tsd-signature-symbol">: </span><a href="irunnerargs.html" class="tsd-signature-type">IRunnerArgs</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+					<li>
+						<h4>E<span class="tsd-signature-symbol">: </span><a href="../globals.html#irunnerexec" class="tsd-signature-type">IRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+					<li>
+						<h4>R<span class="tsd-signature-symbol">: </span><a href="irunner.html" class="tsd-signature-type">IRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="iscrapperdata.html" class="tsd-signature-type">IScrapperData</a>
+						<a href="iscrapper.html" class="tsd-signature-type">IScrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">IScrapper</span>
-								<ul class="tsd-hierarchy">
-									<li>
-										<a href="ihosterscrapper.html" class="tsd-signature-type">IHosterScrapper</a>
-									</li>
-									<li>
-										<a href="irunnerscrapper.html" class="tsd-signature-type">IRunnerScrapper</a>
-									</li>
-									<li>
-										<a href="isourcescrapper.html" class="tsd-signature-type">ISourceScrapper</a>
-									</li>
-								</ul>
+								<span class="target">IRunnerScrapper</span>
 							</li>
 						</ul>
 					</li>
@@ -100,7 +101,6 @@
 				<h3>Implemented by</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../classes/runnerscrapper.html" class="tsd-signature-type">RunnerScrapper</a></li>
-					<li><a href="../classes/scrapper.html" class="tsd-signature-type">Scrapper</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -110,10 +110,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iscrapper.html#domains" class="tsd-kind-icon">domains</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iscrapper.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iscrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#domains" class="tsd-kind-icon">domains</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="irunnerscrapper.html#runner" class="tsd-kind-icon">runner</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="irunnerscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="irunnerscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
 							</ul>
 						</section>
 					</div>
@@ -144,10 +147,31 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="runner" class="tsd-anchor"></a>
+					<h3>runner</h3>
+					<div class="tsd-signature tsd-kind-icon">runner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">R</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/RunnerScrapper.ts#L12">RunnerScrapper.ts:12</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="runneroptions" class="tsd-anchor"></a>
+					<h3>runner<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">runner<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">O</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/RunnerScrapper.ts#L13">RunnerScrapper.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="scrap" class="tsd-anchor"></a>
 					<h3>scrap</h3>
 					<div class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="iscrapper.html">IScrapper</a>.<a href="iscrapper.html#scrap">scrap</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/Scrapper.ts#L11">Scrapper.ts:11</a></li>
 						</ul>
@@ -165,6 +189,40 @@
 										<ul class="tsd-parameters">
 											<li>
 												<h5>url: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="scrapfromargs" class="tsd-anchor"></a>
+					<h3>scrap<wbr>From<wbr>Args</h3>
+					<div class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/1ab8336/packages/core/lib/RunnerScrapper.ts#L14">RunnerScrapper.ts:14</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>url: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>args: <span class="tsd-signature-type">A</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -239,33 +297,42 @@
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="irunnerargs.html" class="tsd-kind-icon">IRunner<wbr>Args</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="irunnerscrapper.html" class="tsd-kind-icon">IRunner<wbr>Scrapper</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="iscrap.html" class="tsd-kind-icon">IScrap</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-has-type-parameter">
-						<a href="iscrapper.html" class="tsd-kind-icon">IScrapper</a>
+						<a href="irunnerscrapper.html" class="tsd-kind-icon">IRunner<wbr>Scrapper</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iscrapper.html#domains" class="tsd-kind-icon">domains</a>
+								<a href="irunnerscrapper.html#domains" class="tsd-kind-icon">domains</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iscrapper.html#name" class="tsd-kind-icon">name</a>
+								<a href="irunnerscrapper.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iscrapper.html#scrap" class="tsd-kind-icon">scrap</a>
+								<a href="irunnerscrapper.html#runner" class="tsd-kind-icon">runner</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="irunnerscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a>
+								<a href="irunnerscrapper.html#scrap" class="tsd-kind-icon">scrap</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="irunnerscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="irunnerscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="iscrap.html" class="tsd-kind-icon">IScrap</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="iscrapper.html" class="tsd-kind-icon">IScrapper</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="iscrapperdata.html" class="tsd-kind-icon">IScrapper<wbr>Data</a>
 					</li>
