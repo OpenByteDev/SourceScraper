@@ -1,26 +1,33 @@
 import { DOMWindow, FromUrlOptions, JSDOM } from 'jsdom';
-import { Runner, RunnerArgs, RunnerOptions } from 'sourcescrapper-core';
+import { IRunner, IRunnerArgs, IRunnerExec, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
-export interface DomRunnerOptions extends RunnerOptions {
+export interface IDomRunnerOptions extends IRunnerOptions {
     jsdomConfig?: FromUrlOptions;
 }
-export interface DomRunnerArgs<T> extends RunnerArgs<T> {
+
+export interface IDomRunnerArgs extends IRunnerArgs<IDomRunnerOptions> {
     document: Document;
     jsdom: JSDOM;
     window: DOMWindow;
 }
-export type DomRunnerExec<T> = (DomRunnerArgs) => Promise<T>;
-export class DomRunner<T> extends Runner<T, DomRunnerExec<T>, DomRunnerOptions> {
-    public static async run<T>(url: string, scrapper: DomRunnerExec<T>, options?: DomRunnerOptions): Promise<T> {
-        return new DomRunner<T>().run(url, scrapper, options);
-    }
-    public defaultOptions: DomRunnerOptions = {
+
+export interface IDomRunnerExec<T> extends IRunnerExec<T, IDomRunnerOptions, IDomRunnerArgs> {
+    (args: IDomRunnerArgs): Promise<T>;
+}
+
+export interface IDomRunner<T> extends IRunner<T, IDomRunnerOptions, IDomRunnerArgs, IDomRunnerExec<T>> { }
+
+export class DomRunner<T> extends Runner<T, IDomRunnerOptions, IDomRunnerArgs, IDomRunnerExec<T>>
+    implements IDomRunner<T> {
+    public defaultOptions: IDomRunnerOptions = {
         jsdomConfig: {}
     };
-    public async run(url: string, scrapper: DomRunnerExec<T>, options?: DomRunnerOptions): Promise<T> {
+    public async run(url: string, scrapper: IDomRunnerExec<T>, options?: IDomRunnerOptions): Promise<T> {
         const opt = this.getOptions(options);
         const jsdom = await JSDOM.fromURL(url, opt.jsdomConfig);
         return scrapper({
+            url,
+            options,
             jsdom,
             document: jsdom.window.document,
             window: jsdom.window
