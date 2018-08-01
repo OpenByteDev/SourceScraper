@@ -1,11 +1,20 @@
-import { IBaseScrap, Scrap } from './Scrap';
+import { IBaseScrap, IScrap, Scrap } from './Scrap';
+import { IStaticThis } from './types';
 
-export interface IScrapper {
+export interface IScrapperData {
     name: string;
     domains: string[];
     urlPattern: RegExp;
 }
-export abstract class Scrapper<T> implements IScrapper {
+
+export interface IScrapper<T> extends IScrapperData {
+    scrap: (url: string) => Promise<IScrap<T>>;
+}
+
+export abstract class Scrapper<T> implements IScrapper<T> {
+    public static async scrap<T, S extends IScrapper<T>>(this: IStaticThis<S>, url: string): Promise<Scrap<T>> {
+        return new this().scrap(url);
+    }
     public abstract name: string;
     public abstract domains: string[];
     public abstract urlPattern: RegExp;
@@ -17,6 +26,9 @@ export abstract class Scrapper<T> implements IScrapper {
         return this.domains.some(d => d === domain);
     }
     public async scrap(url: string): Promise<Scrap<T>> {
+        return this.getScrap(url, async () => this.run(url));
+    }
+    protected async getScrap(url: string, dataSupplier: () => Promise<T>): Promise<Scrap<T>> {
         const base: IBaseScrap<T> = {
             url,
             scrapper: this
@@ -24,7 +36,7 @@ export abstract class Scrapper<T> implements IScrapper {
         try {
             return Scrap.success({
                 ...base,
-                data: await this.run(url)
+                data: await dataSupplier()
             });
         } catch (error) {
             return Scrap.failure({
@@ -32,6 +44,7 @@ export abstract class Scrapper<T> implements IScrapper {
                 error
             });
         }
+
     }
     protected abstract async run(url: string): Promise<T>;
 }
