@@ -19,9 +19,13 @@ export interface IDomRunner<T> extends IRunner<T, IDomRunnerOptions, IDomRunnerA
 
 export class DomRunner<T> extends Runner<T, IDomRunnerOptions, IDomRunnerArgs, IDomRunnerExec<T>>
     implements IDomRunner<T> {
-    public defaultOptions: IDomRunnerOptions = {
+    public static DefaultOptions: IDomRunnerOptions = {
         jsdomConfig: {}
     };
+    public defaultOptions: IDomRunnerOptions = DomRunner.DefaultOptions;
+    public constructor() {
+        super();
+    }
     public async run(url: string, scrapper: IDomRunnerExec<T>, options?: IDomRunnerOptions): Promise<T> {
         const opt = this.getOptions(options);
         const jsdom = await JSDOM.fromURL(url, opt.jsdomConfig);

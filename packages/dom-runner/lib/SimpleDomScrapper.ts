@@ -1,15 +1,25 @@
 import { DomRunner, IDomRunnerArgs, IDomRunnerExec, IDomRunnerOptions } from './DomRunner';
 
-import { ISourceData, ISourceScrapper, RunnerScrapper, Scrap, Source } from 'sourcescrapper-core';
+import { ISourceData, ISourceScrapper, RunnerScrapper, Source } from 'sourcescrapper-core';
 
-export class SimpleDomScrapper extends RunnerScrapper
-    <ISourceData, IDomRunnerOptions, IDomRunnerArgs, IDomRunnerExec<ISourceData>, DomRunner<ISourceData>> {
+export class SimpleDomScrapper
+    extends RunnerScrapper<
+        ISourceData,
+        IDomRunnerOptions,
+        IDomRunnerArgs,
+        IDomRunnerExec<ISourceData>,
+        DomRunner<ISourceData>>
+    implements ISourceScrapper {
     public static Name: string = 'simpledom';
     public static Domains: string[] = [];
     public static UrlPattern: RegExp = /.*/;
+    public static Runner: DomRunner<ISourceData> = new DomRunner<ISourceData>();
+    public static RunnerOptions: IDomRunnerOptions = { };
     public name: string =  SimpleDomScrapper.Name;
     public domains: string[] = SimpleDomScrapper.Domains;
     public urlPattern: RegExp = SimpleDomScrapper.UrlPattern;
+    public runner: DomRunner<ISourceData> = SimpleDomScrapper.Runner;
+    public runnerOptions: IDomRunnerOptions = SimpleDomScrapper.RunnerOptions;
     protected async runWithArgs({ document }: IDomRunnerArgs): Promise<ISourceData> {
         const data: ISourceData = {
             sources: []
