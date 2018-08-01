@@ -1,4 +1,5 @@
 import { Scrapper } from './Scrapper';
+
 import flatMap from 'lodash.flatmap';
 
 export class ScrapperArray<T> extends Array<Scrapper<T>> {
