@@ -1,4 +1,5 @@
 import { Scrapper } from './Scrapper';
+import flatMap from 'lodash.flatmap';
 
 export class ScrapperArray<T> extends Array<Scrapper<T>> {
     constructor(length: number)
@@ -8,7 +9,7 @@ export class ScrapperArray<T> extends Array<Scrapper<T>> {
     }
 
     get domains(): string[] {
-        return this.flatMap(s => s.domains);
+        return flatMap(this, s => s.domains);
     }
 
     public getAllApplicable(url: string): Array<Scrapper<T>> {
