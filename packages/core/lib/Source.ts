@@ -1,3 +1,5 @@
+import { IScrapper } from './Scrapper';
+
 import normalizeUrl = require('normalize-url');
 import trim = require('trim-character');
 
@@ -7,6 +9,7 @@ export interface ISource {
     codec?: string;
     resolution?: string;
 }
+
 export class Source implements ISource {
     public url: string;
     public type?: string;
@@ -27,4 +30,13 @@ export class Source implements ISource {
             trim.right(this.resolution.substring(i), 'p') :
             this.resolution);
     }
+}
+
+export interface ISourceData<T extends ISource = Source> {
+    poster?: string;
+    title?: string;
+    sources: T[];
+}
+
+export interface ISourceScrapper<T extends ISourceData = ISourceData> extends IScrapper<T> {
 }
