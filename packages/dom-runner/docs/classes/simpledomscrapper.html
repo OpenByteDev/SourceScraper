@@ -57,26 +57,18 @@
 					<a href="simpledomscrapper.html">SimpleDomScrapper</a>
 				</li>
 			</ul>
-			<h1>Class SimpleDomScrapper&lt;T&gt;</h1>
+			<h1>Class SimpleDomScrapper</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SourceData</span></h4>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">SourceScrapper</span>
+						<span class="tsd-signature-type">RunnerScrapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerexec.html" class="tsd-signature-type">IDomRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="domrunner.html" class="tsd-signature-type">DomRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">SimpleDomScrapper</span>
@@ -88,7 +80,9 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">IScrapper</span></li>
+					<li><span class="tsd-signature-type">IScrapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IRunnerScrapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerexec.html" class="tsd-signature-type">IDomRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="domrunner.html" class="tsd-signature-type">DomRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">ISourceScrapper</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -100,20 +94,28 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="simpledomscrapper.html#domains" class="tsd-kind-icon">domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="simpledomscrapper.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="simpledomscrapper.html#runner" class="tsd-kind-icon">runner</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="simpledomscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="simpledomscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="simpledomscrapper.html#domains-1" class="tsd-kind-icon">Domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="simpledomscrapper.html#name-1" class="tsd-kind-icon">Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="simpledomscrapper.html#runner-1" class="tsd-kind-icon">Runner</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="simpledomscrapper.html#runneroptions-1" class="tsd-kind-icon">Runner<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="simpledomscrapper.html#urlpattern-1" class="tsd-kind-icon">Url<wbr>Pattern</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="simpledomscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="simpledomscrapper.html#isapplicable" class="tsd-kind-icon">is<wbr>Applicable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="simpledomscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="simpledomscrapper.html#run" class="tsd-kind-icon">run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="simpledomscrapper.html#run" class="tsd-kind-icon">run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="simpledomscrapper.html#runwithargs" class="tsd-kind-icon">run<wbr>With<wbr>Args</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="simpledomscrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="simpledomscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="simpledomscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="simpledomscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="simpledomscrapper.html#scrapfromargs-1" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a></li>
 							</ul>
 						</section>
 					</div>
@@ -128,7 +130,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.domains</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L13">SimpleDomScrapper.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L19">SimpleDomScrapper.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -139,7 +141,29 @@
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.name</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L12">SimpleDomScrapper.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L18">SimpleDomScrapper.ts:18</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="runner" class="tsd-anchor"></a>
+					<h3>runner</h3>
+					<div class="tsd-signature tsd-kind-icon">runner<span class="tsd-signature-symbol">:</span> <a href="domrunner.html" class="tsd-signature-type">DomRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;SimpleDomScrapper.Runner</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides RunnerScrapper.runner</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L21">SimpleDomScrapper.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="runneroptions" class="tsd-anchor"></a>
+					<h3>runner<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">runner<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol"> =&nbsp;SimpleDomScrapper.RunnerOptions</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides RunnerScrapper.runnerOptions</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L22">SimpleDomScrapper.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -150,7 +174,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.urlPattern</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L14">SimpleDomScrapper.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L20">SimpleDomScrapper.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -160,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">Domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L7">SimpleDomScrapper.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L14">SimpleDomScrapper.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -170,7 +194,27 @@
 					<div class="tsd-signature tsd-kind-icon">Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;simpledom&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L6">SimpleDomScrapper.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L13">SimpleDomScrapper.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="runner-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Runner</h3>
+					<div class="tsd-signature tsd-kind-icon">Runner<span class="tsd-signature-symbol">:</span> <a href="domrunner.html" class="tsd-signature-type">DomRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new DomRunner&lt;ISourceData&gt;()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L16">SimpleDomScrapper.ts:16</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="runneroptions-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Runner<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Runner<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L17">SimpleDomScrapper.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -180,13 +224,52 @@
 					<div class="tsd-signature tsd-kind-icon">Url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/.*/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L8">SimpleDomScrapper.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L15">SimpleDomScrapper.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="getscrap" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Scrap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, dataSupplier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Scrapper.getScrap</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:19</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>dataSupplier: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="isapplicable" class="tsd-anchor"></a>
 					<h3>is<wbr>Applicable</h3>
@@ -198,7 +281,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicable</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:11</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -222,7 +305,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicableDomain</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:12</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:17</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -235,18 +318,19 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 					<a name="run" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> run</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SourceData</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from RunnerScrapper.run</p>
 								<p>Overrides Scrapper.run</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L15">SimpleDomScrapper.ts:15</a></li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -255,7 +339,36 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SourceData</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="runwithargs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> run<wbr>With<wbr>Args</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">run<wbr>With<wbr>Args<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides RunnerScrapper.runWithArgs</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/2c282dc/packages/dom-runner/lib/SimpleDomScrapper.ts#L23">SimpleDomScrapper.ts:23</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>document<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -263,18 +376,81 @@
 					<a name="scrap" class="tsd-anchor"></a>
 					<h3>scrap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.scrap</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:13</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:18</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="scrapfromargs" class="tsd-anchor"></a>
+					<h3>scrap<wbr>From<wbr>Args</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from RunnerScrapper.scrapFromArgs</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:14</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>args: <a href="../interfaces/idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+					<a name="scrap-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">scrap&lt;T, S&gt;<span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IStaticThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Scrapper.scrap</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Scrapper.d.ts:12</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+								<li>
+									<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IScrapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>this: <span class="tsd-signature-type">IStaticThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
@@ -283,26 +459,54 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="scrap-1" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+					<a name="scrapfromargs-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap<wbr>From<wbr>Args</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args&lt;T, O, A, E, R, S&gt;<span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IStaticThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from RunnerScrapper.scrapFromArgs</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/SimpleDomScrapper.ts#L9">SimpleDomScrapper.ts:9</a></li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:11</li>
 								</ul>
 							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+								<li>
+									<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerOptions</span></h4>
+								</li>
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerArgs</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+								<li>
+									<h4>E<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerExec</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+								<li>
+									<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerexec.html" class="tsd-signature-type">IDomRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+								<li>
+									<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerScrapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/idomrunnerexec.html" class="tsd-signature-type">IDomRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="domrunner.html" class="tsd-signature-type">DomRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
+									<h5>this: <span class="tsd-signature-type">IStaticThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
+								<li>
+									<h5>args: <span class="tsd-signature-type">A</span></h5>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SourceData</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -323,7 +527,7 @@
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-has-type-parameter">
+					<li class="current tsd-kind-class">
 						<a href="simpledomscrapper.html" class="tsd-kind-icon">Simple<wbr>Dom<wbr>Scrapper</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
@@ -331,6 +535,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="simpledomscrapper.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="simpledomscrapper.html#runner" class="tsd-kind-icon">runner</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="simpledomscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="simpledomscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a>
@@ -342,7 +552,16 @@
 								<a href="simpledomscrapper.html#name-1" class="tsd-kind-icon">Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="simpledomscrapper.html#runner-1" class="tsd-kind-icon">Runner</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="simpledomscrapper.html#runneroptions-1" class="tsd-kind-icon">Runner<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="simpledomscrapper.html#urlpattern-1" class="tsd-kind-icon">Url<wbr>Pattern</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="simpledomscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="simpledomscrapper.html#isapplicable" class="tsd-kind-icon">is<wbr>Applicable</a>
@@ -350,27 +569,39 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="simpledomscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 								<a href="simpledomscrapper.html#run" class="tsd-kind-icon">run</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="simpledomscrapper.html#runwithargs" class="tsd-kind-icon">run<wbr>With<wbr>Args</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="simpledomscrapper.html#scrap" class="tsd-kind-icon">scrap</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="simpledomscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
 								<a href="simpledomscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+								<a href="simpledomscrapper.html#scrapfromargs-1" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/domrunnerargs.html" class="tsd-kind-icon">Dom<wbr>Runner<wbr>Args</a>
+						<a href="../interfaces/idomrunner.html" class="tsd-kind-icon">IDom<wbr>Runner</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/domrunneroptions.html" class="tsd-kind-icon">Dom<wbr>Runner<wbr>Options</a>
+						<a href="../interfaces/idomrunnerargs.html" class="tsd-kind-icon">IDom<wbr>Runner<wbr>Args</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="../globals.html#domrunnerexec" class="tsd-kind-icon">Dom<wbr>Runner<wbr>Exec</a>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/idomrunnerexec.html" class="tsd-kind-icon">IDom<wbr>Runner<wbr>Exec</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/idomrunneroptions.html" class="tsd-kind-icon">IDom<wbr>Runner<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>

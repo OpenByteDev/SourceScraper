@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DomRunnerArgs | SourceScrapper DomRunner</title>
+	<title>IDomRunner | SourceScrapper DomRunner</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="domrunnerargs.html">DomRunnerArgs</a>
+					<a href="idomrunner.html">IDomRunner</a>
 				</li>
 			</ul>
-			<h1>Interface DomRunnerArgs&lt;T&gt;</h1>
+			<h1>Interface IDomRunner&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -76,97 +76,73 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">RunnerArgs</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<span class="tsd-signature-type">IRunner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="idomrunneroptions.html" class="tsd-signature-type">IDomRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="idomrunnerargs.html" class="tsd-signature-type">IDomRunnerArgs</a><span class="tsd-signature-symbol">, </span><a href="idomrunnerexec.html" class="tsd-signature-type">IDomRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">DomRunnerArgs</span>
+								<span class="target">IDomRunner</span>
 							</li>
 						</ul>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/domrunner.html" class="tsd-signature-type">DomRunner</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="domrunnerargs.html#document" class="tsd-kind-icon">document</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="domrunnerargs.html#jsdom" class="tsd-kind-icon">jsdom</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerargs.html#options" class="tsd-kind-icon">options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerargs.html#scrapper" class="tsd-kind-icon">scrapper</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="domrunnerargs.html#url" class="tsd-kind-icon">url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="domrunnerargs.html#window" class="tsd-kind-icon">window</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="idomrunner.html#run" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="document" class="tsd-anchor"></a>
-					<h3>document</h3>
-					<div class="tsd-signature tsd-kind-icon">document<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Document</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/DomRunner.ts#L8">DomRunner.ts:8</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="jsdom" class="tsd-anchor"></a>
-					<h3>jsdom</h3>
-					<div class="tsd-signature tsd-kind-icon">jsdom<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSDOM</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/DomRunner.ts#L9">DomRunner.ts:9</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="options" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="run" class="tsd-anchor"></a>
+					<h3>run</h3>
+					<div class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from RunnerArgs.options</p>
+						<p>Inherited from IRunner.run</p>
 						<ul>
-							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:5</li>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:9</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="scrapper" class="tsd-anchor"></a>
-					<h3>scrapper</h3>
-					<div class="tsd-signature tsd-kind-icon">scrapper<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RunnerExec</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from RunnerArgs.scrapper</p>
-						<ul>
-							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:4</li>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><a href="idomrunnerexec.html" class="tsd-signature-type">IDomRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">O</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>url: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>scrapper: <a href="idomrunnerexec.html" class="tsd-signature-type">IDomRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">O</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
 						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="url" class="tsd-anchor"></a>
-					<h3>url</h3>
-					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from RunnerArgs.url</p>
-						<ul>
-							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/dom-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:3</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="window" class="tsd-anchor"></a>
-					<h3>window</h3>
-					<div class="tsd-signature tsd-kind-icon">window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DOMWindow</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/dom-runner/lib/DomRunner.ts#L10">DomRunner.ts:10</a></li>
-						</ul>
-					</aside>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -183,41 +159,29 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="../classes/domrunner.html" class="tsd-kind-icon">Dom<wbr>Runner</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
+					<li class=" tsd-kind-class">
 						<a href="../classes/simpledomscrapper.html" class="tsd-kind-icon">Simple<wbr>Dom<wbr>Scrapper</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-has-type-parameter">
-						<a href="domrunnerargs.html" class="tsd-kind-icon">Dom<wbr>Runner<wbr>Args</a>
+						<a href="idomrunner.html" class="tsd-kind-icon">IDom<wbr>Runner</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="domrunnerargs.html#document" class="tsd-kind-icon">document</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="domrunnerargs.html#jsdom" class="tsd-kind-icon">jsdom</a>
-							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="domrunnerargs.html#options" class="tsd-kind-icon">options</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="domrunnerargs.html#scrapper" class="tsd-kind-icon">scrapper</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="domrunnerargs.html#url" class="tsd-kind-icon">url</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="domrunnerargs.html#window" class="tsd-kind-icon">window</a>
+								<a href="idomrunner.html#run" class="tsd-kind-icon">run</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface">
-						<a href="domrunneroptions.html" class="tsd-kind-icon">Dom<wbr>Runner<wbr>Options</a>
+						<a href="idomrunnerargs.html" class="tsd-kind-icon">IDom<wbr>Runner<wbr>Args</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="../globals.html#domrunnerexec" class="tsd-kind-icon">Dom<wbr>Runner<wbr>Exec</a>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="idomrunnerexec.html" class="tsd-kind-icon">IDom<wbr>Runner<wbr>Exec</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="idomrunneroptions.html" class="tsd-kind-icon">IDom<wbr>Runner<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
