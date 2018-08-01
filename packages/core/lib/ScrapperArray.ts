@@ -7,8 +7,8 @@ export class ScrapperArray<T> extends Array<Scrapper<T>> {
         super(...args);
     }
 
-    get domains(): Array<string | RegExp> {
-        return this.flatMap<string | RegExp>(e => (Array.isArray(e.domains) ? e.domains : [e.domains]));
+    get domains(): string[] {
+        return this.flatMap(s => s.domains);
     }
 
     public getAllApplicable(url: string): Array<Scrapper<T>> {
@@ -16,6 +16,9 @@ export class ScrapperArray<T> extends Array<Scrapper<T>> {
     }
     public getFirstApplicable(url: string): Scrapper<T> | undefined {
         return this.find(s => s.isApplicable(url));
+    }
+    public allApplicable(url: string): boolean {
+        return this.every(s => s.isApplicable(url));
     }
     public getByName(name: string): Scrapper<T> | undefined {
         name = name.toLowerCase();
