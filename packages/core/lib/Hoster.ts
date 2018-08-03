@@ -1,4 +1,3 @@
-import { IScrapper } from './Scrapper';
 import { integer } from './types';
 
 import normalizeUrl = require('normalize-url');
@@ -19,12 +18,4 @@ export class Hoster implements IHoster {
         this.quality = quality;
         this.url = normalizeUrl(url);
     }
-}
-
-export interface IHosterData<T extends IHoster = Hoster> {
-    title?: string;
-    hosters: T[];
-}
-
-export interface IHosterScrapper<T extends IHosterData = IHosterData> extends IScrapper<T> {
 }
