@@ -8,6 +8,7 @@ export interface IMasterAnimeHoster extends IHoster {
     type: number;
     host: Host;
 }
+
 export class MasterAnimeHoster extends Hoster implements IMasterAnimeHoster {
     public host_id: number;
     public embed_id: string;
