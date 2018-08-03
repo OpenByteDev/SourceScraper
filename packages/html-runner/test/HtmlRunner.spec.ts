@@ -4,15 +4,6 @@ import chai = require('chai');
 import 'mocha';
 chai.should();
 
-/*
-data: T;
-status: number;
-statusText: string;
-headers: any;
-config: AxiosRequestConfig;
-request?: any;
-*/
-
 describe('DomRunner', () => {
     it('should provide valid args', async () => {
         const url = 'http://tekeye.uk/html/html5-video-test-page';
