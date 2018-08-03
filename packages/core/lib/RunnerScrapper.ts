@@ -9,7 +9,7 @@ export interface IRunnerScrapper<
     A extends IRunnerArgs<O> = IRunnerArgs<O>,
     R extends IRunner<T, O, A> = IRunner<T, O, A>> extends IScrapper<T> {
     runner: R;
-    runnerOptions: O;
+    runnerOptions?: O;
     scrapFromArgs: (url: string, args: A) => Promise<IScrap<T>>;
 }
 
@@ -28,7 +28,7 @@ export abstract class RunnerScrapper<
         return new this().scrapFromArgs(url, args);
     }
     public abstract runner: R;
-    public abstract runnerOptions: O;
+    public abstract runnerOptions?: O;
     public async scrapFromArgs(url: string, args: A): Promise<Scrap<T>> {
         return this.getScrap(url, async () => this.runWithArgs(args));
     }
