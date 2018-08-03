@@ -6,4 +6,4 @@ export abstract class HosterRunnerScrapper<
     T extends IHosterData = IHosterData,
     O extends IRunnerOptions = IRunnerOptions,
     A extends IRunnerArgs<O> = IRunnerArgs<O>,
-    R extends Runner<T, O, A> = Runner<T, O, A>> extends RunnerScrapper<T, O, A, R> implements IHosterScrapper { }
+    R extends Runner<T, O, A> = Runner<T, O, A>> extends RunnerScrapper<T, O, A, R> implements IHosterScrapper<T> { }
