@@ -76,7 +76,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">Runner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#htmlrunnerexec" class="tsd-signature-type">HtmlRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/htmlrunneroptions.html" class="tsd-signature-type">HtmlRunnerOptions</a><span class="tsd-signature-symbol">&gt;</span>
+						<span class="tsd-signature-type">Runner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/ihtmlrunnerargs.html" class="tsd-signature-type">IHtmlRunnerArgs</a><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">HtmlRunner</span>
@@ -85,25 +85,51 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><span class="tsd-signature-type">IRunner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/ihtmlrunnerargs.html" class="tsd-signature-type">IHtmlRunnerArgs</a><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="htmlrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="htmlrunner.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="htmlrunner.html#run" class="tsd-kind-icon">run</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static"><a href="htmlrunner.html#run-1" class="tsd-kind-icon">run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="htmlrunner.html#run-1" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-overwrite"><a href="htmlrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-static"><a href="htmlrunner.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3>default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a><span class="tsd-signature-symbol"> =&nbsp;HtmlRunner.DefaultOptions</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides Runner.defaultOptions</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9244b49/packages/html-runner/lib/HtmlRunner.ts#L17">HtmlRunner.ts:17</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -112,23 +138,23 @@
 					<a name="getoptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/htmlrunneroptions.html" class="tsd-signature-type">HtmlRunnerOptions</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">O</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from Runner.getOptions</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/html-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:11</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/html-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:14</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">O</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">O</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/htmlrunneroptions.html" class="tsd-signature-type">HtmlRunnerOptions</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -136,14 +162,14 @@
 					<a name="run" class="tsd-anchor"></a>
 					<h3>run</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><a href="../globals.html#htmlrunnerexec" class="tsd-signature-type">HtmlRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/htmlrunneroptions.html" class="tsd-signature-type">HtmlRunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Runner.run</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/html-runner/lib/HtmlRunner.ts#L19">HtmlRunner.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9244b49/packages/html-runner/lib/HtmlRunner.ts#L18">HtmlRunner.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -152,27 +178,46 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>scrapper: <a href="../globals.html#htmlrunnerexec" class="tsd-signature-type">HtmlRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>scrapper: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="../interfaces/ihtmlrunnerargs.html" class="tsd-signature-type">IHtmlRunnerArgs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>args: <a href="../interfaces/ihtmlrunnerargs.html" class="tsd-signature-type">IHtmlRunnerArgs</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/htmlrunneroptions.html" class="tsd-signature-type">HtmlRunnerOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
 					<a name="run-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> run</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">run&lt;T&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><a href="../globals.html#htmlrunnerexec" class="tsd-signature-type">HtmlRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/htmlrunneroptions.html" class="tsd-signature-type">HtmlRunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">run&lt;T, O, A, R&gt;<span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IStaticThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">O</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from Runner.run</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/html-runner/lib/HtmlRunner.ts#L13">HtmlRunner.ts:13</a></li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/html-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:11</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -180,17 +225,47 @@
 								<li>
 									<h4>T</h4>
 								</li>
+								<li>
+									<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerOptions</span></h4>
+								</li>
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerArgs</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+								<li>
+									<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/ihtmlrunneroptions.html" class="tsd-signature-type">IHtmlRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/ihtmlrunnerargs.html" class="tsd-signature-type">IHtmlRunnerArgs</a><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
+									<h5>this: <span class="tsd-signature-type">IStaticThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>scrapper: <a href="../globals.html#htmlrunnerexec" class="tsd-signature-type">HtmlRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>scrapper: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>args: <span class="tsd-signature-type">A</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/htmlrunneroptions.html" class="tsd-signature-type">HtmlRunnerOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">O</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -200,23 +275,22 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-overwrite">
-					<a name="defaultoptions" class="tsd-anchor"></a>
-					<h3>default<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+					<a name="defaultoptions-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides Runner.defaultOptions</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/html-runner/lib/HtmlRunner.ts#L16">HtmlRunner.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9244b49/packages/html-runner/lib/HtmlRunner.ts#L14">HtmlRunner.ts:14</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="defaultoptions.axiosconfig" class="tsd-anchor"></a>
+						<a name="defaultoptions-1.axiosconfig" class="tsd-anchor"></a>
 						<h3>axios<wbr>Config</h3>
 						<div class="tsd-signature tsd-kind-icon">axios<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/html-runner/lib/HtmlRunner.ts#L17">HtmlRunner.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9244b49/packages/html-runner/lib/HtmlRunner.ts#L15">HtmlRunner.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-type-declaration">
@@ -243,30 +317,30 @@
 					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="htmlrunner.html" class="tsd-kind-icon">Html<wbr>Runner</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="htmlrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="htmlrunner.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="htmlrunner.html#run" class="tsd-kind-icon">run</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
 								<a href="htmlrunner.html#run-1" class="tsd-kind-icon">run</a>
 							</li>
-							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-overwrite">
-								<a href="htmlrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+								<a href="htmlrunner.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/htmlrunnerargs.html" class="tsd-kind-icon">Html<wbr>Runner<wbr>Args</a>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ihtmlrunnerargs.html" class="tsd-kind-icon">IHtml<wbr>Runner<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/htmlrunneroptions.html" class="tsd-kind-icon">Html<wbr>Runner<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="../globals.html#htmlrunnerexec" class="tsd-kind-icon">Html<wbr>Runner<wbr>Exec</a>
+						<a href="../interfaces/ihtmlrunneroptions.html" class="tsd-kind-icon">IHtml<wbr>Runner<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
