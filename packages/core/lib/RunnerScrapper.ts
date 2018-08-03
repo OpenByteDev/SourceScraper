@@ -4,10 +4,10 @@ import { IScrapper, Scrapper } from './Scrapper';
 import { IStaticThis } from './types';
 
 export interface IRunnerScrapper<
-        T,
-        O extends IRunnerOptions = IRunnerOptions,
-        A extends IRunnerArgs<O> = IRunnerArgs<O>,
-        R extends IRunner<T, O, A> = IRunner<T, O, A>> extends IScrapper<T> {
+    T,
+    O extends IRunnerOptions = IRunnerOptions,
+    A extends IRunnerArgs<O> = IRunnerArgs<O>,
+    R extends IRunner<T, O, A> = IRunner<T, O, A>> extends IScrapper<T> {
     runner: R;
     runnerOptions: O;
     scrapFromArgs: (url: string, args: A) => Promise<IScrap<T>>;
@@ -24,7 +24,7 @@ export abstract class RunnerScrapper<
         A extends IRunnerArgs<O> = IRunnerArgs<O>,
         R extends IRunner<T, O, A> = IRunner<T, O, A>,
         S extends IRunnerScrapper<T, O, A, R> = IRunnerScrapper<T, O, A, R>>(
-            this: IStaticThis<S>, url: string, args: A): Promise<Scrap<T>> {
+        this: IStaticThis<S>, url: string, args: A): Promise<Scrap<T>> {
         return new this().scrapFromArgs(url, args);
     }
     public abstract runner: R;
