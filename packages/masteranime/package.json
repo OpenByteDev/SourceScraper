@@ -1,6 +1,6 @@
 {
     "name": "masteranime-scrapper",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "A scrapper for masterani.me",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
