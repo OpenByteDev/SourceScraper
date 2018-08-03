@@ -1,29 +1,31 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-import { Runner, RunnerArgs, RunnerOptions } from 'sourcescrapper-core';
+import { IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
-export interface HtmlRunnerOptions extends RunnerOptions {
+export interface IHtmlRunnerOptions extends IRunnerOptions {
     axiosConfig: AxiosRequestConfig;
 }
-export interface HtmlRunnerArgs<T> extends RunnerArgs<T> {
+
+export interface IHtmlRunnerArgs extends IRunnerArgs<IHtmlRunnerOptions> {
     html: string;
     response: AxiosResponse;
 }
-export type HtmlRunnerExec<T> = (HtmlRunnerArgs) => Promise<T>;
-export class HtmlRunner<T> extends Runner<T, HtmlRunnerExec<T>, HtmlRunnerOptions> {
-    public static async run<T>(url: string, scrapper: HtmlRunnerExec<T>, options?: HtmlRunnerOptions): Promise<T> {
-        return new HtmlRunner<T>().run(url, scrapper, options);
-    }
-    public defaultOptions: HtmlRunnerOptions = {
+
+export class HtmlRunner<T> extends Runner<T, IHtmlRunnerOptions, IHtmlRunnerArgs> {
+    public static DefaultOptions: IHtmlRunnerOptions = {
         axiosConfig: {}
     };
-    public async run(url: string, scrapper: HtmlRunnerExec<T>, options?: HtmlRunnerOptions): Promise<T> {
+    public defaultOptions: IHtmlRunnerOptions = HtmlRunner.DefaultOptions;
+    public async run(
+        url: string,
+        scrapper: (args: IHtmlRunnerArgs) => Promise<T>,
+        options?: IHtmlRunnerOptions): Promise<T> {
         const opt = this.getOptions(options);
         const response = await axios.get(url, opt.axiosConfig);
         return scrapper({
+            url,
             options,
             response,
-            scrapper,
-            url,
+            html: response.data
         });
     }
 }
