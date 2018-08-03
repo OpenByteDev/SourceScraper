@@ -21,7 +21,7 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "noUnusedLocals": true,
-        "noUnusedParameters": false,
+        "noUnusedParameters": true,
         "forceConsistentCasingInFileNames": true,
         "sourceMap": true
     },
