@@ -28,7 +28,7 @@ export abstract class RunnerScrapper<
         return new this().scrapFromArgs(url, args);
     }
     public abstract runner: R;
-    public abstract runnerOptions?: O;
+    public runnerOptions?: O;
     public async scrapFromArgs(url: string, args: A): Promise<Scrap<T>> {
         return this.getScrap(url, async () => this.runWithArgs(args));
     }
