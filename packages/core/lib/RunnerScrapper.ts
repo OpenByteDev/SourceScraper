@@ -1,4 +1,4 @@
-import { IRunner, IRunnerArgs, IRunnerExec, IRunnerOptions, Runner } from './Runner';
+import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from './Runner';
 import { IScrap, Scrap } from './Scrap';
 import { IScrapper, Scrapper } from './Scrapper';
 import { IStaticThis } from './types';
@@ -7,8 +7,7 @@ export interface IRunnerScrapper<
         T,
         O extends IRunnerOptions = IRunnerOptions,
         A extends IRunnerArgs<O> = IRunnerArgs<O>,
-        E extends IRunnerExec<T, O, A> = IRunnerExec<T, O, A>,
-        R extends IRunner<T, O, A, E> = IRunner<T, O, A, E>> extends IScrapper<T> {
+        R extends IRunner<T, O, A> = IRunner<T, O, A>> extends IScrapper<T> {
     runner: R;
     runnerOptions: O;
     scrapFromArgs: (url: string, args: A) => Promise<IScrap<T>>;
@@ -18,15 +17,13 @@ export abstract class RunnerScrapper<
     T,
     O extends IRunnerOptions = IRunnerOptions,
     A extends IRunnerArgs<O> = IRunnerArgs<O>,
-    E extends IRunnerExec<T, O, A> = IRunnerExec<T, O, A>,
-    R extends Runner<T, O, A, E> = Runner<T, O, A, E>> extends Scrapper<T> implements IRunnerScrapper<T, O, A, E, R> {
+    R extends Runner<T, O, A> = Runner<T, O, A>> extends Scrapper<T> implements IRunnerScrapper<T, O, A, R> {
     public static async scrapFromArgs<
         T,
         O extends IRunnerOptions = IRunnerOptions,
         A extends IRunnerArgs<O> = IRunnerArgs<O>,
-        E extends IRunnerExec<T, O, A> = IRunnerExec<T, O, A>,
-        R extends IRunner<T, O, A, E> = IRunner<T, O, A, E>,
-        S extends IRunnerScrapper<T, O, A, E, R> = IRunnerScrapper<T, O, A, E, R>>(
+        R extends IRunner<T, O, A> = IRunner<T, O, A>,
+        S extends IRunnerScrapper<T, O, A, R> = IRunnerScrapper<T, O, A, R>>(
             this: IStaticThis<S>, url: string, args: A): Promise<Scrap<T>> {
         return new this().scrapFromArgs(url, args);
     }
