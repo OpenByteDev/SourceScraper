@@ -57,18 +57,32 @@
 					<a href="vidziscrapper.html">VidziScrapper</a>
 				</li>
 			</ul>
-			<h1>Class VidziScrapper</h1>
+			<h1>Class VidziScrapper&lt;O, A, R&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerOptions</span></h4>
+					</li>
+					<li>
+						<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerArgs</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+					<li>
+						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Runner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">SourceScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vidzisourcedata.html" class="tsd-signature-type">VidziSourceData</a><span class="tsd-signature-symbol">&gt;</span>
+						<span class="tsd-signature-type">SourceRunnerScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">VidziScrapper</span>
@@ -80,7 +94,9 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">IScrapper</span></li>
+					<li><span class="tsd-signature-type">IScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IRunnerScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">ISourceScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -92,20 +108,27 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="vidziscrapper.html#domains" class="tsd-kind-icon">domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="vidziscrapper.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="vidziscrapper.html#runner" class="tsd-kind-icon">runner</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="vidziscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="vidziscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="vidziscrapper.html#domains-1" class="tsd-kind-icon">Domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="vidziscrapper.html#name-1" class="tsd-kind-icon">Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="vidziscrapper.html#runner-1" class="tsd-kind-icon">Runner</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="vidziscrapper.html#urlpattern-1" class="tsd-kind-icon">Url<wbr>Pattern</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="vidziscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="vidziscrapper.html#isapplicable" class="tsd-kind-icon">is<wbr>Applicable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="vidziscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="vidziscrapper.html#run" class="tsd-kind-icon">run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="vidziscrapper.html#run" class="tsd-kind-icon">run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="vidziscrapper.html#runwithargs" class="tsd-kind-icon">run<wbr>With<wbr>Args</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="vidziscrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="vidziscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="vidziscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="vidziscrapper.html#scrapfromargs-1" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,33 +139,55 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="domains" class="tsd-anchor"></a>
 					<h3>domains</h3>
-					<div class="tsd-signature tsd-kind-icon">domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;vidzi.tv&#x27;, &#x27;vidzi.online&#x27;, &#x27;vidzi.nu&#x27;]</span></div>
+					<div class="tsd-signature tsd-kind-icon">domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;VidziScrapper.Domains</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.domains</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L212">VidziScrapper.ts:212</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L234">VidziScrapper.ts:234</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;vidzi&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;VidziScrapper.Name</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.name</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L211">VidziScrapper.ts:211</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L233">VidziScrapper.ts:233</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="runner" class="tsd-anchor"></a>
+					<h3>runner</h3>
+					<div class="tsd-signature tsd-kind-icon">runner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PuppeteerRunner</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;VidziScrapper.Runner</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides RunnerScrapper.runner</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L236">VidziScrapper.ts:236</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="runneroptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> runner<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">runner<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">O</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from RunnerScrapper.runnerOptions</p>
+						<ul>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:11</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="urlpattern" class="tsd-anchor"></a>
 					<h3>url<wbr>Pattern</h3>
-					<div class="tsd-signature tsd-kind-icon">url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i</span></div>
+					<div class="tsd-signature tsd-kind-icon">url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;VidziScrapper.UrlPattern</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.urlPattern</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L213">VidziScrapper.ts:213</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L235">VidziScrapper.ts:235</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -152,7 +197,7 @@
 					<div class="tsd-signature tsd-kind-icon">Domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;vidzi.tv&#x27;, &#x27;vidzi.online&#x27;, &#x27;vidzi.nu&#x27;]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L206">VidziScrapper.ts:206</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L224">VidziScrapper.ts:224</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -162,7 +207,17 @@
 					<div class="tsd-signature tsd-kind-icon">Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;vidzi&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L205">VidziScrapper.ts:205</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L223">VidziScrapper.ts:223</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="runner-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Runner</h3>
+					<div class="tsd-signature tsd-kind-icon">Runner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PuppeteerRunner</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new PuppeteerRunner&lt;IVidziSourceData&gt;()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L226">VidziScrapper.ts:226</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -172,13 +227,52 @@
 					<div class="tsd-signature tsd-kind-icon">Url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L207">VidziScrapper.ts:207</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L225">VidziScrapper.ts:225</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="getscrap" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Scrap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, dataSupplier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Scrapper.getScrap</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Scrapper.d.ts:17</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>dataSupplier: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="isapplicable" class="tsd-anchor"></a>
 					<h3>is<wbr>Applicable</h3>
@@ -190,7 +284,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicable</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Scrapper.d.ts:11</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Scrapper.d.ts:14</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -214,7 +308,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicableDomain</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Scrapper.d.ts:12</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Scrapper.d.ts:15</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -227,18 +321,19 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 					<a name="run" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> run</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vidzisourcedata.html" class="tsd-signature-type">VidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from RunnerScrapper.run</p>
 								<p>Overrides Scrapper.run</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L214">VidziScrapper.ts:214</a></li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:14</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -247,7 +342,36 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vidzisourcedata.html" class="tsd-signature-type">VidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="runwithargs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> run<wbr>With<wbr>Args</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">run<wbr>With<wbr>Args<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides RunnerScrapper.runWithArgs</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L237">VidziScrapper.ts:237</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Page</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -255,14 +379,14 @@
 					<a name="scrap" class="tsd-anchor"></a>
 					<h3>scrap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vidzisourcedata.html" class="tsd-signature-type">VidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.scrap</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Scrapper.d.ts:13</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/Scrapper.d.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -271,7 +395,34 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vidzisourcedata.html" class="tsd-signature-type">VidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="scrapfromargs" class="tsd-anchor"></a>
+					<h3>scrap<wbr>From<wbr>Args</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from RunnerScrapper.scrapFromArgs</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidzi/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:12</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>args: <span class="tsd-signature-type">A</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -279,13 +430,13 @@
 					<a name="scrap-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vidzisourcedata.html" class="tsd-signature-type">VidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L208">VidziScrapper.ts:208</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L227">VidziScrapper.ts:227</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -294,7 +445,33 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vidzisourcedata.html" class="tsd-signature-type">VidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="scrapfromargs-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap<wbr>From<wbr>Args</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IPuppeteerRunnerArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/vidzi/lib/VidziScrapper.ts#L230">VidziScrapper.ts:230</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>args: <span class="tsd-signature-type">IPuppeteerRunnerArgs</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ividzisourcedata.html" class="tsd-signature-type">IVidziSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -312,7 +489,7 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="vidziscrapper.html" class="tsd-kind-icon">Vidzi<wbr>Scrapper</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
@@ -320,6 +497,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="vidziscrapper.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="vidziscrapper.html#runner" class="tsd-kind-icon">runner</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="vidziscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="vidziscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a>
@@ -331,7 +514,13 @@
 								<a href="vidziscrapper.html#name-1" class="tsd-kind-icon">Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="vidziscrapper.html#runner-1" class="tsd-kind-icon">Runner</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="vidziscrapper.html#urlpattern-1" class="tsd-kind-icon">Url<wbr>Pattern</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="vidziscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="vidziscrapper.html#isapplicable" class="tsd-kind-icon">is<wbr>Applicable</a>
@@ -339,14 +528,23 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="vidziscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
 								<a href="vidziscrapper.html#run" class="tsd-kind-icon">run</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="vidziscrapper.html#runwithargs" class="tsd-kind-icon">run<wbr>With<wbr>Args</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="vidziscrapper.html#scrap" class="tsd-kind-icon">scrap</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="vidziscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="vidziscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="vidziscrapper.html#scrapfromargs-1" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a>
 							</li>
 						</ul>
 					</li>
@@ -356,61 +554,61 @@
 						<a href="vidzisource.html" class="tsd-kind-icon">Vidzi<wbr>Source</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/advertising.html" class="tsd-kind-icon">Advertising</a>
+						<a href="../interfaces/iadvertising.html" class="tsd-kind-icon">IAdvertising</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/captions.html" class="tsd-kind-icon">Captions</a>
+						<a href="../interfaces/icaptions.html" class="tsd-kind-icon">ICaptions</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/captionsdetailed.html" class="tsd-kind-icon">Captions<wbr>Detailed</a>
+						<a href="../interfaces/icaptionsdetailed.html" class="tsd-kind-icon">ICaptions<wbr>Detailed</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/captionslistitem.html" class="tsd-kind-icon">Captions<wbr>List<wbr>Item</a>
+						<a href="../interfaces/icaptionslistitem.html" class="tsd-kind-icon">ICaptions<wbr>List<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ijwplayerconfig.html" class="tsd-kind-icon">IJWPlayer<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ilocalization.html" class="tsd-kind-icon">ILocalization</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/imediaelement.html" class="tsd-kind-icon">IMedia<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iplaylist.html" class="tsd-kind-icon">IPlaylist</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iplaylistitem.html" class="tsd-kind-icon">IPlaylist<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iprovider.html" class="tsd-kind-icon">IProvider</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/isetupconfig.html" class="tsd-kind-icon">ISetup<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/itrack.html" class="tsd-kind-icon">ITrack</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ivsource.html" class="tsd-kind-icon">IVSource</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/ividzisource.html" class="tsd-kind-icon">IVidzi<wbr>Source</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/jwplayerconfig.html" class="tsd-kind-icon">JWPlayer<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/localization.html" class="tsd-kind-icon">Localization</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/mediaelement.html" class="tsd-kind-icon">Media<wbr>Element</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/playlist.html" class="tsd-kind-icon">Playlist</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/playlistitem.html" class="tsd-kind-icon">Playlist<wbr>Item</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/provider.html" class="tsd-kind-icon">Provider</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/setupconfig.html" class="tsd-kind-icon">Setup<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/track.html" class="tsd-kind-icon">Track</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/vsource.html" class="tsd-kind-icon">VSource</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/vidzisourcedata.html" class="tsd-kind-icon">Vidzi<wbr>Source<wbr>Data</a>
+						<a href="../interfaces/ividzisourcedata.html" class="tsd-kind-icon">IVidzi<wbr>Source<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#feeddata" class="tsd-kind-icon">Feed<wbr>Data</a>
+						<a href="../globals.html#ifeeddata" class="tsd-kind-icon">IFeed<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#itemmeta" class="tsd-kind-icon">Item<wbr>Meta</a>
+						<a href="../globals.html#iitemmeta" class="tsd-kind-icon">IItem<wbr>Meta</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#mediacontainer" class="tsd-kind-icon">Media<wbr>Container</a>
+						<a href="../globals.html#imediacontainer" class="tsd-kind-icon">IMedia<wbr>Container</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#plugins" class="tsd-kind-icon">Plugins</a>
+						<a href="../globals.html#iplugins" class="tsd-kind-icon">IPlugins</a>
 					</li>
 				</ul>
 			</nav>

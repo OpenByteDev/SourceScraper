@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Track | SourceScrapper Vidzi</title>
+	<title>IVidstreamingSourceData | Vidstreaming Scrapper</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">SourceScrapper Vidzi</a>
+					<a href="../index.html" class="title">Vidstreaming Scrapper</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="track.html">Track</a>
+					<a href="ividstreamingsourcedata.html">IVidstreamingSourceData</a>
 				</li>
 			</ul>
-			<h1>Interface Track</h1>
+			<h1>Interface IVidstreamingSourceData</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Track</span>
+						<span class="tsd-signature-type">ISourceData</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/vidstreamingsource.html" class="tsd-signature-type">VidstreamingSource</a><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IVidstreamingSourceData</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -76,46 +81,49 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="track.html#default" class="tsd-kind-icon">default</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="track.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="track.html#kind" class="tsd-kind-icon">kind</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ividstreamingsourcedata.html#poster" class="tsd-kind-icon">poster</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ividstreamingsourcedata.html#sources" class="tsd-kind-icon">sources</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ividstreamingsourcedata.html#title" class="tsd-kind-icon">title</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="default" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> default</h3>
-					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="poster" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> poster</h3>
+					<div class="tsd-signature tsd-kind-icon">poster<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from ISourceData.poster</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L66">VidziScrapper.ts:66</a></li>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidstreaming/node_modules/sourcescrapper-core/types/SourceScrapper.d.ts:4</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="sources" class="tsd-anchor"></a>
+					<h3>sources</h3>
+					<div class="tsd-signature tsd-kind-icon">sources<span class="tsd-signature-symbol">:</span> <a href="../classes/vidstreamingsource.html" class="tsd-signature-type">VidstreamingSource</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from ISourceData.sources</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L67">VidziScrapper.ts:67</a></li>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidstreaming/node_modules/sourcescrapper-core/types/SourceScrapper.d.ts:6</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="kind" class="tsd-anchor"></a>
-					<h3>kind</h3>
-					<div class="tsd-signature tsd-kind-icon">kind<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="title" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> title</h3>
+					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from ISourceData.title</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/vidzi/lib/VidziScrapper.ts#L65">VidziScrapper.ts:65</a></li>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/vidstreaming/node_modules/sourcescrapper-core/types/SourceScrapper.d.ts:5</li>
 						</ul>
 					</aside>
 				</section>
@@ -131,83 +139,44 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="../classes/vidziscrapper.html" class="tsd-kind-icon">Vidzi<wbr>Scrapper</a>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/vidstreamingscrapper.html" class="tsd-kind-icon">Vidstreaming<wbr>Scrapper</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/vidzisource.html" class="tsd-kind-icon">Vidzi<wbr>Source</a>
+						<a href="../classes/vidstreamingsource.html" class="tsd-kind-icon">Vidstreaming<wbr>Source</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="advertising.html" class="tsd-kind-icon">Advertising</a>
+						<a href="isetupdataentry.html" class="tsd-kind-icon">ISetup<wbr>Data<wbr>Entry</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="captions.html" class="tsd-kind-icon">Captions</a>
+						<a href="ivsource.html" class="tsd-kind-icon">IVSource</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="captionsdetailed.html" class="tsd-kind-icon">Captions<wbr>Detailed</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="captionslistitem.html" class="tsd-kind-icon">Captions<wbr>List<wbr>Item</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="ividzisource.html" class="tsd-kind-icon">IVidzi<wbr>Source</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="jwplayerconfig.html" class="tsd-kind-icon">JWPlayer<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="localization.html" class="tsd-kind-icon">Localization</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="mediaelement.html" class="tsd-kind-icon">Media<wbr>Element</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="playlist.html" class="tsd-kind-icon">Playlist</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="playlistitem.html" class="tsd-kind-icon">Playlist<wbr>Item</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="provider.html" class="tsd-kind-icon">Provider</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="setupconfig.html" class="tsd-kind-icon">Setup<wbr>Config</a>
+						<a href="ividstreamingsource.html" class="tsd-kind-icon">IVidstreaming<wbr>Source</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="track.html" class="tsd-kind-icon">Track</a>
+						<a href="ividstreamingsourcedata.html" class="tsd-kind-icon">IVidstreaming<wbr>Source<wbr>Data</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="track.html#default" class="tsd-kind-icon">default</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="ividstreamingsourcedata.html#poster" class="tsd-kind-icon">poster</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="track.html#file" class="tsd-kind-icon">file</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="ividstreamingsourcedata.html#sources" class="tsd-kind-icon">sources</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="track.html#kind" class="tsd-kind-icon">kind</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="ividstreamingsourcedata.html#title" class="tsd-kind-icon">title</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="vsource.html" class="tsd-kind-icon">VSource</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">
+						<a href="../globals.html#isnotnull" class="tsd-kind-icon">is<wbr>Not<wbr>Null</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="vidzisourcedata.html" class="tsd-kind-icon">Vidzi<wbr>Source<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#feeddata" class="tsd-kind-icon">Feed<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#itemmeta" class="tsd-kind-icon">Item<wbr>Meta</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#mediacontainer" class="tsd-kind-icon">Media<wbr>Container</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#plugins" class="tsd-kind-icon">Plugins</a>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="../globals.html#isstring" class="tsd-kind-icon">is<wbr>String</a>
 					</li>
 				</ul>
 			</nav>

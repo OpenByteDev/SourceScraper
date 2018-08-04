@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>JWPlayerSetupData | Streamcloud Scrapper</title>
+	<title>IOpenloadSourceData | Openload Scrapper</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">Streamcloud Scrapper</a>
+					<a href="../index.html" class="title">Openload Scrapper</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,21 +54,34 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="jwplayersetupdata.html">JWPlayerSetupData</a>
+					<a href="iopenloadsourcedata.html">IOpenloadSourceData</a>
 				</li>
 			</ul>
-			<h1>Interface JWPlayerSetupData</h1>
+			<h1>Interface IOpenloadSourceData&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ISource</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">JWPlayerSetupData</span>
+						<span class="tsd-signature-type">ISourceData</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IOpenloadSourceData</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -79,15 +92,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#aboutlink" class="tsd-kind-icon">aboutlink</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#abouttext" class="tsd-kind-icon">abouttext</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#flashplayer" class="tsd-kind-icon">flashplayer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#height" class="tsd-kind-icon">height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#image" class="tsd-kind-icon">image</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#provider" class="tsd-kind-icon">provider</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#startparam" class="tsd-kind-icon">startparam</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jwplayersetupdata.html#width" class="tsd-kind-icon">width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iopenloadsourcedata.html#poster" class="tsd-kind-icon">poster</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iopenloadsourcedata.html#sources" class="tsd-kind-icon">sources</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iopenloadsourcedata.html#streamurl" class="tsd-kind-icon">streamurl</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iopenloadsourcedata.html#title" class="tsd-kind-icon">title</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,93 +103,46 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="aboutlink" class="tsd-anchor"></a>
-					<h3>aboutlink</h3>
-					<div class="tsd-signature tsd-kind-icon">aboutlink<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">uri</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="poster" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> poster</h3>
+					<div class="tsd-signature tsd-kind-icon">poster<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from ISourceData.poster</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L15">StreamcloudScrapper.ts:15</a></li>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/openload/node_modules/sourcescrapper-core/types/SourceScrapper.d.ts:4</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="sources" class="tsd-anchor"></a>
+					<h3>sources</h3>
+					<div class="tsd-signature tsd-kind-icon">sources<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ISourceData.sources</p>
+						<ul>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/openload/node_modules/sourcescrapper-core/types/SourceScrapper.d.ts:6</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="abouttext" class="tsd-anchor"></a>
-					<h3>abouttext</h3>
-					<div class="tsd-signature tsd-kind-icon">abouttext<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="streamurl" class="tsd-anchor"></a>
+					<h3>streamurl</h3>
+					<div class="tsd-signature tsd-kind-icon">streamurl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L14">StreamcloudScrapper.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/eec9d91/packages/openload/lib/OpenloadScrapper.ts#L5">OpenloadScrapper.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">uri</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="title" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> title</h3>
+					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from ISourceData.title</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L10">StreamcloudScrapper.ts:10</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="flashplayer" class="tsd-anchor"></a>
-					<h3>flashplayer</h3>
-					<div class="tsd-signature tsd-kind-icon">flashplayer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">uri</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L9">StreamcloudScrapper.ts:9</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="height" class="tsd-anchor"></a>
-					<h3>height</h3>
-					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">integer</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L12">StreamcloudScrapper.ts:12</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="image" class="tsd-anchor"></a>
-					<h3>image</h3>
-					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">uri</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L11">StreamcloudScrapper.ts:11</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="provider" class="tsd-anchor"></a>
-					<h3>provider</h3>
-					<div class="tsd-signature tsd-kind-icon">provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L8">StreamcloudScrapper.ts:8</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="startparam" class="tsd-anchor"></a>
-					<h3>startparam</h3>
-					<div class="tsd-signature tsd-kind-icon">startparam<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L16">StreamcloudScrapper.ts:16</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="width" class="tsd-anchor"></a>
-					<h3>width</h3>
-					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">integer</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/streamcloud/lib/StreamcloudScrapper.ts#L13">StreamcloudScrapper.ts:13</a></li>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/openload/node_modules/sourcescrapper-core/types/SourceScrapper.d.ts:5</li>
 						</ul>
 					</aside>
 				</section>
@@ -197,48 +158,30 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="../classes/streamcloudscrapper.html" class="tsd-kind-icon">Streamcloud<wbr>Scrapper</a>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/openloadscrapper.html" class="tsd-kind-icon">Openload<wbr>Scrapper</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="jwplayersetupdata.html" class="tsd-kind-icon">JWPlayer<wbr>Setup<wbr>Data</a>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="iopenloadsourcedata.html" class="tsd-kind-icon">IOpenload<wbr>Source<wbr>Data</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#aboutlink" class="tsd-kind-icon">aboutlink</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iopenloadsourcedata.html#poster" class="tsd-kind-icon">poster</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iopenloadsourcedata.html#sources" class="tsd-kind-icon">sources</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#abouttext" class="tsd-kind-icon">abouttext</a>
+								<a href="iopenloadsourcedata.html#streamurl" class="tsd-kind-icon">streamurl</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#file" class="tsd-kind-icon">file</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#flashplayer" class="tsd-kind-icon">flashplayer</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#height" class="tsd-kind-icon">height</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#image" class="tsd-kind-icon">image</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#provider" class="tsd-kind-icon">provider</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#startparam" class="tsd-kind-icon">startparam</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="jwplayersetupdata.html#width" class="tsd-kind-icon">width</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iopenloadsourcedata.html#title" class="tsd-kind-icon">title</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="streamcloudsourcedata.html" class="tsd-kind-icon">Streamcloud<wbr>Source<wbr>Data</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
