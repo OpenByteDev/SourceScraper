@@ -17,6 +17,12 @@ export class DomRunner<T> extends Runner<T, IDomRunnerOptions, IDomRunnerArgs> i
     public static DefaultOptions: IDomRunnerOptions = {
         jsdomConfig: {}
     };
+    public static async run<T>(
+        url: string,
+        scrapper: (args: IDomRunnerArgs) => Promise<T>,
+        options?: IDomRunnerOptions): Promise<T> {
+        return new DomRunner<T>().run(url, scrapper, options);
+    }
     public defaultOptions: IDomRunnerOptions = DomRunner.DefaultOptions;
     public async run(
         url: string,
