@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper-html-runner",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Provides the HtmlRunner class for scrapping.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
