@@ -16,7 +16,7 @@
         "trim-character": "^2.0.1"
     },
     "devDependencies": {
-        "@types/node": "^10.5.5",
+        "@types/node": "^10.5.6",
         "@types/normalize-url": "^1.9.1",
         "@types/object-merge": "^2.5.0",
         "@types/lodash.flatmap": "^4.5.4",
