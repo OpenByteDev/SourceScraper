@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-import { IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
+import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
 export interface IHtmlRunnerOptions extends IRunnerOptions {
     axiosConfig: AxiosRequestConfig;
@@ -10,7 +10,9 @@ export interface IHtmlRunnerArgs extends IRunnerArgs<IHtmlRunnerOptions> {
     response: AxiosResponse;
 }
 
-export class HtmlRunner<T> extends Runner<T, IHtmlRunnerOptions, IHtmlRunnerArgs> {
+export interface IHtmlRunner<T> extends IRunner<T, IHtmlRunnerOptions, IHtmlRunnerArgs> { }
+
+export class HtmlRunner<T> extends Runner<T, IHtmlRunnerOptions, IHtmlRunnerArgs> implements IHtmlRunner<T> {
     public static DefaultOptions: IHtmlRunnerOptions = {
         axiosConfig: {}
     };
