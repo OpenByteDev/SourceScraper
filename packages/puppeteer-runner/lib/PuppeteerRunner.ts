@@ -43,6 +43,12 @@ export class PuppeteerRunner<T> extends Runner<T, IPuppeteerRunnerOptions, IPupp
             ({ resourceType }: IRequestInterceptorArgs) => resourceType === 'font'
         ]
     };
+    public static async run<T>(
+        url: string,
+        scrapper: (args: IPuppeteerRunnerArgs) => Promise<T>,
+        options?: IPuppeteerRunnerOptions): Promise<T> {
+        return new PuppeteerRunner<T>().run(url, scrapper, options);
+    }
     public defaultOptions: IPuppeteerRunnerOptions = PuppeteerRunner.DefaultOptions;
     public async run(
         url: string,
