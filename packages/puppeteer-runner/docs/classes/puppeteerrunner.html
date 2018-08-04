@@ -76,7 +76,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">Runner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../globals.html#puppeteerrunnerexec" class="tsd-signature-type">PuppeteerRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/puppeteerrunneroptions.html" class="tsd-signature-type">PuppeteerRunnerOptions</a><span class="tsd-signature-symbol">&gt;</span>
+						<span class="tsd-signature-type">Runner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">PuppeteerRunner</span>
@@ -85,10 +85,23 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><span class="tsd-signature-type">IRunner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><a href="../interfaces/ipuppeteerrunner.html" class="tsd-signature-type">IPuppeteerRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="puppeteerrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
@@ -100,10 +113,24 @@
 						<section class="tsd-index-section ">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-overwrite"><a href="puppeteerrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-static"><a href="puppeteerrunner.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3>default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a><span class="tsd-signature-symbol"> =&nbsp;PuppeteerRunner.DefaultOptions</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides Runner.defaultOptions</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9de9362/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L52">PuppeteerRunner.ts:52</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -112,23 +139,23 @@
 					<a name="getoptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/puppeteerrunneroptions.html" class="tsd-signature-type">PuppeteerRunnerOptions</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">O</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from Runner.getOptions</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/puppeteer-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:11</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/puppeteer-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">O</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">O</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/puppeteerrunneroptions.html" class="tsd-signature-type">PuppeteerRunnerOptions</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -136,14 +163,14 @@
 					<a name="run" class="tsd-anchor"></a>
 					<h3>run</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><a href="../globals.html#puppeteerrunnerexec" class="tsd-signature-type">PuppeteerRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/puppeteerrunneroptions.html" class="tsd-signature-type">PuppeteerRunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Runner.run</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L41">PuppeteerRunner.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9de9362/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L53">PuppeteerRunner.ts:53</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -152,10 +179,28 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>scrapper: <a href="../globals.html#puppeteerrunnerexec" class="tsd-signature-type">PuppeteerRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>scrapper: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>args: <a href="../interfaces/ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/puppeteerrunneroptions.html" class="tsd-signature-type">PuppeteerRunnerOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -166,13 +211,13 @@
 					<a name="run-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> run</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">run&lt;T&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><a href="../globals.html#puppeteerrunnerexec" class="tsd-signature-type">PuppeteerRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/puppeteerrunneroptions.html" class="tsd-signature-type">PuppeteerRunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">run&lt;T&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L30">PuppeteerRunner.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9de9362/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L46">PuppeteerRunner.ts:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -187,10 +232,28 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>scrapper: <a href="../globals.html#puppeteerrunnerexec" class="tsd-signature-type">PuppeteerRunnerExec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>scrapper: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>args: <a href="../interfaces/ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/puppeteerrunneroptions.html" class="tsd-signature-type">PuppeteerRunnerOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -200,42 +263,41 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-overwrite">
-					<a name="defaultoptions" class="tsd-anchor"></a>
-					<h3>default<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+					<a name="defaultoptions-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides Runner.defaultOptions</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L33">PuppeteerRunner.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9de9362/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L38">PuppeteerRunner.ts:38</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="defaultoptions.requestinterceptors" class="tsd-anchor"></a>
+						<a name="defaultoptions-1.requestinterceptors" class="tsd-anchor"></a>
 						<h3>request<wbr>Interceptors</h3>
-						<div class="tsd-signature tsd-kind-icon">request<wbr>Interceptors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[({ request }) &#x3D;&gt; request.resourceType &#x3D;&#x3D;&#x3D; &#x27;font&#x27;]</span></div>
+						<div class="tsd-signature tsd-kind-icon">request<wbr>Interceptors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[({ resourceType }: IRequestInterceptorArgs) &#x3D;&gt; resourceType &#x3D;&#x3D;&#x3D; &#x27;font&#x27;]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L37">PuppeteerRunner.ts:37</a></li>
+								<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9de9362/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L42">PuppeteerRunner.ts:42</a></li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
-						<a name="defaultoptions.puppeteerconfig" class="tsd-anchor"></a>
+						<a name="defaultoptions-1.puppeteerconfig" class="tsd-anchor"></a>
 						<h3>puppeteer<wbr>Config</h3>
 						<div class="tsd-signature tsd-kind-icon">puppeteer<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L34">PuppeteerRunner.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9de9362/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L39">PuppeteerRunner.ts:39</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultoptions.puppeteerconfig.headless" class="tsd-anchor"></a>
+							<a name="defaultoptions-1.puppeteerconfig.headless" class="tsd-anchor"></a>
 							<h3>headless</h3>
-							<div class="tsd-signature tsd-kind-icon">headless<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+							<div class="tsd-signature tsd-kind-icon">headless<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L35">PuppeteerRunner.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9de9362/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L40">PuppeteerRunner.ts:40</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -258,6 +320,9 @@
 					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="puppeteerrunner.html" class="tsd-kind-icon">Puppeteer<wbr>Runner</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="puppeteerrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="puppeteerrunner.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
 							</li>
@@ -267,36 +332,36 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
 								<a href="puppeteerrunner.html#run-1" class="tsd-kind-icon">run</a>
 							</li>
-							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-overwrite">
-								<a href="puppeteerrunner.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+								<a href="puppeteerrunner.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-has-type-parameter">
+					<li class=" tsd-kind-class">
 						<a href="simplepuppeteerscrapper.html" class="tsd-kind-icon">Simple<wbr>Puppeteer<wbr>Scrapper</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/initializerargs.html" class="tsd-kind-icon">Initializer<wbr>Args</a>
+						<a href="../interfaces/iinitializerargs.html" class="tsd-kind-icon">IInitializer<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/puppeteerrunnerargs.html" class="tsd-kind-icon">Puppeteer<wbr>Runner<wbr>Args</a>
+						<a href="../interfaces/ipuppeteerrunner.html" class="tsd-kind-icon">IPuppeteer<wbr>Runner</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/puppeteerrunneroptions.html" class="tsd-kind-icon">Puppeteer<wbr>Runner<wbr>Options</a>
+						<a href="../interfaces/ipuppeteerrunnerargs.html" class="tsd-kind-icon">IPuppeteer<wbr>Runner<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/requestinterceptorargs.html" class="tsd-kind-icon">Request<wbr>Interceptor<wbr>Args</a>
+						<a href="../interfaces/ipuppeteerrunneroptions.html" class="tsd-kind-icon">IPuppeteer<wbr>Runner<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/irequestinterceptorargs.html" class="tsd-kind-icon">IRequest<wbr>Interceptor<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#initializer" class="tsd-kind-icon">Initializer</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="../globals.html#puppeteerrunnerexec" class="tsd-kind-icon">Puppeteer<wbr>Runner<wbr>Exec</a>
+						<a href="../globals.html#iinitializer" class="tsd-kind-icon">IInitializer</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#requestinterceptor" class="tsd-kind-icon">Request<wbr>Interceptor</a>
+						<a href="../globals.html#irequestinterceptor" class="tsd-kind-icon">IRequest<wbr>Interceptor</a>
 					</li>
 				</ul>
 			</nav>

@@ -33,7 +33,7 @@
         "lint": "tslint -p .",
         "lint-fix": "tslint -p . --fix",
         "build": "tsc",
-        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"Masteranime Scrapper\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
+        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"SourceScrapper PuppeteerRunner\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
     },
     "keywords": [
         "sourcescrapper",

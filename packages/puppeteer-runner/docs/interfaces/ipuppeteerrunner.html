@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InitializerArgs | SourceScrapper PuppeteerRunner</title>
+	<title>IPuppeteerRunner | SourceScrapper PuppeteerRunner</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,59 +54,113 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="initializerargs.html">InitializerArgs</a>
+					<a href="ipuppeteerrunner.html">IPuppeteerRunner</a>
 				</li>
 			</ul>
-			<h1>Interface InitializerArgs</h1>
+			<h1>Interface IPuppeteerRunner&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">InitializerArgs</span>
+						<span class="tsd-signature-type">IRunner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="ipuppeteerrunneroptions.html" class="tsd-signature-type">IPuppeteerRunnerOptions</a><span class="tsd-signature-symbol">, </span><a href="ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IPuppeteerRunner</span>
+							</li>
+						</ul>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/puppeteerrunner.html" class="tsd-signature-type">PuppeteerRunner</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="initializerargs.html#browser" class="tsd-kind-icon">browser</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="initializerargs.html#page" class="tsd-kind-icon">page</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ipuppeteerrunner.html#run" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="browser" class="tsd-anchor"></a>
-					<h3>browser</h3>
-					<div class="tsd-signature tsd-kind-icon">browser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Browser</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="run" class="tsd-anchor"></a>
+					<h3>run</h3>
+					<div class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from IRunner.run</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L26">PuppeteerRunner.ts:26</a></li>
+							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/puppeteer-runner/node_modules/sourcescrapper-core/types/Runner.d.ts:7</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="page" class="tsd-anchor"></a>
-					<h3>page</h3>
-					<div class="tsd-signature tsd-kind-icon">page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Page</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/6d8e631/packages/puppeteer-runner/lib/PuppeteerRunner.ts#L25">PuppeteerRunner.ts:25</a></li>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scrapper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">O</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>url: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>scrapper: <span class="tsd-signature-type">function</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>args: <a href="ipuppeteerrunnerargs.html" class="tsd-signature-type">IPuppeteerRunnerArgs</a></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">O</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
 						</ul>
-					</aside>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -123,41 +177,38 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="../classes/puppeteerrunner.html" class="tsd-kind-icon">Puppeteer<wbr>Runner</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
+					<li class=" tsd-kind-class">
 						<a href="../classes/simplepuppeteerscrapper.html" class="tsd-kind-icon">Simple<wbr>Puppeteer<wbr>Scrapper</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="iinitializerargs.html" class="tsd-kind-icon">IInitializer<wbr>Args</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="initializerargs.html" class="tsd-kind-icon">Initializer<wbr>Args</a>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="ipuppeteerrunner.html" class="tsd-kind-icon">IPuppeteer<wbr>Runner</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="initializerargs.html#browser" class="tsd-kind-icon">browser</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="initializerargs.html#page" class="tsd-kind-icon">page</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="ipuppeteerrunner.html#run" class="tsd-kind-icon">run</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="puppeteerrunnerargs.html" class="tsd-kind-icon">Puppeteer<wbr>Runner<wbr>Args</a>
+					<li class=" tsd-kind-interface">
+						<a href="ipuppeteerrunnerargs.html" class="tsd-kind-icon">IPuppeteer<wbr>Runner<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="puppeteerrunneroptions.html" class="tsd-kind-icon">Puppeteer<wbr>Runner<wbr>Options</a>
+						<a href="ipuppeteerrunneroptions.html" class="tsd-kind-icon">IPuppeteer<wbr>Runner<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="requestinterceptorargs.html" class="tsd-kind-icon">Request<wbr>Interceptor<wbr>Args</a>
+						<a href="irequestinterceptorargs.html" class="tsd-kind-icon">IRequest<wbr>Interceptor<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#initializer" class="tsd-kind-icon">Initializer</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="../globals.html#puppeteerrunnerexec" class="tsd-kind-icon">Puppeteer<wbr>Runner<wbr>Exec</a>
+						<a href="../globals.html#iinitializer" class="tsd-kind-icon">IInitializer</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#requestinterceptor" class="tsd-kind-icon">Request<wbr>Interceptor</a>
+						<a href="../globals.html#irequestinterceptor" class="tsd-kind-icon">IRequest<wbr>Interceptor</a>
 					</li>
 				</ul>
 			</nav>
