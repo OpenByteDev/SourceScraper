@@ -1,5 +1,4 @@
 import { IBaseScrap, IScrap, Scrap } from './Scrap';
-import { IStaticThis } from './types';
 
 export interface IScrapperData {
     name: string;
@@ -12,9 +11,6 @@ export interface IScrapper<T> extends IScrapperData {
 }
 
 export abstract class Scrapper<T> implements IScrapper<T> {
-    public static async scrap<T, S extends IScrapper<T>>(this: IStaticThis<S>, url: string): Promise<Scrap<T>> {
-        return new this().scrap(url);
-    }
     public abstract name: string;
     public abstract domains: string[];
     public abstract urlPattern: RegExp;
