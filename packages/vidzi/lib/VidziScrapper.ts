@@ -1,14 +1,15 @@
 import { VidziSource } from './VidziSource';
 
-import { Scrap, SourceData, SourceScrapper } from 'sourcescrapper-core';
-import { PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
+import { ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { IPuppeteerRunnerArgs, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
-export interface VidziSourceData extends SourceData<VidziSource> {
-    jwplayerConfig: JWPlayerConfig;
+export interface IVidziSourceData extends ISourceData<VidziSource> {
+    jwplayerConfig: IJWPlayerConfig;
     poster: string;
     title: string;
 }
-export interface Localization {
+
+export interface ILocalization {
     player: string;
     play: string;
     playback: string;
@@ -40,20 +41,23 @@ export interface Localization {
     copied: string;
     videoInfo: string;
 }
-export interface VSource {
+
+export interface IVSource {
     default: boolean;
     file: string;
     label: string;
     type: string;
     preload: string;
 }
-export interface Advertising {
+
+export interface IAdvertising {
     client: string;
     tag: string;
     skipoffset: number;
     skipmessage: string;
 }
-export interface CaptionsDetailed extends Captions {
+
+export interface ICaptionsDetailed extends ICaptions {
     backgroundOpacity: number;
     edgeStyle?: any;
     fontSize: number;
@@ -61,67 +65,80 @@ export interface CaptionsDetailed extends Captions {
     fontScale: number;
     windowOpacity: number;
 }
-export interface Track {
+
+export interface ITrack {
     kind: string;
     default?: boolean;
     file: string;
 }
-export type FeedData = object;
-export interface Playlist {
-    sources: VSource[];
-    tracks: Track[];
+
+export type IFeedData = object;
+
+export interface IPlaylist {
+    sources: IVSource[];
+    tracks: ITrack[];
     minDvrWindow: number;
     dvrSeekLimit: number;
     image: string;
     preload: string;
-    allSources: VSource[];
+    allSources: IVSource[];
     file: string;
-    feedData: FeedData;
+    feedData: IFeedData;
 }
-export type Plugins = any;
-export interface Captions {
+
+export type IPlugins = any;
+
+export interface ICaptions {
     back: boolean;
     color: string;
     fontFamily: string;
     fontsize: number;
 }
-export interface SetupConfig {
+
+export interface ISetupConfig {
     image: string;
-    sources: VSource[];
-    tracks: Track[];
+    sources: IVSource[];
+    tracks: ITrack[];
     height: string;
     base: string;
     hls_startfromlevel: number;
     hls_maxbufferlength: number;
     hls_maxbackbufferlength: number;
-    advertising: Advertising;
-    captions: Captions;
+    advertising: IAdvertising;
+    captions: ICaptions;
     width: string;
 }
-export type ItemMeta = object;
-export type MediaContainer = object;
-export interface PlaylistItem {
-    sources: VSource[];
-    tracks: Track[];
+
+export type IItemMeta = object;
+
+export type IMediaContainer = object;
+
+export interface IPlaylistItem {
+    sources: IVSource[];
+    tracks: ITrack[];
     minDvrWindow: number;
     dvrSeekLimit: number;
     image: string;
     preload: string;
-    allSources: VSource[];
+    allSources: IVSource[];
     file: string;
-    feedData: FeedData;
+    feedData: IFeedData;
 }
-export interface CaptionsListItem {
+
+export interface ICaptionsListItem {
     id: string;
     label: string;
 }
-export interface MediaElement {
+
+export interface IMediaElement {
     webkitWirelessVideoPlaybackDisabled: boolean;
 }
-export interface Provider {
+
+export interface IProvider {
     name: string;
 }
-export interface JWPlayerConfig {
+
+export interface IJWPlayerConfig {
     attached: boolean;
     autostart: boolean;
     bandwidthEstimate: number;
@@ -133,7 +150,7 @@ export interface JWPlayerConfig {
     displaytitle: boolean;
     height: string;
     liveTimeout?: any;
-    localization: Localization;
+    localization: ILocalization;
     mute: boolean;
     nextUpDisplay: boolean;
     playbackRateControls: boolean;
@@ -144,49 +161,49 @@ export interface JWPlayerConfig {
     volume: number;
     width: string;
     image: string;
-    sources: VSource[];
-    tracks: Track[];
+    sources: IVSource[];
+    tracks: ITrack[];
     base: string;
     hls_startfromlevel: number;
     hls_maxbufferlength: number;
     hls_maxbackbufferlength: number;
-    advertising: Advertising;
-    captions: CaptionsDetailed;
+    advertising: IAdvertising;
+    captions: ICaptionsDetailed;
     playbackRate: number;
-    playlist: Playlist[];
+    playlist: IPlaylist[];
     key: string;
     edition: string;
     error?: any;
     flashplayer: string;
-    plugins: Plugins;
+    plugins: IPlugins;
     id: string;
-    setupConfig: SetupConfig;
+    setupConfig: ISetupConfig;
     audioMode: boolean;
     flashBlocked: boolean;
     item: number;
-    itemMeta: ItemMeta;
+    itemMeta: IItemMeta;
     playRejected: boolean;
     state: string;
     itemReady: boolean;
-    feedData: FeedData;
+    feedData: IFeedData;
     playOnViewable: boolean;
     altText: string;
     fullscreen: boolean;
     logoWidth: number;
     scrubbing: boolean;
-    mediaContainer: MediaContainer;
+    mediaContainer: IMediaContainer;
     iFrame: boolean;
     activeTab: boolean;
     touchMode: boolean;
     inDom: boolean;
-    playlistItem: PlaylistItem;
+    playlistItem: IPlaylistItem;
     minDvrWindow: number;
     dvrSeekLimit: number;
     captionsIndex: number;
-    captionsList: CaptionsListItem[];
+    captionsList: ICaptionsListItem[];
     captionsTrack?: any;
-    mediaElement: MediaElement;
-    provider: Provider;
+    mediaElement: IMediaElement;
+    provider: IProvider;
     supportsPlaybackRate: boolean;
     containerWidth: number;
     containerHeight: number;
@@ -201,37 +218,41 @@ export interface JWPlayerConfig {
     currentTime: number;
     instreamMode: boolean;
 }
-export class VidziScrapper extends SourceScrapper<VidziSourceData> {
+
+export class VidziScrapper extends SourceRunnerScrapper<IVidziSourceData> {
     public static Name: string = 'vidzi';
     public static Domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
     public static UrlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
-    public static async scrap(url: string): Promise<Scrap<VidziSourceData>> {
+    public static Runner: PuppeteerRunner<IVidziSourceData> = new PuppeteerRunner<IVidziSourceData>();
+    public static async scrap(url: string): Promise<Scrap<IVidziSourceData>> {
         return new VidziScrapper().scrap(url);
     }
-    public name: string = 'vidzi';
-    public domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
-    public urlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
-    protected async run(url: string): Promise<VidziSourceData> {
-        return PuppeteerRunner.run(url, async ({ page }) => {
-            // tslint:disable-next-line
-            let jwplayer; // remove typescript error "cannot find name 'jwplayer'"
-            const config = await page.evaluate(() => jwplayer().getConfig());
-            const playlistItem = config.playlistItem;
-            const title = await page.$eval('.video-title', (t) => t.innerText);
-            return {
-                jwplayerConfig: config,
-                poster: playlistItem.image,
-                title,
-                sources: playlistItem.allSources.map(s => new VidziSource({
-                    default: s.default,
-                    url: s.file,
-                    type: s.type,
-                    label: s.label,
-                    preload: s.preload,
-                    codec: undefined,
-                    resolution: undefined
-                }))
-            };
-        });
+    public static async scrapFromArgs(url: string, args: IPuppeteerRunnerArgs): Promise<Scrap<IVidziSourceData>> {
+        return new VidziScrapper().scrapFromArgs(url, args);
+    }
+    public name: string = VidziScrapper.Name;
+    public domains: string[] = VidziScrapper.Domains;
+    public urlPattern: RegExp = VidziScrapper.UrlPattern;
+    public runner: PuppeteerRunner<IVidziSourceData> = VidziScrapper.Runner;
+    protected async runWithArgs({ page }: IPuppeteerRunnerArgs): Promise<IVidziSourceData> {
+        // tslint:disable-next-line
+        let jwplayer; // remove typescript error "cannot find name 'jwplayer'"
+        const config = await page.evaluate(() => jwplayer().getConfig());
+        const playlistItem = config.playlistItem;
+        const title = await page.$eval('.video-title', t => t.innerHTML);
+        return {
+            jwplayerConfig: config,
+            poster: playlistItem.image,
+            title,
+            sources: playlistItem.allSources.map(s => new VidziSource({
+                default: s.default,
+                url: s.file,
+                type: s.type,
+                label: s.label,
+                preload: s.preload,
+                codec: undefined,
+                resolution: undefined
+            }))
+        };
     }
 }

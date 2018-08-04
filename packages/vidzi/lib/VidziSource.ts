@@ -8,6 +8,7 @@ export interface IVidziSource extends ISource {
     codec: undefined;
     resolution: undefined;
 }
+
 export class VidziSource extends Source implements IVidziSource {
     public default: boolean;
     public label: string;
