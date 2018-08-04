@@ -1,5 +1,3 @@
-import { IStaticThis } from './types';
-
 import objectMerge = require('object-merge');
 
 export type IRunnerOptions = object;
@@ -20,14 +18,13 @@ export abstract class Runner<
     T,
     O extends IRunnerOptions = IRunnerOptions,
     A extends IRunnerArgs<O> = IRunnerArgs<O>> implements IRunner<T, O, A> {
-    public static async run<
+    /*public static async run<
         T,
         O extends IRunnerOptions = IRunnerOptions,
-        A extends IRunnerArgs<O> = IRunnerArgs<O>,
-        R extends IRunner<T, O, A> = IRunner<T, O, A>>(
-        this: IStaticThis<R>, url: string, scrapper: (args: A) => Promise<T>, options?: O): Promise<T> {
+        A extends IRunnerArgs<O> = IRunnerArgs<O>>(
+        this: IStaticThis<Runner<T, O, A>>, url: string, scrapper: (args: A) => Promise<T>, options?: O): Promise<T> {
         return new this().run(url, scrapper, options);
-    }
+    }*/
     public abstract defaultOptions: O;
     public abstract async run(url: string, scrapper: (args: A) => Promise<T>, options?: O): Promise<T>;
     protected getOptions(options?: O): O {
