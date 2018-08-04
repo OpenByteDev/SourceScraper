@@ -18,36 +18,47 @@ export class SimplePuppeteerScrapper
     public urlPattern: RegExp = SimplePuppeteerScrapper.UrlPattern;
     public runner: PuppeteerRunner<ISourceData> = SimplePuppeteerScrapper.Runner;
     protected async runWithArgs({ page }: IPuppeteerRunnerArgs): Promise<ISourceData> {
-        // tslint:disable-next-line no-shadowed-variable
-        return page.evaluate(async Source => {
-            const data: ISourceData = {
+        const raw = await page.evaluate(async () => {
+            const sdata: {
+                title?: string,
+                poster?: string,
+                sources: Array<{ url: string, type: string | null }>
+            } = {
                 sources: []
             };
             const videos = document.getElementsByTagName('video');
             for (const video of videos) {
-                const vsrc = video.src;
-                if (vsrc)
-                    data.sources.push(new Source({
-                        url: vsrc,
-                        type: video.getAttribute('type') || undefined
-                    }));
+                const source_attr = video.src;
+                if (source_attr)
+                    sdata.sources.push({
+                        url: source_attr,
+                        type: video.getAttribute('type')
+                    });
                 const poster = video.poster;
                 if (poster)
-                    data.poster = poster;
-                const sources = video.getElementsByTagName('source');
-                for (const source of sources) {
+                    sdata.poster = poster;
+                const source_tags = video.getElementsByTagName('source');
+                for (const source of source_tags) {
                     const ssrc = source.src;
                     if (ssrc)
-                        data.sources.push(new Source({
+                        sdata.sources.push({
                             url: ssrc,
-                            type: source.getAttribute('type') || undefined
-                        }));
+                            type: source.getAttribute('type')
+                        });
                 }
             }
             const titles = document.getElementsByTagName('title');
             if (titles.length >= 1)
-                data.title = titles[0].innerText;
-            return Promise.resolve(data);
-        }, Source);
+                sdata.title = titles[0].innerText;
+            return Promise.resolve(sdata);
+        });
+        return {
+            poster: raw.poster,
+            title: raw.title,
+            sources: raw.sources.map(e => new Source({
+                url: e.url,
+                type: e || undefined
+            }))
+        };
     }
 }
