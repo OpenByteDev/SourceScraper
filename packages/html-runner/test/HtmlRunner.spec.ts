@@ -1,14 +1,13 @@
-import { HtmlRunner, IHtmlRunnerArgs } from '../lib';
+import { HtmlRunner } from '../lib';
 
 import chai = require('chai');
 import 'mocha';
 chai.should();
 
-describe('DomRunner', () => {
+describe('HtmlRunner', () => {
     it('should provide valid args', async () => {
         const url = 'http://tekeye.uk/html/html5-video-test-page';
-        const runner = new HtmlRunner<IHtmlRunnerArgs>();
-        const args = await runner.run(url, a => Promise.resolve(a));
+        const args = await HtmlRunner.run(url, a => Promise.resolve(a));
         args.should.have.property('response').that.is.an('object');
         args.response.should.have.property('data').that.is.a('string');
         args.response.should.have.property('status').that.is.a('number');
