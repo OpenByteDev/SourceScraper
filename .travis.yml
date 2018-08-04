@@ -5,4 +5,4 @@ notifications:
   email: false
 script:
   - "lerna bootstrap"
-  - "lerna run test"
+  - "lerna run ci-test"
