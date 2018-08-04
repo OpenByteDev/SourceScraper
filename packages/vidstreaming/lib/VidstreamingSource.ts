@@ -7,6 +7,7 @@ export interface IVidstreamingSource extends ISource {
     resolution: undefined;
     codec: undefined;
 }
+
 export class VidstreamingSource extends Source implements IVidstreamingSource {
     public type: string;
     public label: string;
