@@ -1,6 +1,6 @@
 import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from './DomRunner';
 
-import { ISourceData, ISourceScrapper, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
 
 export class SimpleDomScrapper
     extends SourceRunnerScrapper<
@@ -13,6 +13,12 @@ export class SimpleDomScrapper
     public static Domains: string[] = [];
     public static UrlPattern: RegExp = /.*/;
     public static Runner: DomRunner<ISourceData> = new DomRunner<ISourceData>();
+    public static async scrap(url: string): Promise<Scrap<ISourceData>> {
+        return new SimpleDomScrapper().scrap(url);
+    }
+    public static async scrapFromArgs(url: string, args: IDomRunnerArgs): Promise<Scrap<ISourceData>> {
+        return new SimpleDomScrapper().scrapFromArgs(url, args);
+    }
     public name: string =  SimpleDomScrapper.Name;
     public domains: string[] = SimpleDomScrapper.Domains;
     public urlPattern: RegExp = SimpleDomScrapper.UrlPattern;
