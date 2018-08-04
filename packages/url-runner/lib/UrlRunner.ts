@@ -1,17 +1,26 @@
-import { Runner, RunnerArgs, RunnerOptions } from 'sourcescrapper-core';
+import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
-export type UrlRunnerOptions = RunnerOptions;
-export type UrlRunnerArgs<T> = RunnerArgs<T>;
-export type UrlRunnerExec<T> = (UrlRunnerArgs) => Promise<T>;
-export class UrlRunner<T> extends Runner<T, UrlRunnerExec<T>, UrlRunnerOptions> {
-    public static async run<T>(url: string, scrapper: UrlRunnerExec<T>, options?: UrlRunnerOptions): Promise<T> {
+export type IUrlRunnerOptions = IRunnerOptions;
+
+export type IUrlRunnerArgs = IRunnerArgs<IUrlRunnerOptions>;
+
+export interface IUrlRunner<T> extends IRunner<T, IUrlRunnerOptions, IUrlRunnerArgs> { }
+
+export class UrlRunner<T> extends Runner<T, IUrlRunnerOptions, IUrlRunnerArgs> implements IUrlRunner<T> {
+    public static DefaultOptions: IUrlRunnerOptions = { };
+    public static async run<T>(
+        url: string,
+        scrapper: (args: IUrlRunnerArgs) => Promise<T>,
+        options?: IUrlRunnerOptions): Promise<T> {
         return new UrlRunner<T>().run(url, scrapper, options);
     }
-    public defaultOptions: UrlRunnerOptions = {};
-    public async run(url: string, scrapper: UrlRunnerExec<T>, options?: UrlRunnerOptions): Promise<T> {
+    public defaultOptions: IUrlRunnerOptions = UrlRunner.DefaultOptions;
+    public async run(
+        url: string,
+        scrapper: (args: IUrlRunnerArgs) => Promise<T>,
+        options?: IUrlRunnerOptions): Promise<T> {
         return scrapper({
             options,
-            scrapper,
             url
         });
     }
