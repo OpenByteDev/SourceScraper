@@ -15,19 +15,19 @@ Scrap the sources from your favorite video streaming sites.
 ## Supported Sites
 
 #### Source
- - <sub><img src="http://www.google.com/s2/favicons?domain=oload.win" height="20"></sub> Openload (openload.co, oload.tv, oload.win)
- - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20"></sub> Vidzi (vidzi.tv)
- - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> Vidstreaming (vidstreaming.io)
- - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> Streamango (streamango.com)
- - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> Rapidvideo (rapidvideo.com)
- - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20"></sub> StreamMoe (stream.moe)
- - <sub><img src="http://www.google.com/s2/favicons?domain=mp4upload.com" height="20"></sub> MP4Upload (mp4upload.com)
- - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> Streamcloud (streamcloud.eu) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
+ - <sub><img src="http://www.google.com/s2/favicons?domain=oload.win" height="20"></sub> [Openload](https://www.openload.co)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20"></sub> [Vidzi](https://www.vidzi.tv)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20"></sub> [Vidstreaming](https://www.vidstreaming.io)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=streamango.com" height="20"></sub> [Streamango](https://www.streamango.com)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=rapidvideo.com" height="20"></sub> [Rapidvideo](https://www.rapidvideo.com)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20"></sub> [StreamMoe](https://www.stream.moe)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=mp4upload.com" height="20"></sub> [MP4Upload](https://www.mp4upload.com)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20"></sub> [Streamcloud](https://www.streamcloud.eu) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
 
 #### Hoster
-- <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> MasterAnime (masterani.me)
-- <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> Gogoanime (gogoanime.io, gogoanime.se)
-- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> Kissanime (kissanime.ru) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
+- <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> [MasterAnime](https://www.masterani.me)
+- <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> [Gogoanime](https://www.gogoanime.io)
+- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> [Kissanime](https://www.kissanime.ru) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
 <hr>
 
 ## Getting Started
@@ -35,6 +35,7 @@ Scrap the sources from your favorite video streaming sites.
 ```bash
 $ npm i sourcescrapper
 ```
+There is a packages available for each site individually which you can find [here](./packages.md)
 
 ### Usage
 ```js
