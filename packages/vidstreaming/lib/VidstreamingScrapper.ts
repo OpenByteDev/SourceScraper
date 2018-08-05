@@ -36,8 +36,8 @@ export class VidstreamingScrapper extends SourceRunnerScrapper<IVidstreamingSour
     public static async scrap(url: string): Promise<Scrap<IVidstreamingSourceData>> {
         return new VidstreamingScrapper().scrap(url);
     }
-    public static async scrapFromArgs(url: string, args: IHtmlRunnerArgs): Promise<Scrap<IVidstreamingSourceData>> {
-        return new VidstreamingScrapper().scrapFromArgs(url, args);
+    public static async scrapFromArgs(args: IHtmlRunnerArgs): Promise<Scrap<IVidstreamingSourceData>> {
+        return new VidstreamingScrapper().scrapFromArgs(args);
     }
     public name: string = VidstreamingScrapper.Name;
     public domains: string[] = VidstreamingScrapper.Domains;
