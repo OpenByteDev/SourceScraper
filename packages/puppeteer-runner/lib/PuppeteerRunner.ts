@@ -37,7 +37,7 @@ export class PuppeteerRunner<T> extends Runner<T, IPuppeteerRunnerOptions, IPupp
     implements IPuppeteerRunner<T> {
     public static DefaultOptions: IPuppeteerRunnerOptions = {
         puppeteerConfig: {
-            headless: false
+            headless: true
         },
         requestInterceptors: [
             ({ resourceType }: IRequestInterceptorArgs) => resourceType === 'font'
