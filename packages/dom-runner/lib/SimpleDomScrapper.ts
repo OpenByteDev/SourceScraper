@@ -1,5 +1,6 @@
 import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from './DomRunner';
 
+import { ConstructorOptions as JSDOMOptions, JSDOM } from 'jsdom';
 import { ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
 
 export class SimpleDomScrapper
@@ -11,13 +12,22 @@ export class SimpleDomScrapper
     implements ISourceScrapper {
     public static Name: string = 'simpledom';
     public static Domains: string[] = [];
-    public static UrlPattern: RegExp = /.*/;
+    public static UrlPattern: RegExp = /.*/i;
     public static Runner: DomRunner<ISourceData> = new DomRunner<ISourceData>();
     public static async scrap(url: string): Promise<Scrap<ISourceData>> {
         return new SimpleDomScrapper().scrap(url);
     }
-    public static async scrapFromArgs(url: string, args: IDomRunnerArgs): Promise<Scrap<ISourceData>> {
-        return new SimpleDomScrapper().scrapFromArgs(url, args);
+    public static async scrapFromArgs(args: IDomRunnerArgs): Promise<Scrap<ISourceData>> {
+        return new SimpleDomScrapper().scrapFromArgs(args);
+    }
+    public static async scrapFromHtml(url: string, html: string, options?: JSDOMOptions): Promise<Scrap<ISourceData>> {
+        const jsdom = new JSDOM(html, options);
+        return SimpleDomScrapper.scrapFromArgs({
+            url,
+            jsdom,
+            window: jsdom.window,
+            document: jsdom.window.document
+        });
     }
     public name: string =  SimpleDomScrapper.Name;
     public domains: string[] = SimpleDomScrapper.Domains;
