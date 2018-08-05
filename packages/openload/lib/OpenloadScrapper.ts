@@ -13,8 +13,8 @@ export class OpenloadScrapper extends SourceRunnerScrapper<IOpenloadSourceData> 
     public static async scrap(url: string): Promise<Scrap<IOpenloadSourceData>> {
         return new OpenloadScrapper().scrap(url);
     }
-    public static async scrapFromArgs(url: string, args: IPuppeteerRunnerArgs): Promise<Scrap<IOpenloadSourceData>> {
-        return new OpenloadScrapper().scrapFromArgs(url, args);
+    public static async scrapFromArgs(args: IPuppeteerRunnerArgs): Promise<Scrap<IOpenloadSourceData>> {
+        return new OpenloadScrapper().scrapFromArgs(args);
     }
     public name: string = OpenloadScrapper.Name;
     public domains: string[] = OpenloadScrapper.Domains;
