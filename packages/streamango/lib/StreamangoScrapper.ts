@@ -15,8 +15,8 @@ export class StreamangoScrapper extends SourceRunnerScrapper<IStreamangoSourceDa
     public static async scrap(url: string): Promise<Scrap<IStreamangoSourceData>> {
         return new StreamangoScrapper().scrap(url);
     }
-    public static async scrapFromArgs(url: string, args: IPuppeteerRunnerArgs): Promise<Scrap<IStreamangoSourceData>> {
-        return new StreamangoScrapper().scrapFromArgs(url, args);
+    public static async scrapFromArgs(args: IPuppeteerRunnerArgs): Promise<Scrap<IStreamangoSourceData>> {
+        return new StreamangoScrapper().scrapFromArgs(args);
     }
     public name: string = StreamangoScrapper.Name;
     public domains: string[] = StreamangoScrapper.Domains;
