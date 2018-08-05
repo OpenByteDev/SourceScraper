@@ -1,8 +1,9 @@
 import { SimplePuppeteerScrapper } from '../lib';
 
+import { ISourceData } from 'sourcescrapper-core';
+
 import chai = require('chai');
 import 'mocha';
-import { ISourceData } from 'sourcescrapper-core';
 chai.should();
 
 describe('SimplePuppeteerScrapper', () => {
