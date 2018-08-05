@@ -6,7 +6,7 @@ export interface IStreamangoSource extends ISource {
     type: string;
 }
 
-export class StreamangoSource extends Source implements ISource {
+export class StreamangoSource extends Source implements IStreamangoSource {
     public bitrate: number;
     public height: number;
     public type: string;
