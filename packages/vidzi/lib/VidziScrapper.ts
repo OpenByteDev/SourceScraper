@@ -227,8 +227,8 @@ export class VidziScrapper extends SourceRunnerScrapper<IVidziSourceData> {
     public static async scrap(url: string): Promise<Scrap<IVidziSourceData>> {
         return new VidziScrapper().scrap(url);
     }
-    public static async scrapFromArgs(url: string, args: IPuppeteerRunnerArgs): Promise<Scrap<IVidziSourceData>> {
-        return new VidziScrapper().scrapFromArgs(url, args);
+    public static async scrapFromArgs(args: IPuppeteerRunnerArgs): Promise<Scrap<IVidziSourceData>> {
+        return new VidziScrapper().scrapFromArgs(args);
     }
     public name: string = VidziScrapper.Name;
     public domains: string[] = VidziScrapper.Domains;
