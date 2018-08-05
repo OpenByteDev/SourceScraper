@@ -35,7 +35,7 @@ Scrap the sources from your favorite video streaming sites.
 ```bash
 $ npm i sourcescrapper
 ```
-There is a packages available for each site individually which you can find [here](./packages.md)
+There is a packages available for each site individually which you can find [here](./packages.md).
 
 ### Usage
 ```js
