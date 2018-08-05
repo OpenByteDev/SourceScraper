@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper-dom-runner",
-    "version": "0.4.3",
+    "version": "0.5.0",
     "description": "Provides the DomRunner class for scrapping.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -11,11 +11,11 @@
     },
     "dependencies": {
         "jsdom": "^11.12.0",
-        "sourcescrapper-core": "^0.5.9"
+        "sourcescrapper-core": "^0.5.10"
     },
     "devDependencies": {
-        "@types/jsdom": "^11.0.6",
         "@types/chai": "^4.1.4",
+        "@types/jsdom": "^11.0.6",
         "@types/mocha": "^5.2.5",
         "@types/node": "^10.5.6",
         "chai": "^4.1.2",

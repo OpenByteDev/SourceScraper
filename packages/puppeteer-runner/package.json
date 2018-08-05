@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper-puppeteer-runner",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Provides the PuppeteerRunner class for scrapping.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -11,13 +11,13 @@
     },
     "dependencies": {
         "puppeteer": "^1.6.2",
-        "sourcescrapper-core": "^0.5.9"
+        "sourcescrapper-core": "^0.5.10"
     },
     "devDependencies": {
-        "@types/puppeteer": "^1.6.0",
         "@types/chai": "^4.1.4",
         "@types/mocha": "^5.2.5",
         "@types/node": "^10.5.6",
+        "@types/puppeteer": "^1.6.0",
         "chai": "^4.1.2",
         "mocha": "^5.2.0",
         "npm-run-all": "^4.1.3",

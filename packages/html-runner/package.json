@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper-html-runner",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "Provides the HtmlRunner class for scrapping.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "axios": "^0.18.0",
-        "sourcescrapper-core": "^0.5.9"
+        "sourcescrapper-core": "^0.5.10"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",

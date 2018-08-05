@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper-url-runner",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Provides the UrlRunner class for scrapping.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,7 +10,7 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.5.9"
+        "sourcescrapper-core": "^0.5.10"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",

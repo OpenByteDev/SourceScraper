@@ -1,6 +1,6 @@
 {
     "name": "openload-scrapper",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "A scrapper for Openload",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,8 +10,8 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.5.9",
-        "sourcescrapper-puppeteer-runner": "^0.4.0"
+        "sourcescrapper-core": "^0.5.10",
+        "sourcescrapper-puppeteer-runner": "^0.4.1"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
