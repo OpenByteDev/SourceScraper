@@ -1,6 +1,6 @@
 import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from './PuppeteerRunner';
 
-import { ISourceData, ISourceScrapper, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
 
 export class SimplePuppeteerScrapper
     extends SourceRunnerScrapper<
@@ -11,8 +11,14 @@ export class SimplePuppeteerScrapper
     implements ISourceScrapper {
     public static Name: string = 'puppeteer';
     public static Domains: string[] = [];
-    public static UrlPattern: RegExp = /.*/;
+    public static UrlPattern: RegExp = /.*/i;
     public static Runner: PuppeteerRunner<ISourceData> = new PuppeteerRunner<ISourceData>();
+    public static async scrap(url: string): Promise<Scrap<ISourceData>> {
+        return new SimplePuppeteerScrapper().scrap(url);
+    }
+    public static async scrapFromArgs(args: IPuppeteerRunnerArgs): Promise<Scrap<ISourceData>> {
+        return new SimplePuppeteerScrapper().scrapFromArgs(args);
+    }
     public name: string = SimplePuppeteerScrapper.Name;
     public domains: string[] = SimplePuppeteerScrapper.Domains;
     public urlPattern: RegExp = SimplePuppeteerScrapper.UrlPattern;
