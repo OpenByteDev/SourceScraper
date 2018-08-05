@@ -12,7 +12,7 @@
     "dependencies": {
         "newline-remove": "^1.0.2",
         "query-string": "^6.1.0",
-        "regexp.execall": "^1.0.0",
+        "regexp.execall": "^1.0.2",
         "sourcescrapper-core": "^0.5.9",
         "sourcescrapper-html-runner": "^0.2.3"
     },
