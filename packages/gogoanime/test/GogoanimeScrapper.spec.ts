@@ -1,8 +1,9 @@
 import { GogoanimeScrapper } from '../lib';
 
+import { IHosterData } from 'sourcescrapper-core';
+
 import chai = require('chai');
 import 'mocha';
-import { IHosterData } from 'sourcescrapper-core';
 chai.should();
 
 describe('GogoanimeScrapper', () => {
