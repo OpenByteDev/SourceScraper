@@ -9,6 +9,11 @@ chai.should();
 describe('MP4UploadScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
         const url = 'https://mp4upload.com/embed-fj1z3v1qu8wj.html';
+        MP4UploadScrapper.RunnerOptions = {
+            puppeteerConfig: {
+                args: ['--no-sandbox']
+            }
+        };
         const scrap = await MP4UploadScrapper.scrap(url);
         scrap.should.have.property('success').that.is.a('boolean').and.that.is.true;
         scrap.should.have.property('data').that.is.an('object').and.that.is.not.undefined;

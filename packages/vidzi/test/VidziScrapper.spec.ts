@@ -9,6 +9,11 @@ chai.should();
 describe('VidziScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
         const url = 'https://vidzi.nu/9q00u8jlom1t.html';
+        VidziScrapper.RunnerOptions = {
+            puppeteerConfig: {
+                args: ['--no-sandbox']
+            }
+        };
         const scrap = await VidziScrapper.scrap(url);
         scrap.should.have.property('success').that.is.a('boolean').and.that.is.true;
         scrap.should.have.property('data').that.is.an('object').and.that.is.not.undefined;

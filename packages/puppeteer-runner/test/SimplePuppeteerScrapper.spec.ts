@@ -9,6 +9,11 @@ chai.should();
 describe('SimplePuppeteerScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
         const url = 'http://tekeye.uk/html/html5-video-test-page';
+        SimplePuppeteerScrapper.RunnerOptions = {
+            puppeteerConfig: {
+                args: ['--no-sandbox']
+            }
+        };
         const scrap = await SimplePuppeteerScrapper.scrap(url);
         scrap.should.have.property('success').that.is.a('boolean').and.that.is.true;
         scrap.should.have.property('data').that.is.an('object').and.that.is.not.undefined;

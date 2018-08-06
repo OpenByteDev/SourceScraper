@@ -1,7 +1,7 @@
 import { VidziSource } from './VidziSource';
 
 import { ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
-import { IPuppeteerRunnerArgs, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
+import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface IVidziSourceData extends ISourceData<VidziSource> {
     jwplayerConfig: IJWPlayerConfig;
@@ -224,6 +224,7 @@ export class VidziScrapper extends SourceRunnerScrapper<IVidziSourceData> {
     public static Domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
     public static UrlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
     public static Runner: PuppeteerRunner<IVidziSourceData> = new PuppeteerRunner<IVidziSourceData>();
+    public static RunnerOptions?: IPuppeteerRunnerOptions = undefined;
     public static async scrap(url: string): Promise<Scrap<IVidziSourceData>> {
         return new VidziScrapper().scrap(url);
     }
@@ -234,6 +235,7 @@ export class VidziScrapper extends SourceRunnerScrapper<IVidziSourceData> {
     public domains: string[] = VidziScrapper.Domains;
     public urlPattern: RegExp = VidziScrapper.UrlPattern;
     public runner: PuppeteerRunner<IVidziSourceData> = VidziScrapper.Runner;
+    public runnerOptions?: IPuppeteerRunnerOptions = VidziScrapper.RunnerOptions;
     protected async runWithArgs({ page }: IPuppeteerRunnerArgs): Promise<IVidziSourceData> {
         // tslint:disable-next-line
         let jwplayer; // remove typescript error "cannot find name 'jwplayer'"

@@ -11,7 +11,7 @@ export class KissanimeScrapper extends HosterRunnerScrapper<IHosterData> {
     public static UrlPattern: RegExp =
         /https?:\/\/(www\.)?kissanime\.ru\/Anime\/([a-zA-Z0-9\-]+)\/([a-zA-Z0-9\-]+)\?id=(\d+)/i;
     public static Runner: PuppeteerRunner<IHosterData> = new PuppeteerRunner<IHosterData>();
-    public static RunnerOptions: IPuppeteerRunnerOptions = {
+    public static RunnerOptions?: IPuppeteerRunnerOptions = {
         puppeteerConfig: {
             headless: false
         },
@@ -36,7 +36,7 @@ export class KissanimeScrapper extends HosterRunnerScrapper<IHosterData> {
     public domains: string[] = KissanimeScrapper.Domains;
     public urlPattern: RegExp = KissanimeScrapper.UrlPattern;
     public runner: PuppeteerRunner<IHosterData> = KissanimeScrapper.Runner;
-    public runnerOptions: IPuppeteerRunnerOptions = KissanimeScrapper.RunnerOptions;
+    public runnerOptions?: IPuppeteerRunnerOptions = KissanimeScrapper.RunnerOptions;
     protected async runWithArgs({ page, url }: IPuppeteerRunnerArgs): Promise<IHosterData> {
         const gotoIfNotTarget = async (_page) => {
             if (normalizeUrl(_page.url()) !== normalizeUrl(url)) {
