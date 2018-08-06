@@ -33,6 +33,7 @@ export class VidstreamingScrapper extends SourceRunnerScrapper<IVidstreamingSour
     public static Domains: string[] = ['vidstreaming'];
     public static UrlPattern: RegExp = /https?:\/\/(www\.)?vidstreaming\.io\/embed\/(\w+)/i;
     public static Runner: HtmlRunner<IVidstreamingSourceData> = new HtmlRunner<IVidstreamingSourceData>();
+    public static RunnerOptions?: IHtmlRunnerOptions = undefined;
     public static async scrap(url: string): Promise<Scrap<IVidstreamingSourceData>> {
         return new VidstreamingScrapper().scrap(url);
     }
@@ -43,6 +44,7 @@ export class VidstreamingScrapper extends SourceRunnerScrapper<IVidstreamingSour
     public domains: string[] = VidstreamingScrapper.Domains;
     public urlPattern: RegExp = VidstreamingScrapper.UrlPattern;
     public runner: HtmlRunner<IVidstreamingSourceData> = VidstreamingScrapper.Runner;
+    public runnerOptions?: IHtmlRunnerOptions = VidstreamingScrapper.RunnerOptions;
     protected async runWithArgs({ html }: IHtmlRunnerArgs): Promise<IVidstreamingSourceData> {
         const titleregex = /<title>([^<]+)<\/title>/i;
         const dataregex = /playerInstance\.(setup|load)\(({.*?})\)/gi;

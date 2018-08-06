@@ -1,6 +1,6 @@
 import { ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
 import { SimpleDomScrapper } from 'sourcescrapper-dom-runner';
-import { HtmlRunner, IHtmlRunnerArgs } from 'sourcescrapper-html-runner';
+import { HtmlRunner, IHtmlRunnerArgs, IHtmlRunnerOptions } from 'sourcescrapper-html-runner';
 
 export interface IStreamMoeSourceData extends ISourceData {
     decodedPage: string;
@@ -11,6 +11,7 @@ export class StreamMoeScrapper extends SourceRunnerScrapper<IStreamMoeSourceData
     public static Domains: string[] = ['stream.moe'];
     public static UrlPattern: RegExp = /https?:\/\/(www\.)?stream\.moe\/embed2\/[0-9a-zA-Z]+/i;
     public static Runner: HtmlRunner<IStreamMoeSourceData> = new HtmlRunner<IStreamMoeSourceData>();
+    public static RunnerOptions?: IHtmlRunnerOptions = undefined;
     public static async scrap(url: string): Promise<Scrap<IStreamMoeSourceData>> {
         return new StreamMoeScrapper().scrap(url);
     }
@@ -21,6 +22,7 @@ export class StreamMoeScrapper extends SourceRunnerScrapper<IStreamMoeSourceData
     public domains: string[] = StreamMoeScrapper.Domains;
     public urlPattern: RegExp = StreamMoeScrapper.UrlPattern;
     public runner: HtmlRunner<IStreamMoeSourceData> = StreamMoeScrapper.Runner;
+    public runnerOptions?: IHtmlRunnerOptions = StreamMoeScrapper.RunnerOptions;
     protected async runWithArgs({ html, url }: IHtmlRunnerArgs): Promise<IStreamMoeSourceData> {
         const encodedDataRegex = /atob\((['"])(.*?)\1\)/i;
         const encodedData = encodedDataRegex.exec(html);
