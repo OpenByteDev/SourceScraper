@@ -1,1 +1,5 @@
 * text eol=crlf
+/**/docs/* linguist-documentation=true
+/**/types/* linguist-generated=true
+/**/dist/* linguist-generated=true
+/**/node_modules/* linguist-vendored=true
