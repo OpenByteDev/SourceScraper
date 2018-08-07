@@ -35,7 +35,7 @@ Scrap the sources from your favorite video streaming sites.
 ```bash
 $ npm i sourcescrapper
 ```
-There is a packages available for each site individually which you can find [here](./packages.md).
+There is a package available for each site individually which you can find [here](./packages.md).
 
 ### Usage
 ```js
@@ -46,9 +46,9 @@ const { scrappers } = require('sourcescrapper');
     const scrapper = scrappers.getFirstApplicable(url);
     const scrap = await scrapper.scrap(url);
     if (scrap.success)
-        console.log(scrap.data.sources[0].url);
+        console.log(scrap.data);
 })();
 ```
 
 ### API
-The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/).
+The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/packages/sourcescrapper/docs).
