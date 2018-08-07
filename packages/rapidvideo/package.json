@@ -1,6 +1,6 @@
 {
     "name": "rapidvideo-scrapper",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "description": "A scrapper for Rapidvideo",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,8 +10,8 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.5.13",
-        "sourcescrapper-dom-runner": "^0.5.3"
+        "sourcescrapper-core": "^0.5.14",
+        "sourcescrapper-dom-runner": "^0.5.4"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
