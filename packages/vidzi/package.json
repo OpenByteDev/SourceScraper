@@ -1,6 +1,6 @@
 {
     "name": "vidzi-scrapper",
-    "version": "0.4.3",
+    "version": "0.4.4",
     "description": "A scrapper for vidzi",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,8 +10,8 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.5.12",
-        "sourcescrapper-puppeteer-runner": "^0.4.3"
+        "sourcescrapper-core": "^0.5.13",
+        "sourcescrapper-puppeteer-runner": "^0.4.4"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
