@@ -1,7 +1,7 @@
 import { VidstreamingSource } from './VidstreamingSource';
 
 import { ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
-import { HtmlRunner, IHtmlRunnerArgs } from 'sourcescrapper-html-runner';
+import { HtmlRunner, IHtmlRunnerArgs, IHtmlRunnerOptions } from 'sourcescrapper-html-runner';
 
 import flatMap = require('flatmap');
 import jsonic = require('jsonic');
