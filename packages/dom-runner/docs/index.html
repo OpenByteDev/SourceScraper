@@ -65,9 +65,29 @@
 				<h1 id="sourcescrapper-domrunner">SourceScrapper-DomRunner</h1>
 				<p><a href="https://travis-ci.org/OpenByteDev/SourceScrapper"><img src="https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master" alt="Build Status"></a>
 					<a href="https://www.npmjs.com/package/sourcescrapper-dom-runner"><img src="https://badge.fury.io/js/sourcescrapper-dom-runner.svg" alt="npm version"></a>
+					<a href="https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fdom-runner"><img src="https://david-dm.org/OpenByteDev/SourceScrapper/status.svg?path=packages%2Fdom-runner" alt="Dependency Status"></a>
+					<a href="https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fdom-runner&amp;type=dev"><img src="https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fdom-runner" alt="DevDependency Status"></a>
 					<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="License"></a>
 				<a href=""><img src="https://img.shields.io/badge/doge-wow-yellow.svg" alt="Doge"></a></p>
-				<p>Provides the DomRunner class for scrapping.</p>
+				<p>Provides the <a href="https://openbytedev.github.io/SourceScrapper/packages/dom-runner/docs/classes/domrunner.html">DomRunner</a> class for scrapping.</p>
+				<p>This package is part of the <a href="https://github.com/OpenByteDev/SourceScrapper">SourceScrapper-Project</a>.</p>
+				<h2 id="getting-started">Getting Started</h2>
+				<h3 id="installation">Installation</h3>
+				<pre><code class="lang-bash">$ npm i sourcescrapper-dom-runner
+</code></pre>
+				<h3 id="usage">Usage</h3>
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> { DomRunner } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sourcescrapper-dom-runner'</span>);
+
+<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> url = <span class="hljs-string">'some url'</span>;
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> DomRunner.run(url, args =&gt; {
+        <span class="hljs-comment">// Extract data using args</span>
+    });
+    <span class="hljs-comment">// Do something with extracted data</span>
+})();
+</code></pre>
+				<h3 id="api">API</h3>
+				<p>The API generated with <a href="http://typedoc.org/">TypeDoc</a> can be found <a href="https://openbytedev.github.io/SourceScrapper/packages/dom-runner/docs/">here</a>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">

@@ -95,7 +95,7 @@
 				<h3 id="installation">Installation</h3>
 				<pre><code class="lang-bash">$ npm i sourcescrapper
 </code></pre>
-				<p>There is a packages available for each site individually which you can find <a href="./packages.md">here</a>.</p>
+				<p>There is a package available for each site individually which you can find <a href="./packages.md">here</a>.</p>
 				<h3 id="usage">Usage</h3>
 				<pre><code class="lang-js"><span class="hljs-keyword">const</span> { scrappers } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sourcescrapper'</span>);
 
@@ -104,11 +104,11 @@
     <span class="hljs-keyword">const</span> scrapper = scrappers.getFirstApplicable(url);
     <span class="hljs-keyword">const</span> scrap = <span class="hljs-keyword">await</span> scrapper.scrap(url);
     <span class="hljs-keyword">if</span> (scrap.success)
-        <span class="hljs-built_in">console</span>.log(scrap.data.sources[<span class="hljs-number">0</span>].url);
+        <span class="hljs-built_in">console</span>.log(scrap.data);
 })();
 </code></pre>
 				<h3 id="api">API</h3>
-				<p>The API generated with <a href="http://typedoc.org/">TypeDoc</a> can be found <a href="https://openbytedev.github.io/SourceScrapper/">here</a>.</p>
+				<p>The API generated with <a href="http://typedoc.org/">TypeDoc</a> can be found <a href="https://openbytedev.github.io/SourceScrapper/packages/sourcescrapper/docs">here</a>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
