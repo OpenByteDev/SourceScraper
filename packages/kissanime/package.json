@@ -33,7 +33,7 @@
         "typescript": "^3.0.1"
     },
     "scripts": {
-        "ci-test": "npm-run-all lint build",
+        "ci-test": "npm-run-all lint build test",
         "test": "mocha --timeout 200000 -r ts-node/register test/*.spec.ts",
         "lint": "tslint -p .",
         "lint-fix": "tslint -p . --fix",
