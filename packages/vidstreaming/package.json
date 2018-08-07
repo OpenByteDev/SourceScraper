@@ -1,6 +1,6 @@
 {
     "name": "vidstreaming-scrapper",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "description": "A scrapper for Vidstreaming",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
