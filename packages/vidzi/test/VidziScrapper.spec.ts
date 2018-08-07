@@ -11,7 +11,7 @@ describe('VidziScrapper', () => {
         const url = 'https://vidzi.nu/9q00u8jlom1t.html';
         VidziScrapper.RunnerOptions = {
             puppeteerConfig: {
-                args: ['--no-sandbox']
+                args: ['--no-sandbox', '--disable-setuid-sandbox']
             }
         };
         const scrap = await VidziScrapper.scrap(url);

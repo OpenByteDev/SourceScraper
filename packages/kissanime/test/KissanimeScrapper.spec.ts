@@ -11,7 +11,7 @@ describe('KissanimeScrapper', () => {
         const url = 'http://kissanime.ru/Anime/Shingeki-no-Kyojin-Season-3/Episode-001?id=148021';
         KissanimeScrapper.RunnerOptions = {
             puppeteerConfig: {
-                args: ['--no-sandbox']
+                args: ['--no-sandbox', '--disable-setuid-sandbox']
             }
         };
         const scrap = await KissanimeScrapper.scrap(url);

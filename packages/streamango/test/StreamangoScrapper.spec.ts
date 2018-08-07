@@ -11,7 +11,7 @@ describe('StreamangoScrapper', () => {
         const url = 'https://streamango.com/embed/rrddobalkqkmebnt';
         StreamangoScrapper.RunnerOptions = {
             puppeteerConfig: {
-                args: ['--no-sandbox']
+                args: ['--no-sandbox', '--disable-setuid-sandbox']
             }
         };
         const scrap = await StreamangoScrapper.scrap(url);

@@ -11,7 +11,7 @@ describe('OpenloadScrapper', () => {
         const url = 'https://openload.co/embed/t0jz0bXYJbY';
         OpenloadScrapper.RunnerOptions = {
             puppeteerConfig: {
-                args: ['--no-sandbox']
+                args: ['--no-sandbox', '--disable-setuid-sandbox']
             }
         };
         const scrap = await OpenloadScrapper.scrap(url);

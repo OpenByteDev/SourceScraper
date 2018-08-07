@@ -11,7 +11,7 @@ describe('MP4UploadScrapper', () => {
         const url = 'https://mp4upload.com/embed-fj1z3v1qu8wj.html';
         MP4UploadScrapper.RunnerOptions = {
             puppeteerConfig: {
-                args: ['--no-sandbox']
+                args: ['--no-sandbox', '--disable-setuid-sandbox']
             }
         };
         const scrap = await MP4UploadScrapper.scrap(url);
