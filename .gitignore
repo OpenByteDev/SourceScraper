@@ -3,3 +3,5 @@ node_modules
 lerna-debug.log
 /**/*.lerna_backup
 /**/*.log
+sgen.js
+rgen.js
