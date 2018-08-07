@@ -1,6 +1,6 @@
 import { GogoanimeScrapper } from 'gogoanime-scrapper';
 import { KissanimeScrapper } from 'kissanime-scrapper';
-import { MasterAnimeScrapper } from 'masteranime-scrapper';
+import { MasteranimeScrapper } from 'masteranime-scrapper';
 import { MP4UploadScrapper } from 'mp4upload-scrapper';
 import { OpenloadScrapper } from 'openload-scrapper';
 import { RapidvideoScrapper } from 'rapidvideo-scrapper';
@@ -23,7 +23,7 @@ const source: Array<Scrapper<ISourceData>> = [
 ];
 
 const hoster: Array<Scrapper<IHosterData>> = [
-    new MasterAnimeScrapper(),
+    new MasteranimeScrapper(),
     new GogoanimeScrapper(),
     new KissanimeScrapper()
 ];
