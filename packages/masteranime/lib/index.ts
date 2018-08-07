@@ -1,2 +1,2 @@
-export * from './MasterAnimeHoster';
-export * from './MasterAnimeScrapper';
+export * from './MasteranimeHoster';
+export * from './MasteranimeScrapper';

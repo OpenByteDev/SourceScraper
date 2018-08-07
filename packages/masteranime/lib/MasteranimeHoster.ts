@@ -1,7 +1,7 @@
 import { Host } from 'masteranime-api';
 import { Hoster, IHoster } from 'sourcescrapper-core';
 
-export interface IMasterAnimeHoster extends IHoster {
+export interface IMasteranimeHoster extends IHoster {
     host_id: number;
     embed_id: string;
     quality: number;
@@ -9,14 +9,14 @@ export interface IMasterAnimeHoster extends IHoster {
     host: Host;
 }
 
-export class MasterAnimeHoster extends Hoster implements IMasterAnimeHoster {
+export class MasteranimeHoster extends Hoster implements IMasteranimeHoster {
     public host_id: number;
     public embed_id: string;
     public quality: number;
     public type: number;
     public host: Host;
 
-    constructor(hoster: IMasterAnimeHoster) {
+    constructor(hoster: IMasteranimeHoster) {
         super(hoster);
         this.host_id = hoster.host_id;
         this.embed_id = hoster.embed_id;

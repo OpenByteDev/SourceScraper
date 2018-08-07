@@ -1,4 +1,4 @@
-import { MasterAnimeScrapper } from '../lib';
+import { MasteranimeScrapper } from '../lib';
 
 import { IHosterData } from 'sourcescrapper-core';
 
@@ -6,10 +6,10 @@ import chai = require('chai');
 import 'mocha';
 chai.should();
 
-describe('MasterAnimeScrapper', () => {
+describe('MasteranimeScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
         const url = 'https://www.masterani.me/anime/watch/226-fullmetal-alchemist-brotherhood/1';
-        const scrap = await MasterAnimeScrapper.scrap(url);
+        const scrap = await MasteranimeScrapper.scrap(url);
         scrap.should.have.property('success').that.is.a('boolean').and.that.is.true;
         scrap.should.have.property('data').that.is.an('object').and.that.is.not.undefined;
         const data = scrap.data as IHosterData;
