@@ -14,6 +14,6 @@ describe('PuppeteerRunner', () => {
             browser.should.have.property('close').that.is.a('function');
             browser.should.have.property('newPage').that.is.a('function');
             return Promise.resolve({});
-        });
+        }, { puppeteerConfig: { args: ['--no-sandbox', '--disable-setuid-sandbox'] }});
     });
 });
