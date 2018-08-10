@@ -50,11 +50,11 @@ export class PuppeteerRunner<T> extends Runner<T, IPuppeteerRunnerOptions, IPupp
         return new PuppeteerRunner<T>().run(url, scrapper, options);
     }
     public defaultOptions: IPuppeteerRunnerOptions = PuppeteerRunner.DefaultOptions;
-    public async run(
+    protected async exec(
         url: string,
         scrapper: (args: IPuppeteerRunnerArgs) => Promise<T>,
-        options?: IPuppeteerRunnerOptions): Promise<T> {
-        const { puppeteerConfig, requestInterceptors, init, navigationOptions } = this.getOptions(options);
+        options: IPuppeteerRunnerOptions): Promise<T> {
+        const { puppeteerConfig, requestInterceptors, init, navigationOptions } = options;
 
         const browser = await puppeteerLaunch(puppeteerConfig);
         const page = await browser.newPage();

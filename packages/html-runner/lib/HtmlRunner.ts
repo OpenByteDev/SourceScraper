@@ -23,12 +23,11 @@ export class HtmlRunner<T> extends Runner<T, IHtmlRunnerOptions, IHtmlRunnerArgs
         return new HtmlRunner<T>().run(url, scrapper, options);
     }
     public defaultOptions: IHtmlRunnerOptions = HtmlRunner.DefaultOptions;
-    public async run(
+    protected async exec(
         url: string,
         scrapper: (args: IHtmlRunnerArgs) => Promise<T>,
-        options?: IHtmlRunnerOptions): Promise<T> {
-        const opt = this.getOptions(options);
-        const response = await axios.get(url, opt.axiosConfig);
+        options: IHtmlRunnerOptions): Promise<T> {
+        const response = await axios.get(url, options.axiosConfig);
         return scrapper({
             url,
             options,

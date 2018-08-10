@@ -1,6 +1,8 @@
 import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from './PuppeteerRunner';
 
-import { ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
+import {
+    IRunnerScrapperOptions, ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper
+} from 'sourcescrapper-core';
 
 export class SimplePuppeteerScrapper
     extends SourceRunnerScrapper<
@@ -13,7 +15,7 @@ export class SimplePuppeteerScrapper
     public static Domains: string[] = [];
     public static UrlPattern: RegExp = /.*/i;
     public static Runner: PuppeteerRunner<ISourceData> = new PuppeteerRunner<ISourceData>();
-    public static RunnerOptions?: IPuppeteerRunnerOptions = undefined;
+    public static DefaultOptions: IRunnerScrapperOptions = {};
     public static async scrap(url: string): Promise<Scrap<ISourceData>> {
         return new SimplePuppeteerScrapper().scrap(url);
     }
@@ -24,8 +26,8 @@ export class SimplePuppeteerScrapper
     public domains: string[] = SimplePuppeteerScrapper.Domains;
     public urlPattern: RegExp = SimplePuppeteerScrapper.UrlPattern;
     public runner: PuppeteerRunner<ISourceData> = SimplePuppeteerScrapper.Runner;
-    public runnerOptions?: IPuppeteerRunnerOptions = SimplePuppeteerScrapper.RunnerOptions;
-    protected async runWithArgs({ page }: IPuppeteerRunnerArgs): Promise<ISourceData> {
+    public defaultOptions: IRunnerScrapperOptions = SimplePuppeteerScrapper.DefaultOptions;
+    protected async execWithArgs({ page }: IPuppeteerRunnerArgs): Promise<ISourceData> {
         const raw = await page.evaluate(async () => {
             const sdata: {
                 title?: string,

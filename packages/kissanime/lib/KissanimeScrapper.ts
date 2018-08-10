@@ -1,21 +1,40 @@
-import { Hoster, HosterScrapper, IHosterData, Scrap } from 'sourcescrapper-core';
-import { IPuppeteerRunnerArgs, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
+import {
+    Hoster, HosterScrapper, IHosterData, IRunnerScrapperOptions, Scrap
+} from 'sourcescrapper-core';
+import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 import normalizeUrl = require('normalize-url');
 import urlparser = require('urlparser');
+
+export type IKissanimeScrapperOptions = IRunnerScrapperOptions<IPuppeteerRunnerOptions>;
 
 export class KissanimeScrapper extends HosterScrapper<IHosterData> {
     public static Name: string = 'kissanime';
     public static Domains: string[] = ['kissanime.ru'];
     public static UrlPattern: RegExp =
         /https?:\/\/(www\.)?kissanime\.ru\/Anime\/([a-zA-Z0-9\-]+)\/([a-zA-Z0-9\-]+)\?id=(\d+)/i;
-    public static async scrap(url: string): Promise<Scrap<IHosterData>> {
-        return new KissanimeScrapper().scrap(url);
+    public static DefaultOptions: IKissanimeScrapperOptions = {
+        runnerOptions: {
+            requestInterceptors: [
+                ({ url: u, resourceType }) =>
+                    !u.includes('kissanime.ru') ||
+                    resourceType === 'image' ||
+                    resourceType === 'font' ||
+                    resourceType === 'stylesheet'
+                // ||
+                // url.includes('2mdnsys.com') ||
+                // url.includes('ti553.com')
+            ]
+        }
+    };
+    public static async scrap(url: string, options?: IKissanimeScrapperOptions): Promise<Scrap<IHosterData>> {
+        return new KissanimeScrapper().scrap(url, options);
     }
     public name: string = KissanimeScrapper.Name;
     public domains: string[] = KissanimeScrapper.Domains;
     public urlPattern: RegExp = KissanimeScrapper.UrlPattern;
-    protected async run(url: string): Promise<IHosterData> {
+    public defaultOptions: IKissanimeScrapperOptions = KissanimeScrapper.DefaultOptions;
+    protected async exec(url: string, options: IKissanimeScrapperOptions): Promise<IHosterData> {
         const parsed = urlparser.parse(url);
         parsed.query.parts.push('s=rapidvideo');
         url = parsed.toString();
@@ -44,17 +63,6 @@ export class KissanimeScrapper extends HosterScrapper<IHosterData> {
                     url: defaultUrl
                 })]
             };
-        }, {
-            requestInterceptors: [
-                ({ url: u, resourceType }) =>
-                    !u.includes('kissanime.ru') ||
-                    resourceType === 'image' ||
-                    resourceType === 'font' ||
-                    resourceType === 'stylesheet'
-                // ||
-                // url.includes('2mdnsys.com') ||
-                // url.includes('ti553.com')
-            ]
-        });
+        }, options.runnerOptions);
     }
 }

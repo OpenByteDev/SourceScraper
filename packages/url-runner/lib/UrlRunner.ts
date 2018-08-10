@@ -15,10 +15,10 @@ export class UrlRunner<T> extends Runner<T, IUrlRunnerOptions, IUrlRunnerArgs> i
         return new UrlRunner<T>().run(url, scrapper, options);
     }
     public defaultOptions: IUrlRunnerOptions = UrlRunner.DefaultOptions;
-    public async run(
+    public async exec(
         url: string,
         scrapper: (args: IUrlRunnerArgs) => Promise<T>,
-        options?: IUrlRunnerOptions): Promise<T> {
+        options: IUrlRunnerOptions): Promise<T> {
         return scrapper({
             options,
             url

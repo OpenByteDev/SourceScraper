@@ -1,6 +1,6 @@
 import { VidziSource } from './VidziSource';
 
-import { ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { IRunnerScrapperOptions, ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
 import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface IVidziSourceData extends ISourceData<VidziSource> {
@@ -219,24 +219,30 @@ export interface IJWPlayerConfig {
     instreamMode: boolean;
 }
 
+export type IVidziScrapperOptions = IRunnerScrapperOptions<IPuppeteerRunnerOptions>;
+
 export class VidziScrapper extends SourceRunnerScrapper<IVidziSourceData> {
     public static Name: string = 'vidzi';
     public static Domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
     public static UrlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
     public static Runner: PuppeteerRunner<IVidziSourceData> = new PuppeteerRunner<IVidziSourceData>();
-    public static RunnerOptions?: IPuppeteerRunnerOptions = undefined;
-    public static async scrap(url: string): Promise<Scrap<IVidziSourceData>> {
-        return new VidziScrapper().scrap(url);
+    public static DefaultOptions: IVidziScrapperOptions = {};
+    public static async scrap(
+        url: string,
+        options?: IVidziScrapperOptions): Promise<Scrap<IVidziSourceData>> {
+        return new VidziScrapper().scrap(url, options);
     }
-    public static async scrapFromArgs(args: IPuppeteerRunnerArgs): Promise<Scrap<IVidziSourceData>> {
-        return new VidziScrapper().scrapFromArgs(args);
+    public static async scrapFromArgs(
+        args: IPuppeteerRunnerArgs,
+        options?: IVidziScrapperOptions): Promise<Scrap<IVidziSourceData>> {
+        return new VidziScrapper().scrapFromArgs(args, options);
     }
     public name: string = VidziScrapper.Name;
     public domains: string[] = VidziScrapper.Domains;
     public urlPattern: RegExp = VidziScrapper.UrlPattern;
     public runner: PuppeteerRunner<IVidziSourceData> = VidziScrapper.Runner;
-    public runnerOptions?: IPuppeteerRunnerOptions = VidziScrapper.RunnerOptions;
-    protected async runWithArgs({ page }: IPuppeteerRunnerArgs): Promise<IVidziSourceData> {
+    public defaultOptions: IVidziScrapperOptions = VidziScrapper.DefaultOptions;
+    protected async execWithArgs({ page }: IPuppeteerRunnerArgs): Promise<IVidziSourceData> {
         // tslint:disable-next-line
         let jwplayer; // remove typescript error "cannot find name 'jwplayer'"
         const config = await page.evaluate(() => jwplayer().getConfig());

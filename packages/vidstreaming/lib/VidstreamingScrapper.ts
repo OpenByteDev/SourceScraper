@@ -1,6 +1,6 @@
 import { VidstreamingSource } from './VidstreamingSource';
 
-import { ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { IRunnerScrapperOptions, ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
 import { HtmlRunner, IHtmlRunnerArgs, IHtmlRunnerOptions } from 'sourcescrapper-html-runner';
 
 import flatMap = require('flatmap');
@@ -28,24 +28,30 @@ function isNotNull<T>(obj: T | null): obj is T {
     return obj !== null;
 }
 
+export type IVidstreamingScrapperOptions = IRunnerScrapperOptions<IHtmlRunnerOptions>;
+
 export class VidstreamingScrapper extends SourceRunnerScrapper<IVidstreamingSourceData> {
     public static Name: string = 'vidstreaming';
     public static Domains: string[] = ['vidstreaming'];
     public static UrlPattern: RegExp = /https?:\/\/(www\.)?vidstreaming\.io\/embed\/(\w+)/i;
     public static Runner: HtmlRunner<IVidstreamingSourceData> = new HtmlRunner<IVidstreamingSourceData>();
-    public static RunnerOptions?: IHtmlRunnerOptions = undefined;
-    public static async scrap(url: string): Promise<Scrap<IVidstreamingSourceData>> {
-        return new VidstreamingScrapper().scrap(url);
+    public static DefaultOptions: IRunnerScrapperOptions = {};
+    public static async scrap(
+        url: string,
+        options?: IRunnerScrapperOptions): Promise<Scrap<IVidstreamingSourceData>> {
+        return new VidstreamingScrapper().scrap(url, options);
     }
-    public static async scrapFromArgs(args: IHtmlRunnerArgs): Promise<Scrap<IVidstreamingSourceData>> {
-        return new VidstreamingScrapper().scrapFromArgs(args);
+    public static async scrapFromArgs(
+        args: IHtmlRunnerArgs,
+        options?: IRunnerScrapperOptions): Promise<Scrap<IVidstreamingSourceData>> {
+        return new VidstreamingScrapper().scrapFromArgs(args, options);
     }
     public name: string = VidstreamingScrapper.Name;
     public domains: string[] = VidstreamingScrapper.Domains;
     public urlPattern: RegExp = VidstreamingScrapper.UrlPattern;
     public runner: HtmlRunner<IVidstreamingSourceData> = VidstreamingScrapper.Runner;
-    public runnerOptions?: IHtmlRunnerOptions = VidstreamingScrapper.RunnerOptions;
-    protected async runWithArgs({ html }: IHtmlRunnerArgs): Promise<IVidstreamingSourceData> {
+    public defaultOptions: IRunnerScrapperOptions = VidstreamingScrapper.DefaultOptions;
+    protected async execWithArgs({ html }: IHtmlRunnerArgs): Promise<IVidstreamingSourceData> {
         const titleregex = /<title>([^<]+)<\/title>/i;
         const dataregex = /playerInstance\.(setup|load)\(({.*?})\)/gi;
 

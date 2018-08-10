@@ -24,12 +24,11 @@ export class DomRunner<T> extends Runner<T, IDomRunnerOptions, IDomRunnerArgs> i
         return new DomRunner<T>().run(url, scrapper, options);
     }
     public defaultOptions: IDomRunnerOptions = DomRunner.DefaultOptions;
-    public async run(
+    protected async exec(
         url: string,
         scrapper: (args: IDomRunnerArgs) => Promise<T>,
-        options?: IDomRunnerOptions): Promise<T> {
-        const opt = this.getOptions(options);
-        const jsdom = await JSDOM.fromURL(url, opt.jsdomConfig);
+        options: IDomRunnerOptions): Promise<T> {
+        const jsdom = await JSDOM.fromURL(url, options.jsdomConfig);
         return scrapper({
             url,
             options,

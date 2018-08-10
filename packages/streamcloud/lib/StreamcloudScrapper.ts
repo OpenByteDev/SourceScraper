@@ -1,7 +1,8 @@
-import { integer, ISourceData, Scrap, Source, SourceScrapper, uri } from 'sourcescrapper-core';
-import { HtmlRunner } from 'sourcescrapper-html-runner';
+import { integer, IRunnerScrapperOptions, ISourceData, Scrap, Source, SourceScrapper, uri } from 'sourcescrapper-core';
+import { HtmlRunner, IHtmlRunnerOptions } from 'sourcescrapper-html-runner';
 
 import removeNewlines = require('newline-remove');
+import objectMerge = require('object-merge');
 import queryString from 'querystring';
 import execAll = require('regexp.execall');
 
@@ -21,17 +22,34 @@ export interface IStreamcloudSourceData extends ISourceData {
     setupData: IJWPlayerSetupData;
 }
 
+export type IStreamcloudScrapperOptions = IRunnerScrapperOptions<IHtmlRunnerOptions>;
+
 export class StreamcloudScrapper extends SourceScrapper<IStreamcloudSourceData> {
     public static Name: string = 'streamcloud';
     public static Domains: string[] = ['streamcloud.eu'];
     public static UrlPattern: RegExp = /https?:\/\/streamcloud\.eu\/(\w+)\/(.+)/i;
-    public static async scrap(url: string): Promise<Scrap<IStreamcloudSourceData>> {
-        return new StreamcloudScrapper().scrap(url);
+    public static DefaultOptions: IStreamcloudScrapperOptions = {
+        runnerOptions: {
+            axiosConfig: {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Cache-Control': 'no-cache',
+                    'Connection': 'Keep-Alive',
+                }
+            }
+        }
+    };
+    public static async scrap(
+        url: string,
+        options?: IStreamcloudScrapperOptions): Promise<Scrap<IStreamcloudSourceData>> {
+        return new StreamcloudScrapper().scrap(url, options);
     }
     public name: string = StreamcloudScrapper.Name;
     public domains: string[] = StreamcloudScrapper.Domains;
     public urlPattern: RegExp = StreamcloudScrapper.UrlPattern;
-    protected async run(url: uri): Promise<IStreamcloudSourceData> {
+    public defaultOptions: IStreamcloudScrapperOptions = StreamcloudScrapper.DefaultOptions;
+    protected async exec(url: uri, options: IStreamcloudScrapperOptions): Promise<IStreamcloudSourceData> {
         const dataRegex = /\/([^\/.]+)\/(.*)\.[^.]+/i;
         const data = dataRegex.exec(url);
         if (data === null || data.length <= 2)
@@ -43,14 +61,10 @@ export class StreamcloudScrapper extends SourceScrapper<IStreamcloudSourceData> 
         const html = await HtmlRunner.run(
             url,
             async ({ html: _html }) => Promise.resolve(removeNewlines(_html)),
-            {
+            objectMerge(options.runnerOptions, {
                 axiosConfig: {
-                    method: 'post',
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                        'Cache-Control': 'no-cache',
-                        'Connection': 'Keep-Alive',
-                        'Referer': url
+                        Referer: url
                     },
                     data: queryString.stringify({
                         id,
@@ -62,8 +76,8 @@ export class StreamcloudScrapper extends SourceScrapper<IStreamcloudSourceData> 
                         imhuman: 'Weiter+zum+Video'
                     })
                 }
-            }
-            );
+            })
+        );
 
         const configRegex = /jwplayer\("[^"]+"\).setup\({(.*?)}\);/i;
         const propRegex = /(\w+)\s*:\s*"?(.*?)"?\s*,/ig;

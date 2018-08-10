@@ -1,28 +1,34 @@
-import { ISourceData, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { IRunnerScrapperOptions, ISourceData, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
 import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface IOpenloadSourceData extends ISourceData {
     streamurl: string;
 }
 
+export type IOpenloadScrapperOptions = IRunnerScrapperOptions<IPuppeteerRunnerOptions>;
+
 export class OpenloadScrapper extends SourceRunnerScrapper<IOpenloadSourceData> {
     public static Name: string = 'openload';
     public static Domains: string[] = ['openload.co', 'oload.tv', 'oload.win'];
     public static UrlPattern: RegExp = /https?:\/\/(www\.)?(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/i;
     public static Runner: PuppeteerRunner<IOpenloadSourceData> = new PuppeteerRunner<IOpenloadSourceData>();
-    public static RunnerOptions?: IPuppeteerRunnerOptions = undefined;
-    public static async scrap(url: string): Promise<Scrap<IOpenloadSourceData>> {
-        return new OpenloadScrapper().scrap(url);
+    public static DefaultOptions: IOpenloadScrapperOptions = {};
+    public static async scrap(
+        url: string,
+        options?: IOpenloadScrapperOptions): Promise<Scrap<IOpenloadSourceData>> {
+        return new OpenloadScrapper().scrap(url, options);
     }
-    public static async scrapFromArgs(args: IPuppeteerRunnerArgs): Promise<Scrap<IOpenloadSourceData>> {
-        return new OpenloadScrapper().scrapFromArgs(args);
+    public static async scrapFromArgs(
+        args: IPuppeteerRunnerArgs,
+        options?: IOpenloadScrapperOptions): Promise<Scrap<IOpenloadSourceData>> {
+        return new OpenloadScrapper().scrapFromArgs(args, options);
     }
     public name: string = OpenloadScrapper.Name;
     public domains: string[] = OpenloadScrapper.Domains;
     public urlPattern: RegExp = OpenloadScrapper.UrlPattern;
     public runner: PuppeteerRunner<IOpenloadSourceData> = OpenloadScrapper.Runner;
-    public runnerOptions?: IPuppeteerRunnerOptions = OpenloadScrapper.RunnerOptions;
-    protected async runWithArgs({ page }: IPuppeteerRunnerArgs): Promise<IOpenloadSourceData> {
+    public defaultOptions: IOpenloadScrapperOptions = OpenloadScrapper.DefaultOptions;
+    protected async execWithArgs({ page }: IPuppeteerRunnerArgs): Promise<IOpenloadSourceData> {
         const streamurl = await page.$eval(
             '[id*=stream], div[style*="display:none"] p:last-of-type',
             e => e.innerHTML);

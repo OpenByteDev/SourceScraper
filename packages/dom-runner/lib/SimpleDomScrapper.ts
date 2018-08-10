@@ -1,7 +1,9 @@
 import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from './DomRunner';
 
 import { ConstructorOptions as JSDOMOptions, JSDOM } from 'jsdom';
-import { ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
+import {
+    IRunnerScrapperOptions, ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper
+} from 'sourcescrapper-core';
 
 export class SimpleDomScrapper
     extends SourceRunnerScrapper<
@@ -14,26 +16,36 @@ export class SimpleDomScrapper
     public static Domains: string[] = [];
     public static UrlPattern: RegExp = /.*/i;
     public static Runner: DomRunner<ISourceData> = new DomRunner<ISourceData>();
-    public static async scrap(url: string): Promise<Scrap<ISourceData>> {
-        return new SimpleDomScrapper().scrap(url);
+    public static DefaultOptions: IRunnerScrapperOptions = {
+        runnerOptions: {}
+    };
+    public static async scrap(url: string, options?: IRunnerScrapperOptions): Promise<Scrap<ISourceData>> {
+        return new SimpleDomScrapper().scrap(url, options);
     }
-    public static async scrapFromArgs(args: IDomRunnerArgs): Promise<Scrap<ISourceData>> {
-        return new SimpleDomScrapper().scrapFromArgs(args);
+    public static async scrapFromArgs(
+        args: IDomRunnerArgs,
+        options?: IRunnerScrapperOptions): Promise<Scrap<ISourceData>> {
+        return new SimpleDomScrapper().scrapFromArgs(args, options);
     }
-    public static async scrapFromHtml(url: string, html: string, options?: JSDOMOptions): Promise<Scrap<ISourceData>> {
-        const jsdom = new JSDOM(html, options);
+    public static async scrapFromHtml(
+        url: string,
+        html: string,
+        jsdomOptions?: JSDOMOptions,
+        options?: IRunnerScrapperOptions): Promise<Scrap<ISourceData>> {
+        const jsdom = new JSDOM(html, jsdomOptions);
         return SimpleDomScrapper.scrapFromArgs({
             url,
             jsdom,
             window: jsdom.window,
             document: jsdom.window.document
-        });
+        }, options);
     }
     public name: string =  SimpleDomScrapper.Name;
     public domains: string[] = SimpleDomScrapper.Domains;
     public urlPattern: RegExp = SimpleDomScrapper.UrlPattern;
     public runner: DomRunner<ISourceData> = SimpleDomScrapper.Runner;
-    protected async runWithArgs({ document }: IDomRunnerArgs): Promise<ISourceData> {
+    public defaultOptions: IRunnerScrapperOptions = SimpleDomScrapper.DefaultOptions;
+    protected async execWithArgs({ document }: IDomRunnerArgs): Promise<ISourceData> {
         const data: ISourceData = {
             sources: []
         };

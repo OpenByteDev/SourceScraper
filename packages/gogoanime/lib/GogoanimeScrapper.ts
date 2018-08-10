@@ -1,22 +1,30 @@
-import { Hoster, HosterRunnerScrapper, IHosterData, Scrap } from 'sourcescrapper-core';
-import { DomRunner, IDomRunnerArgs } from 'sourcescrapper-dom-runner';
+import { Hoster, HosterRunnerScrapper, IHosterData, IRunnerScrapperOptions, Scrap } from 'sourcescrapper-core';
+import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from 'sourcescrapper-dom-runner';
+
+export type IGogoanimeScrapperOptions = IRunnerScrapperOptions<IDomRunnerOptions>;
 
 export class GogoanimeScrapper extends HosterRunnerScrapper<IHosterData> {
     public static Name: string = 'gogoanime';
     public static Domains: string[] = ['gogoanime.se', 'gogoanime.sh'];
     public static UrlPattern: RegExp = /https?:\/\/(?:www\.)?gogoanime.(sh|se)\/(\w+(?:-\w+)*)/i;
     public static Runner: DomRunner<IHosterData> = new DomRunner<IHosterData>();
-    public static async scrap(url: string): Promise<Scrap<IHosterData>> {
-        return new GogoanimeScrapper().scrap(url);
+    public static DefaultOptions: IGogoanimeScrapperOptions = {};
+    public static async scrap(
+        url: string,
+        options?: IGogoanimeScrapperOptions): Promise<Scrap<IHosterData>> {
+        return new GogoanimeScrapper().scrap(url, options);
     }
-    public static async scrapFromArgs(args: IDomRunnerArgs): Promise<Scrap<IHosterData>> {
-        return new GogoanimeScrapper().scrapFromArgs(args);
+    public static async scrapFromArgs(
+        args: IDomRunnerArgs,
+        options?: IGogoanimeScrapperOptions): Promise<Scrap<IHosterData>> {
+        return new GogoanimeScrapper().scrapFromArgs(args, options);
     }
     public name: string = GogoanimeScrapper.Name;
     public domains: string[] = GogoanimeScrapper.Domains;
     public urlPattern: RegExp = GogoanimeScrapper.UrlPattern;
     public runner: DomRunner<IHosterData> = GogoanimeScrapper.Runner;
-    protected async runWithArgs({ document }: IDomRunnerArgs): Promise<IHosterData> {
+    public defaultOptions: IGogoanimeScrapperOptions = GogoanimeScrapper.DefaultOptions;
+    protected async execWithArgs({ document }: IDomRunnerArgs): Promise<IHosterData> {
         const bodies = document.getElementsByTagName('body');
         if (!(bodies.length >= 1))
             return Promise.reject(null);
