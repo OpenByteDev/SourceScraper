@@ -20,7 +20,7 @@
     "devDependencies": {
         "@types/chai": "^4.1.4",
         "@types/mocha": "^5.2.5",
-        "@types/node": "^10.5.6",
+        "@types/node": "^10.5.7",
         "@types/normalize-url": "^1.9.1",
         "@types/random-number": "0.0.0",
         "chai": "^4.1.2",

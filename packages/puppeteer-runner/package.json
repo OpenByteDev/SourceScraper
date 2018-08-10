@@ -10,13 +10,13 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "puppeteer": "^1.6.2",
+        "puppeteer": "^1.7.0",
         "sourcescrapper-core": "^0.5.14"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
         "@types/mocha": "^5.2.5",
-        "@types/node": "^10.5.6",
+        "@types/node": "^10.5.7",
         "@types/puppeteer": "^1.6.0",
         "chai": "^4.1.2",
         "mocha": "^5.2.0",
