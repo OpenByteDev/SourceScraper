@@ -9,9 +9,11 @@ chai.should();
 describe('StreamangoScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
         const url = 'https://streamango.com/embed/rrddobalkqkmebnt';
-        StreamangoScrapper.RunnerOptions = {
-            puppeteerConfig: {
-                args: ['--no-sandbox', '--disable-setuid-sandbox']
+        StreamangoScrapper.DefaultOptions = {
+            runnerOptions: {
+                puppeteerConfig: {
+                    args: ['--no-sandbox', '--disable-setuid-sandbox']
+                }
             }
         };
         const scrap = await StreamangoScrapper.scrap(url);

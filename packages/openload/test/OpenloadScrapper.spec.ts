@@ -9,9 +9,11 @@ chai.should();
 describe('OpenloadScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
         const url = 'https://openload.co/embed/t0jz0bXYJbY';
-        OpenloadScrapper.RunnerOptions = {
-            puppeteerConfig: {
-                args: ['--no-sandbox', '--disable-setuid-sandbox']
+        OpenloadScrapper.DefaultOptions = {
+            runnerOptions: {
+                puppeteerConfig: {
+                    args: ['--no-sandbox', '--disable-setuid-sandbox']
+                }
             }
         };
         const scrap = await OpenloadScrapper.scrap(url);

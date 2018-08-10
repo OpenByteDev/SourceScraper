@@ -9,9 +9,11 @@ chai.should();
 describe('SimplePuppeteerScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
         const url = 'http://tekeye.uk/html/html5-video-test-page';
-        SimplePuppeteerScrapper.RunnerOptions = {
-            puppeteerConfig: {
-                args: ['--no-sandbox', '--disable-setuid-sandbox']
+        SimplePuppeteerScrapper.DefaultOptions = {
+            runnerOptions: {
+                puppeteerConfig: {
+                    args: ['--no-sandbox', '--disable-setuid-sandbox']
+                }
             }
         };
         const scrap = await SimplePuppeteerScrapper.scrap(url);
