@@ -1,12 +1,15 @@
 import { Hoster, IHoster } from './Hoster';
-import { IScrapper, Scrapper } from './Scrapper';
+import { IScrapper, IScrapperOptions, Scrapper } from './Scrapper';
 
 export interface IHosterData<T extends IHoster = Hoster> {
     title?: string;
     hosters: T[];
 }
 
-export interface IHosterScrapper<T extends IHosterData = IHosterData> extends IScrapper<T> { }
+export interface IHosterScrapper<
+    T extends IHosterData = IHosterData,
+    SO extends IScrapperOptions = IScrapperOptions> extends IScrapper<T, SO> { }
 
-export abstract class HosterScrapper<T extends IHosterData = IHosterData>
-    extends Scrapper<T> implements IHosterScrapper<T> { }
+export abstract class HosterScrapper<
+    T extends IHosterData = IHosterData,
+    SO extends IScrapperOptions = IScrapperOptions> extends Scrapper<T, SO> implements IHosterScrapper<T, SO> { }

@@ -1,4 +1,4 @@
-import { IScrapper, Scrapper } from './Scrapper';
+import { IScrapper, IScrapperOptions, Scrapper } from './Scrapper';
 import { ISource, Source } from './Source';
 
 export interface ISourceData<T extends ISource = Source> {
@@ -7,7 +7,10 @@ export interface ISourceData<T extends ISource = Source> {
     sources: T[];
 }
 
-export interface ISourceScrapper<T extends ISourceData = ISourceData> extends IScrapper<T> { }
+export interface ISourceScrapper<
+    T extends ISourceData = ISourceData,
+    SO extends IScrapperOptions = IScrapperOptions> extends IScrapper<T, SO> { }
 
-export abstract class SourceScrapper<T extends ISourceData = ISourceData>
-    extends Scrapper<T> implements ISourceScrapper<T> { }
+export abstract class SourceScrapper<
+    T extends ISourceData = ISourceData,
+    SO extends IScrapperOptions = IScrapperOptions> extends Scrapper<T, SO> implements ISourceScrapper<T, SO> { }

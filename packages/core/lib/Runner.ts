@@ -1,35 +1,25 @@
-import objectMerge = require('object-merge');
+import { Configurable, IConfigurable, IOptions } from './Configurable';
 
-export type IRunnerOptions = object;
+export type IRunnerOptions = IOptions;
 
-export interface IRunnerArgs<O extends IRunnerOptions = IRunnerOptions> {
+export interface IRunnerArgs<RO extends IRunnerOptions = IRunnerOptions> {
     url: string;
-    options?: O;
+    options?: RO;
 }
 
 export interface IRunner<
     T,
-    O extends IRunnerOptions = IRunnerOptions,
-    A extends IRunnerArgs<O> = IRunnerArgs<O>> {
-    run: (url: string, scrapper: (args: A) => Promise<T> , options?: O) => Promise<T>;
+    RO extends IRunnerOptions = IRunnerOptions,
+    RA extends IRunnerArgs<RO> = IRunnerArgs<RO>> extends IConfigurable<RO> {
+    run: (url: string, scrapper: (args: RA) => Promise<T> , options?: RO) => Promise<T>;
 }
 
 export abstract class Runner<
     T,
-    O extends IRunnerOptions = IRunnerOptions,
-    A extends IRunnerArgs<O> = IRunnerArgs<O>> implements IRunner<T, O, A> {
-    /*public static async run<
-        T,
-        O extends IRunnerOptions = IRunnerOptions,
-        A extends IRunnerArgs<O> = IRunnerArgs<O>>(
-        this: IStaticThis<Runner<T, O, A>>, url: string, scrapper: (args: A) => Promise<T>, options?: O): Promise<T> {
-        return new this().run(url, scrapper, options);
-    }*/
-    public abstract defaultOptions: O;
-    public abstract async run(url: string, scrapper: (args: A) => Promise<T>, options?: O): Promise<T>;
-    protected getOptions(options?: O): O {
-        return typeof options === 'undefined' ?
-            this.defaultOptions :
-            objectMerge(this.defaultOptions, options) as O;
+    RO extends IRunnerOptions = IRunnerOptions,
+    RA extends IRunnerArgs<RO> = IRunnerArgs<RO>> extends Configurable<RO> implements IRunner<T, RO, RA> {
+    public async run(url: string, scrapper: (args: RA) => Promise<T>, options?: RO): Promise<T> {
+        return this.exec(url, scrapper, this.getOptions(options));
     }
+    protected abstract async exec(url: string, scrapper: (args: RA) => Promise<T>, options?: RO): Promise<T>;
 }

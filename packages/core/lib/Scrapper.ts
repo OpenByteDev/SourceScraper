@@ -1,3 +1,4 @@
+import { Configurable, IConfigurable, IOptions } from './Configurable';
 import { IBaseScrap, IScrap, Scrap } from './Scrap';
 
 export interface IScrapperData {
@@ -6,11 +7,14 @@ export interface IScrapperData {
     urlPattern: RegExp;
 }
 
-export interface IScrapper<T> extends IScrapperData {
-    scrap: (url: string) => Promise<IScrap<T>>;
+export type IScrapperOptions = IOptions;
+
+export interface IScrapper<T, SO extends IScrapperOptions = IScrapperOptions> extends IScrapperData, IConfigurable<SO> {
+    scrap: (url: string, options?: SO) => Promise<IScrap<T>>;
 }
 
-export abstract class Scrapper<T> implements IScrapper<T> {
+export abstract class Scrapper<T, SO extends IScrapperOptions = IScrapperOptions>
+    extends Configurable<SO> implements IScrapper<T, SO> {
     public abstract name: string;
     public abstract domains: string[];
     public abstract urlPattern: RegExp;
@@ -21,8 +25,8 @@ export abstract class Scrapper<T> implements IScrapper<T> {
     public isApplicableDomain(domain: string): boolean {
         return this.domains.some(d => d === domain);
     }
-    public async scrap(url: string): Promise<Scrap<T>> {
-        return this.getScrap(url, async () => this.run(url));
+    public async scrap(url: string, options?: SO): Promise<Scrap<T>> {
+        return this.getScrap(url, async () => this.exec(url, this.getOptions(options)));
     }
     protected async getScrap(url: string, dataSupplier: () => Promise<T>): Promise<Scrap<T>> {
         const base: IBaseScrap<T> = {
@@ -42,5 +46,5 @@ export abstract class Scrapper<T> implements IScrapper<T> {
         }
 
     }
-    protected abstract async run(url: string): Promise<T>;
+    protected abstract async exec(url: string, options?: SO): Promise<T>;
 }

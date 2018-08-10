@@ -1,29 +1,36 @@
 import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from './Runner';
 import { IScrap, Scrap } from './Scrap';
-import { IScrapper, Scrapper } from './Scrapper';
+import { IScrapper, IScrapperOptions, Scrapper } from './Scrapper';
+
+export interface IRunnerScrapperOptions<RO extends IRunnerOptions = IRunnerOptions> extends IScrapperOptions {
+    runnerOptions?: RO;
+}
 
 export interface IRunnerScrapper<
     T,
-    O extends IRunnerOptions = IRunnerOptions,
-    A extends IRunnerArgs<O> = IRunnerArgs<O>,
-    R extends IRunner<T, O, A> = IRunner<T, O, A>> extends IScrapper<T> {
+    RO extends IRunnerOptions = IRunnerOptions,
+    RA extends IRunnerArgs<RO> = IRunnerArgs<RO>,
+    R extends IRunner<T, RO, RA> = IRunner<T, RO, RA>,
+    SO extends IRunnerScrapperOptions<RO> = IRunnerScrapperOptions<RO>> extends IScrapper<T, SO> {
     runner: R;
-    runnerOptions?: O;
-    scrapFromArgs: (args: A) => Promise<IScrap<T>>;
+    scrapFromArgs: (args: RA, options?: SO) => Promise<IScrap<T>>;
 }
 
 export abstract class RunnerScrapper<
     T,
-    O extends IRunnerOptions = IRunnerOptions,
-    A extends IRunnerArgs<O> = IRunnerArgs<O>,
-    R extends Runner<T, O, A> = Runner<T, O, A>> extends Scrapper<T> implements IRunnerScrapper<T, O, A, R> {
+    RO extends IRunnerOptions = IRunnerOptions,
+    RA extends IRunnerArgs<RO> = IRunnerArgs<RO>,
+    R extends Runner<T, RO, RA> = Runner<T, RO, RA>,
+    SO extends IRunnerScrapperOptions<RO> = IRunnerScrapperOptions<RO>>
+    extends Scrapper<T, SO> implements IRunnerScrapper<T, RO, RA, R, SO> {
     public abstract runner: R;
-    public runnerOptions?: O;
-    public async scrapFromArgs(args: A): Promise<Scrap<T>> {
-        return this.getScrap(args.url, async () => this.runWithArgs(args));
+    public async scrapFromArgs(args: RA, options?: SO): Promise<Scrap<T>> {
+        return this.getScrap(args.url, async () => this.execWithArgs(args, this.getOptions(options)));
     }
-    protected abstract async runWithArgs(args: A): Promise<T>;
-    protected async run(url: string): Promise<T> {
-        return this.runner.run(url, this.runWithArgs, this.runnerOptions);
+    protected abstract async execWithArgs(args: RA, options?: SO): Promise<T>;
+    protected async exec(url: string, options?: SO): Promise<T> {
+        const so = this.getOptions(options);
+        const ro = this.runner.getOptions(so.runnerOptions);
+        return this.runner.run(url, async (args: RA) => this.execWithArgs(args, so), ro);
     }
 }
