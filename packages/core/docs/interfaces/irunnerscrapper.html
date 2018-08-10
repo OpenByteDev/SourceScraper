@@ -57,7 +57,7 @@
 					<a href="irunnerscrapper.html">IRunnerScrapper</a>
 				</li>
 			</ul>
-			<h1>Interface IRunnerScrapper&lt;T, O, A, R&gt;</h1>
+			<h1>Interface IRunnerScrapper&lt;T, RO, RA, R, SO&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -71,13 +71,16 @@
 						<h4>T</h4>
 					</li>
 					<li>
-						<h4>O<span class="tsd-signature-symbol">: </span><a href="../globals.html#irunneroptions" class="tsd-signature-type">IRunnerOptions</a></h4>
+						<h4>RO<span class="tsd-signature-symbol">: </span><a href="../globals.html#irunneroptions" class="tsd-signature-type">IRunnerOptions</a></h4>
 					</li>
 					<li>
-						<h4>A<span class="tsd-signature-symbol">: </span><a href="irunnerargs.html" class="tsd-signature-type">IRunnerArgs</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4>RA<span class="tsd-signature-symbol">: </span><a href="irunnerargs.html" class="tsd-signature-type">IRunnerArgs</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RO</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 					<li>
-						<h4>R<span class="tsd-signature-symbol">: </span><a href="irunner.html" class="tsd-signature-type">IRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4>R<span class="tsd-signature-symbol">: </span><a href="irunner.html" class="tsd-signature-type">IRunner</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RO</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RA</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+					<li>
+						<h4>SO<span class="tsd-signature-symbol">: </span><a href="irunnerscrapperoptions.html" class="tsd-signature-type">IRunnerScrapperOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RO</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -85,7 +88,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="iscrapper.html" class="tsd-signature-type">IScrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<a href="iscrapper.html" class="tsd-signature-type">IScrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">IRunnerScrapper</span>
@@ -109,10 +112,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#domains" class="tsd-kind-icon">domains</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="irunnerscrapper.html#runner" class="tsd-kind-icon">runner</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="irunnerscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="irunnerscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="irunnerscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
@@ -124,15 +128,58 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3>default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">SO</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iconfigurable.html">IConfigurable</a>.<a href="iconfigurable.html#defaultoptions">defaultOptions</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/Configurable.ts#L6">Configurable.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="domains" class="tsd-anchor"></a>
 					<h3>domains</h3>
 					<div class="tsd-signature tsd-kind-icon">domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iscrapperdata.html">IScrapperData</a>.<a href="iscrapperdata.html#domains">domains</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/core/lib/Scrapper.ts#L5">Scrapper.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/Scrapper.ts#L6">Scrapper.ts:6</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="getoptions" class="tsd-anchor"></a>
+					<h3>get<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iconfigurable.html">IConfigurable</a>.<a href="iconfigurable.html#getoptions">getOptions</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/Configurable.ts#L7">Configurable.ts:7</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">O</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SO</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">O</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SO</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="name" class="tsd-anchor"></a>
@@ -141,7 +188,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iscrapperdata.html">IScrapperData</a>.<a href="iscrapperdata.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/core/lib/Scrapper.ts#L4">Scrapper.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/Scrapper.ts#L5">Scrapper.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -151,17 +198,7 @@
 					<div class="tsd-signature tsd-kind-icon">runner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">R</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/core/lib/RunnerScrapper.ts#L10">RunnerScrapper.ts:10</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="runneroptions" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> runner<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">runner<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">O</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/core/lib/RunnerScrapper.ts#L11">RunnerScrapper.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/RunnerScrapper.ts#L15">RunnerScrapper.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -172,7 +209,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iscrapper.html">IScrapper</a>.<a href="iscrapper.html#scrap">scrap</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/core/lib/Scrapper.ts#L10">Scrapper.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/Scrapper.ts#L13">Scrapper.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -180,7 +217,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">SO</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -188,6 +225,9 @@
 										<ul class="tsd-parameters">
 											<li>
 												<h5>url: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">SO</a></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -203,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/core/lib/RunnerScrapper.ts#L12">RunnerScrapper.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/RunnerScrapper.ts#L16">RunnerScrapper.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -211,14 +251,17 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RA</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">SO</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>args: <span class="tsd-signature-type">A</span></h5>
+												<h5>args: <span class="tsd-signature-type">RA</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">SO</a></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="iscrap.html" class="tsd-signature-type">IScrap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -235,7 +278,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iscrapperdata.html">IScrapperData</a>.<a href="iscrapperdata.html#urlpattern">urlPattern</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/core/lib/Scrapper.ts#L6">Scrapper.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/core/lib/Scrapper.ts#L7">Scrapper.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -251,6 +294,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/configurable.html" class="tsd-kind-icon">Configurable</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="../classes/hoster.html" class="tsd-kind-icon">Hoster</a>
 					</li>
@@ -288,6 +334,9 @@
 						<a href="ibasescrap.html" class="tsd-kind-icon">IBase<wbr>Scrap</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="iconfigurable.html" class="tsd-kind-icon">IConfigurable</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="ifailurescrap.html" class="tsd-kind-icon">IFailure<wbr>Scrap</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -311,16 +360,19 @@
 						<a href="irunnerscrapper.html" class="tsd-kind-icon">IRunner<wbr>Scrapper</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="irunnerscrapper.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="irunnerscrapper.html#domains" class="tsd-kind-icon">domains</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="irunnerscrapper.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="irunnerscrapper.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="irunnerscrapper.html#runner" class="tsd-kind-icon">runner</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="irunnerscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="irunnerscrapper.html#scrap" class="tsd-kind-icon">scrap</a>
@@ -335,6 +387,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="irunnerscrapperoptions.html" class="tsd-kind-icon">IRunner<wbr>Scrapper<wbr>Options</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="iscrap.html" class="tsd-kind-icon">IScrap</a>
 					</li>
@@ -360,7 +415,13 @@
 						<a href="isuccessscrap.html" class="tsd-kind-icon">ISuccess<wbr>Scrap</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#ioptions" class="tsd-kind-icon">IOptions</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#irunneroptions" class="tsd-kind-icon">IRunner<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#iscrapperoptions" class="tsd-kind-icon">IScrapper<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#double" class="tsd-kind-icon">double</a>

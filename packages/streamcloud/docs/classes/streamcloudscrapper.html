@@ -57,13 +57,21 @@
 					<a href="streamcloudscrapper.html">StreamcloudScrapper</a>
 				</li>
 			</ul>
-			<h1>Class StreamcloudScrapper</h1>
+			<h1>Class StreamcloudScrapper&lt;SO&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>SO<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IScrapperOptions</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -80,8 +88,9 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">IScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><span class="tsd-signature-type">ISourceScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IConfigurable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">ISourceScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -91,6 +100,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamcloudscrapper.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamcloudscrapper.html#domains" class="tsd-kind-icon">domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamcloudscrapper.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamcloudscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
@@ -102,12 +112,19 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="streamcloudscrapper.html#exec" class="tsd-kind-icon">exec</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamcloudscrapper.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="streamcloudscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamcloudscrapper.html#isapplicable" class="tsd-kind-icon">is<wbr>Applicable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamcloudscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="streamcloudscrapper.html#run" class="tsd-kind-icon">run</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamcloudscrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="streamcloudscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-static"><a href="streamcloudscrapper.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,13 +133,24 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3>default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../globals.html#istreamcloudscrapperoptions" class="tsd-signature-type">IStreamcloudScrapperOptions</a><span class="tsd-signature-symbol"> =&nbsp;StreamcloudScrapper.DefaultOptions</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides Configurable.defaultOptions</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L51">StreamcloudScrapper.ts:51</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="domains" class="tsd-anchor"></a>
 					<h3>domains</h3>
 					<div class="tsd-signature tsd-kind-icon">domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;StreamcloudScrapper.Domains</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.domains</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L32">StreamcloudScrapper.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L49">StreamcloudScrapper.ts:49</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -133,7 +161,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.name</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L31">StreamcloudScrapper.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L48">StreamcloudScrapper.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -144,7 +172,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.urlPattern</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L33">StreamcloudScrapper.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L50">StreamcloudScrapper.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -154,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">Domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;streamcloud.eu&#x27;]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L26">StreamcloudScrapper.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L29">StreamcloudScrapper.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -164,7 +192,7 @@
 					<div class="tsd-signature tsd-kind-icon">Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;streamcloud&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L25">StreamcloudScrapper.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L28">StreamcloudScrapper.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -174,13 +202,64 @@
 					<div class="tsd-signature tsd-kind-icon">Url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/https?:\/\/streamcloud\.eu\/(\w+)\/(.+)/i</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L27">StreamcloudScrapper.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L30">StreamcloudScrapper.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="exec" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> exec</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">exec<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">uri</span>, options<span class="tsd-signature-symbol">: </span><a href="../globals.html#istreamcloudscrapperoptions" class="tsd-signature-type">IStreamcloudScrapperOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides Scrapper.exec</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L52">StreamcloudScrapper.ts:52</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">uri</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../globals.html#istreamcloudscrapperoptions" class="tsd-signature-type">IStreamcloudScrapperOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getoptions" class="tsd-anchor"></a>
+					<h3>get<wbr>Options</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SO</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Configurable.getOptions</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Configurable.d.ts:8</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">O</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SO</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="getscrap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Scrap</h3>
@@ -192,7 +271,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.getScrap</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:17</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -231,7 +310,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicable</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:14</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -255,7 +334,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicableDomain</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:15</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:17</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -268,48 +347,27 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-					<a name="run" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> run</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">uri</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Overrides Scrapper.run</p>
-								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L34">StreamcloudScrapper.ts:34</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>url: <span class="tsd-signature-type">uri</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="scrap" class="tsd-anchor"></a>
 					<h3>scrap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">SO</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.scrap</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:16</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamcloud/node_modules/sourcescrapper-core/types/Scrapper.d.ts:18</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">SO</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -320,13 +378,13 @@
 					<a name="scrap-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../globals.html#istreamcloudscrapperoptions" class="tsd-signature-type">IStreamcloudScrapperOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamcloud/lib/StreamcloudScrapper.ts#L28">StreamcloudScrapper.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L43">StreamcloudScrapper.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -334,10 +392,96 @@
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../globals.html#istreamcloudscrapperoptions" class="tsd-signature-type">IStreamcloudScrapperOptions</a></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamcloudsourcedata.html" class="tsd-signature-type">IStreamcloudSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+					<a name="defaultoptions-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L31">StreamcloudScrapper.ts:31</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="defaultoptions-1.runneroptions" class="tsd-anchor"></a>
+						<h3>runner<wbr>Options</h3>
+						<div class="tsd-signature tsd-kind-icon">runner<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L32">StreamcloudScrapper.ts:32</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+							<a name="defaultoptions-1.runneroptions.axiosconfig" class="tsd-anchor"></a>
+							<h3>axios<wbr>Config</h3>
+							<div class="tsd-signature tsd-kind-icon">axios<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L33">StreamcloudScrapper.ts:33</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultoptions-1.runneroptions.axiosconfig.method" class="tsd-anchor"></a>
+								<h3>method</h3>
+								<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;post&quot;</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L34">StreamcloudScrapper.ts:34</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+								<a name="defaultoptions-1.runneroptions.axiosconfig.headers" class="tsd-anchor"></a>
+								<h3>headers</h3>
+								<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L35">StreamcloudScrapper.ts:35</a></li>
+									</ul>
+								</aside>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+									<a name="defaultoptions-1.runneroptions.axiosconfig.headers.cache_control" class="tsd-anchor"></a>
+									<h3>Cache-<wbr><wbr>Control</h3>
+									<div class="tsd-signature tsd-kind-icon">Cache-<wbr><wbr>Control<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;no-cache&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L37">StreamcloudScrapper.ts:37</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+									<a name="defaultoptions-1.runneroptions.axiosconfig.headers.connection" class="tsd-anchor"></a>
+									<h3>Connection</h3>
+									<div class="tsd-signature tsd-kind-icon">Connection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Keep-Alive&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L38">StreamcloudScrapper.ts:38</a></li>
+										</ul>
+									</aside>
+								</section>
+								<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+									<a name="defaultoptions-1.runneroptions.axiosconfig.headers.content_type" class="tsd-anchor"></a>
+									<h3>Content-<wbr><wbr>Type</h3>
+									<div class="tsd-signature tsd-kind-icon">Content-<wbr><wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;application/x-www-form-urlencoded&quot;</span></div>
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamcloud/lib/StreamcloudScrapper.ts#L36">StreamcloudScrapper.ts:36</a></li>
+										</ul>
+									</aside>
+								</section>
+							</section>
+						</section>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -353,9 +497,12 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="streamcloudscrapper.html" class="tsd-kind-icon">Streamcloud<wbr>Scrapper</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="streamcloudscrapper.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="streamcloudscrapper.html#domains" class="tsd-kind-icon">domains</a>
 							</li>
@@ -374,6 +521,12 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="streamcloudscrapper.html#urlpattern-1" class="tsd-kind-icon">Url<wbr>Pattern</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="streamcloudscrapper.html#exec" class="tsd-kind-icon">exec</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="streamcloudscrapper.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="streamcloudscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a>
 							</li>
@@ -383,14 +536,14 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="streamcloudscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-								<a href="streamcloudscrapper.html#run" class="tsd-kind-icon">run</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="streamcloudscrapper.html#scrap" class="tsd-kind-icon">scrap</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="streamcloudscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+								<a href="streamcloudscrapper.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a>
 							</li>
 						</ul>
 					</li>
@@ -401,6 +554,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/istreamcloudsourcedata.html" class="tsd-kind-icon">IStreamcloud<wbr>Source<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#istreamcloudscrapperoptions" class="tsd-kind-icon">IStreamcloud<wbr>Scrapper<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>

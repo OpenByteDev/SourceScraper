@@ -57,7 +57,7 @@
 					<a href="streamangoscrapper.html">StreamangoScrapper</a>
 				</li>
 			</ul>
-			<h1>Class StreamangoScrapper&lt;O, A, R&gt;</h1>
+			<h1>Class StreamangoScrapper&lt;RO, RA, R, SO&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -68,13 +68,16 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerOptions</span></h4>
+						<h4>RO<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerOptions</span></h4>
 					</li>
 					<li>
-						<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerArgs</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4>RA<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerArgs</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RO</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 					<li>
-						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Runner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Runner</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RO</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RA</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+					<li>
+						<h4>SO<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRunnerScrapperOptions</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RO</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -94,9 +97,10 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">IScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><span class="tsd-signature-type">IRunnerScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><span class="tsd-signature-type">ISourceScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IConfigurable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IRunnerScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RO</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RA</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">ISourceScrapper</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -106,26 +110,27 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamangoscrapper.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamangoscrapper.html#domains" class="tsd-kind-icon">domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamangoscrapper.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamangoscrapper.html#runner" class="tsd-kind-icon">runner</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamangoscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="streamangoscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="streamangoscrapper.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="streamangoscrapper.html#domains-1" class="tsd-kind-icon">Domains</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="streamangoscrapper.html#name-1" class="tsd-kind-icon">Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="streamangoscrapper.html#runner-1" class="tsd-kind-icon">Runner</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="streamangoscrapper.html#runneroptions-1" class="tsd-kind-icon">Runner<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="streamangoscrapper.html#urlpattern-1" class="tsd-kind-icon">Url<wbr>Pattern</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="streamangoscrapper.html#exec" class="tsd-kind-icon">exec</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="streamangoscrapper.html#execwithargs" class="tsd-kind-icon">exec<wbr>With<wbr>Args</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamangoscrapper.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="streamangoscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamangoscrapper.html#isapplicable" class="tsd-kind-icon">is<wbr>Applicable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamangoscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="streamangoscrapper.html#run" class="tsd-kind-icon">run</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="streamangoscrapper.html#runwithargs" class="tsd-kind-icon">run<wbr>With<wbr>Args</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamangoscrapper.html#scrap" class="tsd-kind-icon">scrap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="streamangoscrapper.html#scrapfromargs" class="tsd-kind-icon">scrap<wbr>From<wbr>Args</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="streamangoscrapper.html#scrap-1" class="tsd-kind-icon">scrap</a></li>
@@ -138,13 +143,24 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3>default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../globals.html#istreamangoscrapperoptions" class="tsd-signature-type">IStreamangoScrapperOptions</a><span class="tsd-signature-symbol"> =&nbsp;StreamangoScrapper.DefaultOptions</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides Configurable.defaultOptions</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L32">StreamangoScrapper.ts:32</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="domains" class="tsd-anchor"></a>
 					<h3>domains</h3>
 					<div class="tsd-signature tsd-kind-icon">domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;StreamangoScrapper.Domains</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.domains</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L23">StreamangoScrapper.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L29">StreamangoScrapper.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -155,7 +171,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.name</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L22">StreamangoScrapper.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L28">StreamangoScrapper.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -166,18 +182,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides RunnerScrapper.runner</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L25">StreamangoScrapper.ts:25</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-					<a name="runneroptions" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> runner<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">runner<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IPuppeteerRunnerOptions</span><span class="tsd-signature-symbol"> =&nbsp;StreamangoScrapper.RunnerOptions</span></div>
-					<aside class="tsd-sources">
-						<p>Overrides RunnerScrapper.runnerOptions</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L26">StreamangoScrapper.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L31">StreamangoScrapper.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -188,7 +193,17 @@
 					<aside class="tsd-sources">
 						<p>Overrides Scrapper.urlPattern</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L24">StreamangoScrapper.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L30">StreamangoScrapper.ts:30</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="defaultoptions-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Default<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../globals.html#istreamangoscrapperoptions" class="tsd-signature-type">IStreamangoScrapperOptions</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L17">StreamangoScrapper.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -198,7 +213,7 @@
 					<div class="tsd-signature tsd-kind-icon">Domains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;streamango.com&#x27;]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L12">StreamangoScrapper.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L14">StreamangoScrapper.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -208,7 +223,7 @@
 					<div class="tsd-signature tsd-kind-icon">Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;streamango&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L11">StreamangoScrapper.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L13">StreamangoScrapper.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -218,17 +233,7 @@
 					<div class="tsd-signature tsd-kind-icon">Runner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PuppeteerRunner</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new PuppeteerRunner&lt;IStreamangoSourceData&gt;()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L14">StreamangoScrapper.ts:14</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="runneroptions-1" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagOptional">Optional</span> Runner<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">Runner<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IPuppeteerRunnerOptions</span><span class="tsd-signature-symbol"> =&nbsp;undefined</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L15">StreamangoScrapper.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L16">StreamangoScrapper.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -238,13 +243,94 @@
 					<div class="tsd-signature tsd-kind-icon">Url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/https?:\/\/(www\.)?streamango\.com\/embed\/(\w+)\/(.+)/i</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L13">StreamangoScrapper.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L15">StreamangoScrapper.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+					<a name="exec" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> exec</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">exec<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SO</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from RunnerScrapper.exec</p>
+								<p>Overrides Scrapper.exec</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:15</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">SO</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="execwithargs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> exec<wbr>With<wbr>Args</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">exec<wbr>With<wbr>Args<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides RunnerScrapper.execWithArgs</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L33">StreamangoScrapper.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Page</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getoptions" class="tsd-anchor"></a>
+					<h3>get<wbr>Options</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SO</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Configurable.getOptions</p>
+								<ul>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Configurable.d.ts:8</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">O</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SO</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="getscrap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Scrap</h3>
@@ -256,7 +342,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.getScrap</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:17</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:19</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -295,7 +381,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicable</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:14</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -319,7 +405,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.isApplicableDomain</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:15</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:17</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -332,78 +418,27 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
-					<a name="run" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> run</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from RunnerScrapper.run</p>
-								<p>Overrides Scrapper.run</p>
-								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:14</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>url: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-					<a name="runwithargs" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> run<wbr>With<wbr>Args</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>With<wbr>Args<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Overrides RunnerScrapper.runWithArgs</p>
-								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L27">StreamangoScrapper.ts:27</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Page</span></h5>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="scrap" class="tsd-anchor"></a>
 					<h3>scrap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">SO</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from Scrapper.scrap</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:16</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/Scrapper.d.ts:18</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">SO</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -414,20 +449,23 @@
 					<a name="scrapfromargs" class="tsd-anchor"></a>
 					<h3>scrap<wbr>From<wbr>Args</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RA</span>, options<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">SO</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from RunnerScrapper.scrapFromArgs</p>
 								<ul>
-									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:12</li>
+									<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/streamango/node_modules/sourcescrapper-core/types/RunnerScrapper.d.ts:13</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>args: <span class="tsd-signature-type">A</span></h5>
+									<h5>args: <span class="tsd-signature-type">RA</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="" class="tsd-signature-type">SO</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -438,19 +476,22 @@
 					<a name="scrap-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../globals.html#istreamangoscrapperoptions" class="tsd-signature-type">IStreamangoScrapperOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L16">StreamangoScrapper.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L18">StreamangoScrapper.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../globals.html#istreamangoscrapperoptions" class="tsd-signature-type">IStreamangoScrapperOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -461,19 +502,22 @@
 					<a name="scrapfromargs-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> scrap<wbr>From<wbr>Args</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IPuppeteerRunnerArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scrap<wbr>From<wbr>Args<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IPuppeteerRunnerArgs</span>, options<span class="tsd-signature-symbol">?: </span><a href="../globals.html#istreamangoscrapperoptions" class="tsd-signature-type">IStreamangoScrapperOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/345b0e8/packages/streamango/lib/StreamangoScrapper.ts#L19">StreamangoScrapper.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/fcd2510/packages/streamango/lib/StreamangoScrapper.ts#L23">StreamangoScrapper.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>args: <span class="tsd-signature-type">IPuppeteerRunnerArgs</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../globals.html#istreamangoscrapperoptions" class="tsd-signature-type">IStreamangoScrapperOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Scrap</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/istreamangosourcedata.html" class="tsd-signature-type">IStreamangoSourceData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -498,6 +542,9 @@
 						<a href="streamangoscrapper.html" class="tsd-kind-icon">Streamango<wbr>Scrapper</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="streamangoscrapper.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="streamangoscrapper.html#domains" class="tsd-kind-icon">domains</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
@@ -507,10 +554,10 @@
 								<a href="streamangoscrapper.html#runner" class="tsd-kind-icon">runner</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-								<a href="streamangoscrapper.html#runneroptions" class="tsd-kind-icon">runner<wbr>Options</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="streamangoscrapper.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="streamangoscrapper.html#defaultoptions-1" class="tsd-kind-icon">Default<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="streamangoscrapper.html#domains-1" class="tsd-kind-icon">Domains</a>
@@ -522,10 +569,16 @@
 								<a href="streamangoscrapper.html#runner-1" class="tsd-kind-icon">Runner</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="streamangoscrapper.html#runneroptions-1" class="tsd-kind-icon">Runner<wbr>Options</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="streamangoscrapper.html#urlpattern-1" class="tsd-kind-icon">Url<wbr>Pattern</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+								<a href="streamangoscrapper.html#exec" class="tsd-kind-icon">exec</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="streamangoscrapper.html#execwithargs" class="tsd-kind-icon">exec<wbr>With<wbr>Args</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="streamangoscrapper.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="streamangoscrapper.html#getscrap" class="tsd-kind-icon">get<wbr>Scrap</a>
@@ -535,12 +588,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="streamangoscrapper.html#isapplicabledomain" class="tsd-kind-icon">is<wbr>Applicable<wbr>Domain</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
-								<a href="streamangoscrapper.html#run" class="tsd-kind-icon">run</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-								<a href="streamangoscrapper.html#runwithargs" class="tsd-kind-icon">run<wbr>With<wbr>Args</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="streamangoscrapper.html#scrap" class="tsd-kind-icon">scrap</a>
@@ -566,6 +613,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/istreamangosourcedata.html" class="tsd-kind-icon">IStreamango<wbr>Source<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#istreamangoscrapperoptions" class="tsd-kind-icon">IStreamango<wbr>Scrapper<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
