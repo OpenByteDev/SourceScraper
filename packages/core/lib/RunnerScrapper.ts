@@ -27,7 +27,7 @@ export abstract class RunnerScrapper<
     public async scrapFromArgs(args: RA, options?: SO): Promise<Scrap<T>> {
         return this.getScrap(args.url, async () => this.execWithArgs(args, this.getOptions(options)));
     }
-    protected abstract async execWithArgs(args: RA, options?: SO): Promise<T>;
+    protected abstract async execWithArgs(args: RA, options: SO): Promise<T>;
     protected async exec(url: string, options?: SO): Promise<T> {
         const so = this.getOptions(options);
         const ro = this.runner.getOptions(so.runnerOptions);

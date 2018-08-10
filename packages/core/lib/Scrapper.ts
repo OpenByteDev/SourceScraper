@@ -46,5 +46,5 @@ export abstract class Scrapper<T, SO extends IScrapperOptions = IScrapperOptions
         }
 
     }
-    protected abstract async exec(url: string, options?: SO): Promise<T>;
+    protected abstract async exec(url: string, options: SO): Promise<T>;
 }

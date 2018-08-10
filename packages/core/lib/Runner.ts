@@ -21,5 +21,5 @@ export abstract class Runner<
     public async run(url: string, scrapper: (args: RA) => Promise<T>, options?: RO): Promise<T> {
         return this.exec(url, scrapper, this.getOptions(options));
     }
-    protected abstract async exec(url: string, scrapper: (args: RA) => Promise<T>, options?: RO): Promise<T>;
+    protected abstract async exec(url: string, scrapper: (args: RA) => Promise<T>, options: RO): Promise<T>;
 }
