@@ -7,8 +7,12 @@ import 'mocha';
 chai.should();
 
 describe('VidziScrapper', () => {
-    it('should be able to scrap a video from a test page', async () => {
-        const url = 'https://vidzi.nu/9q00u8jlom1t.html';
+    const url = 'https://vidzi.nu/9q00u8jlom1t.html';
+    it('should detect a valid url', () => {
+         const scrapper = new VidziScrapper();
+         scrapper.isApplicable(url).should.be.true;
+    });
+    it('should scrap data from a test page', async () => {
         VidziScrapper.DefaultOptions = {
             runnerOptions: {
                 puppeteerConfig: {
@@ -23,5 +27,7 @@ describe('VidziScrapper', () => {
         data.should.have.property('sources').that.is.an('array');
         data.sources.length.should.be.greaterThan(0);
         data.sources.forEach(h => h.should.have.property('url').that.is.a('string'));
+
+        return Promise.resolve(null);
     });
 });

@@ -7,8 +7,12 @@ import 'mocha';
 chai.should();
 
 describe('StreamangoScrapper', () => {
-    it('should be able to scrap a video from a test page', async () => {
-        const url = 'https://streamango.com/embed/rrddobalkqkmebnt';
+    const url = 'https://streamango.com/embed/rrddobalkqkmebnt';
+    it('should detect a valid url', () => {
+         const scrapper = new StreamangoScrapper();
+         scrapper.isApplicable(url).should.be.true;
+    });
+    it('should scrap data from a test page', async () => {
         StreamangoScrapper.DefaultOptions = {
             runnerOptions: {
                 puppeteerConfig: {

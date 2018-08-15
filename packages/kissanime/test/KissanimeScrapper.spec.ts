@@ -7,8 +7,12 @@ import 'mocha';
 chai.should();
 
 describe('KissanimeScrapper', () => {
-    it('should be able to scrap a video from a test page', async () => {
-        const url = 'http://kissanime.ru/Anime/Shingeki-no-Kyojin-Season-3/Episode-001?id=148021';
+    const url = 'http://kissanime.ru/Anime/Shingeki-no-Kyojin-Season-3/Episode-001?id=148021';
+    it('should detect a valid url', () => {
+         const scrapper = new KissanimeScrapper();
+         scrapper.isApplicable(url).should.be.true;
+    });
+    it('should scrap data from a test page', async () => {
         KissanimeScrapper.DefaultOptions = {
             runnerOptions: {
                 puppeteerConfig: {

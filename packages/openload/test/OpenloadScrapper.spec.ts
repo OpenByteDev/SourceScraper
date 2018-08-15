@@ -7,8 +7,12 @@ import 'mocha';
 chai.should();
 
 describe('OpenloadScrapper', () => {
-    it('should be able to scrap a video from a test page', async () => {
-        const url = 'https://openload.co/embed/t0jz0bXYJbY';
+    const url = 'https://openload.co/embed/t0jz0bXYJbY';
+    it('should detect a valid url', () => {
+         const scrapper = new OpenloadScrapper();
+         scrapper.isApplicable(url).should.be.true;
+    });
+    it('should scrap data from a test page', async () => {
         OpenloadScrapper.DefaultOptions = {
             runnerOptions: {
                 puppeteerConfig: {

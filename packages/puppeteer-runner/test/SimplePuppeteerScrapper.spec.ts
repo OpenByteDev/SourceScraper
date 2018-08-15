@@ -7,8 +7,12 @@ import 'mocha';
 chai.should();
 
 describe('SimplePuppeteerScrapper', () => {
-    it('should be able to scrap a video from a test page', async () => {
-        const url = 'http://tekeye.uk/html/html5-video-test-page';
+    const url = 'http://tekeye.uk/html/html5-video-test-page';
+    it('should detect a valid url', () => {
+         const scrapper = new SimplePuppeteerScrapper();
+         scrapper.isApplicable(url).should.be.true;
+    });
+    it('should scrap data from a test page', async () => {
         SimplePuppeteerScrapper.DefaultOptions = {
             runnerOptions: {
                 puppeteerConfig: {

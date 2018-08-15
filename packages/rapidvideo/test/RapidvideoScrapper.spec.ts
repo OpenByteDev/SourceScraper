@@ -7,8 +7,12 @@ import 'mocha';
 chai.should();
 
 describe('RapidvideoScrapper', () => {
-    it('should be able to scrap a video from a test page', async () => {
-        const url = 'https://rapidvideo.com/e/FO24ULAW2H';
+    const url = 'https://rapidvideo.com/e/FO24ULAW2H';
+    it('should detect a valid url', () => {
+         const scrapper = new RapidvideoScrapper();
+         scrapper.isApplicable(url).should.be.true;
+    });
+    it('should scrap data from a test page', async () => {
         const scrap = await RapidvideoScrapper.scrap(url);
         scrap.should.have.property('success').that.is.a('boolean').and.that.is.true;
         scrap.should.have.property('data').that.is.an('object').and.that.is.not.undefined;

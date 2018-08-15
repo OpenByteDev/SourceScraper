@@ -7,8 +7,12 @@ import 'mocha';
 chai.should();
 
 describe('MP4UploadScrapper', () => {
-    it('should be able to scrap a video from a test page', async () => {
-        const url = 'https://mp4upload.com/embed-4gwq9pacjqx3.html';
+    const url = 'https://mp4upload.com/embed-4gwq9pacjqx3.html';
+    it('should detect a valid url', () => {
+         const scrapper = new MP4UploadScrapper();
+         scrapper.isApplicable(url).should.be.true;
+    });
+    it('should scrap data from a test page', async () => {
         MP4UploadScrapper.DefaultOptions = {
             runnerOptions: {
                 puppeteerConfig: {
