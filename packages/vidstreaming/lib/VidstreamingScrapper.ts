@@ -33,7 +33,8 @@ export type IVidstreamingScrapperOptions = IRunnerScrapperOptions<IHtmlRunnerOpt
 export class VidstreamingScrapper extends SourceRunnerScrapper<IVidstreamingSourceData> {
     public static Name: string = 'vidstreaming';
     public static Domains: string[] = ['vidstreaming'];
-    public static UrlPattern: RegExp = /https?:\/\/(www\.)?vidstreaming\.io\/embed\/(\w+)/i;
+    public static UrlPattern: RegExp =
+    /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?vidstreaming\.io\/(streaming|load)\.php\?id=([a-zA-Z]+)=&title=([a-zA-Z0-9+]+)/i;
     public static Runner: HtmlRunner<IVidstreamingSourceData> = new HtmlRunner<IVidstreamingSourceData>();
     public static DefaultOptions: IRunnerScrapperOptions = {};
     public static async scrap(

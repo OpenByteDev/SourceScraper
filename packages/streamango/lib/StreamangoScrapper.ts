@@ -12,7 +12,7 @@ export type IStreamangoScrapperOptions = IRunnerScrapperOptions<IPuppeteerRunner
 export class StreamangoScrapper extends SourceRunnerScrapper<IStreamangoSourceData> {
     public static Name: string = 'streamango';
     public static Domains: string[] = ['streamango.com'];
-    public static UrlPattern: RegExp = /https?:\/\/(www\.)?streamango\.com\/embed\/(\w+)\/(.+)/i;
+    public static UrlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?streamango\.com\/embed\/(\w+)/i;
     public static Runner: PuppeteerRunner<IStreamangoSourceData> = new PuppeteerRunner<IStreamangoSourceData>();
     public static DefaultOptions: IStreamangoScrapperOptions = {};
     public static async scrap(

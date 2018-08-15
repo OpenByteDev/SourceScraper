@@ -11,7 +11,7 @@ export type IStreamMoeScrapperOptions = IRunnerScrapperOptions<IHtmlRunnerOption
 export class StreamMoeScrapper extends SourceRunnerScrapper<IStreamMoeSourceData> {
     public static Name: string = 'streammoe';
     public static Domains: string[] = ['stream.moe'];
-    public static UrlPattern: RegExp = /https?:\/\/(www\.)?stream\.moe\/embed2\/[0-9a-zA-Z]+/i;
+    public static UrlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?stream\.moe\/embed2\/[0-9a-zA-Z]+/i;
     public static Runner: HtmlRunner<IStreamMoeSourceData> = new HtmlRunner<IStreamMoeSourceData>();
     public static DefaultOptions: IStreamMoeScrapperOptions = {};
     public static async scrap(

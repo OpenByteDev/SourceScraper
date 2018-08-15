@@ -13,7 +13,8 @@ export type IMasteranimeScrapperOptions = IScrapperOptions;
 export class MasteranimeScrapper extends HosterScrapper<IMasteranimeHosterData> {
     public static Name: string = 'masteranime';
     public static Domains: string[] = ['masterani.me'];
-    public static UrlPattern: RegExp = /https?:\/\/(www\.)?masterani\.me\/anime\/watch\/(\d+-(?:\w+-)+\w+)\/(\d+)/i;
+    public static UrlPattern: RegExp =
+        /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?masterani\.me\/anime\/watch\/(\d+-(?:\w+-)+\w+)\/(\d+)/i;
     public static DefaultOptions: IMasteranimeScrapperOptions = {};
     public static async scrap(
         url: string,

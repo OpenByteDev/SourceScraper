@@ -6,7 +6,7 @@ export type IGogoanimeScrapperOptions = IRunnerScrapperOptions<IDomRunnerOptions
 export class GogoanimeScrapper extends HosterRunnerScrapper<IHosterData> {
     public static Name: string = 'gogoanime';
     public static Domains: string[] = ['gogoanime.se', 'gogoanime.sh'];
-    public static UrlPattern: RegExp = /https?:\/\/(?:www\.)?gogoanime.(sh|se)\/(\w+(?:-\w+)*)/i;
+    public static UrlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?gogoanime.(?:sh|se)\/(\w+(?:-\w+)*)/i;
     public static Runner: DomRunner<IHosterData> = new DomRunner<IHosterData>();
     public static DefaultOptions: IGogoanimeScrapperOptions = {};
     public static async scrap(

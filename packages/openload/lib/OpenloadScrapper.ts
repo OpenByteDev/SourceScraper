@@ -10,7 +10,8 @@ export type IOpenloadScrapperOptions = IRunnerScrapperOptions<IPuppeteerRunnerOp
 export class OpenloadScrapper extends SourceRunnerScrapper<IOpenloadSourceData> {
     public static Name: string = 'openload';
     public static Domains: string[] = ['openload.co', 'oload.tv', 'oload.win'];
-    public static UrlPattern: RegExp = /https?:\/\/(www\.)?(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/i;
+    public static UrlPattern: RegExp =
+        /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?(openload\.co|oload\.(?:tv|win))\/embed\/(\w+)/i;
     public static Runner: PuppeteerRunner<IOpenloadSourceData> = new PuppeteerRunner<IOpenloadSourceData>();
     public static DefaultOptions: IOpenloadScrapperOptions = {};
     public static async scrap(

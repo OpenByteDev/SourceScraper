@@ -224,7 +224,7 @@ export type IVidziScrapperOptions = IRunnerScrapperOptions<IPuppeteerRunnerOptio
 export class VidziScrapper extends SourceRunnerScrapper<IVidziSourceData> {
     public static Name: string = 'vidzi';
     public static Domains: string[] = ['vidzi.tv', 'vidzi.online', 'vidzi.nu'];
-    public static UrlPattern: RegExp = /https?:\/\/(?:www\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
+    public static UrlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?vidzi\.(?:tv|online|nu)\/(\w+)\.html/i;
     public static Runner: PuppeteerRunner<IVidziSourceData> = new PuppeteerRunner<IVidziSourceData>();
     public static DefaultOptions: IVidziScrapperOptions = {};
     public static async scrap(

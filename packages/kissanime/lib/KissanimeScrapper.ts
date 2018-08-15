@@ -12,7 +12,7 @@ export class KissanimeScrapper extends HosterScrapper<IHosterData> {
     public static Name: string = 'kissanime';
     public static Domains: string[] = ['kissanime.ru'];
     public static UrlPattern: RegExp =
-        /https?:\/\/(www\.)?kissanime\.ru\/Anime\/([a-zA-Z0-9\-]+)\/([a-zA-Z0-9\-]+)\?id=(\d+)/i;
+        /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?kissanime\.ru\/Anime\/([a-zA-Z0-9\-]+)\/([a-zA-Z0-9\-]+)\?id=(\d+)/i;
     public static DefaultOptions: IKissanimeScrapperOptions = {
         runnerOptions: {
             requestInterceptors: [

@@ -10,7 +10,7 @@ export type IMP4UploadScrapperOptions = IRunnerScrapperOptions<IPuppeteerRunnerO
 export class MP4UploadScrapper extends SourceRunnerScrapper<IMP4UploadSourceData> {
     public static Name: string = 'mp4upload';
     public static Domains: string[] = ['mp4upload.com'];
-    public static UrlPattern: RegExp = /https?:\/\/(www\.)?mp4upload\.com\/embed-([a-zA-Z0-9]+)\.html/i;
+    public static UrlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?mp4upload\.com\/embed-([a-zA-Z0-9]+)\.html/i;
     public static Runner: PuppeteerRunner<IMP4UploadSourceData> = new PuppeteerRunner<IMP4UploadSourceData>();
     public static DefaultOptions: IMP4UploadScrapperOptions = { };
     public static async scrap(
