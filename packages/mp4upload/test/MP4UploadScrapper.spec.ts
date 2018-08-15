@@ -8,7 +8,7 @@ chai.should();
 
 describe('MP4UploadScrapper', () => {
     it('should be able to scrap a video from a test page', async () => {
-        const url = 'https://mp4upload.com/embed-fj1z3v1qu8wj.html';
+        const url = 'https://mp4upload.com/embed-4gwq9pacjqx3.html';
         MP4UploadScrapper.DefaultOptions = {
             runnerOptions: {
                 puppeteerConfig: {
