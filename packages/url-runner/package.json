@@ -27,7 +27,7 @@
     },
     "scripts": {
         "ci-test": "npm-run-all lint build test",
-        "test": "mocha --timeout 20000 -r ts-node/register test/*.spec.ts",
+        "test": "mocha --timeout 60000 -r ts-node/register test/*.spec.ts",
         "lint": "tslint -p .",
         "lint-fix": "tslint -p . --fix",
         "build": "tsc",
