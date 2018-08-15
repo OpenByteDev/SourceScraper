@@ -1,6 +1,6 @@
 {
     "name": "vidstreaming-scrapper",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "A scrapper for Vidstreaming",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -14,8 +14,8 @@
         "jsonic": "^0.3.0",
         "newline-remove": "^1.0.2",
         "regexp.execall": "^1.0.2",
-        "sourcescrapper-core": "^0.6.1",
-        "sourcescrapper-html-runner": "^0.3.1"
+        "sourcescrapper-core": "^0.6.2",
+        "sourcescrapper-html-runner": "^0.3.2"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
