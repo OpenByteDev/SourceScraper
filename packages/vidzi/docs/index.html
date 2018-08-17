@@ -73,18 +73,16 @@
 				<p>This package is part of the <a href="https://github.com/OpenByteDev/SourceScrapper">SourceScrapper-Project</a>.</p>
 				<h2 id="getting-started">Getting Started</h2>
 				<h3 id="installation">Installation</h3>
-				<pre><code class="lang-bash">$ npm i vidzi-scrapper
-</code></pre>
+				<pre><code class="language-bash">$ npm i vidzi-scrapper</code></pre>
 				<h3 id="usage">Usage</h3>
-				<pre><code class="lang-js"><span class="hljs-keyword">const</span> { VidziScrapper } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'vidzi-scrapper'</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { VidziScrapper } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'vidzi-scrapper'</span>);
 
 <span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
     <span class="hljs-keyword">const</span> url = <span class="hljs-string">'some url'</span>;
     <span class="hljs-keyword">const</span> scrap = <span class="hljs-keyword">await</span> VidziScrapper.scrap(url);
     <span class="hljs-keyword">if</span> (scrap.success)
         <span class="hljs-built_in">console</span>.log(scrap.data.sources);
-})();
-</code></pre>
+})();</code></pre>
 				<h3 id="api">API</h3>
 				<p>The API generated with <a href="http://typedoc.org/">TypeDoc</a> can be found <a href="https://openbytedev.github.io/SourceScrapper/packages/vidzi/docs/">here</a>.</p>
 			</div>
