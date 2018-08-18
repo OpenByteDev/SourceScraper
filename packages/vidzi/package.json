@@ -28,8 +28,8 @@
         "typescript": "^3.1.0-dev.20180818"
     },
     "scripts": {
-        "ci-test": "npm-run-all lint build test",
-        "test": "mocha test/*.spec.ts",
+        "ci-test": "npm test",
+        "test": "npm-run-all lint build",
         "lint": "tslint -p .",
         "lint-fix": "tslint -p . --fix",
         "build": "tsc",
