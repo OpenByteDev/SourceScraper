@@ -52,3 +52,4 @@ const { scrappers } = require('sourcescrapper');
 
 ### API
 The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/packages/sourcescrapper/docs).
+
