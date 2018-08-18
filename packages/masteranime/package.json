@@ -10,7 +10,7 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "masteranime-api": "^1.0.5",
+        "masteranime-api": "^1.0.6",
         "sourcescrapper-core": "^0.6.4"
     },
     "devDependencies": {
