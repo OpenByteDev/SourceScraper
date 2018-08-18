@@ -27,7 +27,7 @@ Scrap the sources from your favorite video streaming sites.
 #### Hoster
 - <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20"></sub> [MasterAnime](https://www.masterani.me)
 - <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.io" height="20"></sub> [Gogoanime](https://www.gogoanime.io)
-- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> [Kissanime](https://www.kissanime.ru) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
+- <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20"></sub> [Kissanime](https://www.kissanime.ru)
 <hr>
 
 ## Getting Started
