@@ -1,6 +1,6 @@
 {
     "name": "streamcloud-scrapper",
-    "version": "0.4.4",
+    "version": "0.4.5",
     "description": "A scrapper for Streamcloud",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -14,8 +14,8 @@
         "object-merge": "^2.5.1",
         "query-string": "^6.1.0",
         "regexp.execall": "^1.0.2",
-        "sourcescrapper-core": "^0.6.4",
-        "sourcescrapper-html-runner": "^0.3.4"
+        "sourcescrapper-core": "^0.6.5",
+        "sourcescrapper-html-runner": "^0.3.5"
     },
     "devDependencies": {
         "@types/newline-remove": "^1.0.0",
