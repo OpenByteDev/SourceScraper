@@ -7,7 +7,7 @@ import 'mocha';
 chai.should();
 
 describe('RapidvideoScrapper', () => {
-    const url = 'https://rapidvideo.com/e/FO24ULAW2H';
+    const url = 'https://www.rapidvideo.com/?v=FO24ULAW2H';
     it('should detect a valid url', () => {
          const scrapper = new RapidvideoScrapper();
          scrapper.isApplicable(url).should.be.true;
