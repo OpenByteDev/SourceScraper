@@ -1,6 +1,6 @@
 {
     "name": "mp4upload-scrapper",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "A scrapper for MP4Upload",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,8 +10,8 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.6.3",
-        "sourcescrapper-puppeteer-runner": "^0.5.3"
+        "sourcescrapper-core": "^0.6.4",
+        "sourcescrapper-puppeteer-runner": "^0.5.4"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
