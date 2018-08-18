@@ -1,5 +1,7 @@
-import { integer, IRunnerScrapperOptions, ISourceData, Scrap, Source, SourceScrapper, uri } from '../../sourcescrapper-core';
 import { HtmlRunner, IHtmlRunnerOptions } from 'sourcescrapper-html-runner';
+import {
+    integer, IRunnerScrapperOptions, ISourceData, Scrap, Source, SourceScrapper, uri
+} from '../../sourcescrapper-core';
 
 import removeNewlines = require('newline-remove');
 import objectMerge = require('object-merge');
