@@ -1,6 +1,6 @@
 {
 	"devDependencies": {
-		"lerna": "^3.1.0"
+		"lerna": "^3.1.1"
 	},
 	"scripts": {
 		"clean": "npm run powershell ./clean_generated_files.ps1",
