@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IMasteranimeHosterData | Masteranime Scrapper</title>
+	<title>IEpisodeDetailed | Masteranime Scrapper</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,34 +54,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="imasteranimehosterdata.html">IMasteranimeHosterData</a>
+					<a href="iepisodedetailed.html">IEpisodeDetailed</a>
 				</li>
 			</ul>
-			<h1>Interface IMasteranimeHosterData&lt;T&gt;</h1>
+			<h1>Interface IEpisodeDetailed</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IHoster</span></h4>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">IHosterData</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">IMasteranimeHosterData</span>
-							</li>
-						</ul>
+						<span class="target">IEpisodeDetailed</span>
 					</li>
 				</ul>
 			</section>
@@ -92,9 +79,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imasteranimehosterdata.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="imasteranimehosterdata.html#hosters" class="tsd-kind-icon">hosters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="imasteranimehosterdata.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iepisodedetailed.html#anime" class="tsd-kind-icon">anime</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iepisodedetailed.html#auto_update" class="tsd-kind-icon">auto_<wbr>update</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iepisodedetailed.html#mirrors" class="tsd-kind-icon">mirrors</a></li>
 							</ul>
 						</section>
 					</div>
@@ -103,34 +90,57 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="data" class="tsd-anchor"></a>
-					<h3>data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="iepisodedetailed.html" class="tsd-signature-type">IEpisodeDetailed</a></div>
+					<a name="anime" class="tsd-anchor"></a>
+					<h3>anime</h3>
+					<div class="tsd-signature tsd-kind-icon">anime<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9d50092/packages/masteranime/lib/MasteranimeScrapper.ts#L8">MasteranimeScrapper.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9d50092/packages/masteranime/lib/MasteranimeScrapper.ts#L13">MasteranimeScrapper.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>episodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>current<span class="tsd-signature-symbol">: </span><a href="icurrentepisode.html" class="tsd-signature-type">ICurrentEpisode</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>next<span class="tsd-signature-symbol">: </span><a href="iepisode.html" class="tsd-signature-type">IEpisode</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>prev<span class="tsd-signature-symbol">: </span><a href="iepisode.html" class="tsd-signature-type">IEpisode</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>info<span class="tsd-signature-symbol">: </span><a href="ishortanimeinfo.html" class="tsd-signature-type">IShortAnimeInfo</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>poster<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="auto_update" class="tsd-anchor"></a>
+					<h3>auto_<wbr>update</h3>
+					<div class="tsd-signature tsd-kind-icon">auto_<wbr>update<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9d50092/packages/masteranime/lib/MasteranimeScrapper.ts#L23">MasteranimeScrapper.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-					<a name="hosters" class="tsd-anchor"></a>
-					<h3>hosters</h3>
-					<div class="tsd-signature tsd-kind-icon">hosters<span class="tsd-signature-symbol">:</span> <a href="../classes/masteranimehoster.html" class="tsd-signature-type">MasteranimeHoster</a><span class="tsd-signature-symbol">[]</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="mirrors" class="tsd-anchor"></a>
+					<h3>mirrors</h3>
+					<div class="tsd-signature tsd-kind-icon">mirrors<span class="tsd-signature-symbol">:</span> <a href="imirror.html" class="tsd-signature-type">IMirror</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides IHosterData.hosters</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9d50092/packages/masteranime/lib/MasteranimeScrapper.ts#L9">MasteranimeScrapper.ts:9</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="title" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> title</h3>
-					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from IHosterData.title</p>
-						<ul>
-							<li>Defined in C:/Users/Admin/OneDrive/Code/Web/SourceScrapper/packages/masteranime/node_modules/sourcescrapper-core/types/HosterScrapper.d.ts:4</li>
+							<li>Defined in <a href="https://github.com/OpenByteDev/SourceScrapper/blob/9d50092/packages/masteranime/lib/MasteranimeScrapper.ts#L22">MasteranimeScrapper.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,33 +171,33 @@
 					<li class=" tsd-kind-interface">
 						<a href="iepisode.html" class="tsd-kind-icon">IEpisode</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="iepisodedetailed.html" class="tsd-kind-icon">IEpisode<wbr>Detailed</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iepisodedetailed.html#anime" class="tsd-kind-icon">anime</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iepisodedetailed.html#auto_update" class="tsd-kind-icon">auto_<wbr>update</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iepisodedetailed.html#mirrors" class="tsd-kind-icon">mirrors</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="ihost.html" class="tsd-kind-icon">IHost</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="imasteranimehoster.html" class="tsd-kind-icon">IMasteranime<wbr>Hoster</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-has-type-parameter">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="imasteranimehosterdata.html" class="tsd-kind-icon">IMasteranime<wbr>Hoster<wbr>Data</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="imasteranimehosterdata.html#data" class="tsd-kind-icon">data</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-								<a href="imasteranimehosterdata.html#hosters" class="tsd-kind-icon">hosters</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="imasteranimehosterdata.html#title" class="tsd-kind-icon">title</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="imirror.html" class="tsd-kind-icon">IMirror</a>
 					</li>
