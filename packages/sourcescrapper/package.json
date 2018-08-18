@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "description": "Scrap the sources from your favorite video streaming sites.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,18 +10,18 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "gogoanime-scrapper": "^0.2.5",
-        "kissanime-scrapper": "^0.3.5",
-        "masteranime-scrapper": "^0.5.6",
-        "mp4upload-scrapper": "^0.2.5",
-        "openload-scrapper": "^0.4.5",
-        "rapidvideo-scrapper": "^0.4.5",
-        "sourcescrapper-core": "^0.6.5",
-        "streamango-scrapper": "^0.4.5",
-        "streamcloud-scrapper": "^0.4.5",
-        "streammoe-scrapper": "^0.2.5",
-        "vidstreaming-scrapper": "^0.4.5",
-        "vidzi-scrapper": "^0.5.6"
+        "gogoanime-scrapper": "^0.2.6",
+        "kissanime-scrapper": "^0.3.6",
+        "masteranime-scrapper": "^0.5.7",
+        "mp4upload-scrapper": "^0.2.6",
+        "openload-scrapper": "^0.4.6",
+        "rapidvideo-scrapper": "^0.4.6",
+        "sourcescrapper-core": "^0.6.6",
+        "streamango-scrapper": "^0.4.6",
+        "streamcloud-scrapper": "^0.4.6",
+        "streammoe-scrapper": "^0.2.6",
+        "vidstreaming-scrapper": "^0.4.6",
+        "vidzi-scrapper": "^0.5.7"
     },
     "devDependencies": {
         "@types/node": "^10.7.1",
