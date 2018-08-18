@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScrapper)
 [![npm version](https://badge.fury.io/js/sourcescrapper.svg)](https://www.npmjs.com/package/sourcescrapper) 
 [![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg?path=packages%2Fsourcescrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fsourcescrapper)
-[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fsourcescrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?type=dev$path=packages%2Fsourcescrapper)
+[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fsourcescrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?type=dev&path=packages%2Fsourcescrapper)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Doge](https://img.shields.io/badge/doge-wow-yellow.svg)]()
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
