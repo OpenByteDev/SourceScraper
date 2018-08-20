@@ -3,9 +3,15 @@
 		"lerna": "^3.1.1"
 	},
 	"scripts": {
-		"bootstrap": "./node_modules/.bin/lerna bootstrap",
-		"ci-test": "./node_modules/.bin/lerna run ci-test",
+		"bootstrap": "npm run lerna bootstrap",
+		"ci-test": "npm run lerna run ci-test",
+		"lint-fix": "npm run lerna run lint-fix",
+		"build": "npm run lerna run build",
+		"gen-doc": "npm run lerna run gen-doc",
+		"exec": "npm run lerna exec",
+		"lerna": "./node_modules/.bin/lerna",
 		"clean": "npm run powershell ./clean_generated_files.ps1",
 		"powershell": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command"
-	}
+	},
+	"dependencies": {}
 }
