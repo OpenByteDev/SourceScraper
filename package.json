@@ -4,6 +4,7 @@
 	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
+		"publish": "lerna publish",
 		"ci-test": "lerna run ci-test",
 		"lint-fix": "lerna run lint-fix",
 		"build": "lerna run build",
