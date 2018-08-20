@@ -4,5 +4,5 @@ node_js:
 notifications:
   email: false
 script:
-  - "lerna bootstrap"
-  - "lerna run ci-test"
+  - "npm run bootstrap"
+  - "npm run ci-test"
