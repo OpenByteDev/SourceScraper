@@ -8,6 +8,7 @@
 		"lint-fix": "lerna run lint-fix",
 		"build": "lerna run build",
 		"gen-doc": "lerna run gen-doc",
+		"reset": "lerna exec \"npm i\" && npm run bootstrap",
 		"clean": "npm run powershell ./clean_generated_files.ps1",
 		"powershell": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command"
 	},
