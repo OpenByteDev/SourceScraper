@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScrapper)
 [![npm version](https://badge.fury.io/js/streamcloud-scrapper.svg)](https://www.npmjs.com/package/streamcloud-scrapper)
-[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg?path=packages%2Fstreamcloud)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fstreamcloud)
-[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fstreamcloud)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fstreamcloud&type=dev)
+[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg?path=packages%2Fstreamcloud-scrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fstreamcloud-scrapper)
+[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fstreamcloud-scrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fstreamcloud-scrapper&type=dev)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Doge](https://img.shields.io/badge/doge-wow-yellow.svg)]()
 
@@ -34,4 +34,4 @@ const { StreamcloudScrapper } = require('streamcloud-scrapper');
 
 
 ### API
-The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/packages/streamcloud/docs/).
+The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/packages/streamcloud-scrapper/docs/).

@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScrapper)
 [![npm version](https://badge.fury.io/js/vidstreaming-scrapper.svg)](https://www.npmjs.com/package/vidstreaming-scrapper)
-[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg?path=packages%2Fvidstreaming)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fvidstreaming)
-[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fvidstreaming)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fvidstreaming&type=dev)
+[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg?path=packages%2Fvidstreaming-scrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fvidstreaming-scrapper)
+[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fvidstreaming-scrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fvidstreaming-scrapper&type=dev)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Doge](https://img.shields.io/badge/doge-wow-yellow.svg)]()
 
@@ -34,4 +34,4 @@ const { VidstreamingScrapper } = require('vidstreaming-scrapper');
 
 
 ### API
-The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/packages/vidstreaming/docs/).
+The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/packages/vidstreaming-scrapper/docs/).
