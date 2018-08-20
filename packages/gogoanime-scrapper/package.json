@@ -1,6 +1,6 @@
 {
     "name": "gogoanime-scrapper",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "description": "A scrapper for Gogoanime",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,8 +10,8 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.6.6",
-        "sourcescrapper-dom-runner": "^0.6.6"
+        "sourcescrapper-core": "^0.6.7",
+        "sourcescrapper-dom-runner": "^0.6.7"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
