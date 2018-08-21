@@ -1,5 +1,5 @@
-import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 import { IRunnerScrapperOptions, ISourceData, Scrap, Source, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface IOpenloadSourceData extends ISourceData {
     streamurl: string;

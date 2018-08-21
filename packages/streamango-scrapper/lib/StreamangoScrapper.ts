@@ -1,7 +1,7 @@
 import { StreamangoSource } from './StreamangoSource';
 
-import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 import { IRunnerScrapperOptions, ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
+import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface IStreamangoSourceData extends ISourceData {
     sources: StreamangoSource[];

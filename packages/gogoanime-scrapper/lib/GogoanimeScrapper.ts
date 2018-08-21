@@ -1,5 +1,5 @@
-import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from 'sourcescrapper-dom-runner';
 import { Hoster, HosterRunnerScrapper, IHosterData, IRunnerScrapperOptions, Scrap } from 'sourcescrapper-core';
+import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from 'sourcescrapper-dom-runner';
 
 export type IGogoanimeScrapperOptions = IRunnerScrapperOptions<IDomRunnerOptions>;
 
