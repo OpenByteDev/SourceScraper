@@ -2,7 +2,7 @@ import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from '
 
 import {
     IRunnerScrapperOptions, ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper
-} from '../../sourcescrapper-core';
+} from 'sourcescrapper-core';
 
 export class SimplePuppeteerScrapper
     extends SourceRunnerScrapper<

@@ -1,7 +1,7 @@
 import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 import {
     Hoster, HosterScrapper, IHosterData, IRunnerScrapperOptions, Scrap
-} from '../../sourcescrapper-core';
+} from 'sourcescrapper-core';
 
 import normalizeUrl = require('normalize-url');
 import urlparser = require('urlparser');

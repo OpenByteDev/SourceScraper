@@ -1,6 +1,6 @@
 import { SimpleDomScrapper } from '../lib';
 
-import { ISourceData } from '../../sourcescrapper-core';
+import { ISourceData } from 'sourcescrapper-core';
 
 import chai = require('chai');
 import 'mocha';

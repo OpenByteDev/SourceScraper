@@ -1,4 +1,4 @@
-import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from '../../sourcescrapper-core';
+import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
 import { Browser, launch as puppeteerLaunch, LaunchOptions, NavigationOptions, Page, Request } from 'puppeteer';
 

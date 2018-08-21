@@ -1,5 +1,5 @@
 import { DOMWindow, FromUrlOptions, JSDOM } from 'jsdom';
-import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from '../../sourcescrapper-core';
+import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
 export interface IDomRunnerOptions extends IRunnerOptions {
     jsdomConfig?: FromUrlOptions;

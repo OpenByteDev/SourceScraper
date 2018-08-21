@@ -1,4 +1,4 @@
-import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from '../../sourcescrapper-core';
+import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
 export type IUrlRunnerOptions = IRunnerOptions;
 

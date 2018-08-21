@@ -1,7 +1,7 @@
 import { VidziSource } from './VidziSource';
 
 import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
-import { IRunnerScrapperOptions, ISourceData, Scrap, SourceRunnerScrapper } from '../../sourcescrapper-core';
+import { IRunnerScrapperOptions, ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
 
 export interface IVidziSourceData extends ISourceData<VidziSource> {
     jwplayerConfig: IJWPlayerConfig;

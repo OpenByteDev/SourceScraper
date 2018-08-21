@@ -1,6 +1,6 @@
 import { KissanimeScrapper } from '../lib';
 
-import { IHosterData } from '../../sourcescrapper-core';
+import { IHosterData } from 'sourcescrapper-core';
 
 import chai = require('chai');
 import 'mocha';

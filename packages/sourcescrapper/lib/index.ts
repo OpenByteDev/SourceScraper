@@ -9,7 +9,7 @@ import * as streamcloud from 'streamcloud-scrapper';
 import * as streammoe from 'streammoe-scrapper';
 import * as vidstreaming from 'vidstreaming-scrapper';
 import * as vidzi from 'vidzi-scrapper';
-import * as core from '../../sourcescrapper-core';
+import * as core from 'sourcescrapper-core';
 import { scrappers } from './scrappers';
 
 export {

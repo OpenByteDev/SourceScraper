@@ -3,7 +3,7 @@ import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from './DomRunner';
 import { ConstructorOptions as JSDOMOptions, JSDOM } from 'jsdom';
 import {
     IRunnerScrapperOptions, ISourceData, ISourceScrapper, Scrap, Source, SourceRunnerScrapper
-} from '../../sourcescrapper-core';
+} from 'sourcescrapper-core';
 
 export class SimpleDomScrapper
     extends SourceRunnerScrapper<

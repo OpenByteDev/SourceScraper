@@ -1,4 +1,4 @@
-import { ISource, Source } from '../../sourcescrapper-core';
+import { ISource, Source } from 'sourcescrapper-core';
 
 export interface IMP4UploadSource extends ISource {
     default: boolean;

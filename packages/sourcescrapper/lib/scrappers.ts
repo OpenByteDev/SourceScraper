@@ -9,7 +9,7 @@ import { StreamcloudScrapper } from 'streamcloud-scrapper';
 import { StreamMoeScrapper } from 'streammoe-scrapper';
 import { VidstreamingScrapper } from 'vidstreaming-scrapper';
 import { VidziScrapper } from 'vidzi-scrapper';
-import { IHosterData, ISourceData, Scrapper, ScrapperArray } from '../../sourcescrapper-core';
+import { IHosterData, ISourceData, Scrapper, ScrapperArray } from 'sourcescrapper-core';
 
 const source: Array<Scrapper<ISourceData>> = [
     new OpenloadScrapper(),

@@ -1,4 +1,4 @@
-import { ISource, Source } from '../../sourcescrapper-core';
+import { ISource, Source } from 'sourcescrapper-core';
 
 export interface IVidziSource extends ISource {
     default: boolean;

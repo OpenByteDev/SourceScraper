@@ -1,6 +1,6 @@
 import { SimpleDomScrapper } from 'sourcescrapper-dom-runner';
 import { HtmlRunner, IHtmlRunnerArgs, IHtmlRunnerOptions } from 'sourcescrapper-html-runner';
-import { IRunnerScrapperOptions, ISourceData, Scrap, SourceRunnerScrapper } from '../../sourcescrapper-core';
+import { IRunnerScrapperOptions, ISourceData, Scrap, SourceRunnerScrapper } from 'sourcescrapper-core';
 
 export interface IStreamMoeSourceData extends ISourceData {
     decodedPage: string;
