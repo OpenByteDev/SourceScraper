@@ -5,6 +5,8 @@ import {
     IRunnerScrapperOptions, ISourceData, ISourceScrapper, Scrap, SourceRunnerScrapper
 } from 'sourcescrapper-core';
 
+export type ISimpleJWPlayerScrapperOptions = IRunnerScrapperOptions<IJWPlayerRunnerOptions>;
+
 export class SimpleJWPlayerScrapper
     extends SourceRunnerScrapper<
         ISourceData,
@@ -16,7 +18,7 @@ export class SimpleJWPlayerScrapper
     public static Domains: string[] = [];
     public static UrlPattern: RegExp = /.*/i;
     public static Runner: JWPlayerRunner<ISourceData> = new JWPlayerRunner<ISourceData>();
-    public static DefaultOptions: IRunnerScrapperOptions = {};
+    public static DefaultOptions: ISimpleJWPlayerScrapperOptions = {};
     public static async scrap(url: string): Promise<Scrap<ISourceData>> {
         return new SimpleJWPlayerScrapper().scrap(url);
     }
@@ -27,11 +29,11 @@ export class SimpleJWPlayerScrapper
     public domains: string[] = SimpleJWPlayerScrapper.Domains;
     public urlPattern: RegExp = SimpleJWPlayerScrapper.UrlPattern;
     public runner: JWPlayerRunner<ISourceData> = SimpleJWPlayerScrapper.Runner;
-    public defaultOptions: IRunnerScrapperOptions = SimpleJWPlayerScrapper.DefaultOptions;
-    protected async execWithArgs({ config }: IJWPlayerRunnerArgs): Promise<ISourceData> {
+    public defaultOptions: ISimpleJWPlayerScrapperOptions = SimpleJWPlayerScrapper.DefaultOptions;
+    protected async execWithArgs({ sources, poster }: IJWPlayerRunnerArgs): Promise<ISourceData> {
         return {
-            poster: config.image,
-            sources: config.sources.map(s => {
+            poster,
+            sources: sources.map(s => {
                 const url = s.file;
                 delete s.file;
                 return { ...s, url };
