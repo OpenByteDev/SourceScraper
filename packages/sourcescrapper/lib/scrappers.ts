@@ -4,12 +4,12 @@ import { MasteranimeScrapper } from 'masteranime-scrapper';
 import { MP4UploadScrapper } from 'mp4upload-scrapper';
 import { OpenloadScrapper } from 'openload-scrapper';
 import { RapidvideoScrapper } from 'rapidvideo-scrapper';
+import { IHosterData, ISourceData, Scrapper, ScrapperArray } from 'sourcescrapper-core';
 import { StreamangoScrapper } from 'streamango-scrapper';
 import { StreamcloudScrapper } from 'streamcloud-scrapper';
 import { StreamMoeScrapper } from 'streammoe-scrapper';
 import { VidstreamingScrapper } from 'vidstreaming-scrapper';
 import { VidziScrapper } from 'vidzi-scrapper';
-import { IHosterData, ISourceData, Scrapper, ScrapperArray } from 'sourcescrapper-core';
 
 const source: Array<Scrapper<ISourceData>> = [
     new OpenloadScrapper(),
