@@ -6,7 +6,7 @@ import chai = require('chai');
 import 'mocha';
 chai.should();
 
-describe('SimplePuppeteerScrapper', () => {
+describe('SimpleJWPlayerScrapper', () => {
     const url = 'http://tekeye.uk/html/html5-video-test-page';
     it('should detect a valid url', () => {
          const scrapper = new SimplePuppeteerScrapper();
@@ -21,8 +21,8 @@ describe('SimplePuppeteerScrapper', () => {
             }
         };
         const scrap = await SimplePuppeteerScrapper.scrap(url);
-        scrap.should.have.property('success').that.is.a('boolean').and.that.is.true;
-        scrap.should.have.property('data').that.is.an('object').and.that.is.not.undefined;
+        scrap.should.have.property('success').that.is.true;
+        scrap.should.have.property('data').that.is.an('object');
         const data = scrap.data as ISourceData;
         data.should.have.property('sources').that.is.an('array');
         data.sources.length.should.be.greaterThan(0);
