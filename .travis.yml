@@ -6,3 +6,7 @@ notifications:
 script:
   - "npm run bootstrap"
   - "npm run ci-test"
+cache:
+  bundler: true
+  directories:
+   - node_modules
