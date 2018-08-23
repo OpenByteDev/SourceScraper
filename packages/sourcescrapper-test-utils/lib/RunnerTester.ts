@@ -5,7 +5,7 @@ import { IRunnerArgs, IRunnerOptions, Runner } from 'sourcescrapper-core';
 
 import 'mocha';
 
-export type IArgsTest<RA extends IRunnerArgs> = (args: RA) => Promise<any>;
+export type IArgsTest<RA extends IRunnerArgs> = (args: RA, url: string) => Promise<any>;
 
 export class RunnerTester<T, RO extends IRunnerOptions, RA extends IRunnerArgs<RO>, R extends Runner<T, RO, RA>>
     extends Tester<R> {
@@ -23,7 +23,7 @@ export class RunnerTester<T, RO extends IRunnerOptions, RA extends IRunnerArgs<R
         return this.runTestForEach(
             urls,
             'should provide valid args',
-            async url => this.runner.run(url, argsTest, options));
+            async url => this.runner.run(url, args => argsTest(args, url), options));
     }
     protected getTestTarget(): R {
         return this.runner;
