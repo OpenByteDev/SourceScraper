@@ -1,6 +1,6 @@
 {
     "name": "tiwikiwi-scrapper",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "A scrapper for TiwiKiwi",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,8 +10,8 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.7.0",
-        "sourcescrapper-jwplayer-runner": "^0.1.1"
+        "sourcescrapper-core": "^0.7.1",
+        "sourcescrapper-jwplayer-runner": "^0.1.2"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",

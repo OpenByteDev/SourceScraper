@@ -1,6 +1,6 @@
 {
     "name": "sourcescrapper-test-utils",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Test Utils for sourcescrapper packages.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -12,8 +12,8 @@
     "dependencies": {
         "chai": "^4.1.2",
         "mocha": "^5.2.0",
-        "sourcescrapper-core": "^0.7.0",
-        "sourcescrapper-puppeteer-runner": "^0.5.9"
+        "sourcescrapper-core": "^0.7.1",
+        "sourcescrapper-puppeteer-runner": "^0.5.10"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
