@@ -1,4 +1,4 @@
-import { IFlowplayerRunnerArgs, IFlowplayerRunnerOptions, FlowplayerRunner } from './FlowplayerRunner';
+import { FlowplayerRunner, IFlowplayerRunnerArgs, IFlowplayerRunnerOptions } from './FlowplayerRunner';
 import { FlowplayerSource } from './FlowplayerSource';
 
 import {
@@ -14,7 +14,7 @@ export class SimpleFlowplayerScrapper
         IFlowplayerSourceData,
         IFlowplayerRunnerOptions,
         IFlowplayerRunnerArgs,
-        FlowplayerRunner<IFlowplayerSourceData>
+        FlowplayerRunner<IFlowplayerSourceData>>
     implements ISourceScrapper<IFlowplayerSourceData> {
     public static Name: string = 'flowplayer';
     public static Domains: string[] = [];

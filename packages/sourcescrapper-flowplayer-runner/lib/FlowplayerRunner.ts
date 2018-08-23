@@ -3,50 +3,50 @@ import { IRunner, IRunnerArgs, Runner } from 'sourcescrapper-core';
 import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'sourcescrapper-puppeteer-runner';
 
 export interface IFlowplayerConfigSource {
-	type: string;
-	src: string;
+    type: string;
+    src: string;
 }
 
 export interface IFlowplayerClip {
-	sources: IFlowplayerConfigSource[];
+    sources: IFlowplayerConfigSource[];
 }
 
 export interface IFlowplayerConfig {
-	debug: boolean;
-	disabled: boolean;
-	fullscreen: boolean;
-	keyboard: boolean;
-	ratio: number;
-	adaptiveRatio: boolean;
-	rtmp: number;
-	proxy: string;
-	hlsQualities: boolean;
-	splash: boolean;
-	live: boolean;
-	livePositionOffset: number;
-	swf: string;
-	swfHls: string;
-	speeds: number[];
-	tooltip: boolean;
-	mouseoutTimeout: number;
-	volume: number;
-	errors: string[];
-	errorUrls: string[];
-	playlist: any[];
-	hlsFix?: any;
-	clip: IFlowplayerClip;
-	logo: string;
-	native_fullscreen: boolean;
-	share: boolean;
-	autoplay: boolean;
-	hostname: string;
-	origin: string;
+    debug: boolean;
+    disabled: boolean;
+    fullscreen: boolean;
+    keyboard: boolean;
+    ratio: number;
+    adaptiveRatio: boolean;
+    rtmp: number;
+    proxy: string;
+    hlsQualities: boolean;
+    splash: boolean;
+    live: boolean;
+    livePositionOffset: number;
+    swf: string;
+    swfHls: string;
+    speeds: number[];
+    tooltip: boolean;
+    mouseoutTimeout: number;
+    volume: number;
+    errors: string[];
+    errorUrls: string[];
+    playlist: any[];
+    hlsFix?: any;
+    clip: IFlowplayerClip;
+    logo: string;
+    native_fullscreen: boolean;
+    share: boolean;
+    autoplay: boolean;
+    hostname: string;
+    origin: string;
 }
 
 export type IFlowplayerRunnerOptions = IPuppeteerRunnerOptions;
 
 export interface IFlowplayerRunnerArgs extends IPuppeteerRunnerArgs, IRunnerArgs<IFlowplayerRunnerOptions> {
-    Flowplayer: JSHandle;
+    flowplayer: JSHandle;
     config: IFlowplayerConfig;
     sources: IFlowplayerConfigSource[];
 }
