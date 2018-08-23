@@ -48,6 +48,7 @@ export type IFlowplayerRunnerOptions = IPuppeteerRunnerOptions;
 export interface IFlowplayerRunnerArgs extends IPuppeteerRunnerArgs, IRunnerArgs<IFlowplayerRunnerOptions> {
     flowplayer: JSHandle;
     config: IFlowplayerConfig;
+    clip: IFlowplayerClip;
     sources: IFlowplayerConfigSource[];
 }
 
@@ -71,12 +72,14 @@ export class FlowplayerRunner<T> extends Runner<T, IFlowplayerRunnerOptions, IFl
             const { page } = args;
             const flowplayer = await page.evaluateHandle('flowplayer()');
             const config = await page.evaluate(player => player.conf, flowplayer);
-            const sources = config.sources;
+            const clip = config.clip;
+            const sources = clip.sources;
             try {
                 return scrapper({
                     ...args,
                     flowplayer,
                     config,
+                    clip,
                     sources
                 });
             } finally {
