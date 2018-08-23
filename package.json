@@ -1,28 +1,28 @@
 {
-				"author": "OpenByte <development.openbyte@gmail.com>",
-				"repository": {
-								"type": "git",
-								"url": "https://github.com/OpenByteDev/SourceScrapper.git"
-				},
-				"dependencies": {},
-				"devDependencies": {
-								"lerna": "^3.1.4"
-				},
-				"scripts": {
-								"bootstrap": "lerna bootstrap",
-								"publish": "lerna publish",
-								"ci-test": "lerna run ci-test",
-								"lint-fix": "lerna run lint-fix",
-								"build": "lerna run build",
-								"gen-doc": "lerna run gen-doc",
-								"lerna": "npm run lerna",
-								"reset": "lerna exec \"npm i\" && npm run bootstrap",
-								"clean": "npm run powershell ./clean_generated_files.ps1",
-								"powershell": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command"
-				},
-				"license": "MIT",
-				"bugs": {
-								"url": "https://github.com/OpenByteDev/SourceScrapper/issues"
-				},
-				"homepage": "https://github.com/OpenByteDev/SourceScrapper#readme"
+    "author": "OpenByte <development.openbyte@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OpenByteDev/SourceScrapper.git"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "lerna": "^3.1.4"
+    },
+    "scripts": {
+        "bootstrap": "lerna bootstrap",
+        "publish": "lerna publish",
+        "ci-test": "lerna run ci-test",
+        "lint-fix": "lerna run lint-fix",
+        "build": "lerna run build",
+        "gen-doc": "lerna run gen-doc",
+        "lerna": "lerna",
+        "reset": "lerna exec \"npm i\" && npm run bootstrap",
+        "clean": "npm run powershell ./clean_generated_files.ps1",
+        "powershell": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/OpenByteDev/SourceScrapper/issues"
+    },
+    "homepage": "https://github.com/OpenByteDev/SourceScrapper#readme"
 }
