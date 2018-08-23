@@ -5,7 +5,7 @@ export type IOptions = object;
 export interface IConfigurable<O extends IOptions = IOptions> {
     defaultOptions: O;
     getOptions: (options?: Partial<O>) => O;
-    changeOptions: (options: Partial<O>) => O
+    changeOptions: (options: Partial<O>) => O;
 }
 
 export abstract class Configurable<O extends IOptions = IOptions> implements IConfigurable<O> {
