@@ -1,14 +1,6 @@
-import { IRunnerArgs } from 'sourcescrapper-core';
-
 import chai = require('chai');
 import 'mocha';
 chai.should();
-
-export type IArgsTest<RA extends IRunnerArgs> = (args: RA) => Promise<any>;
-
-export interface IHasConstructor {
-    constructor: (...args) => any;
-}
 
 export abstract class Tester<T> {
     protected abstract getTestTarget(): T;
