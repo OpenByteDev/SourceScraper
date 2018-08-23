@@ -1,6 +1,6 @@
 {
     "name": "streammoe-scrapper",
-    "version": "0.2.8",
+    "version": "0.2.9",
     "description": "A scrapper for StreamMoe",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -12,9 +12,9 @@
     "dependencies": {
         "jsonic": "^0.3.0",
         "newline-remove": "^1.0.2",
-        "sourcescrapper-core": "^0.6.8",
-        "sourcescrapper-dom-runner": "^0.6.8",
-        "sourcescrapper-html-runner": "^0.3.8"
+        "sourcescrapper-core": "^0.7.0",
+        "sourcescrapper-dom-runner": "^0.6.9",
+        "sourcescrapper-html-runner": "^0.3.9"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
