@@ -1,6 +1,6 @@
 {
     "name": "mp4upload-scrapper",
-    "version": "0.2.8",
+    "version": "0.2.10",
     "description": "A scrapper for MP4Upload",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,8 +10,8 @@
         "url": "https://github.com/OpenByteDev/SourceScrapper.git"
     },
     "dependencies": {
-        "sourcescrapper-core": "^0.6.8",
-        "sourcescrapper-puppeteer-runner": "^0.5.8"
+        "sourcescrapper-core": "^0.7.1",
+        "sourcescrapper-puppeteer-runner": "^0.5.10"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
@@ -24,7 +24,7 @@
         "tslint": "^5.11.0",
         "tslint-eslint-rules": "^5.4.0",
         "typedoc": "^0.12.0",
-        "typescript": "^3.1.0-dev.20180823"
+        "typescript": "^3.0.1"
     },
     "scripts": {
         "ci-test": "npm-run-all lint build test",
