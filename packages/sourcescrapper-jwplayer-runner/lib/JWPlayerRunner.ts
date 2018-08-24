@@ -7,7 +7,6 @@ export interface IJWPlayerConfigSource {
     file: string;
     label: string;
     type: string;
-    androidhls: boolean;
     preload: string;
 }
 
