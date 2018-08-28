@@ -6,7 +6,8 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "lerna": "^3.1.4"
+        "lerna": "^3.1.4",
+        "directory-template": "^0.3.1"
     },
     "scripts": {
         "bootstrap": "lerna bootstrap",
@@ -17,6 +18,10 @@
         "gen-doc": "lerna run gen-doc",
         "test": "lerna run test",
         "lerna": "lerna",
+        "generate": "dtgen",
+        "generate-scraper": "dtgen --template .template/scraper --out packages",
+        "generate-runnerscraper": "dtgen --template .template/runnerscraper --out packages",
+        "generate-runner": "dtgen --template .template/runner --out packages",
         "reset": "lerna exec \"npm i\" && npm run bootstrap",
         "clean": "npm run powershell ./clean_generated_files.ps1",
         "powershell": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command"
