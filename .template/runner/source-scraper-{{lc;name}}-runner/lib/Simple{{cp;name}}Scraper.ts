@@ -6,23 +6,23 @@ import {
 
 export type ISimple{{cp;name}}ScraperOptions = IRunnerScraperOptions<I{{cp;name}}RunnerOptions>;
 
-export type ISimple{{cp;name}}ScraperSourceData = I{{cp;type}}Data<{{cp;type}}>;
+export type ISimple{{cp;name}}Scraper{{cp;type}}Data = I{{cp;type}}Data<{{cp;type}}>;
 
 export class Simple{{cp;name}}Scraper
     extends {{cp;type}}RunnerScraper<
-        ISimple{{cp;name}}ScraperSourceData,
+        ISimple{{cp;name}}Scraper{{cp;type}}Data,
         I{{cp;name}}RunnerOptions,
         I{{cp;name}}RunnerArgs,
-        {{cp;name}}Runner<ISimple{{cp;name}}ScraperSourceData>>
+        {{cp;name}}Runner<ISimple{{cp;name}}Scraper{{cp;type}}Data>>
     implements I{{cp;type}}Scraper {
 
     public name: string = '{{lc;name}}';
     public domains: string[] = [];
     public urlPattern: RegExp = /.*/i;
-    public runner: {{cp;name}}Runner<ISimple{{cp;name}}ScraperSourceData> = new {{cp;name}}Runner<ISimple{{cp;name}}ScraperSourceData>();
+    public runner: {{cp;name}}Runner<ISimple{{cp;name}}Scraper{{cp;type}}Data> = new {{cp;name}}Runner<ISimple{{cp;name}}Scraper{{cp;type}}Data>();
     public defaultOptions: ISimple{{cp;name}}ScraperOptions = {};
 
-    protected async execWithArgs(args: I{{cp;name}}RunnerArgs): Promise<ISimple{{cp;name}}ScraperSourceData> {
+    protected async execWithArgs(args: I{{cp;name}}RunnerArgs): Promise<ISimple{{cp;name}}Scraper{{cp;type}}Data> {
 
     }
 }

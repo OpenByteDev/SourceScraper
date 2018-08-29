@@ -1,8 +1,10 @@
 import { {{cp;name}}Scraper } from '../lib';
 
-import { testScraping, testUrlDetection } from 'source-scraper-test-utils';
+import { ScraperTester } from 'source-scraper-test-utils';
 
 const urls = ['{{testUrl}}'];
-const scraper = new {{cp;name}}Scraper();
-testUrlDetection(scraper, urls);
-testScraping(scraper, urls);
+ScraperTester.fromStatic({{cp;name}}Scraper)
+.testUrlDetection(urls)
+    .testScraping(urls)
+    .run();
+
