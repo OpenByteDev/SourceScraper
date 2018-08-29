@@ -1,5 +1,7 @@
 import { IRunner, IRunnerArgs, Runner } from 'source-scraper-core';
-import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'source-scraper-puppeteer-runner';
+import {
+    IPuppeteerRunner, IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner
+} from 'source-scraper-puppeteer-runner';
 
 import { JSHandle } from 'puppeteer';
 
@@ -56,7 +58,7 @@ export interface IFlowplayerRunnerArgs extends IPuppeteerRunnerArgs, IRunnerArgs
 export interface IFlowplayerRunner<T> extends IRunner<T, IFlowplayerRunnerOptions, IFlowplayerRunnerArgs> { }
 
 export class FlowplayerRunner<T> extends Runner<T, IFlowplayerRunnerOptions, IFlowplayerRunnerArgs>
-    implements IFlowplayerRunner<T> {
+    implements IFlowplayerRunner<T>, IPuppeteerRunner<T> {
     public defaultOptions: IFlowplayerRunnerOptions = {};
 
     protected async exec(
