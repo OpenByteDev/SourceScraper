@@ -1,5 +1,7 @@
 import { IRunner, IRunnerArgs, Runner } from 'source-scraper-core';
-import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'source-scraper-puppeteer-runner';
+import {
+    IPuppeteerRunner, IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner
+} from 'source-scraper-puppeteer-runner';
 
 import { JSHandle } from 'puppeteer';
 
@@ -124,14 +126,14 @@ export interface IJWPlayerRunnerArgs extends IPuppeteerRunnerArgs, IRunnerArgs<I
 export interface IJWPlayerRunner<T> extends IRunner<T, IJWPlayerRunnerOptions, IJWPlayerRunnerArgs> { }
 
 export class JWPlayerRunner<T> extends Runner<T, IJWPlayerRunnerOptions, IJWPlayerRunnerArgs>
-    implements IJWPlayerRunner<T> {
+    implements IJWPlayerRunner<T>, IPuppeteerRunner<T> {
     public defaultOptions: IJWPlayerRunnerOptions = {};
 
     protected async exec(
         url: string,
         scraper: (args: IJWPlayerRunnerArgs) => Promise<T>,
         options: IJWPlayerRunnerOptions): Promise<T> {
-        return new PuppeteerRunner<T>().run(url, async (args) => {
+        return new PuppeteerRunner<T>().run(url, async args => {
             const { page } = args;
             const jwplayer = await page.evaluateHandle('jwplayer()');
             const config = await page.evaluate(player => player.getConfig(), jwplayer);
