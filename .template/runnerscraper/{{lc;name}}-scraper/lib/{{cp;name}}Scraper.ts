@@ -7,7 +7,7 @@ export class {{cp;name}}Scraper extends {{cp;type}}Scraper<I{{cp;type}}Data> {
     public urlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?{{urlPattern}}/i;
     public runner: {{cp;runner}}Runner<I{{cp;type}}Data> = new {{cp;runner}}Runner<I{{cp;type}}Data>();
     public defaultOptions: IScraperRunnerOptions<I{{cp;runner}}RunnerOptions> = {};
-	
+
     protected async execWithArgs(args: I{{cp;runner}}RunnerArgs): Promise<I{{cp;type}}Data> {
         
     }

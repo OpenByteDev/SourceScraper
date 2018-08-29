@@ -1,12 +1,14 @@
-import { {{cp;name}}Runner, I{{cp;name}}RunnerArgs } from '../lib';
+import { {{cp;name}}Runner } from '../lib';
 
-import { testArgs } from 'source-scraper-test-utils';
+import { RunnerTester } from 'source-scraper-test-utils';
 
 import chai = require('chai');
 chai.should();
 
 const urls = ['{{testUrl}}'];
-const runner = new {{cp;name}}Runner();
-testArgs(runner, urls, (args: I{{cp;name}}RunnerArgs) => {
+RunnerTester.fromStatic({{cp;name}}Runner)
+    .testArgs(urls, args => {
 
-});
+    })
+    .run();
+
