@@ -1,0 +1,6 @@
+node_modules
+.idea
+lib
+docs
+*.lerna_backup
+*.log
