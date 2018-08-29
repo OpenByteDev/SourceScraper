@@ -38,6 +38,7 @@
         "source",
         "scraper",
         "extractor",
+        "{{name}}",
         {{domains}}
     ],
     "license": "MIT",

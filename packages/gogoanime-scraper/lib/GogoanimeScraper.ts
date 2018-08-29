@@ -1,11 +1,11 @@
-import { Hoster, HosterScraper, IHosterData, IRunnerScraperOptions } from 'source-scraper-core';
+import { Hoster, HosterRunnerScraper, IHosterData, IRunnerScraperOptions } from 'source-scraper-core';
 import { DomRunner, IDomRunnerArgs, IDomRunnerOptions } from 'source-scraper-dom-runner';
 
 export type IGogoanimeScraperOptions = IRunnerScraperOptions<IDomRunnerOptions>;
 
 export type IGogoanimeScraperHosterData = IHosterData<Hoster>;
 
-export class GogoanimeScraper extends HosterScraper<IGogoanimeScraperHosterData> {
+export class GogoanimeScraper extends HosterRunnerScraper<IGogoanimeScraperHosterData> {
     public name: string = 'gogoanime';
     public domains: string[] = ['gogoanime.se', 'gogoanime.sh'];
     public urlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?gogoanime.(?:sh|se)\/(\w+(?:-\w+)*)/i;

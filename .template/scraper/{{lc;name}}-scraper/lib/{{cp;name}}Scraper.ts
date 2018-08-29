@@ -2,7 +2,7 @@ import { IScraperOptions, {{cp;type}}Scraper, I{{cp;type}}Data, {{cp;type}} } fr
 
 export type I{{cp;name}}ScraperOptions = IScraperOptions;
 
-export type I{{cp;name}}ScraperSourceData = I{{cp;type}}Data<{{cp;type}}>;
+export type I{{cp;name}}Scraper{{cp;type}}Data = I{{cp;type}}Data<{{cp;type}}>;
 
 export class {{cp;name}}Scraper extends {{cp;type}}Scraper<I{{cp;type}}Data> {
     public name: string = '{{lc;name}}';
@@ -10,7 +10,7 @@ export class {{cp;name}}Scraper extends {{cp;type}}Scraper<I{{cp;type}}Data> {
     public urlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?{{urlPattern}}/i;
     public defaultOptions: I{{cp;name}}ScraperOptions = {};
 	
-    protected async exec(ur: string): Promise<I{{cp;type}}Data> {
+    protected async exec(ur: string): Promise<I{{cp;name}}Scraper{{cp;type}}Data> {
         
     }
 }
