@@ -1,9 +1,7 @@
 import { IRunner, IRunnerArgs, Runner } from 'source-scraper-core';
-import {
-    IPuppeteerRunner, IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner
-} from 'source-scraper-puppeteer-runner';
+import { IPuppeteerRunnerArgs, IPuppeteerRunnerOptions, PuppeteerRunner } from 'source-scraper-puppeteer-runner';
 
-import {J SHandle } from 'puppeteer';
+import { JSHandle } from 'puppeteer';
 
 export interface IFlowplayerConfigSource {
     type: string;
@@ -48,7 +46,7 @@ export interface IFlowplayerConfig {
 
 export type IFlowplayerRunnerOptions = IPuppeteerRunnerOptions;
 
-export interface IFlowplayerRunnerArgs extends IRunnerArgs<IFlowplayerRunnerOptions> {
+export interface IFlowplayerRunnerArgs extends IPuppeteerRunnerArgs, IRunnerArgs<IFlowplayerRunnerOptions> {
     flowplayer: JSHandle;
     config: IFlowplayerConfig;
     clip: IFlowplayerClip;
@@ -58,15 +56,14 @@ export interface IFlowplayerRunnerArgs extends IRunnerArgs<IFlowplayerRunnerOpti
 export interface IFlowplayerRunner<T> extends IRunner<T, IFlowplayerRunnerOptions, IFlowplayerRunnerArgs> { }
 
 export class FlowplayerRunner<T> extends Runner<T, IFlowplayerRunnerOptions, IFlowplayerRunnerArgs>
-    implements IPuppeteerRunner<T> {
+    implements IFlowplayerRunner<T> {
     public defaultOptions: IFlowplayerRunnerOptions = {};
 
     protected async exec(
         url: string,
         scraper: (args: IFlowplayerRunnerArgs) => Promise<T>,
         options: IFlowplayerRunnerOptions): Promise<T> {
-
-        return PuppeteerRunner.run(url, async (args: IPuppeteerRunnerArgs) => {
+        return new PuppeteerRunner<T>().run(url, async args => {
             const { page } = args;
             const flowplayer = await page.evaluateHandle('flowplayer()');
             const config = await page.evaluate(player => player.conf, flowplayer);

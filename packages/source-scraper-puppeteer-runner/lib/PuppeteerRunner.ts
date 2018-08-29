@@ -31,8 +31,10 @@ export interface IPuppeteerRunnerArgs extends IRunnerArgs<IPuppeteerRunnerOption
     page: Page;
 }
 
-export interface IPuppeteerRunner<T> extends IRunner<T, IIPuppeteerRunnerOptions, IIPuppeteerRunnerArgs> { }
-export class PuppeteerRunner<T> extends Runner<T, IPuppeteerRunnerOptions, IPuppeteerRunnerArgs> {
+export interface IPuppeteerRunner<T> extends IRunner<T, IPuppeteerRunnerOptions, IPuppeteerRunnerArgs> { }
+
+export class PuppeteerRunner<T> extends Runner<T, IPuppeteerRunnerOptions, IPuppeteerRunnerArgs>
+    implements IPuppeteerRunner<T> {
     public defaultOptions: IPuppeteerRunnerOptions = {
         puppeteerConfig: {
             headless: true

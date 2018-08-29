@@ -131,7 +131,7 @@ export class JWPlayerRunner<T> extends Runner<T, IJWPlayerRunnerOptions, IJWPlay
         url: string,
         scraper: (args: IJWPlayerRunnerArgs) => Promise<T>,
         options: IJWPlayerRunnerOptions): Promise<T> {
-        return new PuppeteerRunner().run(url, async (...args) => {
+        return new PuppeteerRunner<T>().run(url, async (args) => {
             const { page } = args;
             const jwplayer = await page.evaluateHandle('jwplayer()');
             const config = await page.evaluate(player => player.getConfig(), jwplayer);

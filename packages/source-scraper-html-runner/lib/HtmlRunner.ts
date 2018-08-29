@@ -13,7 +13,8 @@ export interface IHtmlRunnerArgs extends IRunnerArgs<IHtmlRunnerOptions> {
 
 export interface IHtmlRunner<T> extends IRunner<T, IHtmlRunnerOptions, IHtmlRunnerArgs> { }
 
-export class Runner<T> {
+export class HtmlRunner<T> extends Runner<T, IHtmlRunnerOptions, IHtmlRunnerArgs>
+    implements IHtmlRunner<T> {
     public defaultOptions: IHtmlRunnerOptions = {
         axiosConfig: {}
     };

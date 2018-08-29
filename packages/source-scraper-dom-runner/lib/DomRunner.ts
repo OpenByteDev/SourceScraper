@@ -14,7 +14,8 @@ export interface IDomRunnerArgs<RO extends IDomRunnerOptions = IDomRunnerOptions
 
 export interface IDomRunner<T> extends IRunner<T, IDomRunnerOptions, IDomRunnerArgs> { }
 
-export class DomRunner<T> extends Runner<T, IDomRunnerOptions, IDomRunnerArgs> implements IDomRunner<T> {
+export class DomRunner<T> extends Runner<T, IDomRunnerOptions, IDomRunnerArgs>
+    implements IDomRunner<T> {
     public defaultOptions: IDomRunnerOptions = {
         jsdomConfig: {}
     };
