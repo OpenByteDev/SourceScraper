@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "source-scraper-core": "^1.0.0",
+        "source-scraper-puppeteer-runner": "1.0.0",
         "puppeteer": "^1.7.0"
     },
     "devDependencies": {

@@ -121,14 +121,17 @@ export interface IJWPlayerRunnerArgs extends IPuppeteerRunnerArgs, IRunnerArgs<I
     poster: string;
 }
 
-export interface IJWPlayerRunner<T> extends IRunner<T, IIJWPlayerRunnerOptions, IIJWPlayerRunnerArgs> { extends Runner<T, IJWPlayerRunnerOptions, IJWPlayerRunnerArgs> {
+export interface IJWPlayerRunner<T> extends IRunner<T, IJWPlayerRunnerOptions, IJWPlayerRunnerArgs> { }
+
+export class JWPlayerRunner<T> extends Runner<T, IJWPlayerRunnerOptions, IJWPlayerRunnerArgs>
+    implements IJWPlayerRunner<T> {
     public defaultOptions: IJWPlayerRunnerOptions = {};
 
     protected async exec(
         url: string,
         scraper: (args: IJWPlayerRunnerArgs) => Promise<T>,
         options: IJWPlayerRunnerOptions): Promise<T> {
-        return new PuppeteerRunner().run(url, async (args: IPuppeteerRunnerArgs) => {
+        return new PuppeteerRunner().run(url, async (...args) => {
             const { page } = args;
             const jwplayer = await page.evaluateHandle('jwplayer()');
             const config = await page.evaluate(player => player.getConfig(), jwplayer);

@@ -1,4 +1,4 @@
-import { IRunnerArgs, IRunnerOptions, Runner, IRunner } from 'source-scraper-core';
+import { IRunner, IRunnerArgs, IRunnerOptions, Runner } from 'source-scraper-core';
 
 import { DOMWindow, FromUrlOptions, JSDOM } from 'jsdom';
 

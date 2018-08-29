@@ -14,6 +14,7 @@
         "publish": "lerna publish",
         "ci-test": "lerna run ci-test",
         "lint-fix": "lerna run lint-fix",
+        "lint": "lerna run lint-fix",
         "build": "lerna run build",
         "gen-doc": "lerna run gen-doc",
         "test": "lerna run test",

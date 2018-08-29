@@ -18,7 +18,8 @@ export class SimpleFlowplayerScraper
     public name: string = 'flowplayer';
     public domains: string[] = [];
     public urlPattern: RegExp = /.*/i;
-    public runner: FlowplayerRunner<ISimpleFlowplayerScraperSourceData> = new FlowplayerRunner<ISimpleFlowplayerScraperSourceData>();
+    public runner: FlowplayerRunner<ISimpleFlowplayerScraperSourceData> =
+        new FlowplayerRunner<ISimpleFlowplayerScraperSourceData>();
     public defaultOptions: ISimpleFlowplayerScraperOptions = {};
 
     protected async execWithArgs({ sources }: IFlowplayerRunnerArgs): Promise<ISimpleFlowplayerScraperSourceData> {
