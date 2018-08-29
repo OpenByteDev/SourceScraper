@@ -19,6 +19,7 @@
         "gen-doc": "lerna run gen-doc",
         "test": "lerna run test",
         "lerna": "lerna",
+        "install-typings": "lerna exec \"ts-typie\"",
         "generate": "dtgen",
         "generate-scraper": "dtgen --template .template/scraper --out packages",
         "generate-runnerscraper": "dtgen --template .template/runnerscraper --out packages",
