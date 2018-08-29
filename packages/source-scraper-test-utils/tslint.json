@@ -1,7 +1,7 @@
 {
     "extends": [
-        "tslint:latest"
-        // "tslint-eslint-rules"
+        "tslint:latest",
+        "tslint-eslint-rules"
     ],
     "jsRules": {},
     "rules": {
