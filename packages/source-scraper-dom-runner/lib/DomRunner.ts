@@ -6,7 +6,7 @@ export interface IDomRunnerOptions extends IRunnerOptions {
     jsdomConfig?: FromUrlOptions;
 }
 
-export interface IDomRunnerArgs<RO extends IDomRunnerOptions = IDomRunnerOptions> extends IRunnerArgs<RO> {
+export interface IDomRunnerArgs extends IRunnerArgs<IDomRunnerOptions> {
     document: Document;
     jsdom: JSDOM;
     window: DOMWindow;
