@@ -1,4 +1,4 @@
-# SourceScraper-DomRunner
+# source-scraper-dom-runner
 
 [![Build Status](https://travis-ci.org/OpenByteDev/SourceScraper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScraper)
 [![npm version](https://badge.fury.io/js/source-scraper-dom-runner.svg)](https://www.npmjs.com/package/source-scraper-dom-runner)

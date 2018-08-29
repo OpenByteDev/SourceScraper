@@ -1,4 +1,4 @@
-# SourceScraper-JWPlayerRunner
+# source-scraper-jwplayer-runner
 
 [![Build Status](https://travis-ci.org/OpenByteDev/SourceScraper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScraper)
 [![npm version](https://badge.fury.io/js/source-scraper-jwplayer-runner.svg)](https://www.npmjs.com/package/source-scraper-jwplayer-runner)
