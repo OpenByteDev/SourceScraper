@@ -9,3 +9,4 @@ export * from './ScraperArray';
 export * from './Source';
 export * from './SourceScraper';
 export * from './SourceRunnerScraper';
+export * from './Configurable';
