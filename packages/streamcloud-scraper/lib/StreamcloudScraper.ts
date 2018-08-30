@@ -1,8 +1,7 @@
-import { IRunnerScraperOptions, ISourceData, Source, SourceScraper } from 'source-scraper-core';
+import { Configurable, IRunnerScraperOptions, ISourceData, Source, SourceScraper } from 'source-scraper-core';
 import { HtmlRunner, IHtmlRunnerOptions } from 'source-scraper-html-runner';
 
-import removeNewlines = require('newline-remove');
-import objectMerge = require('object-merge');
+import removeNewlines from 'newline-remove';
 import queryString from 'querystring';
 import execAll = require('regexp.execall');
 
@@ -54,7 +53,7 @@ export class StreamcloudScraper extends SourceScraper<IStreamcloudScraperSourceD
         const html = await this.runner.run(
             url,
             async ({ html: _html }) => Promise.resolve(removeNewlines(_html)),
-            objectMerge(options.runnerOptions, {
+            Configurable.mergeOptions(options.runnerOptions || {}, {
                 axiosConfig: {
                     headers: {
                         Referer: url
