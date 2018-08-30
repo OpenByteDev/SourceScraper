@@ -6,20 +6,23 @@ import {
 
 export type ISimplePuppeteerScraperOptions = IRunnerScraperOptions<IPuppeteerRunnerOptions>;
 
+export type ISimplePuppeteerScraperSourceData = ISourceData<Source>;
+
 export class SimplePuppeteerScraper
     extends SourceRunnerScraper<
-        ISourceData,
+        ISimplePuppeteerScraperSourceData,
         IPuppeteerRunnerOptions,
         IPuppeteerRunnerArgs,
-        PuppeteerRunner<ISourceData>>
+        PuppeteerRunner<ISimplePuppeteerScraperSourceData>>
     implements ISourceScraper {
 
     public name: string = 'puppeteer';
     public domains: string[] = [];
     public urlPattern: RegExp = /.*/i;
-    public runner: PuppeteerRunner<ISourceData> = new PuppeteerRunner<ISourceData>();
+    public runner: PuppeteerRunner<ISimplePuppeteerScraperSourceData> =
+        new PuppeteerRunner<ISimplePuppeteerScraperSourceData>();
     public defaultOptions: ISimplePuppeteerScraperOptions = {};
-    protected async execWithArgs({ page }: IPuppeteerRunnerArgs): Promise<ISourceData> {
+    protected async execWithArgs({ page }: IPuppeteerRunnerArgs): Promise<ISimplePuppeteerScraperSourceData> {
         const raw = await page.evaluate(async () => {
             const sdata: {
                 title?: string,

@@ -39,7 +39,7 @@ export class SimpleDomScraper
     }
 
     protected async execWithArgs({ document }: IDomRunnerArgs): Promise<ISimpleDomScraperSourceData> {
-        const data: ISourceData = {
+        const data: ISimpleDomScraperSourceData = {
             sources: []
         };
         const videos = document.getElementsByTagName('video');
