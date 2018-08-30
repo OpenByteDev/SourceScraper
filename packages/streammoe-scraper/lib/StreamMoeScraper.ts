@@ -1,8 +1,8 @@
 import { IRunnerScraperOptions, ISourceData, Source, SourceRunnerScraper } from 'source-scraper-core';
-import { SimpleDomScraper } from 'source-scraper-dom-runner';
+import { IDomRunnerOptions, SimpleDomScraper } from 'source-scraper-dom-runner';
 import { HtmlRunner, IHtmlRunnerArgs, IHtmlRunnerOptions } from 'source-scraper-html-runner';
 
-export type IStreamMoeScraperOptions = IRunnerScraperOptions<IHtmlRunnerOptions>;
+export type IStreamMoeScraperOptions = IRunnerScraperOptions<IHtmlRunnerOptions & IDomRunnerOptions>;
 
 export interface IStreamMoeScraperSourceData extends ISourceData<Source> {
     decodedPage: string;

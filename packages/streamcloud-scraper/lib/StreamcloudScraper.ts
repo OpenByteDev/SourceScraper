@@ -50,25 +50,26 @@ export class StreamcloudScraper extends SourceScraper<IStreamcloudScraperSourceD
         const name = data[2];
         if (!id || !name)
             return Promise.reject(null);
+        const _options: IHtmlRunnerOptions = {
+            axiosConfig: {
+                headers: {
+                    Referer: url
+                },
+                data: queryString.stringify({
+                    id,
+                    fname: name,
+                    hash: '',
+                    op: 'download1',
+                    referer: '',
+                    usr_login: '',
+                    imhuman: 'Weiter+zum+Video'
+                })
+            }
+        };
         const html = await this.runner.run(
             url,
             async ({ html: _html }) => Promise.resolve(removeNewlines(_html)),
-            Configurable.mergeOptions(options.runnerOptions || {}, {
-                axiosConfig: {
-                    headers: {
-                        Referer: url
-                    },
-                    data: queryString.stringify({
-                        id,
-                        fname: name,
-                        hash: '',
-                        op: 'download1',
-                        referer: '',
-                        usr_login: '',
-                        imhuman: 'Weiter+zum+Video'
-                    })
-                }
-            })
+            Configurable.mergeOptions(options.runnerOptions, _options)
         );
 
         const configRegex = /jwplayer\("[^"]+"\).setup\({(.*?)}\);/i;
