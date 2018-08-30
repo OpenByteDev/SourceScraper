@@ -10,7 +10,7 @@ export class {{cp;name}}Scraper extends {{cp;type}}Scraper<I{{cp;type}}Data> {
     public urlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?{{urlPattern}}/i;
     public defaultOptions: I{{cp;name}}ScraperOptions = {};
 	
-    protected async exec(ur: string): Promise<I{{cp;name}}Scraper{{cp;type}}Data> {
+    protected async exec(url: string): Promise<I{{cp;name}}Scraper{{cp;type}}Data> {
         
     }
 }
