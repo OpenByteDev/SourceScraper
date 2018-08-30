@@ -42,9 +42,7 @@ export abstract class Configurable<O extends IOptions = IOptions> implements ICo
     public abstract defaultOptions: O;
 
     public getOptions(options?: Partial<O>): O {
-        return typeof options === 'undefined' ?
-            this.defaultOptions :
-            objectMerge(this.defaultOptions, options) as O;
+        return Configurable.mergeOptions(this.defaultOptions, options);
     }
     public changeOptions(options: Partial<O>): O {
         return (this.defaultOptions = this.getOptions(options));
