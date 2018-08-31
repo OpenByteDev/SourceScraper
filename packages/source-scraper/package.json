@@ -27,6 +27,7 @@
         "streamcloud-scraper": "^1.0.2",
         "streammoe-scraper": "^1.0.2",
         "tiwikiwi-scraper": "^1.0.2",
+        "vevio-scraper": "^1.0.0",
         "vidstreaming-scraper": "^1.0.2",
         "vidzi-scraper": "^1.0.2"
     },

@@ -23,6 +23,7 @@ Scrap the sources from your favorite video streaming sites.
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20" width="20"></sub> [Streamcloud](https://www.streamcloud.eu)
  - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20" width="20"></sub> [StreamMoe](https://www.stream.moe)
  - <sub><img src="http://www.google.com/s2/favicons?domain=tiwi.kiwi" height="20" width="20"></sub> [Tiwikiwi](https://www.tiwi.kiwi)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vev.io" height="20" width="20"></sub> [Vevio](https://www.vev.io)
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20" width="20"></sub> [Vidstreaming](https://www.vidstreaming.io)
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20" width="20"></sub> [Vidzi](https://www.vidzi.tv) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
 

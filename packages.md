@@ -14,6 +14,7 @@
  - [streamcloud-scraper](https://www.npmjs.com/package/streamcloud-scraper)
  - [streammoe-scraper](https://www.npmjs.com/package/streammoe-scraper)
  - [tiwikiwi-scraper](https://www.npmjs.com/package/tiwikiwi-scraper)
+ - [vevio-scraper](https://www.npmjs.com/package/vevio-scraper)
  - [vidstreaming-scraper](https://www.npmjs.com/package/vidstreaming-scraper)
  - [vidzi-scraper](https://www.npmjs.com/package/vidzi-scraper)
  
