@@ -1,37 +1,40 @@
-import { GogoanimeScraper } from 'gogoanime-scraper';
-import { KissanimeScraper } from 'kissanime-scraper';
-import { MasteranimeScraper } from 'masteranime-scraper';
+import { IHosterData, ISourceData, ScraperArray } from 'source-scraper-core';
+
 import { MP4UploadScraper } from 'mp4upload-scraper';
 import { MyStreamScraper } from 'mystream-scraper';
 import { OpenloadScraper } from 'openload-scraper';
 import { RapidvideoScraper } from 'rapidvideo-scraper';
-import { IHosterData, ISourceData, Scraper, ScraperArray } from 'source-scraper-core';
 import { StreamangoScraper } from 'streamango-scraper';
 import { StreamcloudScraper } from 'streamcloud-scraper';
 import { StreamMoeScraper } from 'streammoe-scraper';
+import { TiwiKiwiScraper } from 'tiwikiwi-scraper';
 import { VidstreamingScraper } from 'vidstreaming-scraper';
 import { VidziScraper } from 'vidzi-scraper';
 
-const source: Array<Scraper<ISourceData>> = [
-    new OpenloadScraper(),
-    new VidziScraper(),
-    new VidstreamingScraper(),
-    new StreamangoScraper(),
-    new RapidvideoScraper(),
-    new StreamMoeScraper(),
+import { GogoanimeScraper } from 'gogoanime-scraper';
+import { KissanimeScraper } from 'kissanime-scraper';
+import { MasteranimeScraper } from 'masteranime-scraper';
+
+export const source = new ScraperArray<ISourceData>(
     new MP4UploadScraper(),
     new MyStreamScraper(),
-    new StreamcloudScraper()
-];
+    new OpenloadScraper(),
+    new RapidvideoScraper(),
+    new StreamangoScraper(),
+    new StreamcloudScraper(),
+    new StreamMoeScraper(),
+    new TiwiKiwiScraper(),
+    new VidstreamingScraper(),
+    new VidziScraper()
+);
 
-const hoster: Array<Scraper<IHosterData>> = [
+export const hoster = new ScraperArray<IHosterData>(
     new MasteranimeScraper(),
     new GogoanimeScraper(),
     new KissanimeScraper()
-];
+);
 
-export = {
-    all: new ScraperArray<ISourceData | IHosterData>(...[...source, ...hoster]),
-    source: new ScraperArray<ISourceData>(...source),
-    hoster: new ScraperArray<IHosterData>(...hoster)
-};
+export const all = new ScraperArray<ISourceData | IHosterData>(
+    ...source,
+    ...hoster
+);
