@@ -1,9 +1,9 @@
-# SourceScrapper
+# SourceScraper
 
-[![Build Status](https://travis-ci.org/OpenByteDev/SourceScrapper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScrapper)
-[![npm version](https://badge.fury.io/js/sourcescrapper.svg)](https://www.npmjs.com/package/sourcescrapper) 
-[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/status.svg?path=packages%2Fsourcescrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?path=packages%2Fsourcescrapper)
-[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScrapper/dev-status.svg?path=packages%2Fsourcescrapper)](https://david-dm.org/OpenByteDev/SourceScrapper?type=dev&path=packages%2Fsourcescrapper)
+[![Build Status](https://travis-ci.org/OpenByteDev/SourceScraper.svg?branch=master)](https://travis-ci.org/OpenByteDev/SourceScraper)
+[![npm version](https://badge.fury.io/js/source-scraper.svg)](https://www.npmjs.com/package/source-scraper) 
+[![Dependency Status](https://david-dm.org/OpenByteDev/SourceScraper/status.svg?path=packages%2Fsource-scraper)](https://david-dm.org/OpenByteDev/SourceScraper?path=packages%2Fsource-scraper)
+[![DevDependency Status](https://david-dm.org/OpenByteDev/SourceScraper/dev-status.svg?path=packages%2Fsource-scraper)](https://david-dm.org/OpenByteDev/SourceScraper?type=dev&path=packages%2Fsource-scraper)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Doge](https://img.shields.io/badge/doge-wow-yellow.svg)]()
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
@@ -33,23 +33,23 @@ Scrap the sources from your favorite video streaming sites.
 ## Getting Started
 ### Installation
 ```bash
-$ npm i sourcescrapper
+$ npm i source-scraper
 ```
 There is a package available for each site individually which you can find [here](./packages.md).
 
 ### Usage
 ```js
-const { scrappers } = require('sourcescrapper');
+const { scrapers } = require('source-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrapper = scrappers.getFirstApplicable(url);
-    const scrap = await scrapper.scrap(url);
+    const scraper = scrapers.getFirstApplicable(url);
+    const scrap = await scraper.scrap(url);
     if (scrap.success)
         console.log(scrap.data);
 })();
 ```
 
 ### API
-The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScrapper/packages/sourcescrapper/docs).
+The API generated with [TypeDoc](http://typedoc.org/) can be found [here](https://openbytedev.github.io/SourceScraper/packages/source-scraper/docs).
 
