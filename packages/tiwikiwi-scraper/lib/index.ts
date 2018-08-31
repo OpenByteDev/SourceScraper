@@ -1,1 +1,1 @@
-export * from './TiwikiwiScraper';
+export * from './TiwiKiwiScraper';
