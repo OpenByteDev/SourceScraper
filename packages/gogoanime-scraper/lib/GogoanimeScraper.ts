@@ -15,11 +15,11 @@ export class GogoanimeScraper extends HosterRunnerScraper<IGogoanimeScraperHoste
     protected async execWithArgs({ document }: IDomRunnerArgs): Promise<IHosterData> {
         const bodies = document.getElementsByTagName('body');
         if (!(bodies.length >= 1))
-            return Promise.reject(null);
+            return Promise.reject(new Error('Unable to find body element'));
         const body = bodies[0];
         const containers = body.getElementsByClassName('anime_muti_link'); // <-- no typo here
         if (!(containers.length >= 1))
-            return Promise.reject(null);
+            return Promise.reject(new Error('Unable to find container element'));
         const container = containers[0];
         const items = container.getElementsByTagName('li');
         const hosters: Hoster[] = [];

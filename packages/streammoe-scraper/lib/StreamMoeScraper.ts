@@ -21,12 +21,12 @@ export class StreamMoeScraper extends SourceRunnerScraper<IStreamMoeScraperSourc
         const encodedDataRegex = /atob\((['"])(.*?)\1\)/i;
         const encodedData = encodedDataRegex.exec(html);
         if (encodedData === null || encodedData.length < 3)
-            return Promise.reject(null);
+            return Promise.reject(new Error('Unable to find encoded data'));
         const encoded = encodedData[2];
         const decoded = Buffer.from(encoded, 'base64').toString('ascii');
         const scrap = await new SimpleDomScraper().scrapFromHtml(url, decoded, undefined, options);
         if (!scrap.success || typeof scrap.data === 'undefined')
-            return Promise.reject(null);
+            return Promise.reject(new Error('Unable to find source'));
         const titleRegex = /<title[^>]*>\s*(?:\[.*?])\s*(.*?)\s*(?:\[.*?]).*?<\/title>/i;
         const titleData = titleRegex.exec(html);
         const title = titleData !== null && titleData.length >= 1 ? titleData[0] : undefined;

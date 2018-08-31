@@ -42,14 +42,13 @@ export class StreamcloudScraper extends SourceScraper<IStreamcloudScraperSourceD
     };
 
     protected async exec(url: string, options: IStreamcloudScraperOptions): Promise<IStreamcloudScraperSourceData> {
-        const dataRegex = /\/([^\/.]+)\/(.*)\.[^.]+/i;
-        const data = dataRegex.exec(url);
-        if (data === null || data.length <= 2)
-            return Promise.reject(null);
-        const id = data[1];
-        const name = data[2];
+        const urlData = this.urlPattern.exec(url);
+        if (urlData === null || urlData.length < 3)
+            return Promise.reject(new Error('Unexpected url format'));
+        const id = urlData[1];
+        const name = urlData[2];
         if (!id || !name)
-            return Promise.reject(null);
+            return Promise.reject(new Error('Unexpected url format'));
         const _options: IHtmlRunnerOptions = {
             axiosConfig: {
                 headers: {
@@ -77,7 +76,7 @@ export class StreamcloudScraper extends SourceScraper<IStreamcloudScraperSourceD
         const tabRegex = /(?:\\t|\t)/ig;
         const configData = configRegex.exec(html);
         if (!configData || configData.length < 1)
-            return Promise.reject(null);
+            return Promise.reject(new Error('Unable to find jwplayer config'));
         const configRAW = configData[1].replace(tabRegex, '');
         const propData = execAll(propRegex, configRAW) as any[];
         const props: IJWPlayerSetupData = propData
