@@ -16,6 +16,7 @@
  
 #### Other
  - [source-scraper-core](https://www.npmjs.com/package/source-scraper-core)
+ - [source-scraper-test-utils](https://www.npmjs.com/package/source-scraper-test-utils)
  - [source-scraper-url-runner](https://www.npmjs.com/package/source-scraper-url-runner)
  - [source-scraper-html-runner](https://www.npmjs.com/package/source-scraper-html-runner)
  - [source-scraper-dom-runner](https://www.npmjs.com/package/source-scraper-dom-runner)
