@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Doge](https://img.shields.io/badge/doge-wow-yellow.svg)]()
 
-A scraper for [Tiwikiwi](https://www.tiwi.kiwi/).
+A scraper for [Tiwikiwi](https://tiwi.kiwi/).
 
 This package is part of the [SourceScraper-Project](https://github.com/OpenByteDev/SourceScraper).
 
