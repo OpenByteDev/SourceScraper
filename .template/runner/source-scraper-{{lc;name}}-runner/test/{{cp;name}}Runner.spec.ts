@@ -11,4 +11,3 @@ RunnerTester.fromStatic({{cp;name}}Runner)
 
     })
     .run();
-

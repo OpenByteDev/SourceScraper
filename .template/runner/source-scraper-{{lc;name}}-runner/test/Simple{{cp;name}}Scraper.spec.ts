@@ -7,4 +7,3 @@ ScraperTester.fromStatic(Simple{{cp;name}}Scraper)
     .testUrlDetection(urls)
     .testScraping(urls)
     .run();
-

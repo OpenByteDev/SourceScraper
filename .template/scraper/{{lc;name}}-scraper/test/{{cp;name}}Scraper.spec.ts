@@ -4,7 +4,6 @@ import { ScraperTester } from 'source-scraper-test-utils';
 
 const urls = ['{{testUrl}}'];
 ScraperTester.fromStatic({{cp;name}}Scraper)
-	.testUrlDetection(urls)
+    .testUrlDetection(urls)
     .testScraping(urls)
     .run();
-

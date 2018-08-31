@@ -4,7 +4,7 @@ export type I{{cp;name}}ScraperOptions = IScraperOptions;
 
 export type I{{cp;name}}Scraper{{cp;type}}Data = I{{cp;type}}Data<{{cp;type}}>;
 
-export class {{cp;name}}Scraper extends {{cp;type}}Scraper<I{{cp;type}}Data> {
+export class {{cp;name}}Scraper extends {{cp;type}}Scraper<I{{cp;name}}Scraper{{cp;type}}Data> {
     public name: string = '{{lc;name}}';
     public domains: string[] = [{{domains}}];
     public urlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?{{urlPattern}}/i;
