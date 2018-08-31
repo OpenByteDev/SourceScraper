@@ -1,23 +1,23 @@
 ## List of packages
  
-#### Scrapper
- - [sourcescrapper](https://www.npmjs.com/package/sourcescrapper)
- - [openload-scrapper](https://www.npmjs.com/package/openload-scrapper)
- - [vidzi-scrapper](https://www.npmjs.com/package/vidzi-scrapper)
- - [vidstreaming-scrapper](https://www.npmjs.com/package/vidstreaming-scrapper)
- - [streamango-scrapper](https://www.npmjs.com/package/streamango-scrapper)
- - [rapidvideo-scrapper](https://www.npmjs.com/package/rapidvideo-scrapper)
- - [streammoe-scrapper](https://www.npmjs.com/package/streammoe-scrapper)
- - [mp4upload-scrapper](https://www.npmjs.com/package/mp4upload-scrapper)
- - [streamcloud-scrapper](https://www.npmjs.com/package/streamcloud-scrapper)
- - [masteranime-scrapper](https://www.npmjs.com/package/masteranime-scrapper)
- - [gogoanime-scrapper](https://www.npmjs.com/package/gogoanime-scrapper)
- - [kissanime-scrapper](https://www.npmjs.com/package/kissanime-scrapper)
+#### Scraper
+ - [source-scraper](https://www.npmjs.com/package/source-scraper)
+ - [openload-scraper](https://www.npmjs.com/package/openload-scraper)
+ - [vidzi-scraper](https://www.npmjs.com/package/vidzi-scraper)
+ - [vidstreaming-scraper](https://www.npmjs.com/package/vidstreaming-scraper)
+ - [streamango-scraper](https://www.npmjs.com/package/streamango-scraper)
+ - [rapidvideo-scraper](https://www.npmjs.com/package/rapidvideo-scraper)
+ - [streammoe-scraper](https://www.npmjs.com/package/streammoe-scraper)
+ - [mp4upload-scraper](https://www.npmjs.com/package/mp4upload-scraper)
+ - [streamcloud-scraper](https://www.npmjs.com/package/streamcloud-scraper)
+ - [masteranime-scraper](https://www.npmjs.com/package/masteranime-scraper)
+ - [gogoanime-scraper](https://www.npmjs.com/package/gogoanime-scraper)
+ - [kissanime-scraper](https://www.npmjs.com/package/kissanime-scraper)
  
 #### Other
- - [sourcescrapper-core](https://www.npmjs.com/package/sourcescrapper-core)
- - [sourcescrapper-url-runner](https://www.npmjs.com/package/sourcescrapper-url-runner)
- - [sourcescrapper-html-runner](https://www.npmjs.com/package/sourcescrapper-html-runner)
- - [sourcescrapper-dom-runner](https://www.npmjs.com/package/sourcescrapper-dom-runner)
- - [sourcescrapper-puppeteer-runner](https://www.npmjs.com/package/sourcescrapper-puppeteer-runner)
+ - [source-scraper-core](https://www.npmjs.com/package/source-scraper-core)
+ - [source-scraper-url-runner](https://www.npmjs.com/package/source-scraper-url-runner)
+ - [source-scraper-html-runner](https://www.npmjs.com/package/source-scraper-html-runner)
+ - [source-scraper-dom-runner](https://www.npmjs.com/package/source-scraper-dom-runner)
+ - [source-scraper-puppeteer-runner](https://www.npmjs.com/package/source-scraper-puppeteer-runner)
 
