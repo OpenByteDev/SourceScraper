@@ -1,0 +1,11 @@
+{
+    "extends": [
+        "../tslint.json"
+    ],
+    "jsRules": {},
+    "rules": {
+        "no-implicit-dependencies": false,
+        "no-unused-expression": false
+    },
+    "rulesDirectory": []
+}
