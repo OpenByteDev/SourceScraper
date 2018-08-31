@@ -1,6 +1,6 @@
 {
     "name": "rapidvideo-scraper",
-    "version": "0.2.10",
+    "version": "1.0.0",
     "description": "A scraper for Rapidvideo",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",

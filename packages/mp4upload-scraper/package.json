@@ -1,6 +1,6 @@
 {
     "name": "mp4upload-scraper",
-    "version": "0.2.10",
+    "version": "1.0.0",
     "description": "A scraper for MP4Upload",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
