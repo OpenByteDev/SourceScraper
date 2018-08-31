@@ -7,7 +7,7 @@ import { RapidvideoScraper } from 'rapidvideo-scraper';
 import { StreamangoScraper } from 'streamango-scraper';
 import { StreamcloudScraper } from 'streamcloud-scraper';
 import { StreamMoeScraper } from 'streammoe-scraper';
-import { TiwiKiwiScraper } from 'tiwikiwi-scraper';
+import { TiwikiwiScraper } from 'tiwikiwi-scraper';
 import { VidstreamingScraper } from 'vidstreaming-scraper';
 import { VidziScraper } from 'vidzi-scraper';
 
@@ -23,7 +23,7 @@ export const source = new ScraperArray<ISourceData>(
     new StreamangoScraper(),
     new StreamcloudScraper(),
     new StreamMoeScraper(),
-    new TiwiKiwiScraper(),
+    new TiwikiwiScraper(),
     new VidstreamingScraper(),
     new VidziScraper()
 );
