@@ -1,6 +1,6 @@
 {
     "name": "source-scraper-test-utils",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Test Utils for the SourceScraper-Project",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,9 +10,9 @@
         "url": "https://github.com/OpenByteDev/SourceScraper.git"
     },
     "dependencies": {
-        "source-scraper-core": "^1.0.0",
         "chai": "^4.1.2",
-        "mocha": "^5.2.0"
+        "mocha": "^5.2.0",
+        "source-scraper-core": "^1.0.1"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",
