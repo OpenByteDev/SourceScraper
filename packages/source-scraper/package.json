@@ -1,0 +1,59 @@
+{
+    "name": "source-scraper",
+    "version": "1.2.0",
+    "description": "Scrap the sources from your favorite video streaming sites.",
+    "author": "OpenByte <development.openbyte@gmail.com>",
+    "main": "dist/index.js",
+    "types": "types/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OpenByteDev/SourceScraper.git"
+    },
+    "dependencies": {
+        "source-scraper-core": "^1.0.0",
+        "gogoanime-scraper": "^1.0.0",
+        "kissanime-scraper": "^1.0.0",
+        "masteranime-scraper": "^1.0.0",
+        "mp4upload-scraper": "^1.0.0",
+        "mystream-scraper": "^1.0.0",
+        "openload-scraper": "^1.0.0",
+        "streamango-scraper": "^1.0.0",
+        "streamcloud-scraper": "^1.0.0",
+        "streammoe-scraper": "^1.0.0",
+        "vidstreaming-scraper": "^1.0.0",
+        "vidzi-scraper": "^1.0.0",
+        "source-scraper-dom-runner": "1.0.0",
+        "source-scraper-flowplayer-runner": "1.0.0",
+        "source-scraper-html-runner": "1.0.0",
+        "source-scraper-jwplayer-runner": "1.0.0",
+        "source-scraper-puppeteer-runner": "1.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^10.7.1",
+        "npm-run-all": "^4.1.3",
+        "ts-typie": "^1.1.1",
+        "tslint": "^5.11.0",
+        "tslint-eslint-rules": "^5.4.0",
+        "typedoc": "^0.12.0",
+        "typescript": "^3.0.1"
+    },
+    "scripts": {
+        "ci-test": "npm run test",
+        "test": "npm-run-all lint build",
+        "lint": "tslint -p .",
+        "lint-fix": "tslint -p . --fix",
+        "build": "tsc",
+        "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"source-scraper\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
+    },
+    "keywords": [
+        "source-scraper",
+        "source",
+        "scraper",
+        "extractor"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/OpenByteDev/SourceScraper/issues"
+    },
+    "homepage": "https://github.com/OpenByteDev/SourceScraper#readme"
+}
