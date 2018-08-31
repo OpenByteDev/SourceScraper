@@ -4,7 +4,6 @@ import { ScraperTester } from 'source-scraper-test-utils';
 
 const urls = ['https://streamango.com/embed/rrddobalkqkmebnt'];
 ScraperTester.fromStatic(StreamangoScraper)
-	.testUrlDetection(urls)
+    .testUrlDetection(urls)
     .testScraping(urls)
     .run();
-

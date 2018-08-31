@@ -7,4 +7,3 @@ ScraperTester.fromStatic(SimpleFlowplayerScraper)
     .testUrlDetection(urls)
     .testScraping(urls)
     .run();
-
