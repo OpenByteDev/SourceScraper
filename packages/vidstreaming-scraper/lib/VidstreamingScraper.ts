@@ -33,7 +33,8 @@ export type IVidstreamingScraperSourceData = ISourceData<VidstreamingSource>;
 export class VidstreamingScraper extends SourceRunnerScraper<IVidstreamingScraperSourceData> {
     public name: string = 'vidstreaming';
     public domains: string[] = ['vidstreaming.io'];
-    public urlPattern: RegExp = /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?vidstreaming\.io\/(streaming|load)\.php\?id=([a-zA-Z]+)=&title=([a-zA-Z0-9+]+)/i;
+    public urlPattern: RegExp =
+        /(?:(?:https?:)?\/\/)?(?:[^.]+\.)?vidstreaming\.io\/(streaming|load)\.php\?id=(\w+)=&title=([\w+]+)/i;
     public runner: HtmlRunner<IVidstreamingScraperSourceData> = new HtmlRunner<IVidstreamingScraperSourceData>();
     public defaultOptions: IVidstreamingScraperOptions = {};
 
