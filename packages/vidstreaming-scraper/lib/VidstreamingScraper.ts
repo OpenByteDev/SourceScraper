@@ -52,11 +52,10 @@ export class VidstreamingScraper extends SourceRunnerScraper<IVidstreamingScrape
 
         const sources: IVidstreamingConfigSource[] =
             flatMap(data, e => {
-                if (Array.isArray(e.sources))
+                if ('sources' in e && Array.isArray(e.sources))
                     return e.sources;
-                else return [e];
-            })
-                .filter(e => e && e && isString(e.file) && !e.file.includes('error.com'));
+                else return [e as IVidstreamingConfigSource];
+            }).filter(e => e && e && isString(e.file) && !e.file.includes('error.com'));
 
         const titles = titleregex.exec(html);
 
