@@ -1,6 +1,6 @@
 {
     "name": "source-scraper-flowplayer-runner",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Provides the FlowplayerRunner class for scrapping.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -12,7 +12,7 @@
     "dependencies": {
         "puppeteer": "^1.7.0",
         "source-scraper-core": "^1.0.2",
-        "source-scraper-puppeteer-runner": "^1.0.2"
+        "source-scraper-puppeteer-runner": "^1.0.3"
     },
     "devDependencies": {
         "@types/chai": "^4.1.4",

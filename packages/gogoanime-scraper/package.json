@@ -1,6 +1,6 @@
 {
     "name": "gogoanime-scraper",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A scraper for Gogoanime",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",

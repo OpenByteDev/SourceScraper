@@ -1,6 +1,6 @@
 {
     "name": "vevio-scraper",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A scraper for Vevio",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -10,9 +10,9 @@
         "url": "https://github.com/OpenByteDev/SourceScraper.git"
     },
     "dependencies": {
-        "source-scraper-core": "^1.0.0",
         "axios": "^0.18.0",
-        "jsonic": "^0.3.0"
+        "jsonic": "^0.3.0",
+        "source-scraper-core": "^1.0.0"
     },
     "devDependencies": {
         "@types/jsonic": "^0.3.0",

@@ -1,6 +1,6 @@
 {
     "name": "mp4upload-scraper",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A scraper for MP4Upload",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "source-scraper-core": "^1.0.2",
-        "source-scraper-jwplayer-runner": "^1.0.2"
+        "source-scraper-jwplayer-runner": "^1.0.3"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.5",
