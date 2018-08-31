@@ -14,4 +14,3 @@ RunnerTester.fromStatic(FlowplayerRunner)
         Array.isArray(sources).should.be.true;
     })
     .run();
-
