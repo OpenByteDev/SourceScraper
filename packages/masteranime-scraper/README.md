@@ -22,11 +22,11 @@ $ npm i masteranime-scraper
 ### Usage
 
 ```js
-const { masteranimeScraper } = require('masteranime-scraper');
+const { MasteranimeScraper } = require('masteranime-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new masteranimeScraper().scrap(url);
+    const scrap = await new MasteranimeScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.hosters);
 })();

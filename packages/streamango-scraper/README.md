@@ -22,11 +22,11 @@ $ npm i streamango-scraper
 ### Usage
 
 ```js
-const { streamangoScraper } = require('streamango-scraper');
+const { StreamangoScraper } = require('streamango-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new streamangoScraper().scrap(url);
+    const scrap = await new StreamangoScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

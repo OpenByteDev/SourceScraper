@@ -22,11 +22,11 @@ $ npm i vidzi-scraper
 ### Usage
 
 ```js
-const { vidziScraper } = require('vidzi-scraper');
+const { VidziScraper } = require('vidzi-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new vidziScraper().scrap(url);
+    const scrap = await new VidziScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

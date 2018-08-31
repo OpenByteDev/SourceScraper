@@ -22,11 +22,11 @@ $ npm i vidstreaming-scraper
 ### Usage
 
 ```js
-const { vidstreamingScraper } = require('vidstreaming-scraper');
+const { VidstreamingScraper } = require('vidstreaming-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new vidstreamingScraper().scrap(url);
+    const scrap = await new VidstreamingScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

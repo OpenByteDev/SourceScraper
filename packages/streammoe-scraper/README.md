@@ -22,11 +22,11 @@ $ npm i streammoe-scraper
 ### Usage
 
 ```js
-const { streammoeScraper } = require('streammoe-scraper');
+const { StreamMoeScraper } = require('streammoe-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new streammoeScraper().scrap(url);
+    const scrap = await new StreamMoeScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

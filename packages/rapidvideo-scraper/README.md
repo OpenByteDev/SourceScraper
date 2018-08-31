@@ -22,11 +22,11 @@ $ npm i rapidvideo-scraper
 ### Usage
 
 ```js
-const { rapidvideoScraper } = require('rapidvideo-scraper');
+const { RapidvideoScraper } = require('rapidvideo-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new rapidvideoScraper().scrap(url);
+    const scrap = await new RapidvideoScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

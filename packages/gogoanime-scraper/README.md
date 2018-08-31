@@ -22,11 +22,11 @@ $ npm i gogoanime-scraper
 ### Usage
 
 ```js
-const { gogoanimeScraper } = require('gogoanime-scraper');
+const { GogoanimeScraper } = require('gogoanime-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new gogoanimeScraper().scrap(url);
+    const scrap = await new GogoanimeScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.hosters);
 })();

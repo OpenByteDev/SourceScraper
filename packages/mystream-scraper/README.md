@@ -22,11 +22,11 @@ $ npm i mystream-scraper
 ### Usage
 
 ```js
-const { mystreamScraper } = require('mystream-scraper');
+const { MyStreamScraper } = require('mystream-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new mystreamScraper().scrap(url);
+    const scrap = await new MyStreamScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

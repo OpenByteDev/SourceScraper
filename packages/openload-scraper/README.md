@@ -22,11 +22,11 @@ $ npm i openload-scraper
 ### Usage
 
 ```js
-const { openloadScraper } = require('openload-scraper');
+const { OpenloadScraper } = require('openload-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new openloadScraper().scrap(url);
+    const scrap = await new OpenloadScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

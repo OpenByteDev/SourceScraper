@@ -22,11 +22,11 @@ $ npm i mp4upload-scraper
 ### Usage
 
 ```js
-const { mp4uploadScraper } = require('mp4upload-scraper');
+const { MP4UploadScraper } = require('mp4upload-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new mp4uploadScraper().scrap(url);
+    const scrap = await new MP4UploadScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

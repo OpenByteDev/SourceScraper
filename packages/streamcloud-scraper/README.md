@@ -22,11 +22,11 @@ $ npm i streamcloud-scraper
 ### Usage
 
 ```js
-const { streamcloudScraper } = require('streamcloud-scraper');
+const { StreamcloudScraper } = require('streamcloud-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new streamcloudScraper().scrap(url);
+    const scrap = await new StreamcloudScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();

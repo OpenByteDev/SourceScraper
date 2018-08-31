@@ -22,11 +22,11 @@ $ npm i kissanime-scraper
 ### Usage
 
 ```js
-const { kissanimeScraper } = require('kissanime-scraper');
+const { KissanimeScraper } = require('kissanime-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new kissanimeScraper().scrap(url);
+    const scrap = await new KissanimeScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.hosters);
 })();

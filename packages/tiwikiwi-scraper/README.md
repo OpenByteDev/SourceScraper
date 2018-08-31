@@ -22,11 +22,11 @@ $ npm i tiwikiwi-scraper
 ### Usage
 
 ```js
-const { tiwikiwiScraper } = require('tiwikiwi-scraper');
+const { TiwikiwiScraper } = require('tiwikiwi-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new tiwikiwiScraper().scrap(url);
+    const scrap = await new TiwikiwiScraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.sources);
 })();
