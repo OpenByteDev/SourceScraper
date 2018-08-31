@@ -1,6 +1,6 @@
 {
     "name": "mystream-scraper",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A scraper for MyStream",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",

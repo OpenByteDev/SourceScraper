@@ -1,6 +1,6 @@
 {
     "name": "vidzi-scraper",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A scraper for Vidzi",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",

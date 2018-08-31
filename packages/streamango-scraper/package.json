@@ -1,6 +1,6 @@
 {
     "name": "streamango-scraper",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A scraper for Streamango",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
