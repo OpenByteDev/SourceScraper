@@ -2,7 +2,7 @@
     "author": "OpenByte <development.openbyte@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/OpenByteDev/SourceScrapper.git"
+        "url": "https://github.com/OpenByteDev/SourceScraper.git"
     },
     "dependencies": {},
     "devDependencies": {
@@ -30,7 +30,7 @@
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/OpenByteDev/SourceScrapper/issues"
+        "url": "https://github.com/OpenByteDev/SourceScraper/issues"
     },
-    "homepage": "https://github.com/OpenByteDev/SourceScrapper#readme"
+    "homepage": "https://github.com/OpenByteDev/SourceScraper#readme"
 }
