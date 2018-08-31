@@ -22,11 +22,11 @@ $ npm i {{lc;name}}-scraper
 ### Usage
 
 ```js
-const { {{name}}Scraper } = require('{{lc;name}}-scraper');
+const { {{cp;name}}Scraper } = require('{{lc;name}}-scraper');
 
 (async () => {
     const url = 'some url';
-    const scrap = await new {{name}}Scraper().scrap(url);
+    const scrap = await new {{cp;name}}Scraper().scrap(url);
     if (scrap.success)
         console.log(scrap.data.{{lc;type}}s);
 })();
