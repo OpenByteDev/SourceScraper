@@ -4,13 +4,12 @@
         "type": "git",
         "url": "https://github.com/OpenByteDev/SourceScraper.git"
     },
-    "dependencies": {
-        "await-exec": "^0.1.2",
-        "await-spawn": "^2.1.1"
-    },
+    "dependencies": {},
     "devDependencies": {
         "lerna": "^3.1.4",
-        "directory-template": "^0.3.1"
+        "directory-template": "^0.3.1",
+        "await-exec": "^0.1.2",
+        "await-spawn": "^2.1.1"
     },
     "scripts": {
         "lerna": "lerna",
