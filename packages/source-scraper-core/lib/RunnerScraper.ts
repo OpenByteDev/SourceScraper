@@ -24,13 +24,15 @@ export abstract class RunnerScraper<
     SO extends IRunnerScraperOptions<RO> = IRunnerScraperOptions<RO>>
     extends Scraper<T, SO> implements IRunnerScraper<T, RO, RA, R, SO> {
     public abstract runner: R;
+
     public async scrapFromArgs(args: RA, options?: SO): Promise<Scrap<T>> {
         return this.getScrap(args.url, async () => this.execWithArgs(args, this.getOptions(options)));
     }
+    protected transformUrl?(url: string): string;
     protected abstract async execWithArgs(args: RA, options: SO): Promise<T>;
     protected async exec(url: string, options: SO): Promise<T> {
         return this.runner.run(
-            url,
+            this.transformUrl ? this.transformUrl(url) : url,
             async (args: RA) => this.execWithArgs(args, options),
             options.runnerOptions);
     }
