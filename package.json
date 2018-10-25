@@ -6,8 +6,8 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "lerna": "^3.1.4",
-        "directory-template": "^0.3.1",
+        "lerna": "^3.4.3",
+        "directory-template": "^0.3.2",
         "await-exec": "^0.1.2",
         "await-spawn": "^2.1.1"
     },
