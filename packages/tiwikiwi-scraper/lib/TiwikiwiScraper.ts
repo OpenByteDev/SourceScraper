@@ -1,6 +1,6 @@
-import { SimpleJWPlayerScraper } from 'source-scraper-jwplayer-runner';
+import { SimpleFlowplayerScraper } from 'source-scraper-flowplayer-runner';
 
-export class TiwikiwiScraper extends SimpleJWPlayerScraper {
+export class TiwikiwiScraper extends SimpleFlowplayerScraper {
     public name: string = 'tiwikiwi';
     public domains: string[] = ['tiwi.kiwi'];
     public urlPattern: RegExp =
