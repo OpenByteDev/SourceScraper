@@ -4,7 +4,7 @@ import { IRunnerScraperOptions, ISourceData, SourceRunnerScraper } from 'source-
 import { HtmlRunner, IHtmlRunnerArgs, IHtmlRunnerOptions } from 'source-scraper-html-runner';
 
 import jsonic = require('jsonic');
-import flatMap from 'lodash.flatmap';
+import flatMap = require('lodash.flatmap');
 import removeNewline = require('newline-remove');
 import execAll = require('regexp.execall');
 
