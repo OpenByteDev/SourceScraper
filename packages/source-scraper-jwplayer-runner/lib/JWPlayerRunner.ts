@@ -137,7 +137,7 @@ export class JWPlayerRunner<T> extends Runner<T, IJWPlayerRunnerOptions, IJWPlay
             const { page } = args;
             const jwplayer = await page.evaluateHandle('jwplayer()');
             const config = await page.evaluate(player => player.getConfig(), jwplayer);
-            const sources = config.sources;
+            const sources = config.playlist || [config.playlistItem] || [config];
             const poster = config.image;
             try {
                 return scraper({
