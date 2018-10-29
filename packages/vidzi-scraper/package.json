@@ -1,6 +1,6 @@
 {
     "name": "vidzi-scraper",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "A scraper for Vidzi",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "source-scraper-core": "^1.1.1",
-        "source-scraper-jwplayer-runner": "^1.0.5"
+        "source-scraper-jwplayer-runner": "^1.0.6"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.5",
