@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "source-scraper-core": "^1.1.1",
-        "source-scraper-flowplayer-runner": "^1.0.5"
+        "source-scraper-jwplayer-runner": "^1.0.5"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.5",
