@@ -1,6 +1,6 @@
 {
 	"name": "tiwikiwi-scraper",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "A scraper for Tiwikiwi",
 	"author": "OpenByte <development.openbyte@gmail.com>",
 	"main": "dist/index.js",

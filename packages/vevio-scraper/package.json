@@ -1,6 +1,6 @@
 {
 	"name": "vevio-scraper",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "A scraper for Vevio",
 	"author": "OpenByte <development.openbyte@gmail.com>",
 	"main": "dist/index.js",
