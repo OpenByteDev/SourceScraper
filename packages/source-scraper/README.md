@@ -46,7 +46,7 @@ const { scrapers } = require('source-scraper');
 
 (async () => {
     const url = 'some url';
-    const scraper = scrapers.getFirstApplicable(url);
+    const scraper = scrapers.all.getFirstApplicable(url);
     const scrap = await scraper.scrap(url);
     if (scrap.success)
         console.log(scrap.data);
