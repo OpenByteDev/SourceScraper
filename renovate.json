@@ -1,5 +1,11 @@
 {
-  "extends": [
-    "config:base"
-  ]
+    "extends": [
+        "config:base"
+    ],
+    "rangeStrategy": "replace",
+    "includePaths": ["./packages"],
+    "automerge": true,
+    "major": {
+        "automerge": false
+    }
 }
