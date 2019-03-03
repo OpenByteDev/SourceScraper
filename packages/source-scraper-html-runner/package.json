@@ -1,6 +1,6 @@
 {
     "name": "source-scraper-html-runner",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Provides the HtmlRunner class for scrapping.",
     "author": "OpenByte <development.openbyte@gmail.com>",
     "main": "dist/index.js",
@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "axios": "^0.18.0",
-        "source-scraper-core": "^1.1.3"
+        "source-scraper-core": "^1.1.4"
     },
     "devDependencies": {
         "@types/chai": "^4.1.7",
@@ -20,7 +20,7 @@
         "chai": "^4.2.0",
         "mocha": "^6.0.2",
         "npm-run-all": "^4.1.5",
-        "source-scraper-test-utils": "^1.1.3",
+        "source-scraper-test-utils": "^1.1.4",
         "ts-node": "^8.0.2",
         "ts-typie": "^1.1.1",
         "tslint": "^5.13.1",
