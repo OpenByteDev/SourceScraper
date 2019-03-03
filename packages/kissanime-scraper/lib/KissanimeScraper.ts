@@ -1,7 +1,7 @@
 import { Hoster, HosterScraper, IHosterData, IRunnerScraperOptions } from 'source-scraper-core';
 import { IPuppeteerRunnerOptions, PuppeteerRunner } from 'source-scraper-puppeteer-runner';
 
-import normalizeUrl = require('normalize-url');
+import normalizeUrl from 'normalize-url';
 import urlparser = require('urlparser');
 
 export type IKissanimeScraperOptions = IRunnerScraperOptions<IPuppeteerRunnerOptions>;

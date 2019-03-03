@@ -1,4 +1,4 @@
-import normalizeUrl = require('normalize-url');
+import normalizeUrl from 'normalize-url';
 import trim = require('trim-character');
 
 export interface ISource {

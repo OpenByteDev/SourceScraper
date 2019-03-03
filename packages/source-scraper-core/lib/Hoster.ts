@@ -1,4 +1,4 @@
-import normalizeUrl = require('normalize-url');
+import normalizeUrl from 'normalize-url';
 
 export interface IHoster {
     name: string;

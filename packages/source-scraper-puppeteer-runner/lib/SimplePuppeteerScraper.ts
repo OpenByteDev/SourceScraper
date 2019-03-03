@@ -62,7 +62,7 @@ export class SimplePuppeteerScraper
             title: raw.title,
             sources: raw.sources.map(e => new Source({
                 url: e.url,
-                type: e || undefined
+                type: e.type || undefined
             }))
         };
     }

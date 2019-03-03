@@ -1,3 +1,1 @@
-export interface IStatic<T extends object> {
-    new(): T;
-}
+export type IStatic<T extends object> = new() => T;
