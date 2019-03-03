@@ -103,7 +103,7 @@
 
 <span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
     <span class="hljs-keyword">const</span> url = <span class="hljs-string">'some url'</span>;
-    <span class="hljs-keyword">const</span> scraper = scrapers.getFirstApplicable(url);
+    <span class="hljs-keyword">const</span> scraper = scrapers.all.getFirstApplicable(url);
     <span class="hljs-keyword">const</span> scrap = <span class="hljs-keyword">await</span> scraper.scrap(url);
     <span class="hljs-keyword">if</span> (scrap.success)
         <span class="hljs-built_in">console</span>.log(scrap.data);
