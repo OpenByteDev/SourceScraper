@@ -28,7 +28,7 @@ const { VerystreamScraper } = require('verystream-scraper');
     const url = 'some url';
     const scrap = await new VerystreamScraper().scrap(url);
     if (scrap.success)
-        console.log(scrap.data.runnerscrapers);
+        console.log(scrap.data.sources);
 })();
 ```
 
