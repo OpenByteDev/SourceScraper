@@ -1,0 +1,54 @@
+{
+  "name": "verystream-scraper",
+  "version": "1.0.2",
+  "description": "A scraper for Verystream",
+  "author": "OpenByte <development.openbyte@gmail.com>",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenByteDev/SourceScraper.git"
+  },
+  "dependencies": {
+    "source-scraper-core": "^1.1.4",
+    "source-scraper-puppeteer-runner": "^1.0.8"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.7.1",
+    "@types/typescript": "^2.0.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.3",
+    "source-scraper-test-utils": "^1.0.0",
+    "ts-node": "^7.0.1",
+    "ts-typie": "^1.1.1",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typedoc": "^0.12.0",
+    "typescript": "^3.0.1"
+  },
+  "scripts": {
+    "ci-test": "npm-run-all lint build test",
+    "test": "mocha test/*.spec.ts",
+    "lint": "tslint -p .",
+    "lint-fix": "tslint -p . --fix",
+    "build": "tsc",
+    "gen-doc": "typedoc --out ./docs ./lib/ --ignoreCompilerErrors --target ES6 --name \"verystream-scraper\" --excludePrivate --module commonjs --mode file --externalPattern node_modules --excludeExternals"
+  },
+  "keywords": [
+    "source-scraper",
+    "source",
+    "scrap",
+    "scraper",
+    "scrapers",
+    "scraping",
+    "extractor",
+    "verystream",
+    "verystream.com"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenByteDev/SourceScraper/issues"
+  },
+  "homepage": "https://github.com/OpenByteDev/SourceScraper#readme"
+}
