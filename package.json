@@ -1,5 +1,8 @@
 {
     "author": "OpenByte <development.openbyte@gmail.com>",
+    "contributors": [
+        "MatejTuray"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/OpenByteDev/SourceScraper.git"
