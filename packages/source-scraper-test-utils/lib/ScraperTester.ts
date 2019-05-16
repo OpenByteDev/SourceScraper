@@ -35,7 +35,6 @@ export class ScraperTester<T, SO extends IScraperOptions, S extends Scraper<T, S
             async () => {
                 for (const url of urls) {
                     const scrap = await this.scraper.scrap(url, options);
-                    console.log(scrap);
                     scrap.should.have.property('success').that.is.true;
                     scrap.should.have.property('data').that.is.an('object');
                     let data = scrap.data as any;

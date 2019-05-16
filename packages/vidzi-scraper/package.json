@@ -15,16 +15,16 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "^5.2.6",
-		"@types/node": "^11.10.4",
-		"mocha": "^6.0.2",
+		"@types/node": "^12.0.2",
+		"mocha": "^6.1.4",
 		"npm-run-all": "^4.1.5",
 		"source-scraper-test-utils": "^1.1.4",
-		"ts-node": "^8.0.2",
+		"ts-node": "^8.1.0",
 		"ts-typie": "^1.1.1",
-		"tslint": "^5.13.1",
+		"tslint": "^5.16.0",
 		"tslint-eslint-rules": "^5.4.0",
 		"typedoc": "^0.14.2",
-		"typescript": "^3.3.3333"
+		"typescript": "^3.4.5"
 	},
 	"scripts": {
 		"ci-test": "npm-run-all lint build test",
