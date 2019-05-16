@@ -23,7 +23,7 @@ Scrap the sources from your favorite video streaming sites.
  - <sub><img src="http://www.google.com/s2/favicons?domain=streamcloud.eu" height="20" width="20"></sub> [Streamcloud](https://streamcloud.eu)
  - <sub><img src="http://www.google.com/s2/favicons?domain=stream.moe" height="20" width="20"></sub> [StreamMoe](https://stream.moe)
  - <sub><img src="http://www.google.com/s2/favicons?domain=tiwi.kiwi" height="20" width="20"></sub> [Tiwikiwi](https://tiwi.kiwi)
- - <sub><img src="http://www.google.com/s2/favicons?domain=vev.io" height="20" width="20"></sub> [Vevio](https://vev.io)
+ - <sub><img src="http://www.google.com/s2/favicons?domain=vev.io" height="20" width="20"></sub> [Vevio](https://vev.io)<sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidstreaming.io" height="20" width="20"></sub> [Vidstreaming](https://vidstreaming.io)
  - <sub><img src="http://www.google.com/s2/favicons?domain=vidzi.tv" height="20" width="20"></sub> [Vidzi](https://vidzi.tv) <sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20"></sub>
   - <sub><img src="http://www.google.com/s2/favicons?domain=verystream.com" height="20" width="20"></sub> [Verystream](https://verystream.com)
@@ -31,7 +31,7 @@ Scrap the sources from your favorite video streaming sites.
 #### Hoster
 - <sub><img src="http://www.google.com/s2/favicons?domain=gogoanime.se" height="20" width="20"></sub> [Gogoanime](https://gogoanime.se)
 - <sub><img src="http://www.google.com/s2/favicons?domain=kissanime.ru" height="20" width="20"></sub> [Kissanime](https://kissanime.ru)
-- <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20" width="20"></sub> [MasterAnime](https://masterani.me)
+- <sub><img src="http://www.google.com/s2/favicons?domain=masterani.me" height="20" width="20"></sub> [MasterAnime](https://masterani.me)<sub><img src="https://i.imgur.com/Hm8dCCN.png" height="20" title="Closed"></sub>
 <hr>
 
 ## Getting Started
