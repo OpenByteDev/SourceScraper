@@ -32,23 +32,26 @@ export class ScraperTester<T, SO extends IScraperOptions, S extends Scraper<T, S
     public testScraping(urls: string[], options?: SO): this {
         return this.addTest(
             'should scrap data from a test page',
-            () => urls.forEach(async url => {
-                const scrap = await this.scraper.scrap(url, options);
-                scrap.should.have.property('success').that.is.true;
-                scrap.should.have.property('data').that.is.an('object');
-                let data = scrap.data as any;
-                if ('sources' in data) {
-                    data = data as ISourceData;
-                    data.should.have.property('sources').that.is.an('array');
-                    data.sources.length.should.be.greaterThan(0);
-                    data.sources.forEach(s => s.should.have.property('url').that.is.a('string'));
-                } else if ('hosters' in data) {
-                    data = data as IHosterData;
-                    data.should.have.property('hosters').that.is.an('array');
-                    data.hosters.length.should.be.greaterThan(0);
-                    data.hosters.forEach(s => s.should.have.property('url').that.is.a('string'));
-                } else throw new Error('Unexpected scraper type');
-            })
+            async () => {
+                for (const url of urls) {
+                    const scrap = await this.scraper.scrap(url, options);
+                    console.log(scrap);
+                    scrap.should.have.property('success').that.is.true;
+                    scrap.should.have.property('data').that.is.an('object');
+                    let data = scrap.data as any;
+                    if ('sources' in data) {
+                        data = data as ISourceData;
+                        data.should.have.property('sources').that.is.an('array');
+                        data.sources.length.should.be.greaterThan(0);
+                        data.sources.forEach(s => s.should.have.property('url').that.is.a('string'));
+                    } else if ('hosters' in data) {
+                        data = data as IHosterData;
+                        data.should.have.property('hosters').that.is.an('array');
+                        data.hosters.length.should.be.greaterThan(0);
+                        data.hosters.forEach(s => s.should.have.property('url').that.is.a('string'));
+                    } else throw new Error('Unexpected scraper type');
+                }
+            }
         );
     }
     protected getTestTarget(): S {
